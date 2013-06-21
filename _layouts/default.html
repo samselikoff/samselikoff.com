@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>{{ page.title }}</title>
+      <meta name="viewport" content="width=device-width">
+
+      <link rel="stylesheet" href="/css/syntax.css">
+      <link rel="stylesheet" href="/css/style.css">
+      <link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="site">
+
+        <header role="banner">
+          <div id="inner-header" class="wrap clearfix">
+
+
+            <!-- <nav class="social">
+              <ul>
+                <li><a href="https://github.com/samselikoff" target="_blank"><i class="icon-github"></i></a></li>
+                <li><a href="https://twitter.com/samselikoff" target="_blank"><i class="icon-twitter"></i></a></li>
+                <li><a href="http://www.linkedin.com/in/samselikoff" target="_blank"><i class="icon-linked-in"></i></a></li>
+                <li><a href="https://www.facebook.com/sam.selikoff" target="_blank"><i class="icon-facebook"></i></a></li>
+              </ul>
+            </nav> -->
+
+            <div id="intro">
+              <p class="title"><a href="/">Sam Selikoff</a></p>
+              <div class="byline thin">
+                <p class="inline">Full-stack web developer</p>
+                <p class="inline">with a background in economics</p>
+              </div>
+              <p class="visible-phone"><a href="/about">Learn more about me</a>, or explore my work:</p>
+            </div>
+
+            <nav class="main-nav desktop" role="navigation">
+              <ul>
+                <li {% if page.url == '/projects/index.html' %}class="current-page"{% endif %}><a href="/projects">Projects</a></li>
+                <li {% if page.url == '/writing/index.html' %}class="current-page"{% endif %}><a href="/writing">Writing</a></li>
+                <li {% if page.url == '/portfolio/index.html' %}class="current-page"{% endif %}><a href="/portfolio">Portfolio</a></li>
+                <li {% if page.url == '/blog/index.html' or page.date != nil %}class="current-page"{% endif %}><a href="/blog">Blog</a></li>
+                <li {% if page.url == '/about/index.html' %}class="current-page"{% endif %}><a href="/about">About</a></li>
+              </ul>         
+            </nav>
+
+            <nav class="main-nav mobile" role="navigation">
+              <div class="row">
+                <a {% if page.url == '/projects/index.html' %}class="current-page"{% endif %} href="/projects">Projects</a>
+                <a {% if page.url == '/writing/index.html' %}class="current-page"{% endif %} href="/writing">Writing</a>
+              </div>
+              <div class="row">
+                <a {% if page.url == '/portfolio/index.html' %}class="current-page"{% endif %} href="/portfolio">Portfolio</a>
+                <a {% if page.url == '/blog/index.html' or page.date != nil %}class="current-page"{% endif %} href="/blog">Blog</a>
+              </div>
+            </nav>
+          </div>
+        </header>
+ 
+        <div class="content wrap">
+          {{ content }}
+        </div>
+
+        <footer>
+          <p class="copyright">© 2013 Sam Selikoff</p>
+        </footer>
+
+      </div>
+    </div> <!-- /container -->
+  </body>
+</html>

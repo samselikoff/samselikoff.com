@@ -1,0 +1,6 @@
+name: Sam Selikoff
+pygments: true
+permalink: /blog/:year/:month/:day/:title
+paginate: 5
+paginate_path: /blog/page-:num
+paginate_file: index.html

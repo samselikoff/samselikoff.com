@@ -1,0 +1,21 @@
+---
+layout: default
+title: Sam Selikoff
+---
+
+<div id="home">
+
+  {% for post in site.posts limit:1 %}
+		<article class="reading">
+			<p class="thin no-bottom-margin">Latest blog post:</p>
+  		<h3 class="muted margin-top"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+			<p class="byline">Posted on {{ post.date | date_to_string }} in {{ post.categories | map: "capitalize" | join: ", " }}</p>
+			<section>
+				{{ post.content }}
+			</section>
+  	</article>
+  {% endfor %}
+
+  <h3><a href="/blog">See all blog posts »</a></h3>
+
+</div>

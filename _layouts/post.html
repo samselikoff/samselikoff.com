@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<div id="post" class="reading">
+	<article>
+		<h2>{{ page.title }}</h2>
+		<p class="byline">Posted on {{ page.date | date_to_string }} in {{ page.categories | map: "capitalize" | join: ", " }}</p>
+		<section>
+			{{ content }}
+		</section>
+	</article>
+</div>
