@@ -6,16 +6,33 @@ title: Sam Selikoff
 <div id="home">
 
   {% for post in site.posts limit:1 %}
-		<article class="reading">
-			<p class="thin no-bottom-margin">Latest blog post:</p>
-  		<h3 class="muted margin-top"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-			<p class="byline">Posted on {{ post.date | date_to_string }} in {{ post.categories | map: "capitalize" | join: ", " }}</p>
-			<section>
-				{{ post.content }}
-			</section>
-  	</article>
+    <article>
+      <header class="page-header">
+        <p class="thin subtitle">Latest blog post:</p>
+        <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p class="byline">{{ post.date | date_to_string }} &#183; {{ post.categories | array_to_sentence_string }}</p>
+      </header>
+      <section>
+        {{ post.content }}
+      </section>
+      <a href="{{ post.url }}/#disqus_thread">Comments</a>
+  </article>
   {% endfor %}
 
-  <h3><a href="/blog">See all blog posts »</a></h3>
+  <h3 class="text-center"><a href="/blog">See all blog posts »</a></h3>
 
 </div>
+
+
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'samselikoff'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>

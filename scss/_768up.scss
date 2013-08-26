@@ -35,9 +35,9 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 
-header {
+#top-header {
 
-	#intro {
+	#header-intro {
 		text-align: left;
 		float: left;
 
@@ -61,9 +61,9 @@ header {
 NAVIGATION STYLES
 *********************/
 
-nav.mobile {display: none;}
+nav.mobile {display: none !important;}
 
-.main-nav.desktop {
+#top-header .main-nav.desktop {
 	display: initial;
 	float: right;
 	margin-top: 15px;
@@ -79,6 +79,7 @@ nav.mobile {display: none;}
 			padding-left: 0;
 			font-size: 19px;
 			padding-right: 20px;
+			// color: #999;
 
 			/*
 			you can use hover styles here even though this size
@@ -86,7 +87,8 @@ nav.mobile {display: none;}
 			*/
 			&:hover, &:focus {
 				// background-color: #dedede;
-
+				// text-decoration: none;
+				// color: #4A9C95;
 			}
 		}
 
@@ -104,7 +106,7 @@ nav.mobile {display: none;}
 	/* highlight current page */
 	li.current-page {
 		a {
-			color: $link-hover;
+			text-decoration: underline;
 		}
 	}  /* end current highlighters */
 
@@ -176,6 +178,10 @@ mobile. Make sure to double check these!
 /*********************
 PAGE STYLES
 *********************/
-#home {
-	margin-top: 50px;
+
+#blog {
+	.pages {
+		display: inline-block;
+		margin-top: 15px;
+	}
 }

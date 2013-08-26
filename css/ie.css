@@ -102,53 +102,53 @@ TYPOGRAPHY
 use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
-/* line 120, ../scss/_mixins.scss */
+/* line 123, ../scss/_mixins.scss */
 span.amp {
   font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
   font-style: italic;
 }
 
-/* line 126, ../scss/_mixins.scss */
+/* line 129, ../scss/_mixins.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 127, ../scss/_mixins.scss */
+/* line 130, ../scss/_mixins.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 128, ../scss/_mixins.scss */
+/* line 131, ../scss/_mixins.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 132, ../scss/_mixins.scss */
+/* line 135, ../scss/_mixins.scss */
 .alert-help, .alert-info, .alert-error, .alert-success {
   margin: 10px;
   padding: 5px 18px;
   border: 1px solid;
 }
 
-/* line 138, ../scss/_mixins.scss */
+/* line 141, ../scss/_mixins.scss */
 .alert-help {
   border-color: #e8dc59;
   background: #ebe16f;
 }
 
-/* line 144, ../scss/_mixins.scss */
+/* line 147, ../scss/_mixins.scss */
 .alert-info {
   border-color: #bfe4f4;
   background: #d5edf8;
 }
 
-/* line 150, ../scss/_mixins.scss */
+/* line 153, ../scss/_mixins.scss */
 .alert-error {
   border-color: #f8cdce;
   background: #fbe3e4;
 }
 
-/* line 156, ../scss/_mixins.scss */
+/* line 159, ../scss/_mixins.scss */
 .alert-success {
   border-color: #deeaae;
   background: #e6efc2;
@@ -178,7 +178,7 @@ probably best not to use it. I mean, were you going to anyway? */
 /*********************
 BUTTONS
 *********************/
-/* line 218, ../scss/_mixins.scss */
+/* line 221, ../scss/_mixins.scss */
 .button, .button:visited {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 1px solid #356f6a;
@@ -202,7 +202,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #4a9c95, #428b84);
   background-image: linear-gradient(to bottom, #4a9c95, #428b84);
 }
-/* line 237, ../scss/_mixins.scss */
+/* line 240, ../scss/_mixins.scss */
 .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
   color: white;
   border: 1px solid #356f6a;
@@ -215,7 +215,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #428b84, #3a7974);
   background-image: linear-gradient(to bottom, #428b84, #3a7974);
 }
-/* line 245, ../scss/_mixins.scss */
+/* line 248, ../scss/_mixins.scss */
 .button:active, .button:visited:active {
   background-color: #4a9c95;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#428b84), to(#4a9c95));
@@ -225,7 +225,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #428b84, #4a9c95);
 }
 
-/* line 250, ../scss/_mixins.scss */
+/* line 253, ../scss/_mixins.scss */
 .blue-button, .blue-button:visited {
   border-color: #1472ad;
   text-shadow: 0 1px 1px #1472ad;
@@ -237,7 +237,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #1990db, #1681c4);
   box-shadow: inset 0 0 3px #59b3ec;
 }
-/* line 256, ../scss/_mixins.scss */
+/* line 259, ../scss/_mixins.scss */
 .blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
   border-color: #116396;
   background-color: #1472ad;
@@ -247,7 +247,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #1784c9, #1472ad);
   background-image: linear-gradient(to bottom, #1784c9, #1472ad);
 }
-/* line 260, ../scss/_mixins.scss */
+/* line 263, ../scss/_mixins.scss */
 .blue-button:active, .blue-button:visited:active {
   background-color: #1990db;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
@@ -483,21 +483,21 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 /* line 40, ../scss/_768up.scss */
-header #intro {
+#top-header #header-intro {
   text-align: left;
   float: left;
 }
 /* line 44, ../scss/_768up.scss */
-header #intro .title {
+#top-header #header-intro .title {
   margin-top: 10px;
 }
 /* line 48, ../scss/_768up.scss */
-header #intro .byline .inline {
+#top-header #header-intro .byline .inline {
   display: block;
   margin: 0;
 }
 /* line 53, ../scss/_768up.scss */
-header #intro .social {
+#top-header #header-intro .social {
   margin-top: 20px;
   margin-right: 20px;
 }
@@ -507,11 +507,11 @@ NAVIGATION STYLES
 *********************/
 /* line 64, ../scss/_768up.scss */
 nav.mobile {
-  display: none;
+  display: none !important;
 }
 
 /* line 66, ../scss/_768up.scss */
-.main-nav.desktop {
+#top-header .main-nav.desktop {
   display: initial;
   float: right;
   margin-top: 15px;
@@ -522,13 +522,13 @@ nav.mobile {
   /* end current highlighters */
 }
 /* line 73, ../scss/_768up.scss */
-.main-nav.desktop li {
+#top-header .main-nav.desktop li {
   float: left;
   position: relative;
   /* showing sub-menus */
 }
 /* line 77, ../scss/_768up.scss */
-.main-nav.desktop li a {
+#top-header .main-nav.desktop li a {
   border-bottom: 0;
   padding-left: 0;
   font-size: 19px;
@@ -538,40 +538,40 @@ nav.mobile {
   has the possibility of being a mobile device.
   */
 }
-/* line 97, ../scss/_768up.scss */
-.main-nav.desktop li:hover ul {
+/* line 99, ../scss/_768up.scss */
+#top-header .main-nav.desktop li:hover ul {
   top: auto;
   display: block;
 }
-/* line 106, ../scss/_768up.scss */
-.main-nav.desktop li.current-page a {
-  color: #193432;
+/* line 108, ../scss/_768up.scss */
+#top-header .main-nav.desktop li.current-page a {
+  text-decoration: underline;
 }
 
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 117, ../scss/_768up.scss */
+/* line 119, ../scss/_768up.scss */
 aside {
   display: initial;
   margin-top: 24px;
   font-size: 15px;
 }
-/* line 122, ../scss/_768up.scss */
+/* line 124, ../scss/_768up.scss */
 aside h4 {
   margin: 0;
 }
-/* line 126, ../scss/_768up.scss */
+/* line 128, ../scss/_768up.scss */
 aside > div {
   padding: 0 10px;
   margin-bottom: 25px;
 }
-/* line 132, ../scss/_768up.scss */
+/* line 134, ../scss/_768up.scss */
 aside > div ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 140, ../scss/_768up.scss */
+/* line 142, ../scss/_768up.scss */
 aside > div ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -585,7 +585,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 160, ../scss/_768up.scss */
+/* line 162, ../scss/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
@@ -598,9 +598,10 @@ mobile. Make sure to double check these!
 /*********************
 PAGE STYLES
 *********************/
-/* line 179, ../scss/_768up.scss */
-#home {
-  margin-top: 50px;
+/* line 183, ../scss/_768up.scss */
+#blog .pages {
+  display: inline-block;
+  margin-top: 15px;
 }
 
 /******************************************************************

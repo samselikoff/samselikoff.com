@@ -51,6 +51,8 @@ Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
 
+$main-color: #4A9C95;
+
 $alert-yellow: #ebe16f;
 $alert-red: #fbe3e4;
 $alert-green: #e6efc2;
@@ -69,8 +71,9 @@ $bones-blue: #1990db;
 
 // $link-color: #515356;
 // $link-color: rgb(60,165,235);
-$link-color: #4A9C95;
+$link-color: $main-color;
 $link-hover: darken($link-color, 30%);
+$link-active: $main-color;
 
 $link-color-alt: #777;
 $link-hover-alt: darken($link-color-alt, 30%);
