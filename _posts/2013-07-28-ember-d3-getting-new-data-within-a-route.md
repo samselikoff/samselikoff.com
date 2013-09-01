@@ -82,7 +82,7 @@ Here's the method:
 
 {% highlight javascript %}
 App.MonthsController = Ember.ArrayController.extend({
-    toggleMonth: function(id) {
+    addMonth: function(id) {
         var _this = this;
         App.Month.find(id).then(function(month) {
             _this.pushObject(month);
