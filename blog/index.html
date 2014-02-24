@@ -6,18 +6,18 @@ title: Sam Selikoff - Blog
 <div id="blog" class="reading">
   
   <ul>
-  {% for post in site.posts %}
-    <li>
-      <div class="twocol first">
-        <p><small class="thin byline">{{ post.date | date_to_string }}</small></p>
-      </div>
-      <div class="tencol last">
-        <h3 class="title">
-          <a  href="{{ post.url }}">{{ post.title }}</a>
-        </h3>
-      </div>
-    </li>
-  {% endfor %}
+    {% for post in site.posts %}
+      <li class="post">
+        <div class="twocol first">
+          <p><small class="thin byline">{{ post.date | date: '%B %-d, %Y' }}</small></p>
+        </div>
+        <div class="tencol last">
+          <h3 class="title">
+            <a  href="{{ post.url }}">{{ post.title }}</a>
+          </h3>
+        </div>
+      </li>
+    {% endfor %}
   </ul>
 
   {% comment %}

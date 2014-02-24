@@ -1,0 +1,13 @@
+This talk will discuss using D3 within JavaScript applications built with MVC frameworks. The main point will be that when using D3 with an MVC framework, one should embrace the framework's idioms, and treat D3 code as first-class.
+
+Often, D3 code is not treated as first-class, and is instead thought of as a separate layer. There are a few reasons why this happens:
+
+  - there are many one-off examples
+  - lots of D3 code is procedural
+  - there's not a lot of precedent for reusability in D3
+
+However, in complex Javascript applications where D3 plays a central role, this pattern is hard to maintain. It also makes it harder to see unique and innovative ways to incorporate D3.
+
+After arguing these general points, the talk will move to discussing specifics of Backbone, Angular and Ember. The Backbone portion will discuss the limits of Backbone views, and cover other solutions that developers have come up with for the view layer (e.g. React) as well as how to integrate D3 into these solutions. The Angular portion will describe the framework's philosophy, and discuss how to build a D3 directive. The Ember portion will discuss components as reusable UI widgets, and cover building a D3 component. 
+
+The talk will conclude with some remarks that apply to all reusable D3 code.

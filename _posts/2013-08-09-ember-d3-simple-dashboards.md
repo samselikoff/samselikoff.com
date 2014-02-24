@@ -5,9 +5,11 @@ categories: Programming Ember D3
 published: true
 ---
 
+**UPDATE 9/26/13:** I gave an updated version of this talk in September. There's no video, but you can find the materials [here](http://www.samselikoff.com/blog/2013/09/26/updated-ember-d3-talk/). The big changes are the upgrade to Ember 1.0, and the use of components.
+
 Last night I gave a talk at the [Boston Ember.js](http://www.meetup.com/Boston-Ember-js/) meetup group. Here are the materials from my presentation.
 
-**Slides:** [http://slid.es/samselikoff/ember-and-d3](http://slid.es/samselikoff/ember-and-d3)
+**Slides:** [http://slid.es/samselikoff/ember-and-d3-aug-2013](http://slid.es/samselikoff/ember-and-d3-aug-2013)
 
 **Demo:** Each part is self-contained, so you can view source to see exactly what's going on:  
 

@@ -2,4 +2,20 @@ name: Sam Selikoff
 pygments: true
 permalink: /blog/:year/:month/:day/:title
 # paginate: 5
-paginate_path: "blog/page:num"
+# paginate_path: "blog/page:num"
+exclude: ['node_modules']
+
+# markdown: maruku
+markdown: redcarpet
+redcarpet:
+    extensions: [with_toc_data]
+
+sass:
+    style:  expanded  # nested|expanded|compact|compressed
+    deploy_style: compressed  # nested|expanded|compact|compressed
+    # "deploy_style:" is used only for building the site
+    # (ie: not using the --watch flag)
+
+    compile_in_place: false   # true|false
+    # If true, compiles sass directly into your jekyll source directory
+    # As well as your destination directory

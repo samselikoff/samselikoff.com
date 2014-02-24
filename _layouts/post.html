@@ -5,12 +5,14 @@ layout: default
 <div id="post" class="reading">
 	<article>
 		<header class="page-header">
-  		<h3 class="title">{{ page.title }}</h3>
-			<p class="byline">{{ page.date | date_to_string }} &#183; {{ page.categories | array_to_sentence_string }}</p>
+  		<h1 class="title">{{ page.title }}</h3>
+			<p class="byline">{{ page.date | date: '%B %-d, %Y' }} &#183; {{ page.categories | array_to_sentence_string }}</p>
 		</header>
 		<section>
 			{{ content }}
 		</section>
+
+		<hr>	
 
 		<div class="comments">
 		    <div id="disqus_thread"></div>

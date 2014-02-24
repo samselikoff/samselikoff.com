@@ -1,0 +1,349 @@
+// /******************************************************************
+// Site Name:
+// Author:
+
+// Stylesheet: Tablet & Small Desktop Stylesheet
+
+// Here's where you can start getting into the good stuff.
+// This size will work on iPads, other tablets, and desktops.
+// So you can start working with more styles, background images,
+// and other resources. You'll also notice the grid starts to
+// come into play. Have fun!
+
+// ******************************************************************/
+
+.site {
+  // page acts as a container for our grid.
+  @include container;
+  // background-color: blue;
+  margin: 0;
+
+  // header and footer are full-width by default.
+  footer { clear: both; }
+
+  // nav spans 3 columns of total 12.
+  nav { @include span-columns(3,12); }
+
+  .content {
+    // content spans the final (omega) 9 columns of 12.
+    @include span-columns(9 omega,12);
+
+    // // main content spans 6 of those 9 columns.
+    // .main { @include span-columns(6,9); }
+
+    // // secondary content spans the final 3 (omega) of 9 columns.
+    // .secondary { @include span-columns(3 omega,9); }
+  }
+}
+
+#main-nav {
+  background-color: transparent;
+  box-shadow: none;
+  position: fixed;
+  width: 216px;
+
+  #header-intro {
+    padding: 0;
+    text-align: left;
+  }
+
+  .social {
+    margin-bottom: 15px;
+
+    ul {
+      padding-left: 0;
+
+      li {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .main-nav ul {
+    text-align: left;
+    padding-left: 0;
+
+    li.current-page {
+      opacity: 1;
+      font-weight: bold;
+    }
+
+    li {
+      opacity: 0.9;
+      display: block;
+
+      a {
+        padding: 0;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// .content {
+//   margin-top: 0;
+// }
+
+// /*********************
+// GENERAL STYLES
+// *********************/
+
+// body {}
+
+.visible-phone {
+  display: none !important;
+}
+.visible-tablet {
+  display: initial !important;
+}
+
+
+// /*********************
+// LAYOUT & GRID STYLES
+// *********************/
+
+// .wrap {
+//   max-width: 960px;
+// }
+
+// /*********************
+// HEADER STYLES
+// *********************/
+
+// #top-header {
+
+//   #header-intro {
+//     text-align: left;
+//     float: left;
+
+//     .title {
+//       margin-top: 10px;
+//     }
+
+//     .byline .inline {
+//       display: block;
+//       margin: 0;
+//     }
+//   }
+
+//   .social {
+//     float: right;
+//     clear: right;
+//     margin-right: 0;
+//     margin-top: 20px;
+//     display: inline-block;
+//     width: 195px;
+//   }
+// }
+
+// /*********************
+// NAVIGATION STYLES
+// *********************/
+
+// nav.mobile {display: none !important;}
+
+// #top-header .main-nav.desktop {
+//   display: initial;
+//   float: right;
+//   margin-top: 15px;
+//   margin-bottom: 0px;
+//   width: initial;
+
+//   li {
+//     float: left;
+//     position: relative;
+
+//     a {
+//       border-bottom: 0;
+//       padding-left: 0;
+//       font-size: 19px;
+//       padding-right: 20px;
+//       // color: #999;
+
+//       /*
+//       you can use hover styles here even though this size
+//       has the possibility of being a mobile device.
+//       */
+//       &:hover, &:focus {
+//         // background-color: #dedede;
+//         // text-decoration: none;
+//         // color: #4A9C95;
+//       }
+//     }
+
+//     &:first-child {}
+//     &:last-child {}
+
+//     /* showing sub-menus */
+//     &:hover ul {
+//       top: auto;
+//       display: block;
+//     }
+
+//   } /* end .menu ul li */
+
+//   /* highlight current page */
+//   li.current-page {
+//     a {
+//       text-decoration: underline;
+//     }
+//   }  /* end current highlighters */
+
+// }
+
+// /*********************
+// SIDEBARS & ASIDES
+// *********************/
+
+// aside {
+//   display: initial;
+//   margin-top: 24px;
+//   font-size: 15px;
+
+//   h4 {
+//     margin: 0;
+//   }
+
+//   & > div {
+//     padding: 0 10px;
+//     margin-bottom: 25px;
+//     // margin: 2.2em 0;
+
+//     ul {
+//       li {
+//         margin-bottom: 0.75em;
+
+//         &:first-child {}
+//         &:last-child {}
+//         a {}
+//         /* deep nesting */
+
+//         ul {
+//           margin-top: 0.75em;
+//           padding-left: 1em;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// /*********************
+// FOOTER STYLES
+// *********************/
+
+// /*
+// you'll probably need to do quite a bit
+// of overriding here if you styled them for
+// mobile. Make sure to double check these!
+// */
+// .footer-links {
+//   ul {
+//     li {
+//       a {
+//         &:hover {}
+//       }
+//       /*
+//       be careful with the depth of your menus.
+//       it's very rare to have multi-depth menus in
+//       the footer.
+//       */
+//       ul {}
+//     }
+//   }
+// } /* end .footer-links */
+
+
+
+// /*********************
+// PAGE STYLES
+// *********************/
+
+#resume {
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    line-height: 16px;
+  }
+
+  .sep {
+    color: #eee;
+  }
+
+  header {
+    .location {
+      @include span-columns(3, 9);
+    } 
+
+    .links {
+      @include span-columns(6 omega, 9);
+      text-align: right;
+      font-size: 13px;
+      text-transform: uppercase;
+
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+
+  section {
+
+    .title { 
+      @include span-columns(3, 9); 
+      color: #999;
+      font-weight: 200;
+      font-size: 16px;
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+
+    .items { 
+      @include span-columns(6 omega, 9); 
+      margin-top: 0;
+
+      h3 {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-weight: 900;
+        text-transform: uppercase;
+
+        small {
+          font-size: .7em;
+          font-weight: normal;
+        }
+      }
+      p {margin-top: 0;}
+      li {
+        font-size: 13px;
+        line-height: 18px;
+      }
+      .fa {
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+  // margin-top: 0;
+
+
+// #blog {
+//   .pages {
+//     display: inline-block;
+//     margin-top: 15px;
+//   }
+// }
+
+// #resume {
+//   header h3 {
+//     text-align: center;
+//   }  
+
+//   h3 {
+//     text-align: left;
+//   }
+// }
