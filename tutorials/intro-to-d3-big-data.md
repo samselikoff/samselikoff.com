@@ -115,7 +115,7 @@ I like learning through an example, so we'll work through this bar chart:
 
   [bar chart]
 
-Surely, not as exciting as some of the community examples. But its simplicity will let us focus on D3's primitive objects.
+sSurely, not as exciting as some of the community examples. But its simplicity will let us focus on D3's primitive objects.
 
 This chart is rendered in SVG; open up the inspector (CMD+CONTROL+i/Control+Shift+i) and see:
 
