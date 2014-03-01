@@ -5,119 +5,123 @@ slug: "intro-to-d3-big-data"
 date: February 24, 2014
 ---
 
+[D3.js](http://www.d3js.org) is a JavaScript library used to create interactive visualizations in the browser. This tutorial discusses some motivations for learning D3, presents a brief introduction to the library, and concludes with some applications of D3 to big data.
+
+
 Why data vis?
 -------------
+"Big Data" is something of a buzzword, but beneath it is an important idea: that data can be so complex, it's incomprehensible.
 
-"Big Data" is something of a buzzword, but beneath it is an important idea: data so complex, that it's impossible to gain insight from it at face value.
+Data visualization provides an answer to this problem. Visualizations distill lots of information into something we humans can understand, typically by focusing on an aggregate view or subset of the data.
 
-Data visualization can help solve this problem. Visualizations distill lots of information into something we humans can understand, typically by focusing on an aggregate view or subset of the data.
-
-Visualizations help us in two ways. First, sometimes we have data, and we know what it says, but it's hard to communicate our insight to others. Data vis helps us present the idea quickly. Take this press release about Apple's revenues:
+Visualizations help us in two ways: _communication_ and _exploration_. First, take this press release about Apple's revenues:
 
 > 
 
-How long did it take you to consume this information? What if the author's goal was to give you a big-picture understanding of the general trend in Apple's performance over the past few years?
+How long did it take you to consume this information? What if the author was simply trying give you a high-level understanding of Apple's performance over the past few years?
 
 Now consider this:
 
+  [time series chart]
 
+How long did it take you to understand the main trend of the chart? Do you feel like you have a better grasp of the data? The density of information in the chart helps us easily communicate a particular insight we have to others. Importantly, in data visualization we _have_ control over the information density - unlike in text.
 
+Visualizations also help us explore. Sometimes we don't know anything about our data, but we simply can't investigate it in its raw form. Visualizations help by presenting the data in a way that's more suitable for exploration.
 
-Sometimes we have so much data, we just need to convert it into a form that helps us explore it:
+Take this calendar chart:
 
   [show calendar chart of daily stock prices]
-  "Our best month was January!"
 
-This is why datavis is important to big data.
+With chart, we're able to quickly scan several years' of data and look for something interesting; indeed, the end of 2008 looks like an area worth exploring.
+
+So data vis is more than just pretty charts. Effective data vis makes our data more valuable, by facilitating communication and exploration.
 
   
 What's D3?
 ----------
+D3 stands for Data-Driven Documents. Sounds like it could be useful for big data - but what the heck does it mean?
 
-D3 means data-driven documents. That sounds useful for big data! What the heck does it mean?
+The word "document" in D3 refers to the DOM, which is what you see when you view a webpage (like this one). It's the parsed and rendered HTML and CSS. But it's more than that; it's a living, breathing thing. Javascript can manipulate the DOM, creating and deleting HTML and CSS. This is how we add behavior to web apps.
 
-The document here refers to the DOM. Who can tell me what that is? I actually don't know. OK so it's kind of an agreed-upon set of terms for representing documents, accessing info from documents, changing documents, etc. Think of CSS queries, DOM events, etc. The stuff we're familiar with.
+At a higher level, the DOM is an agreed-upon set of terms for representing, updating, and querying information from documents. It's what enables CSS queries and DOM events. It's the raw stuff of the platform that all web developers are familiar with.
 
-The point is we usually write out our HTML by hand. Our browsers parse the HTML and convert it into a DOM Tree-like thing, which we can then style with CSS and manipulate with Javascript. 
+Over time, JavaScript development on the web has gotten better, and we've learned how to do some pretty cool things. We've used libraries like jQuery to iron out cross-browser issues, and we've built plugins to make our UIs more interactive. But most of these innovations are related to GUI programming - because most of the time, we're building user interfaces for web applications.
 
-We get better with JS and do cooler things, and use libraries like jQuery to make it easier. But most of the time we're doing things related to GUI programming. We're building user interfaces.
+But we want to do data vis! And data vis isn't quite the same as building GUIs. It's about relating data (a time series dataset) to elements on the screen (bars, circles, or points).
 
-But - we want to do data vis! And data vis is about relating elements in the visualization (e.g bars, circles, points) to data (e.g. a time series). 
-
-Doing this with vanilla javascript is verbose; lets set the heights of some hypothetical bars in our document:
+Building visualizations with tools that are suited for GUI programming is difficult and verbose. For example, if we were to set the heights of some hypothetical bars that exist in an HTML document with vanilla JavaScript, it'd look something like this:
 
     var nums = [80, 53, 125, 200, 28, 97];
 
     var bars = document.getElementsByTagName("rect");
     for (var i = 0; i < bars.length; i++) {
       var bar = bars.item(i);
-      bar.style.setProperty("height", data[i], null);
+      bar.setAttribute("height", nums[i]);
     }
 
 With d3, its
 
     d3.selectAll('rect')
-      .attr('height', function(d, i) {return data[i];});
+      .attr('height', function(d, i) {return nums[i];});
 
-So first, its more terse. But here we're getting a glimpse of d3 in action. We'll go into detail on how this works soon, but you'll notice: we can set the height using a function; and this function is 'smart' - it knows about our data. 
+In addition to being shorter, there are a few benefits to the second apparoch:
 
-So d3 is really about providing an appropriate API for creating and transforming the DOM in a data-driven way: hence data-driven documents. 
+  - D3's embraces [declarative programming](http://en.wikipedia.org/wiki/Declarative_programming), and we can see that here: the `.attr` method lets us set the heights on the entire set of elements all at once, rather than using a `for` loop. Declarative code abstracts away implementation details, making complicated transformations easier to reason about. It's a powerful paradigm, but definitely takes some getting used to.
 
-[I will assume you understand the basics of HTML, CSS and JS]
+  - We're getting a little ahead of ourselves, but as you can see we're using a function to set the heights. And the function is smart; it _knows_ about our data, and makes the relevant datum (and index) available to the transformation. This is the standard way we set attributes of elements that are bound to data.
 
-
-Is and isn't
-------------
-
-So d3 gives us charts? No! I didn't say that. I said d3 is an api. That sounds pretty low-level, right? It is. Just like javascript gives us document.getElementsByTagName, d3 gives us d3.selectAll. It doesn't give us d3.beautifulUnicornChart. Its low-level, small, performant. It's an API for creating data-driven documents.
-
-It's not a charting/mapping library. There are plenty that are written _using_ d3, because d3 is a great api for creating data-driven documents, such as data visualizaitons.
-
-It's not a compatability layer, though it does take care of some cross-browser quirks related to created data-driven docs.
-
-Also, you should know that D3 is about web standards. Remember, the D for document means DOM. THat's web standards talk: HTML, javascript, CSS. No flash, no crazy java applet plugin. This stuff works with browsers, out of the box. It makes it especially nice nice if you're used to using the browser's inspector - and you will be if you start writing d3.
+So D3 is really about providing an API that's well-suited for DOM creation and manipulation, based on the data; hence, data-driven documents. 
 
 
-So how will it help us?
------------------------
+What D3 isn't
+-------------
+It may surprise you to learn that D3 doesn't come with any prebuilt visualizations; there's no d3.barchart, for instance. This is because D3 aims to be low-level and flexible. There are many excellent charting libraries out there, and several built on top of D3. If your goal is to render a few standard charts as quickly as possible, you may want to consider using a library instead of writing them by hand.
 
-Remember when we talked about the two ways data vis can help us? Explaining and exploring?
+D3 is also not a compatability layer, though it does take care of a few cross-browser quirks. D3 is built to work on modern browsers.
 
-If you're focused on exploring, d3 can be awesome. But, it's hard to learn. If you need to crank out half a dozen pie and bar charts by the end of the week, you probably shouldn't write those from scratch using d3. Use a library: nvd3, flot, google charts, etc.
+Finally, you should know that D3 is about web standards. Remember, the first D in D3 refers to the DOM. That's web standards talk: HTML, CSS, and JavaScript. There's no new technology here: no Flash, no Java applets, no proprietary plugins. D3 works in any modern browser on any device, out of the box. So learning D3 involves learning about web standards, which is the language of modern web development.
 
-Sometimes, though, existing solutions aren't enough, and you need custom ways to explore your data. Remember that calendar chart I showed you in the beginning?
+
+Can D3 help in the context of big data?
+---------------------------------------
+Because it is low-level, D3 may seem like a bad fit for big data analysis. Indeed, it won't help you run gigabytes of data through a model; but after you've done this with some other tool, D3 can help you make sense of the result.
+
+Recall the two primary uses of data visualization: explaining and exploring.
+
+If you're focused on exploring data, D3 can be awesome. But, don't underestimate the learning curve. If you need to crank out a dozen pie and bar charts by the end of the week, you probably shouldn't write them from scratch using D3. Instead, use a library with visualizations built-in: NVD3, flot, Google charts, etc.
+
+Sometimes, though, existing solutions aren't enough, and you need a custom way to explore your data. Remember the calendar chart from above?
 
   [calendar chart]
 
-This is a pretty crazy cool chart. And I'm pretty sure it's not available as a built-in excel chart. The point is, d3 is low-level, which means if you can dream it, you can build it. Learning D3 can be a great way to explore your specific data, because you have complete control over the representation and interaction.
+This is a pretty unique chart, and it's probably not available as a built-in chart in Excel. The point is, D3 is low-level, which means if you can dream it, you can build it. Learning D3 can be a great way to explore your data, because you have complete control over the representation and interaction of the visualization.
 
 It's also good for explaining - again, because of the control.
 
   [show nytimes connections between grammys]
 
-The authors wanted to explain these relationships. They could have written an article laying out the facts of the relationships, but this visualization is much more insightful. Again, not found in excel. So if you have a specific idea or concept you want to explain - which people in big data often do - learning d3 can give you the power to do so in a unique and effective way.
+The authors of this visualization wanted to explain relationships they had found in the data. They could have written an article, but instead used D3 to communicate the insights much more immediately (and beautifully). Again, this visualization is not found in Excel. 
 
+The point is, if you have a specific idea or concept you want to explain - which people in big data often do - learning D3 can give you the power to do so in a unique and effective way.
 
-Ok, lets learn it!
+Alright, enough ceremony. Lets learn it!
 
 
 Learning D3
-===========
+-----------
+This tutorial won't go over all the different pieces of the D3 toolbelt; there are plenty of existing resources on that. Instead, it will introduce some of the main conceptual hurdles to learning D3, primarily selections and data bindings. Once you get a handle of these, the code in the myriad [examples]() from the community should make much more sense. Armed with [D3's documentation] as a reference, you'll be on your way to making your own visualizations.
 
-There are definitely a few conceptual hurdles to learning d3. I like starting with an example. Let's build a bar chart:
+I like learning through an example, so we'll work through this bar chart:
 
   [bar chart]
 
-This comes straight from the [examples]() page, which, by the way, is a fantastic resource for learning d3.
+Surely, not as exciting as some of the community examples. But its simplicity will let us focus on D3's primitive objects.
 
-There are several components here: the bars, the x and y axis, the labels. As we discuss these components, remember that D3 is not just about building charts. We'll see the approach D3 takes to build these things, and by learning and understanding it you'll be able to apply the general concepts to any visualization you like.
-
-This particular chart is rendered in SVG. SVG is web standards talk; it's part of the same "document", it's not an external resource that's embedded. You can open up the inspector and see:
+This chart is rendered in SVG; open up the inspector (CMD+CONTROL+i/Control+Shift+i) and see:
 
   [picture of inspector showing the bar chart]
 
-See? The svg is in the DOM. Its parsed and ready to style and manipulate. But again, d3 is not just about svg. We can use it to create an html table, for example. But today we'll focus on svg, which is often used in data vis.
-
+The SVG is in the DOM. Its parsed and ready to style and manipulate. D3 is not just about SVG; we can use it to create an HTML table, for example. But SVG lets us do all the cool visualizations that we typically use D3 for.
 
 ### Selections
 

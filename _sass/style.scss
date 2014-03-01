@@ -1,35 +1,7 @@
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Main Stylesheet
-
-Here's where the magic happens. Here, you'll see we are calling in
-the separate media queries. The base mobile goes outside any query
-and is called at the beginning, after that we call the rest
-of the styles inside media queries.
-******************************************************************/
-
-
-//
-// IMPORTING STYLES
-//
-// other 
 @import "susy";
-
-// import normalize
 @import "normalize";
-
-// import mixins
 @import "mixins";
-
-
-/*
-BASE (MOBILE) SIZE
-This are the mobile styles. It's what people see on their phones. If
-you set a great foundation, you won't need to add too many styles in
-the other stylesheets. Remember, keep it light: Speed is Important.
-*/
+@import "grid";
 
 // styles in base.scss
 @import "base";
@@ -101,16 +73,6 @@ query for retina AND a certain size if you want. Go Nuts.
 	@import "2x";
 
 } // end of media query
-
-/*
-iPHONE 5 MEDIA QUERY
-Want to get fancy for no good reason? Knock yourself out.
-*/
-@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-  
-  // iPhone 5 or iPod Touch 5th generation styles (you can include your own file if you want)
-  
-}
 
 /*
 PRINT STYLESHEET

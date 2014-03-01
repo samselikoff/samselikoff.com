@@ -489,7 +489,7 @@ function drawAnimatedBarChart() {
     .draw(data);
 }
 
-$('#draw-animated-bar-chart').on('click', drawAnimatedBarChart);
+d3.select('#draw-animated-bar-chart').on('click', drawAnimatedBarChart);
 
 // Profit and loss bar chart
 var profitLossBarChart = d3.select("#profit-loss-bar-chart")
