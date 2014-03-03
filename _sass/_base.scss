@@ -692,6 +692,9 @@ POSTS & CONTENT STYLES
 
 .content {
   margin-top: 30px;
+  img {
+    max-width: 100%;
+  }
 }
 
 .post {
@@ -705,7 +708,7 @@ SIDEBARS & ASIDES
 *********************/
 
 aside {
-  display: none;
+  // display: none;
 }
 
 /*********************

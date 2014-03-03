@@ -1452,12 +1452,16 @@ POSTS & CONTENT STYLES
 .content {
   margin-top: 30px;
 }
+/* line 695, ../_sass/_base.scss */
+.content img {
+  max-width: 100%;
+}
 
-/* line 698, ../_sass/_base.scss */
+/* line 701, ../_sass/_base.scss */
 .post p {
   margin-bottom: 0;
 }
-/* line 699, ../_sass/_base.scss */
+/* line 702, ../_sass/_base.scss */
 .post h3 {
   margin-top: 0;
 }
@@ -1465,19 +1469,14 @@ POSTS & CONTENT STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 707, ../_sass/_base.scss */
-aside {
-  display: none;
-}
-
 /*********************
 FOOTER STYLES
 *********************/
-/* line 715, ../_sass/_base.scss */
+/* line 718, ../_sass/_base.scss */
 footer {
   clear: both;
 }
-/* line 718, ../_sass/_base.scss */
+/* line 721, ../_sass/_base.scss */
 footer .copyright {
   text-align: center;
   font-size: 0.8em;
@@ -1486,19 +1485,19 @@ footer .copyright {
 /*********************
 ICON STYLES
 *********************/
-/* line 728, ../_sass/_base.scss */
+/* line 731, ../_sass/_base.scss */
 [class^="icon-"], [class*=" icon-"] {
   display: inline-block;
   width: 24px;
   height: 24px;
 }
 
-/* line 733, ../_sass/_base.scss */
+/* line 736, ../_sass/_base.scss */
 a [class^="icon-"], a [class*=" icon-"] {
   opacity: .4;
 }
 
-/* line 736, ../_sass/_base.scss */
+/* line 739, ../_sass/_base.scss */
 a [class^="icon-"]:hover, a [class*=" icon-"]:hover {
   opacity: 1;
 }
