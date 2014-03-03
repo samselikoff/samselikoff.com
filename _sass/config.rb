@@ -1,8 +1,3 @@
-# Compass is a great cross-platform tool for compiling SASS. 
-# This compass config file will allow you to 
-# quickly dive right in.
-# For more info about compass + SASS: http://net.tutsplus.com/tutorials/html-css-techniques/using-compass-and-sass-for-css-in-your-next-project/
-
 require 'susy'
 
 ########

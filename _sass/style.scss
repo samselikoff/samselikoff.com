@@ -1,85 +1,19 @@
-@import "susy";
-@import "normalize";
-@import "mixins";
-@import "grid";
+@import 'tools/normalize';
+@import 'tools/settings';
+@import 'tools/mixins';
+@import 'tools/utility';
+@import 'susy';
 
-// styles in base.scss
-@import "base";
+@import 'base';
 
-/*
-LARGER MOBILE DEVICES
-This is for devices like the Galaxy Note or something that's
-larger than an iPhone but smaller than a tablet. Let's call them
-tweeners.
-*/
-@media only screen and (min-width: 481px) {
+@import 'layouts/header';
+@import 'layouts/content';
+@import 'layouts/footer';
 
-	// styles in 481up.scss
-	@import "481up";
-
-} // end of media query
-
-/*
-TABLET & SMALLER LAPTOPS
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
-*/
-@media only screen and (min-width: 768px) {
-
-	// import grids
-	@import "grid";
-
-	// styles in 768up.scss
-	@import "768up";
-
-} // end of media query
-
-/*
-DESKTOP
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
-*/
-@media only screen and (min-width: 1030px) {
-
-	// styles in 1030up.scss
-	@import "1030up";
-
-} // end of media query
-
-/*
-LARGE VIEWING SIZE
-This is for the larger monitors and possibly full screen viewers.
-*/
-@media only screen and (min-width: 1240px) {
-
-	// styles in 1240up.scss
-	@import "1240up";
-
-} // end of media query
-
-/*
-RETINA (2x RESOLUTION DEVICES)
-This applies to the retina iPhone (4s) and iPad (2,3) along with
-other displays with a 2x resolution. You can also create a media
-query for retina AND a certain size if you want. Go Nuts.
-*/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min--moz-device-pixel-ratio: 1.5),
-       only screen and (min-device-pixel-ratio: 1.5) {
-
-	// styles in 2x.scss
-	@import "2x";
-
-} // end of media query
-
-/*
-PRINT STYLESHEET
-Feel free to customize this. Remember to add things that won't make
-sense to print at the bottom. Things like nav, ads, and forms should
-be set to display none.
-*/
-@media print {
-	@import "print";
-}
+@import 'modules/article';
+@import 'modules/page-header';
+@import 'modules/home';
+@import 'modules/blog';
+@import 'modules/writing';
+@import 'modules/resume';
+@import 'modules/about';

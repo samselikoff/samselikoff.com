@@ -1,0 +1,30 @@
+#blog {
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+
+    li {
+      clear: both;
+    }
+  }
+
+  section { 
+    clear: both;
+    
+    .keep-reading {
+      text-decoration: none;
+    }
+  }
+
+  .previous {float: left}
+  .next {float: right}
+
+  .pages {
+    list-style-type: none;
+  }
+  .pages li {
+    float: left;
+    margin-right: 10px;
+  }
+}

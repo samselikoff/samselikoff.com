@@ -1,0 +1,82 @@
+@media print {
+  /* line 3, ../_sass/print.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* line 11, ../_sass/print.scss */
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+  /* line 16, ../_sass/print.scss */
+  a:after, a:visited:after {
+    content: " (" attr(href) ")";
+  }
+  /* line 21, ../_sass/print.scss */
+  a abbr[title]:after, a:visited abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 28, ../_sass/print.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 32, ../_sass/print.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 37, ../_sass/print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 41, ../_sass/print.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* line 45, ../_sass/print.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 53, ../_sass/print.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 59, ../_sass/print.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /* line 68, ../_sass/print.scss */
+  .sidebar,
+  .page-navigation,
+  .wp-prev-next,
+  .respond-form,
+  nav {
+    display: none;
+  }
+
+  /* line 72, ../_sass/print.scss */
+  #disqus_thread {
+    display: none;
+  }
+}

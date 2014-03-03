@@ -18,13 +18,14 @@ understand (what's inside the media queries). We also need to
 import the mixins file so SASS can understand the variables.
 */
 
-/* import mixins */
-@import "mixins";
+@import 'tools/normalize';
+@import 'tools/settings';
+@import 'tools/mixins';
+@import 'tools/utility';
 
-@import "grid";
-@import "481up";
-@import "768up";
-@import "1030up";
+// @import "481up";
+// @import "768up";
+// @import "1030up";
 
 /* 
 you can call the larger styles if you want, but there's really no need 

@@ -1,99 +1,63 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>{{ page.title }}</title>
-      <meta name="viewport" content="width=device-width">
+---
+layout: base
+---
 
-      <link rel="stylesheet" href="/css/syntax.css">
-      <link rel="stylesheet" href="/css/style.css">
-      <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-      <link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400' rel='stylesheet' type='text/css'>
-      <link rel="stylesheet" href="/css/font-awesome-4.0.3/css/font-awesome.min.css">
-      <script src="/js/jquery.js"></script>
-
-  </head>
-  <body>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-42527632-1', 'samselikoff.com');
-      ga('send', 'pageview');
-
-    </script>
-    <div class="container">
-      <div class="site">
-
-        <nav id="main-nav" role="banner">
-          <div id="inner-header" class="wrap clearfix">
-
-
-
-            <div id="header-intro">
-              <p class="title"><a href="/">Sam Selikoff</a></p>
-              <div class="byline thin subtitle">
-                <p class="inline">Full-stack web developer</p>
-                <p class="inline">with a background in economics</p>
-              </div>
-            </div>
-
-            <nav class="social">
-              <ul>
-                <li><a href="https://github.com/samselikoff" target="_blank">
-                  <img src="/images/icons/github.png" width="22" height="22"></img>
-                </a></li>
-                <li><a href="https://twitter.com/samselikoff" target="_blank">
-                  <img src="/images/icons/twitter.png" width="22" height="22"></img>
-                </a></li>
-                <li><a href="http://www.linkedin.com/in/samselikoff" target="_blank">
-                  <img src="/images/icons/linkedin.png" width="22" height="22"></img>
-                </a></li>
-                <li><a href="https://www.facebook.com/sam.selikoff" target="_blank">
-                  <img src="/images/icons/facebook2.png" width="22" height="22">
-                </li>
-              </ul>
-            </nav>
-
-            <nav class="main-nav desktop visible-tablet" role="navigation">
-              <ul>
-                <li {% if page.url == '/projects/index.html' %}class="current-page"{% endif %}><a href="/projects">Projects</a></li>
-                <li {% if page.url == '/writing/index.html' %}class="current-page"{% endif %}><a href="/writing">Writing</a></li>
-                <li {% if page.url == '/blog/index.html' or page.date != nil %}class="current-page"{% endif %}><a href="/blog">Blog</a></li>
-                <li {% if page.url == '/resume/index.html' %}class="current-page"{% endif %}><a href="/resume">Resume</a></li>
-                <li {% if page.url == '/about/index.html' %}class="current-page"{% endif %}><a href="/about">About</a></li>
-              </ul>         
-            </nav>
-
-            <nav class="main-nav mobile visible-phone" role="navigation">
-              <p class="thin subtitle text-center"><a href="/about/index.html">Learn more about me</a>, or explore my work:</p>
-              <div class="row">
-                <a {% if page.url == '/projects/index.html' %}class="current-page"{% endif %} href="/projects">Projects</a>
-                <a {% if page.url == '/writing/index.html' %}class="current-page"{% endif %} href="/writing">Writing</a>
-              </div>
-              <div class="row">
-                <!-- <a {% if page.url == '/portfolio/index.html' %}class="current-page"{% endif %} href="/portfolio">Portfolio</a> -->
-                <a {% if page.url == '/blog/index.html' or page.date != nil %}class="current-page"{% endif %} href="/blog">Blog</a>
-                <a {% if page.url == '/resume/index.html' or page.date != nil %}class="current-page"{% endif %} href="/resume">Resume</a>
-              </div>
-            </nav>
-          </div>
-        </nav>
- 
-        <div id="{{ page.id }}" class="content wrap">
-          {{ content }}
-        </div>
-
-        <footer>
-          <p class="copyright muted">&copy; 2013 Sam Selikoff</p>
-        </footer>
-
+<nav id="main-nav" role="banner">
+  <div id="inner-header" class="wrap clearfix">
+    <div id="header-intro">
+      <p class="title"><a href="/">Sam Selikoff</a></p>
+      <div class="byline thin subtitle">
+        <p class="inline">Full-stack web developer</p>
+        <p class="inline">with a background in economics</p>
       </div>
-    </div> <!-- /container -->
+    </div>
 
+    <nav class="social">
+      <ul>
+        <li><a href="https://github.com/samselikoff" target="_blank">
+          <img src="/images/icons/github.png" width="22" height="22"></img>
+        </a></li>
+        <li><a href="https://twitter.com/samselikoff" target="_blank">
+          <img src="/images/icons/twitter.png" width="22" height="22"></img>
+        </a></li>
+        <li><a href="http://www.linkedin.com/in/samselikoff" target="_blank">
+          <img src="/images/icons/linkedin.png" width="22" height="22"></img>
+        </a></li>
+        <li><a href="https://www.facebook.com/sam.selikoff" target="_blank">
+          <img src="/images/icons/facebook2.png" width="22" height="22">
+        </li>
+      </ul>
+    </nav>
 
-  </body>
-</html>
+    <nav class="main-nav desktop visible-tablet" role="navigation">
+      <ul>
+        <li {% if page.url == '/projects/index.html' %}class="current-page"{% endif %}><a href="/projects">Projects</a></li>
+        <li {% if page.url == '/writing/index.html' %}class="current-page"{% endif %}><a href="/writing">Writing</a></li>
+        <li {% if page.url == '/blog/index.html' or page.date != nil %}class="current-page"{% endif %}><a href="/blog">Blog</a></li>
+        <li {% if page.url == '/resume/index.html' %}class="current-page"{% endif %}><a href="/resume">Resume</a></li>
+        <li {% if page.url == '/about/index.html' %}class="current-page"{% endif %}><a href="/about">About</a></li>
+      </ul>         
+    </nav>
+
+    <nav class="main-nav mobile visible-phone" role="navigation">
+      <p class="thin subtitle text-center"><a href="/about/index.html">Learn more about me</a>, or explore my work:</p>
+      <div class="row">
+        <a {% if page.url == '/projects/index.html' %}class="current-page"{% endif %} href="/projects">Projects</a>
+        <a {% if page.url == '/writing/index.html' %}class="current-page"{% endif %} href="/writing">Writing</a>
+      </div>
+      <div class="row">
+        <!-- <a {% if page.url == '/portfolio/index.html' %}class="current-page"{% endif %} href="/portfolio">Portfolio</a> -->
+        <a {% if page.url == '/blog/index.html' or page.date != nil %}class="current-page"{% endif %} href="/blog">Blog</a>
+        <a {% if page.url == '/resume/index.html' or page.date != nil %}class="current-page"{% endif %} href="/resume">Resume</a>
+      </div>
+    </nav>
+  </div>
+</nav>
+
+<div id="{{ page.id }}" class="content wrap">
+  {{ content }}
+</div>
+
+<footer>
+  <p class="copyright muted">&copy; 2013 Sam Selikoff</p>
+</footer>
