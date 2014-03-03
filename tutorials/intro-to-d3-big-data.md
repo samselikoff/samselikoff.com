@@ -1,6 +1,7 @@
 ---
 layout: writing
-title:  "An Intro to D3, with applications to Big Data"
+title:  "An Introduction to D3"
+subtitle:  "With applications to big data"
 slug: "intro-to-d3-big-data"
 date: February 24, 2014
 ---
@@ -295,13 +296,13 @@ Now that D3 knows exactly what our selection represents, and it also knows what'
 
 <aside>Adapted from http://bost.ocks.org/mike/join/</aside>
 
-The names are appropriate: 
+The names are appropriate:
 
-  - **enter** refers to elements in the data that were joined to our selection, but are not currently in the DOM. Typically these elements will be entering the DOM via `.append()` - hence the name _enter_.
+- **enter** refers to elements in the data that were joined to our selection, but are not currently in the DOM. Typically these elements will be entering the DOM via `.append()` - hence the name _enter_.
 
-  - **exit** refers to elements in the current DOM, but not in the data that was joined to the selection. Typically these will be exiting the DOM via `.remove()`.
+- **exit** refers to elements in the current DOM, but not in the data that was joined to the selection. Typically these will be exiting the DOM via `.remove()`.
 
-  - **update** refers to elements in both groups, but which may have certain properties that have changed.
+- **update** refers to elements in both groups, but which may have certain properties that have changed.
 
 So how does this look in practice? Recall what we're trying to do: create bars. We're working with the following selection,
 

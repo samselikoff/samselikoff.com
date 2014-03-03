@@ -605,125 +605,129 @@ dd {
 }
 
 /* line 5, ../_sass/tools/_utility.scss */
+.soft {
+  color: #666;
+}
+
+/* line 9, ../_sass/tools/_utility.scss */
 .no-bottom-margin {
   margin-bottom: 0;
 }
 
-/* line 9, ../_sass/tools/_utility.scss */
+/* line 13, ../_sass/tools/_utility.scss */
 .no-top-margin {
   margin-top: 0;
 }
 
-/* line 13, ../_sass/tools/_utility.scss */
+/* line 17, ../_sass/tools/_utility.scss */
 .margin-top {
   margin-top: 10px;
 }
 
-/* line 17, ../_sass/tools/_utility.scss */
+/* line 21, ../_sass/tools/_utility.scss */
 .margin-top-large {
   margin-top: 30px;
 }
 
-/* line 21, ../_sass/tools/_utility.scss */
+/* line 25, ../_sass/tools/_utility.scss */
 .margin-left {
   margin-left: 10px;
 }
 
-/* line 25, ../_sass/tools/_utility.scss */
+/* line 29, ../_sass/tools/_utility.scss */
 .clear {
   clear: both;
 }
 
-/* line 29, ../_sass/tools/_utility.scss */
+/* line 33, ../_sass/tools/_utility.scss */
 .clearfix {
   zoom: 1;
 }
-/* line 31, ../_sass/tools/_utility.scss */
+/* line 35, ../_sass/tools/_utility.scss */
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
-/* line 32, ../_sass/tools/_utility.scss */
+/* line 36, ../_sass/tools/_utility.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 35, ../_sass/tools/_utility.scss */
+/* line 39, ../_sass/tools/_utility.scss */
 .row {
   display: inline-block;
   width: 100%;
 }
 
-/* line 40, ../_sass/tools/_utility.scss */
+/* line 44, ../_sass/tools/_utility.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 41, ../_sass/tools/_utility.scss */
+/* line 45, ../_sass/tools/_utility.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 42, ../_sass/tools/_utility.scss */
+/* line 46, ../_sass/tools/_utility.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 44, ../_sass/tools/_utility.scss */
+/* line 48, ../_sass/tools/_utility.scss */
 .thin {
   font-weight: 300;
   font-family: 'Raleway', 'Lato', sans-serif;
-  color: #999;
 }
 
-/* line 52, ../_sass/tools/_utility.scss */
+/* line 56, ../_sass/tools/_utility.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 56, ../_sass/tools/_utility.scss */
+/* line 60, ../_sass/tools/_utility.scss */
 .hide {
   display: none;
 }
 
-/* line 60, ../_sass/tools/_utility.scss */
+/* line 64, ../_sass/tools/_utility.scss */
 .pull-left {
   float: left;
 }
 
-/* line 64, ../_sass/tools/_utility.scss */
+/* line 68, ../_sass/tools/_utility.scss */
 .pull-right {
   float: right;
 }
 
-/* line 68, ../_sass/tools/_utility.scss */
+/* line 72, ../_sass/tools/_utility.scss */
 .visible-tablet {
   display: none !important;
 }
 
 @media (min-width: 768px) {
-  /* line 73, ../_sass/tools/_utility.scss */
+  /* line 77, ../_sass/tools/_utility.scss */
   .visible-phone {
     display: none !important;
   }
 
-  /* line 76, ../_sass/tools/_utility.scss */
+  /* line 80, ../_sass/tools/_utility.scss */
   .visible-tablet {
     display: initial !important;
   }
 }
-/* line 81, ../_sass/tools/_utility.scss */
+/* line 85, ../_sass/tools/_utility.scss */
 .wrap {
   width: 96%;
   margin: 0 auto;
 }
 
-/* line 87, ../_sass/tools/_utility.scss */
+/* line 91, ../_sass/tools/_utility.scss */
 .subtitle {
   font-size: 20px;
   line-height: 26px;
 }
-/* line 91, ../_sass/tools/_utility.scss */
+/* line 95, ../_sass/tools/_utility.scss */
 .subtitle a {
   text-decoration: none;
 }

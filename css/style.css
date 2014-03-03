@@ -587,125 +587,129 @@ dd {
 }
 
 /* line 5, ../_sass/tools/_utility.scss */
+.soft {
+  color: #666;
+}
+
+/* line 9, ../_sass/tools/_utility.scss */
 .no-bottom-margin {
   margin-bottom: 0;
 }
 
-/* line 9, ../_sass/tools/_utility.scss */
+/* line 13, ../_sass/tools/_utility.scss */
 .no-top-margin {
   margin-top: 0;
 }
 
-/* line 13, ../_sass/tools/_utility.scss */
+/* line 17, ../_sass/tools/_utility.scss */
 .margin-top {
   margin-top: 10px;
 }
 
-/* line 17, ../_sass/tools/_utility.scss */
+/* line 21, ../_sass/tools/_utility.scss */
 .margin-top-large {
   margin-top: 30px;
 }
 
-/* line 21, ../_sass/tools/_utility.scss */
+/* line 25, ../_sass/tools/_utility.scss */
 .margin-left {
   margin-left: 10px;
 }
 
-/* line 25, ../_sass/tools/_utility.scss */
+/* line 29, ../_sass/tools/_utility.scss */
 .clear {
   clear: both;
 }
 
-/* line 29, ../_sass/tools/_utility.scss */
+/* line 33, ../_sass/tools/_utility.scss */
 .clearfix {
   zoom: 1;
 }
-/* line 31, ../_sass/tools/_utility.scss */
+/* line 35, ../_sass/tools/_utility.scss */
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
-/* line 32, ../_sass/tools/_utility.scss */
+/* line 36, ../_sass/tools/_utility.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 35, ../_sass/tools/_utility.scss */
+/* line 39, ../_sass/tools/_utility.scss */
 .row {
   display: inline-block;
   width: 100%;
 }
 
-/* line 40, ../_sass/tools/_utility.scss */
+/* line 44, ../_sass/tools/_utility.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 41, ../_sass/tools/_utility.scss */
+/* line 45, ../_sass/tools/_utility.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 42, ../_sass/tools/_utility.scss */
+/* line 46, ../_sass/tools/_utility.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 44, ../_sass/tools/_utility.scss */
+/* line 48, ../_sass/tools/_utility.scss */
 .thin {
   font-weight: 300;
   font-family: 'Raleway', 'Lato', sans-serif;
-  color: #999;
 }
 
-/* line 52, ../_sass/tools/_utility.scss */
+/* line 56, ../_sass/tools/_utility.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 56, ../_sass/tools/_utility.scss */
+/* line 60, ../_sass/tools/_utility.scss */
 .hide {
   display: none;
 }
 
-/* line 60, ../_sass/tools/_utility.scss */
+/* line 64, ../_sass/tools/_utility.scss */
 .pull-left {
   float: left;
 }
 
-/* line 64, ../_sass/tools/_utility.scss */
+/* line 68, ../_sass/tools/_utility.scss */
 .pull-right {
   float: right;
 }
 
-/* line 68, ../_sass/tools/_utility.scss */
+/* line 72, ../_sass/tools/_utility.scss */
 .visible-tablet {
   display: none !important;
 }
 
 @media (min-width: 768px) {
-  /* line 73, ../_sass/tools/_utility.scss */
+  /* line 77, ../_sass/tools/_utility.scss */
   .visible-phone {
     display: none !important;
   }
 
-  /* line 76, ../_sass/tools/_utility.scss */
+  /* line 80, ../_sass/tools/_utility.scss */
   .visible-tablet {
     display: initial !important;
   }
 }
-/* line 81, ../_sass/tools/_utility.scss */
+/* line 85, ../_sass/tools/_utility.scss */
 .wrap {
   width: 96%;
   margin: 0 auto;
 }
 
-/* line 87, ../_sass/tools/_utility.scss */
+/* line 91, ../_sass/tools/_utility.scss */
 .subtitle {
   font-size: 20px;
   line-height: 26px;
 }
-/* line 91, ../_sass/tools/_utility.scss */
+/* line 95, ../_sass/tools/_utility.scss */
 .subtitle a {
   text-decoration: none;
 }
@@ -721,14 +725,14 @@ dd {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  line-height: 28px;
+  line-height: 1.5em;
   color: #333;
   background-color: "white";
 }
 
 /* line 15, ../_sass/_base.scss */
 small {
-  font-size: 0.9em;
+  font-size: small;
 }
 
 /* line 19, ../_sass/_base.scss */
@@ -783,15 +787,17 @@ iframe {
 /* line 62, ../_sass/_base.scss */
 a, a:visited {
   color: #2185c5;
+  text-decoration: none;
   /* on hover */
   /* on click */
   /* mobile tap color */
 }
-/* line 66, ../_sass/_base.scss */
+/* line 67, ../_sass/_base.scss */
 a:hover, a:focus, a:visited:hover, a:visited:focus {
   color: #0b2d42;
+  text-decoration: underline;
 }
-/* line 76, ../_sass/_base.scss */
+/* line 78, ../_sass/_base.scss */
 a:link, a:visited:link {
   /*
   this highlights links on iPhones/iPads.
@@ -804,7 +810,7 @@ a:link, a:visited:link {
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
-/* line 90, ../_sass/_base.scss */
+/* line 92, ../_sass/_base.scss */
 h1, h2, h3, h4, h5 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
@@ -815,40 +821,40 @@ h1, h2, h3, h4, h5 {
   */
   /* removing text decoration from all headline links */
 }
-/* line 100, ../_sass/_base.scss */
+/* line 102, ../_sass/_base.scss */
 h1 a, h2 a, h3 a, h4 a, h5 a {
   text-decoration: none;
 }
-/* line 104, ../_sass/_base.scss */
+/* line 106, ../_sass/_base.scss */
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
   text-decoration: underline;
 }
 
-/* line 109, ../_sass/_base.scss */
+/* line 111, ../_sass/_base.scss */
 h1 {
   font-size: 2.5em;
   line-height: 1.333em;
 }
 
-/* line 114, ../_sass/_base.scss */
+/* line 116, ../_sass/_base.scss */
 h2 {
   font-size: 1.75em;
   line-height: 1.4em;
   margin-bottom: 0.375em;
 }
 
-/* line 120, ../_sass/_base.scss */
+/* line 122, ../_sass/_base.scss */
 h3 {
   font-size: 1.125em;
 }
 
-/* line 124, ../_sass/_base.scss */
+/* line 126, ../_sass/_base.scss */
 h4 {
   font-size: 1.1em;
   font-weight: 700;
 }
 
-/* line 129, ../_sass/_base.scss */
+/* line 131, ../_sass/_base.scss */
 h5 {
   font-size: 0.846em;
   line-height: 2.09em;
@@ -859,18 +865,18 @@ h5 {
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 139, ../_sass/_base.scss */
+/* line 141, ../_sass/_base.scss */
 nav {
   /* end .nav */
 }
-/* line 141, ../_sass/_base.scss */
+/* line 143, ../_sass/_base.scss */
 nav ul {
   clear: both;
   margin-top: 0;
   margin-bottom: 10px;
   /* end .menu li */
 }
-/* line 152, ../_sass/_base.scss */
+/* line 154, ../_sass/_base.scss */
 nav ul li a {
   text-decoration: none;
   padding: 10px;
@@ -882,24 +888,24 @@ nav ul li a {
   keep this file as small as possible!
   */
 }
-/* line 164, ../_sass/_base.scss */
+/* line 166, ../_sass/_base.scss */
 nav ul li a:hover, nav ul li a:focus {
   text-decoration: underline;
 }
 
-/* line 174, ../_sass/_base.scss */
+/* line 176, ../_sass/_base.scss */
 [class^="icon-"], [class*=" icon-"] {
   display: inline-block;
   width: 24px;
   height: 24px;
 }
 
-/* line 179, ../_sass/_base.scss */
+/* line 181, ../_sass/_base.scss */
 a [class^="icon-"], a [class*=" icon-"] {
   opacity: .4;
 }
 
-/* line 182, ../_sass/_base.scss */
+/* line 184, ../_sass/_base.scss */
 a [class^="icon-"]:hover, a [class*=" icon-"]:hover {
   opacity: 1;
 }
@@ -1199,10 +1205,31 @@ article h2 {
 }
 
 /* line 2, ../_sass/modules/_writing.scss */
-#writing ul {
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
+#writing .back {
+  display: block;
+  margin-top: 1em;
+}
+/* line 6, ../_sass/modules/_writing.scss */
+#writing .back a:hover {
+  text-decoration: none;
+}
+/* line 9, ../_sass/modules/_writing.scss */
+#writing .back i {
+  font-size: 0.9em;
+  padding-right: 0.3em;
+}
+/* line 21, ../_sass/modules/_writing.scss */
+#writing .content {
+  margin-top: 0;
+}
+/* line 25, ../_sass/modules/_writing.scss */
+#writing h1 {
+  margin-top: .1em;
+  margin-bottom: 0;
+}
+/* line 29, ../_sass/modules/_writing.scss */
+#writing h1 .subtitle {
+  display: block;
 }
 
 /* line 2, ../_sass/modules/_resume.scss */
