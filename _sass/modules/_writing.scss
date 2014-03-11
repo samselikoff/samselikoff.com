@@ -1,16 +1,14 @@
-#writing {
-  .back {
-    display: block;
-    margin-top: 1em;
+.site {
+  // margin: 0 auto;
+}
 
-    a:hover {
-      text-decoration: none;
-    }
-    i {
-      font-size: 0.9em;
-      padding-right: 0.3em;
-    }
+#writing {
+  nav {
+    float: left;
+    width: 140px;
+    margin-left: 1em;
   }
+
 
   ul {
     // list-style-type: none;
@@ -23,12 +21,17 @@
   }
 
   h1 {
-    margin-top: .1em;
-    margin-bottom: 0;
+    // margin-top: .1em;
+    // margin-bottom: 0;
 
     .subtitle {
       display: block;
     }
+  }
+
+
+  img {
+    max-width: 100%;
   }
 
 }

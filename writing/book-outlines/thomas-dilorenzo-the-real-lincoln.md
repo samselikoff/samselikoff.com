@@ -1,5 +1,5 @@
 ---  
-layout: default  
+layout: writing  
 title:  "'The Real Lincoln,' by Thomas DiLorenzo"  
 ---  
 

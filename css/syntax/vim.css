@@ -1,0 +1,421 @@
+/* line 1, ../../_sass/syntax/vim.scss */
+.highlight .hll {
+  background-color: #222222;
+}
+
+/* line 2, ../../_sass/syntax/vim.scss */
+.highlight .c {
+  color: navy;
+}
+
+/* Comment */
+/* line 3, ../../_sass/syntax/vim.scss */
+.highlight .err {
+  color: #cccccc;
+  border: 1px solid red;
+}
+
+/* Error */
+/* line 4, ../../_sass/syntax/vim.scss */
+.highlight .g {
+  color: #cccccc;
+}
+
+/* Generic */
+/* line 5, ../../_sass/syntax/vim.scss */
+.highlight .k {
+  color: #cdcd00;
+}
+
+/* Keyword */
+/* line 6, ../../_sass/syntax/vim.scss */
+.highlight .l {
+  color: #cccccc;
+}
+
+/* Literal */
+/* line 7, ../../_sass/syntax/vim.scss */
+.highlight .n {
+  color: #cccccc;
+}
+
+/* Name */
+/* line 8, ../../_sass/syntax/vim.scss */
+.highlight .o {
+  color: #3399cc;
+}
+
+/* Operator */
+/* line 9, ../../_sass/syntax/vim.scss */
+.highlight .x {
+  color: #cccccc;
+}
+
+/* Other */
+/* line 10, ../../_sass/syntax/vim.scss */
+.highlight .p {
+  color: #cccccc;
+}
+
+/* Punctuation */
+/* line 11, ../../_sass/syntax/vim.scss */
+.highlight .cm {
+  color: navy;
+}
+
+/* Comment.Multiline */
+/* line 12, ../../_sass/syntax/vim.scss */
+.highlight .cp {
+  color: navy;
+}
+
+/* Comment.Preproc */
+/* line 13, ../../_sass/syntax/vim.scss */
+.highlight .c1 {
+  color: navy;
+}
+
+/* Comment.Single */
+/* line 14, ../../_sass/syntax/vim.scss */
+.highlight .cs {
+  color: #cd0000;
+  font-weight: bold;
+}
+
+/* Comment.Special */
+/* line 15, ../../_sass/syntax/vim.scss */
+.highlight .gd {
+  color: #cd0000;
+}
+
+/* Generic.Deleted */
+/* line 16, ../../_sass/syntax/vim.scss */
+.highlight .ge {
+  color: #cccccc;
+  font-style: italic;
+}
+
+/* Generic.Emph */
+/* line 17, ../../_sass/syntax/vim.scss */
+.highlight .gr {
+  color: red;
+}
+
+/* Generic.Error */
+/* line 18, ../../_sass/syntax/vim.scss */
+.highlight .gh {
+  color: #000080;
+  font-weight: bold;
+}
+
+/* Generic.Heading */
+/* line 19, ../../_sass/syntax/vim.scss */
+.highlight .gi {
+  color: #00cd00;
+}
+
+/* Generic.Inserted */
+/* line 20, ../../_sass/syntax/vim.scss */
+.highlight .go {
+  color: gray;
+}
+
+/* Generic.Output */
+/* line 21, ../../_sass/syntax/vim.scss */
+.highlight .gp {
+  color: #000080;
+  font-weight: bold;
+}
+
+/* Generic.Prompt */
+/* line 22, ../../_sass/syntax/vim.scss */
+.highlight .gs {
+  color: #cccccc;
+  font-weight: bold;
+}
+
+/* Generic.Strong */
+/* line 23, ../../_sass/syntax/vim.scss */
+.highlight .gu {
+  color: #800080;
+  font-weight: bold;
+}
+
+/* Generic.Subheading */
+/* line 24, ../../_sass/syntax/vim.scss */
+.highlight .gt {
+  color: #0040d0;
+}
+
+/* Generic.Traceback */
+/* line 25, ../../_sass/syntax/vim.scss */
+.highlight .kc {
+  color: #cdcd00;
+}
+
+/* Keyword.Constant */
+/* line 26, ../../_sass/syntax/vim.scss */
+.highlight .kd {
+  color: #00cd00;
+}
+
+/* Keyword.Declaration */
+/* line 27, ../../_sass/syntax/vim.scss */
+.highlight .kn {
+  color: #cd00cd;
+}
+
+/* Keyword.Namespace */
+/* line 28, ../../_sass/syntax/vim.scss */
+.highlight .kp {
+  color: #cdcd00;
+}
+
+/* Keyword.Pseudo */
+/* line 29, ../../_sass/syntax/vim.scss */
+.highlight .kr {
+  color: #cdcd00;
+}
+
+/* Keyword.Reserved */
+/* line 30, ../../_sass/syntax/vim.scss */
+.highlight .kt {
+  color: #00cd00;
+}
+
+/* Keyword.Type */
+/* line 31, ../../_sass/syntax/vim.scss */
+.highlight .ld {
+  color: #cccccc;
+}
+
+/* Literal.Date */
+/* line 32, ../../_sass/syntax/vim.scss */
+.highlight .m {
+  color: #cd00cd;
+}
+
+/* Literal.Number */
+/* line 33, ../../_sass/syntax/vim.scss */
+.highlight .s {
+  color: #cd0000;
+}
+
+/* Literal.String */
+/* line 34, ../../_sass/syntax/vim.scss */
+.highlight .na {
+  color: #cccccc;
+}
+
+/* Name.Attribute */
+/* line 35, ../../_sass/syntax/vim.scss */
+.highlight .nb {
+  color: #cd00cd;
+}
+
+/* Name.Builtin */
+/* line 36, ../../_sass/syntax/vim.scss */
+.highlight .nc {
+  color: #00cdcd;
+}
+
+/* Name.Class */
+/* line 37, ../../_sass/syntax/vim.scss */
+.highlight .no {
+  color: #cccccc;
+}
+
+/* Name.Constant */
+/* line 38, ../../_sass/syntax/vim.scss */
+.highlight .nd {
+  color: #cccccc;
+}
+
+/* Name.Decorator */
+/* line 39, ../../_sass/syntax/vim.scss */
+.highlight .ni {
+  color: #cccccc;
+}
+
+/* Name.Entity */
+/* line 40, ../../_sass/syntax/vim.scss */
+.highlight .ne {
+  color: #666699;
+  font-weight: bold;
+}
+
+/* Name.Exception */
+/* line 41, ../../_sass/syntax/vim.scss */
+.highlight .nf {
+  color: #cccccc;
+}
+
+/* Name.Function */
+/* line 42, ../../_sass/syntax/vim.scss */
+.highlight .nl {
+  color: #cccccc;
+}
+
+/* Name.Label */
+/* line 43, ../../_sass/syntax/vim.scss */
+.highlight .nn {
+  color: #cccccc;
+}
+
+/* Name.Namespace */
+/* line 44, ../../_sass/syntax/vim.scss */
+.highlight .nx {
+  color: #cccccc;
+}
+
+/* Name.Other */
+/* line 45, ../../_sass/syntax/vim.scss */
+.highlight .py {
+  color: #cccccc;
+}
+
+/* Name.Property */
+/* line 46, ../../_sass/syntax/vim.scss */
+.highlight .nt {
+  color: #cccccc;
+}
+
+/* Name.Tag */
+/* line 47, ../../_sass/syntax/vim.scss */
+.highlight .nv {
+  color: #00cdcd;
+}
+
+/* Name.Variable */
+/* line 48, ../../_sass/syntax/vim.scss */
+.highlight .ow {
+  color: #cdcd00;
+}
+
+/* Operator.Word */
+/* line 49, ../../_sass/syntax/vim.scss */
+.highlight .w {
+  color: #cccccc;
+}
+
+/* Text.Whitespace */
+/* line 50, ../../_sass/syntax/vim.scss */
+.highlight .mf {
+  color: #cd00cd;
+}
+
+/* Literal.Number.Float */
+/* line 51, ../../_sass/syntax/vim.scss */
+.highlight .mh {
+  color: #cd00cd;
+}
+
+/* Literal.Number.Hex */
+/* line 52, ../../_sass/syntax/vim.scss */
+.highlight .mi {
+  color: #cd00cd;
+}
+
+/* Literal.Number.Integer */
+/* line 53, ../../_sass/syntax/vim.scss */
+.highlight .mo {
+  color: #cd00cd;
+}
+
+/* Literal.Number.Oct */
+/* line 54, ../../_sass/syntax/vim.scss */
+.highlight .sb {
+  color: #cd0000;
+}
+
+/* Literal.String.Backtick */
+/* line 55, ../../_sass/syntax/vim.scss */
+.highlight .sc {
+  color: #cd0000;
+}
+
+/* Literal.String.Char */
+/* line 56, ../../_sass/syntax/vim.scss */
+.highlight .sd {
+  color: #cd0000;
+}
+
+/* Literal.String.Doc */
+/* line 57, ../../_sass/syntax/vim.scss */
+.highlight .s2 {
+  color: #cd0000;
+}
+
+/* Literal.String.Double */
+/* line 58, ../../_sass/syntax/vim.scss */
+.highlight .se {
+  color: #cd0000;
+}
+
+/* Literal.String.Escape */
+/* line 59, ../../_sass/syntax/vim.scss */
+.highlight .sh {
+  color: #cd0000;
+}
+
+/* Literal.String.Heredoc */
+/* line 60, ../../_sass/syntax/vim.scss */
+.highlight .si {
+  color: #cd0000;
+}
+
+/* Literal.String.Interpol */
+/* line 61, ../../_sass/syntax/vim.scss */
+.highlight .sx {
+  color: #cd0000;
+}
+
+/* Literal.String.Other */
+/* line 62, ../../_sass/syntax/vim.scss */
+.highlight .sr {
+  color: #cd0000;
+}
+
+/* Literal.String.Regex */
+/* line 63, ../../_sass/syntax/vim.scss */
+.highlight .s1 {
+  color: #cd0000;
+}
+
+/* Literal.String.Single */
+/* line 64, ../../_sass/syntax/vim.scss */
+.highlight .ss {
+  color: #cd0000;
+}
+
+/* Literal.String.Symbol */
+/* line 65, ../../_sass/syntax/vim.scss */
+.highlight .bp {
+  color: #cd00cd;
+}
+
+/* Name.Builtin.Pseudo */
+/* line 66, ../../_sass/syntax/vim.scss */
+.highlight .vc {
+  color: #00cdcd;
+}
+
+/* Name.Variable.Class */
+/* line 67, ../../_sass/syntax/vim.scss */
+.highlight .vg {
+  color: #00cdcd;
+}
+
+/* Name.Variable.Global */
+/* line 68, ../../_sass/syntax/vim.scss */
+.highlight .vi {
+  color: #00cdcd;
+}
+
+/* Name.Variable.Instance */
+/* line 69, ../../_sass/syntax/vim.scss */
+.highlight .il {
+  color: #cd00cd;
+}
+
+/* Literal.Number.Integer.Long */

@@ -1,5 +1,6 @@
 name: Sam Selikoff
 pygments: true
+highlighter: pygments
 permalink: /blog/:year/:month/:day/:title
 # paginate: 5
 # paginate_path: "blog/page:num"

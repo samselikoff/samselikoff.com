@@ -6,6 +6,10 @@
   color: #666;
 }
 
+.subtle {
+  color: #999;
+}
+
 .no-bottom-margin {
   margin-bottom: 0;
 }
@@ -28,6 +32,18 @@
 
 .clear {
   clear: both;
+}
+
+.padding {
+  padding: 1em;
+}
+
+.well {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1em;
+  box-shadow: 0 0 15px 0px rgba(0,0,0,0.05) inset;
+  margin: 14px 0;
 }
 
 .clearfix {
@@ -83,11 +99,23 @@
 }
 
 .wrap {
-  width: 96%;
+  @include below(tablet) {
+    width: 96%;
+    margin: 0 auto;
+  }
+}
+
+.container {
+  max-width: 960px;
   margin: 0 auto;
 }
 
-// Move this somewhere else
+.col-1-2 { @include span-columns(6,12); }
+
+.col-1-2.last { @include span-columns(6 omega,12); }
+
+
+// Move these somewhere else
 .subtitle {
   font-size: 20px;
   line-height: 26px;
@@ -96,3 +124,4 @@
     text-decoration: none;
   }
 }
+

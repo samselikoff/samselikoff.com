@@ -1,13 +1,14 @@
 ---
 layout: writing
 title:  "'The Abolition of Man,' by C.S. Lewis"
+subtitle: "A summary"
 toc: ["Chapter 1: Men without chests", "Chapter 2", "Chapter 3"]
 date: March 23, 2012
 ---
 
 Chapter 1: Men Without Chests
-==============================
- 
+-----------------------------
+
 The authors of a book on English grammar make the following point. They say that anyone who says, for example, "That waterfall is beautiful," is not really saying that the waterfall is intrinsically beautiful; they are just saying that they have feelings of beauty inside of them, and so therefore they are really misusing the English language. Lewis points out that the authors are making a philosophical rather than a grammatical point.
  
 He then argues that this point fails on many grounds. First, the person claiming the waterfall was beautiful wouldn't have feelings of beauty inside of him - he'd have feelings of humility. Similarly, if someone said, "John is unjust," that person wouldn't have feelings of unjustness inside of him, he'd have feelings of justice, of discerning what is just from what is unjust. So the authors' point doesn't even make sense on their own grounds.
@@ -26,8 +27,8 @@ We see that in making their arguments about what the man in the original story w
  
  
 Chapter 2: The Way
-==================
- 
+------------------
+
 Lewis begins by saying that even though the authors' philosophy would lead to the destruction of the society, this itself does not prove the philosophy to be false. But the authors have a problem. By writing a book that is purely practical in nature (a nature on how one *ought* to write the English language), they have implicitly advanced their own value judgement. They are saying, the English language *should* be written this way. But why should it? For what reason or purpose? Whatever it is, it exists, or else their book is simply impossible. So from this, Lewis deduces that the authors don't believe that everything that contains a value judgement is meaningless (they think people ought to know proper grammar).
  
 Lewis wants to see if it's possible to construct a rationalistic philosophy where value judgements do not involve emotion or sentiment - do not involve chests. He begins by considering whether one can make the following claim on this philosophy: "It is sweet and fitting to die for one's country." (This is a line from the Roman lyrical poet Horace's Odes). (Note Lewis here is assuming that dying for one's country is an obvious moral good that everyone agrees on. Perhaps he could have just said, dying to save one's family.)
@@ -42,8 +43,8 @@ So, the Tao is everything that is moral. And one cannot attack the Tao, because 
  
  
 Chapter 3: The Abolition of Man
-===============================
- 
+-------------------------------
+
 Lewis begins by saying that many today are devoted to man's conquest over nature. While the advance of technology has certainly benefited mankind (e.g. the development of modern medicine), Lewis says that this is not really man controlling nature. In fact, man must use other men and their developed means to 'conquer' nature. The patient must use the doctor to 'conquer' nature. So it is really a power that some men can exercise over others, using nature as its instrument, rather than collective Man's exercise of power over nature. (Lewis stresses that he's not talking about an abuse of power, perhaps by wicked men. He's saying that, in any case where we talk about man conquering nature, it's really the exercise of power by one man over another.)
  
 Time is a very important consideration in all of this. Those who desire to practice eugenics, for example, think they are increasing man's power over nature. In fact, the men that come after them will be weaker, not stronger, for their predecessors have dictated how they are to live. Suppose one generation completely rejected all tradition and developed many great new technologies, and further that they had many plans for how to organize society. It is clear that the generations to follow would be, in a sense, enslaved to their planning. They may have more power, in the sense of technology, but they would also have less, in terms of being able to choose how to live. The conditions under which they live would have been 'planned' by the previous generation. In the extreme case of eugenics, only those the previous generation had picked would be able to live at all. And if also the 'science' of psychological conditioning has reached its apex, and is perfect in its influence, the current generations will be propagandized to believe precisely what the previous generation wanted them to. This will indeed be complete and total victory of Man over nature; but what has lost the battle is not only mother nature, but human nature too.
@@ -54,13 +55,11 @@ The conditioners, standing outside the Tao, can have no rationale behind how the
  
 Lewis finishes his final essay by asking for a new method of scientific inquiry. He says we have learned a lot through our 'explaining away'; that science began as a brother to magic, and both were wrought with ill intent, used purely as means for other ends instead of ends in themselves, and simply that science was more efficient and so won out. But Lewis thinks there's something about Science that made it beat magic, something 'good' about it, something in it that is also in the Tao. He hopes that scientific inquiry could change into asking about how a thing fits into the whole, rather than attempting to explain away that thing. In any case, even if this new mode of inquiry doesn't exist, Lewis points out that the scientists must stop somewhere, before they explain away explanation itself, and undo all of their work.
  
-Additions:
-----------
+### Additions:
  
  1. Read pg. 21. I don't think Lewis is talking about is-ought yet. He's just saying that you cannot peddle a moral sentiment that denies the existence of moral sentiments. So you cannot teach people that morality doesn't exist. You are teaching; therefore you think your students should believe what you're saying. But *should* is a moral sentiment. Thus, the position is self-defeating.
  
-Questions:
-----------
+### Questions:
  
  1. Am I getting confused on truth vs. morality here?
  2. Is Lewis claiming there is no is-ought gap, that they are both what it means to be Rational?

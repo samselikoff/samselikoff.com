@@ -5,8 +5,8 @@ title: Sam Selikoff - Writing
 
 <h2 class="thin subtitle muted">Tutorials</h2>   
 
- - <h3><a href="/tutorials/intro-to-d3-big-data.html">An intro to D3, with applications to Big Data</a></h3>
- - <h3><a href="/tutorials/intro-to-d3-chart.html">Intro to d3.chart</a></h3>
+ - <h3><a href="/tutorials/intro-to-d3-big-data.html">An Introduction to D3, With Applications to Big Data</a></h3>
+ - <h3><a href="/tutorials/starting-out-with-d3-chart.html">Starting out with d3.chart</a></h3>
 
 <h2 class="thin subtitle muted">Economics</h2>   
 

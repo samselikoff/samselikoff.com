@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: writing
 title: "'The Problem of Pain,' by C.S. Lewis"
+subtitle: An outline
+date: April 9, 2013
 ---
-
-The Problem of Pain
-===================
 
 - [Chapter 1: Introduction](#intro)
 - [Chapter 2: Divine Omnipotence](#divine-omnipotence)
@@ -15,8 +14,7 @@ The Problem of Pain
 - [Chapter 7: Human Pain, contd.](#human-pain-continued)
 - [Chapter 8: Hell](#hell)
 
-
-<h3 id="intro">Chapter 1: Introduction</h3>
+<h2 id="intro">Chapter 1: Introduction</h2>
 
 1. **The Problem**: Lewis identifies 'the problem' - the fact that everyone recognizes there is evil in the world. He then notes the difficulty of squaring this fact with man's conceiving of an all-loving, benevolent God. Why would man have ever conceived of such a God in the first place? Who, living in a fallen world like ours, one destined to extinguish with all life erased from memory, would posit that it was made by an all-loving God? He argues it is unreasonable to think that such a conception simply emerged out of the minds of men. He then examines the origin of religion.
 2. **The origin of religion**
@@ -28,7 +26,7 @@ The Problem of Pain
       - **The historical event of Jesus**. Jesus claimed to be the son of or 'one with' the Numinous moral law-giver. Either he was crazy, or a real revelation.  
   - It is important to grapple with these aspects. Often skeptics consider how likely it is that the universe formed from chance; but this misses the point. The problem of pain is only a 'problem' if we ascribe righteousness and love to our reality. Similarly, we must explain the historical development of Christianity. People can deny morality and the feeling of the Numinous, but if they do so, they cut themselves off from the great poets and prophets of all of human history.
 
-<h3 id="divine-omnipotence">Chapter 2: Divine Omnipotence</h3>
+<h2 id="divine-omnipotence">Chapter 2: Divine Omnipotence</h2>
 
 1. The problem of pain exists because (1) god is all powerful and (2) all good, but (3) his creatures are not happy. 
 2. **Omnipotence** 
@@ -42,7 +40,7 @@ The Problem of Pain
   - Note that none of this (human suffering caused by nature is a necessary fact of our world's creation) implies anything about God's goodness, namely, whether or not God being good is consistent with him having made a universe that was destined to cause suffering on us. This is the subject of the next chapter.
 (Question: is he saying suffering is a necessary fact of our world's creation, even without the fall?)
 
-<h3 id="divine-goodness">Chapter 3: Divine Goodness</h3> 
+<h2 id="divine-goodness">Chapter 3: Divine Goodness</h2> 
 
 Was it good for God to make a world that was destined to lead to human suffering?
 
@@ -59,7 +57,7 @@ Was it good for God to make a world that was destined to lead to human suffering
   - We were made primarily so God could love us. 
     - Is this selfish? No, because selfish loves requires (1) needs and (2) needs that differ from the beloved. God does not need our love; in face, he can't need it, since he is the source of love. If there is something in him akin to a want or need, it must be created by his will for our own sakes, since we need to be needed. And God is not separate from us as a father is from his son, and he cannot misunderstand him the same way.
 
-<h3 id="human-wickedness">Chapter 4: Human Wickedness</h3> 
+<h2 id="human-wickedness">Chapter 4: Human Wickedness</h2> 
 
 In the last chapter we said that love doesn't always involve happiness. Since we were talking about man, we are assuming that man needed to be changed to be fully loved. Why does man need to be changed? The Christian answer is that he has used his free will to become wicked.
 
@@ -77,7 +75,7 @@ In the last chapter we said that love doesn't always involve happiness. Since we
 5. Ultimately, shame is a useful emotion.
 
 
-<h3 id="the-fall-of-man">Chapter 5: The Fall of Man</h3> 
+<h2 id="the-fall-of-man">Chapter 5: The Fall of Man</h2> 
 
 In the previous chapter, Lewis argued that man is wicked. How did it come about? The Christian answer is the Fall.
 
@@ -93,7 +91,7 @@ In the previous chapter, Lewis argued that man is wicked. How did it come about?
 The doctrine of the free Fall implies that good, to us in our present state, is primarily a remedial or corrective good. We will now consider what part plays in such a remedy.
 
 
-<h3 id="human-pain">Chapter 6: Human Pain</h3> 
+<h2 id="human-pain">Chapter 6: Human Pain</h2> 
 
 Is pain (suffering, anguish, not necessarily physical pain) a necessary part of good?
 
@@ -118,7 +116,7 @@ When Lewis experiences pain, "first he is overwhelmed, and all my little happine
 A final point: Christ talks about the poor being blessed. Even the Marxist, who thinks Christianity is an 'opiate of the people', has contempt for the rich and everyone except the poor. But this is not compatible with a belief that the effects of poverty on those who suffer it are wholly evil; it even implies that they are good (as we have been arguing).
 
 
-<h3 id="human-pain-continued">Chapter 7: Human Pain, contnued</h3> 
+<h2 id="human-pain-continued">Chapter 7: Human Pain, contnued</h2> 
 
 We will cover some more topics.
 
@@ -132,7 +130,7 @@ We will cover some more topics.
 6. It is interesting to note that pain is different from sin in that sin tends to proliferate, while pian does not. One sin can often lead to many more; and once the sinner realizes this, he must repent of each one. Pain does not do this. Once the pain is cured, it is sterile. Each pain doesn't need an undoing, like each sin does. Another way of saying it: a sin done in public infects everyone who witnesses it: either they condone it, sharing my guilt, or they risk being proud or out-of-place in condemning it. Pain doesn't do this. Pain brings about a good effect in people who witness it - pity. "Thus that evil which God chiefly uses to produce the 'complex good' is most markedly disinfected, or deprived of that proliferous tendency which is the worst characteristic of evil in general."
 
 
-<h3 id="hell">Chapter 8: Hell</h3> 
+<h2 id="hell">Chapter 8: Hell</h2> 
 
 Hell is most unfortunate, but it comes with humans having a will. It is intolerable, yet Lewis argues that it is moral.
 
@@ -151,7 +149,7 @@ Hell is most unfortunate, but it comes with humans having a will. It is intolera
   - But Lewis says this is a miracle, for God to make creatures that are capable of 'resisting' him. He says this is what omnipotence means for God, since from the outset his creatures had the ability to do this. But in the end they're not resisting him and becoming free; they enjoy the horrible freedom they hav edemnaded and become self-enslaved; while the blessed, who submit more and more in obedience to the will of God, become more and more free.
 
 
-<h3 id="animal-pain">Chapter 9: Animal Pain</h3> 
+<h2 id="animal-pain">Chapter 9: Animal Pain</h2> 
 
 1. Sentience is relevant here. A dog is different from a plant.
 2. Further, there is division among sentience. An ape is different from an earthworm.
@@ -162,7 +160,7 @@ Hell is most unfortunate, but it comes with humans having a will. It is intolera
 4. If animals have any identities, it is in their masters.
 
 
-<h3 id="heaven">Chapter 10: Heaven</h3> 
+<h2 id="heaven">Chapter 10: Heaven</h2> 
 
 1. Sometimes when we talk about heaven people think that its the point, that you become a Christian so you can obtain heaven. But 'heaven offers nothing that a mercenary soul can desire.
 2. Each of us have secret longings, things that make us like this or that, and that others can never fully understand. As long as we are alive we desire it. It's what makes us like the books and movies we like. Lewis speculates that Heaven will be the fulfillment of this desire for everyone.

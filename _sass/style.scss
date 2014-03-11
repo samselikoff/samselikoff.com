@@ -1,10 +1,14 @@
+@import 'susy';
+
 @import 'tools/normalize';
 @import 'tools/settings';
 @import 'tools/mixins';
 @import 'tools/utility';
-@import 'susy';
 
 @import 'base';
+
+// Syntax
+@import 'syntax/default';
 
 @import 'layouts/header';
 @import 'layouts/content';

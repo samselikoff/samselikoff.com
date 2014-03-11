@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: writing
 title:  "'The Case for Gold,' by Ron Paul"
+subtitle:  Some notes
 ---
 
 There was heavy suspension of payments in the 19th century, so even though there wasn’t a central bank, there was lots of inflation via the FRB system.
