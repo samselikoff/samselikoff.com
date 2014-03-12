@@ -8,8 +8,8 @@ exclude: ['node_modules', 'gulpfile.js']
 
 # markdown: maruku
 markdown: redcarpet
-redcarpet:
-    extensions: [with_toc_data]
+# redcarpet:
+#     extensions: [with_toc_data]
 
 sass:
     style:  expanded  # nested|expanded|compact|compressed

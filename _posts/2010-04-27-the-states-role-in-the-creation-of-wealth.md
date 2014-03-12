@@ -14,8 +14,6 @@ It is true that private property enforcement is a precondition for prosperous fr
 
 It must be understood that the State is not now or can not ever be responsible for the gains made through the institution of capitalism. By its very nature, it is anti-capitalist, for its method of capital accumulation requires that capital in some form already exist. In other words, since the State finds its lifeblood in stealing, something must already exist for it to steal.
 
-<!--more-->
-
 You may respond to my claim in the following way: After creation, the State does in fact allow capitalism to function by ‘establishing the rules of the game’ and acting as an ‘umpire’ to prevent potentially disastrous machinations of greedy individuals. It is only because the State has devised the Rule of Law, with proper enforcement, that free markets are ‘permitted to function’.
 
 But this perspective confuses the Rule of Law with rules. The (true) Rule of Law always, by necessity, emerges from the citizenry. It is the fundamental belief in man’s natural right to his own property. To the extent that rules – enacted and enforced by the State – conform to the Rule of Law, people obey them. To the extent that they do not, people think less of them, and eventually, as history has shown us, rid of them altogether.

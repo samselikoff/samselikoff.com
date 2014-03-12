@@ -12,7 +12,6 @@ I just read a book review for the book "Eaarth," which is about the ecological c
 > "Civilization will end within 15 or 30 years unless immediate action is taken against problems facing mankind."  
 > <small>George Wald, Harvard Biologist</small>
 > 
-> <!--more-->
 > 
 > "We are in an environmental crisis which threatens the survival of this nation, and of the world as a suitable place of human habitation."  
 > <small>Barry Commoner, Washington University biologist</small>

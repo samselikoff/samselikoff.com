@@ -10,7 +10,8 @@ title: Sam Selikoff
       <header class="page-header">
         <p class="thin subtitle">Latest blog post:</p>
         <h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <p class="byline">{{ post.date | date: '%B %-d, %Y' }} &#183; {{ post.categories | array_to_sentence_string }}</p>
+        <!-- <p class="byline">{{ post.date | date: '%B %-d, %Y' }} &#183; {{ post.categories | array_to_sentence_string }}</p> -->
+        <p class="byline">{{ post.date | date: '%B %-d, %Y' }}</p>
       </header>
       <section>
         {{ post.content }}

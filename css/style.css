@@ -1604,10 +1604,6 @@ article .byline {
 .page-header {
   margin-bottom: 30px;
 }
-/* line 5, ../_sass/modules/_page-header.scss */
-.page-header .title {
-  margin: 0;
-}
 /* line 13, ../_sass/modules/_page-header.scss */
 .page-header .subtitle {
   margin: 0;
@@ -1675,6 +1671,10 @@ article .byline {
   float: left;
   width: 140px;
   margin-left: 1em;
+}
+/* line 13, ../_sass/modules/_writing.scss */
+#writing ul {
+  margin-top: 0;
 }
 /* line 19, ../_sass/modules/_writing.scss */
 #writing .content {

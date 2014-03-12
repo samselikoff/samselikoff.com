@@ -8,14 +8,12 @@ date: February 24, 2014
 
 [D3.js](http://www.d3js.org) is a JavaScript library used to create interactive visualizations in the browser. This tutorial discusses some motivations for learning D3, presents a brief introduction to the library, and concludes with thoughts on big data.
 
-_Outline_  
-
 1. [Why data vis?](#why-data-vis)
   - [What's D3?](#whats-d3)
-  - [What D3 Isn't](#what-d3-isnt)
+  - [What D3 isn't](#what-d3-isnt)
   - [Can D3 help in the context of big data?](#can-d3-help)
 2. [Learning D3](#learning-d3)
-  - [Selections](#selections)
+  - [A first look at Selections](#selections)
   - [Selecting arrays of elements](#selecting-arrays)
   - [Selecting no elements](#selecting-no-elements)
   - [The data join](#data-join)
@@ -135,7 +133,7 @@ The SVG is right there in the DOM, the same place as the rest of this document. 
 
 D3 is not just about SVG; we can use it to create an HTML table, for instance. But SVG lets us do far more than we could with just CSS and the standard HTML elements.
 
-<h3 id="selections">Selections</h3>
+<h3 id="selections">A first look at Selections</h3>
 
 To start out, say our initial document is
 
@@ -477,7 +475,7 @@ We did it! A simple data-driven bar chart, ripe for CSS styling and additional J
 
 <h2 id="conclusion">Some concluding thoughts on D3 and big data</h2>
 
-There are, of course, many - _many_ - more things to learn, within both the D3 library itself and the larger community. Scales, axes, transitions, events, brushes...it can seem a little overwhelming. But it's also a testament to how much control D3 gives you over your visualizations. After learning this, one may wonder if such a low-level tool can really be useful for analyzing massive amounts of data. Aren't there libraries better equipped for this sort of thing?
+There are, of course, many - _many_ - more things to learn, both inside and outside the D3 library itself. Scales, axes, transitions, events, brushes...it can seem a little overwhelming. But it's also a testament to how much control D3 gives you over your visualizations. After learning this, one may wonder if such a low-level tool can really be useful for analyzing massive amounts of data. Aren't there libraries better equipped for this sort of thing?
 
 D3 certainly doesn't provide an end-all solution to the problem of big data analysis; but it plays an important role. First off, here's a list of some data-intensive projects and companies using D3:
 
@@ -490,25 +488,27 @@ D3 certainly doesn't provide an end-all solution to the problem of big data anal
 
 There are many more beyond this list, but you get the idea: D3 has been making a splash among companies that deal with large amounts of data.
 
-The bigger point has to do with the nature of modern analytics. Not too long ago, computer hardware was expensive and data anlysis was time-consuming. Running a simple model could take hours or even days, so static analysis - writing an algorithm, feeding it some data, exploring the results, and repeating - was really the only option.
+More importantly, trends in modern analytics are bringing interactive visualizations to the fore. Not too long ago, computer hardware was expensive and data analysis time-consuming. Running a simple model could take hours or even days, so static analysis - writing an algorithm, feeding it some data, exploring the results, and repeating - was really the only option.
 
-But modern hardware has changed the game. Static reports have been replaced by dynamic, interactive visualizations of real-time data. And more and more companies are discovering that using these tools to explore their data is the only way to make sense of everything. 
+But modern hardware has drastically impacted this process. Static reports have been replaced by dynamic, interactive real-time visualizations. And more companies are discovering that interactive tools are _the way_ to gain actionable insights from their data.
 
-This is where D3 can help. Now, even in modern data analysis there are cleaning, aggregation, reduction and filtering steps involved. But once these steps have occured, D3 can take center stage. Its value to big data is that given some focused set of data, D3 provides developers with a means of transforming it into effective, interactive and real-time visualizations; visualizations that convey dense amounts of information, and let data scientists explore that data in an unbounded way.
+This is where D3 comes in. It gives you a toolkit for building complex visualizations rich with interactivity. Traditional server-side technologies are still useful for cleaning, aggregating, reducing and filtering raw data; but when it comes to viewing and interpreting the results, you need customized, dynamic visualizations. D3 can help you build those.
 
-Data analysis has always involved human intuition and knoweldge about what to look for, and where ot explore. D3 lets us build tools to enhance these capabilities, giving humans more control and intimacy over the data they are mining.
+Human knowledge and intuition has always played a role in data analysis. It tells us where to look, what to look for, and what to ignore. D3 lets us build tools to enhance these capabilities, giving us more control and better understanding of our data.
 
 
 Learn more
 ----------
 
-This tutorial barely scratched the surface of what D3 has to offer. Here are some more resources to help you on your journey - but most importantly, start coding!
+This tutorial barely scratched the surface of what D3 has to offer, so here are some more resources to help you on your journey. If you don't understand things the first time around, don't get discouraged; D3 is one of those things that starts to make sense after hearing the same ideas presented in two or three different ways.
 
-  - [Examples](https://github.com/mbostock/d3/wiki/Gallery). Inspiring and instructive.
+Most importantly, practice!
+
+  - [Examples](https://github.com/mbostock/d3/wiki/Gallery). Inspiring and instructive. The [basic charts](https://github.com/mbostock/d3/wiki/Gallery#wiki-basic-charts) are a good place to start.
   - [Tutorials](https://github.com/mbostock/d3/wiki/Tutorials), especially
-    - [Thinking with Joins](http://bost.ocks.org/mike/join/)
-    - [How Selections Work](http://bost.ocks.org/mike/selection/)
+    - [Let's make a bar chart](http://bost.ocks.org/mike/bar/)
     - [The General Update Pattern](http://bl.ocks.org/mbostock/3808218)
+  - Scott Murray's [online tutorials](http://alignedleft.com/tutorials/d3/) and [book](http://shop.oreilly.com/product/0636920026938.do?cmp=af-strata-books-videos-product_cj_9781449339739_%25zp)
   - [Google forum](https://groups.google.com/forum/#!forum/d3-js)
 
 <script src="/js/d3.v3.min.js"></script>
