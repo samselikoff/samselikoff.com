@@ -297,7 +297,7 @@ This is where the **data join** comes in. The data join gives us a way to specif
 var nums = [80, 53, 125, 200, 28, 97];
 
 var bars = svg.selectAll('rect')
-  .data(data);   // there it is!
+  .data(nums);   // there it is!
 ```
 
 Now we have a selection, but one that is bound to data. D3 knows _exactly_ what that selection represents: an array of six different `<rect>` elements, and each element maps to the corresponding item in the array (the first `<rect>` corresponds to 80, the second to 53, and so on).
@@ -326,7 +326,7 @@ So how does this look in practice? Recall what we're trying to do: create bars. 
 var nums = [80, 53, 125, 200, 28, 97];
 
 var bars = svg.selectAll('rect')
-  .data(data);
+  .data(nums);
 ```
 
 but the `<rect>` elements don't exist in the DOM. That means there are six rects in our enter subselection. We access them like this:
@@ -348,8 +348,12 @@ If you try this out yourself, the DOM will be what you expect.
   <script>
     var nums = [80, 53, 125, 200, 28, 97];
 
+    var svg = d3.select('body').append('svg')
+      .attr('height', 200)
+      .attr('width', 200)
+
     var bars = svg.selectAll('rect')
-      .data(data);
+      .data(nums);
 
     bars.enter().append('rect');
   </script>
