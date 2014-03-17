@@ -6,7 +6,7 @@ slug: "intro-to-d3-big-data"
 date: February 24, 2014
 ---
 
-[D3.js](http://www.d3js.org) is a JavaScript library used to create interactive visualizations in the browser. This tutorial discusses some motivations for learning D3, presents a brief introduction to the library, and concludes with thoughts on big data.
+[D3.js](http://www.d3js.org) is a JavaScript library used to create interactive visualizations in the browser. This tutorial discusses some motivations for learning D3, presents a brief introduction to the library, and concludes with some thoughts on big data.
 
 1. [Why data vis?](#why-data-vis)
   - [What's D3?](#whats-d3)
@@ -40,6 +40,8 @@ Visualizations also help us explore. Sometimes we don't know anything about our 
 
   ![Calendar chart](/images/posts/2014-03/intro-d3-calendar-chart.png)
 
+<aside>Source: [http://bl.ocks.org/mbostock/4063318](http://bl.ocks.org/mbostock/4063318)</aside>
+
 With this chart, we're able to quickly scan several years of data and see if there's anything interesting; indeed, the end of 2008 seems to merit further exploration.
 
 So data vis is about more than just making pretty charts. By facilitating communication and exploration, visualizations make our data more valuable.
@@ -57,7 +59,7 @@ Over time, JavaScript development on the web has gotten better, and we've learne
 
 But we're here to create data visualizations! And data vis isn't quite the same as GUI programming. It's about mapping data (say, a time series dataset) to elements on the screen (bars, circles, or points).
 
-Building visualizations with tools that are suited for GUI programming is difficult and verbose. For example, if we were to set the heights of some hypothetical bars that exist in an HTML document with vanilla JavaScript, it'd look something like this:
+Building visualizations with tools that are suited for GUI programming is difficult and verbose. For example, if we were to set the heights of some hypothetical bars in an HTML document with vanilla JavaScript, it'd look something like this:
 
 ```js
 var nums = [80, 53, 125, 200, 28, 97];
@@ -417,7 +419,16 @@ Hmm, that doesn't look like six bars. Actually, if you open your inspector, you'
 
 Let's spread them out a bit. `<rect>` elements have `x` and `y` properties that control horizontal and vertical position, respectively. We'll offset the bars horizontally by changing the `x` property. Now, we can't just set them all to something like 10; this will move them all together. We need to move the first one a bit, the second a bit more, and so on.
 
-Sounds like we need another data-driven transformation! This time, we'll use each bar's index:
+Sounds like we need another data-driven transformation! Above, we created bar elements in a data-driven way by calling `append` on a bound selection. Once we're working with a bound selection, we can implement additional data-driven transformations using the following syntax (which you'll recognize from our very first example):
+
+``` js
+selection.attr('attrName', function(d, i) { return [expression using d/i]; });
+selection.style('cssProp', function(d, i) { return [expression using d/i]; });
+```
+
+The second parameter of either an attribute (e.g. `width` on a rectangle) or a css property (e.g. `opacity`) can be a function, instead of just a static value. And that function accepts two parameters corresponding to the current element in the selection: `d` represents the current data point, and `i` the current index.
+
+For this transformation, we'll use each bar's index. 
 
 <div class="row">
   <div class="col-1-2">
