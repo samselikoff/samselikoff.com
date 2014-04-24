@@ -5,6 +5,7 @@ title: Sam Selikoff - Writing
 
 <h2 class="thin subtitle muted">Tutorials</h2>   
 
+ - <h3><a href="/tutorials/d3-backbone-angular-ember/1_original.html">Using D3 with Backbone, Angular and Ember</a></h3>
  - <h3><a href="/tutorials/intro-to-d3-big-data.html">An Introduction to D3, with applications to big data</a></h3>
  - <h3><a href="/tutorials/starting-out-with-d3-chart.html">Starting out with d3.chart</a></h3>
 

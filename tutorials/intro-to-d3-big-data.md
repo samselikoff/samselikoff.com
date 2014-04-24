@@ -346,7 +346,11 @@ bars.enter().append('rect');
 If you try this out yourself, the DOM will be what you expect.
 
 ```html
+<!-- From this...  -->
+<!DOCTYPE html>
+<html>
 <body>
+  <script src='http://d3js.org/d3.v3.min.js'></script>
   <script>
     var nums = [80, 53, 125, 200, 28, 97];
 
@@ -359,16 +363,18 @@ If you try this out yourself, the DOM will be what you expect.
 
     bars.enter().append('rect');
   </script>
-
-  <svg>
-    <rect></rect>
-    <rect></rect>
-    <rect></rect>
-    <rect></rect>
-    <rect></rect>
-    <rect></rect>
-  </svg>
 </body>
+</html>
+
+<!-- You get this! -->
+<svg>
+  <rect></rect>
+  <rect></rect>
+  <rect></rect>
+  <rect></rect>
+  <rect></rect>
+  <rect></rect>
+</svg>
 ```
 
 Congratulations - you've just created your first data-driven document!

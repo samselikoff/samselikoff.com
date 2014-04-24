@@ -1,0 +1,14 @@
+.original {
+  text-align: center;
+}
+.original h1 {
+  color: rgb(189, 49, 49);
+}
+
+.original text {
+  font-size: 12px;
+}
+
+.original circle {
+  fill: rgb(189, 49, 49) !important;
+}
