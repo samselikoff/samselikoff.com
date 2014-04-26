@@ -1643,24 +1643,29 @@ article .byline {
   text-decoration: none;
 }
 /* line 22, ../_sass/modules/_blog.scss */
+#blog article .subtitle {
+  display: block;
+  margin-top: 0.7em;
+}
+/* line 27, ../_sass/modules/_blog.scss */
 #blog article ul {
   list-style-type: disc;
   margin-left: 1em;
   padding-left: 1em;
 }
-/* line 29, ../_sass/modules/_blog.scss */
+/* line 34, ../_sass/modules/_blog.scss */
 #blog .previous {
   float: left;
 }
-/* line 30, ../_sass/modules/_blog.scss */
+/* line 35, ../_sass/modules/_blog.scss */
 #blog .next {
   float: right;
 }
-/* line 32, ../_sass/modules/_blog.scss */
+/* line 37, ../_sass/modules/_blog.scss */
 #blog .pages {
   list-style-type: none;
 }
-/* line 35, ../_sass/modules/_blog.scss */
+/* line 40, ../_sass/modules/_blog.scss */
 #blog .pages li {
   float: left;
   margin-right: 10px;
