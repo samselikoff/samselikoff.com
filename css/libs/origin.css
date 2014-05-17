@@ -1,0 +1,161 @@
+.chart {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+  color: #999999;
+  clear: both; }
+
+  .chart img.loading {
+    display: block;
+    left: 50%;
+    position: relative;
+    top: 50%; }
+
+  .chart path {
+    fill: none; }
+
+  .chart .axis path, .chart .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges; }
+
+  .chart .brush .extent {
+    stroke: #fff;
+    fill-opacity: .125;
+    shape-rendering: crispEdges; }
+
+  .chart .overlay {
+    fill: none;
+    pointer-events: all; }
+
+  .chart .hover-label {
+    position: fixed;
+    display: none;
+    color: #333;
+    z-index: 1010;
+    max-width: 276px;
+    padding: 1px;
+    text-align: left;
+    white-space: normal;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+
+    .chart .hover-label.top {margin-top: -10px; }
+    .chart .hover-label.right {margin-left: 10px; }
+    .chart .hover-label.bottom {margin-top: 10px; }
+    .chart .hover-label.left {margin-left: -10px; }
+    .chart .hover-label:empty {display: none; }
+    
+    .chart .hover-label .arrow, .chart .hover-label .arrow:after {
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid; }
+    
+    .chart .hover-label .arrow {
+      border-width: 11px; }
+    
+    .chart .hover-label .arrow:after {
+      border-width: 10px;
+      content: ""; }
+    
+    .chart .hover-label.top .arrow {
+      left: 50%;
+      margin-left: -11px;
+      border-bottom-width: 0;
+      border-top-color: #999;
+      border-top-color: #999999;
+      bottom: -11px; }
+      
+      .chart .hover-label.top .arrow:after {
+        bottom: 1px;
+        margin-left: -10px;
+        border-bottom-width: 0;
+        border-top-color: white; }
+    
+    .chart .hover-label.right .arrow {
+      top: 50%;
+      left: -11px;
+      margin-top: -11px;
+      border-left-width: 0;
+      border-right-color: #999;
+      border-right-color: #999999; }
+      
+      .chart .hover-label.right .arrow:after {
+        left: 1px;
+        bottom: -10px;
+        border-left-width: 0;
+        border-right-color: white; }
+    
+    .chart .hover-label.bottom .arrow {
+      left: 50%;
+      margin-left: -11px;
+      border-top-width: 0;
+      border-bottom-color: #999;
+      border-bottom-color: #999999;
+      top: -11px; }
+      
+      .chart .hover-label.bottom .arrow:after {
+        top: 1px;
+        margin-left: -10px;
+        border-top-width: 0;
+        border-bottom-color: white; }
+    
+    .chart .hover-label.left .arrow {
+      top: 50%;
+      right: -11px;
+      margin-top: -11px;
+      border-right-width: 0;
+      border-left-color: #999;
+      border-left-color: #999999; }
+      
+      .chart .hover-label.left .arrow:after {
+        right: 1px;
+        border-right-width: 0;
+        border-left-color: white;
+        bottom: -10px; }
+    
+    .chart .hover-label-content {
+      padding: 10px;
+      text-align: center;}
+
+      .chart .hover-label-content h1 {
+        color: #333;
+        font-size: 16px;
+        margin: 0 0 10px; }
+
+      .chart .hover-label-content p {
+        margin: 6px 0; }
+
+.tooltip-line {
+  stroke: #bbb;
+  stroke-dasharray: 5;
+}
+
+.tooltip-label {
+  position: absolute;
+}
+
+.tooltip-label {
+  padding: 1em;
+  margin: 0 1em;
+  font-size: 0.8em;
+  background-color: white; 
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tooltip-label p {
+  margin: 0.2em;
+}

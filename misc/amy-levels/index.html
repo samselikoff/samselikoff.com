@@ -2,24 +2,51 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/libs/origin.css">
   <script src="/js/libs/d3.v3.min.js"></script>
   <script src="/js/libs/d3.chart.0.2.js"></script>
   <script src="/js/libs/origin.0.1.2.js"></script>
   <style>
     body {
-      width: 940px;
+      max-width: 940px;
       margin: 0 auto;
+      font-family: sans-serif;
+    }
+
+    @media screen and (max-width: 520px) {
+      body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
     }
 
     h1, h2 {
       text-align: center;
+      font-family: sans-serif;
     }
 
-    #charts {
-      width: 920px;
+    h2 {
+      font-weight: normal;
+      font-size: 1em;
+    }
+
+    .chart-container {
+      width: 47%;
       border: 1px solid #eee;
-      height: 600px;
-      margin: 50px auto 0;
+      margin: 1%;
+      float: left;
+    }
+
+    @media screen and (max-width: 520px) {
+      .chart-container {
+        width: 95%;
+        margin: 0 6px;
+      }
+    }
+
+    .chart {
+      height: 200px;
     }
 
     .axis path, .axis line {
@@ -29,7 +56,7 @@
     }
 
     .axis text {
-      font-size: 12px;
+      font-size: 10px;
       fill: #999;
     }
 
@@ -38,12 +65,32 @@
       fill: white;
     }
 
+    .line {
+      fill: none;
+    }
+
 
   </style>
 </head>
 <body>
   <h1>Amy's levels</h1>
-  <div id="charts"></div>
+
+  <div class="chart-container">
+    <h2>Platelet Count</h2>
+    <div class="chart"></div>
+  </div>
+  <div class="chart-container">
+    <h2>Neut Abs</h2>
+    <div class="chart"></div>
+  </div>
+  <div class="chart-container">
+    <h2>Creatinine / Plasma</h2>
+    <div class="chart"></div>
+  </div>
+  <div class="chart-container">
+    <h2>Bilirubin</h2>
+    <div class="chart"></div>
+  </div>
   <script src='script.js'></script>
 
 </body>

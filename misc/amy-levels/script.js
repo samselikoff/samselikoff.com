@@ -71,24 +71,24 @@ var allSeries = groupNames.map(function(group) {
     values: data
       .sort(function(a, b) {return a.date > b.date;})
       .map(function(obs) {
-        return {name: obs.date, value: obs[group.key]};
+        return {time: obs.date, value: obs[group.key]};
       })
   };
 });
 
-var svg = d3.select('#charts').append('svg')
-  .attr('width', '920px')
-  .attr('height', '600px');
+// var svg = d3.select('#charts').append('svg')
+//   .attr('width', '920px')
+//   .attr('height', '600px');
 
-var groups = svg.selectAll('.group').data(allSeries),
-    groupsEnter = groups.enter();
+// var groups = svg.selectAll('.group').data(allSeries),
+//     groupsEnter = groups.enter();
 
-groupsEnter.append('g')
-    .attr('class', 'group')
-    .attr('transform', function(d, i) {return 'translate(' + i*235 + ',0)';});
+// groupsEnter.append('g')
+//     .attr('class', 'group')
+//     .attr('transform', function(d, i) {return 'translate(' + i*235 + ',0)';});
 
-groups.append('text').text(function(d) {return d.label;})
-  .attr('transform', 'translate(20, 20)');
+// groups.append('text').text(function(d) {return d.label;})
+//   .attr('transform', 'translate(20, 20)');
 
 // groups.selectAll('rect').data(function(d) {return d.values;}).enter()
 //   .append('rect')
@@ -96,28 +96,40 @@ groups.append('text').text(function(d) {return d.label;})
 //     .attr('width', 10)
 //     .attr('height', function(d, i) {return d.value;});
 
-groups.each(function(d, i) {
-  var colors = ['#FF6138', '#04BFBF', '#00A388', 'rgb(172, 57, 144)'];
+var colors = ['#FF6138', '#04BFBF', 'rgb(172, 57, 144)', '#00A388'];
 
-  var barChart = d3.select(this).chart('bar-chart')
-    .asideWidth(0)
-    .width(100)
-    .height(550)
-    .color(colors[i])
-    .margin({top: 80, right: 10, bottom: 80, left: 15});
+d3.select('body').selectAll('.chart-container').data(allSeries)
+.each(function(d, i) {
 
-  barChart.legend.hidden(true);
+  var chart = d3.select(this).select('.chart')
+    .append('svg')
+      .chart('core-line-chart')
+      .asideWidth(0)
+      .brushHeight(0)
+      .color(colors[i])
+      .parseDate(d3.time.format('%m/%d/%y').parse)
+      // .width(100)
+      // .height(200)
+      ;
 
-  barChart.xAxis
-    .hideTicks(true)
-    .rotation(45);
+  chart.line().interpolate('linear');
+  chart.area().interpolate('linear');
 
-  barChart.labels.position('top');
+  chart.tooltip.template(function(d) {return d.value;});
+
+  chart.unlayer('brush');
+  chart.unlayer('lines-brush');
+  chart.unlayer('areas-brush');
+
+  chart.xAxis.ticks(4).rotation(45);
+
+  chart.xAxisBrush.hide(1);
+
+  chart.legend.hidden(true);
 
   // Add the threshold
-  var scale = barChart.yScale();
-
-  barChart.layer('bars').on('enter:transition', function() {
+  var scale = chart.yScale();
+  chart.layer('lines').on('enter:transition', function() {
     var domain = scale.domain();
 
     if (domain[1] < d.threshold) {
@@ -128,15 +140,16 @@ groups.each(function(d, i) {
       .append('g').style('opacity', 0);
 
     g.append('line')
-      .attr('x1', 5)
+      .attr('x1', 0)
       .attr('y1', scale(d.threshold))
-      .attr('x2', 120)
+      .attr('x2', chart.xScale().range()[1])
       .attr('y2', scale(d.threshold))
       .style('stroke', 'black')
       .style('stroke-dasharray', '9')
-      .style('stroke-width', '2px');
+      // .style('stroke-width', '2px')
+      ;
 
-    var text = (d.sign == '+') ? 'good ('+d.threshold+') -->' : '<-- good('+d.threshold+')';
+    var text = (d.sign == '+') ? 'normal ('+d.threshold+') -->' : '<-- normal ('+d.threshold+')';
     g.append('text')
       .text(text)
       .style('font-size', '10px')
@@ -147,5 +160,54 @@ groups.each(function(d, i) {
   });
 
 
-  barChart.draw(d.values);
+  chart.draw(d.values);
+
+  // var barChart = d3.select(this).chart('bar-chart')
+  //   .asideWidth(0)
+  //   .width(100)
+  //   .height(550)
+  //   .color(colors[i])
+  //   .margin({top: 80, right: 10, bottom: 80, left: 15});
+
+  // barChart.legend.hidden(true);
+
+  // barChart.xAxis
+  //   .hideTicks(true)
+  //   .rotation(45);
+
+  // barChart.labels.position('top');
+
+  // // Add the threshold
+  // var scale = barChart.yScale();
+
+  // barChart.layer('bars').on('enter:transition', function() {
+  //   var domain = scale.domain();
+
+  //   if (domain[1] < d.threshold) {
+  //     scale.domain([domain[0], d.threshold]);
+  //   }
+
+  //   g = this.chart().base.select('g')
+  //     .append('g').style('opacity', 0);
+
+  //   g.append('line')
+  //     .attr('x1', 5)
+  //     .attr('y1', scale(d.threshold))
+  //     .attr('x2', 120)
+  //     .attr('y2', scale(d.threshold))
+  //     .style('stroke', 'black')
+  //     .style('stroke-dasharray', '9')
+  //     .style('stroke-width', '2px');
+
+  //   var text = (d.sign == '+') ? 'good ('+d.threshold+') -->' : '<-- good('+d.threshold+')';
+  //   g.append('text')
+  //     .text(text)
+  //     .style('font-size', '10px')
+  //     .attr('transform', 'translate(-5,' + scale(d.threshold) + ')rotate(-90)')
+  //     .style('text-anchor', d.sign == '-' ? 'end' : '');
+
+  //   g.transition().duration(500).style('opacity', 1);
+  // });
+
+  // barChart.draw(d.values);
 });

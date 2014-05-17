@@ -1,6 +1,6 @@
 /*! origin - v0.1.2
  *  License: MIT Expat
- *  Date: 2014-05-14
+ *  Date: 2014-05-17
  */
 /* 
   Base labels class. This class is not meant to be used alone.
@@ -774,7 +774,8 @@ d3.chart('base-chart', {
 
       this.base.attr('height', this.outerHeight());
 
-      this.trigger('change:height', newHeight, oldHeight);
+      this.trigger('change:innerHeight', newHeight, oldHeight);
+      this.trigger('change:chartHeight', this.chartHeight());
     }
 
     return this;
@@ -991,6 +992,7 @@ d3.chart('standard-base-chart').extend('bar-chart', {
           d3.min(data, function(d) { return d3.min([d.value, 0]); }),
           d3.max(data, function(d) { return d.value; })
         ]);
+        
 
         return this.selectAll('.bar')
           .data(data);
@@ -1124,16 +1126,20 @@ d3.chart('standard-base-chart').extend('core-line-chart', {
       
 
     // Update the y-scale.
-    var all_values = Array();
+    var allValues = Array();
     data.forEach(function(obj) {
       var objmap = d3.map(obj);
       objmap.forEach(function(k, v) {
         if (k != chart._timeKey) {
-          all_values.push(+v);
+          allValues.push(+v);
         }
       });
     });
-    chart._yScale.domain(d3.extent(all_values));
+
+    allValues.push(0);
+
+    chart._yScale.domain(d3.extent(allValues));
+
     chart._yScaleBrush.domain(chart._yScale.domain());
 
     return allSeries;
@@ -1166,7 +1172,8 @@ d3.chart('standard-base-chart').extend('core-line-chart', {
       .interpolate("basis");
     this._keyFunction = function(d) {return d.name;};
 
-    chart._parseDate = d3.time.format("%Y-%m-%d %X").parse;
+    chart._parseDateFormat = "%Y-%m-%d %X";
+    chart._parseDate = d3.time.format(chart._parseDateFormat).parse;
 
     chart.areas = {};
     chart.areas.lines = chart.newContainer('areas');
@@ -1560,6 +1567,15 @@ d3.chart('standard-base-chart').extend('core-line-chart', {
 
     return this;
   },
+
+  parseDateFormat: function(_) {
+    if (arguments.length === 0) {return this._parseDateFormat;}
+  
+    this._parseDateFormat = _;
+  
+    return this;
+  },
+  
 
   line: function(_) {
     if (arguments.length === 0) {return this._line;}
