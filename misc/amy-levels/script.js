@@ -121,7 +121,8 @@ groups.each(function(d, i) {
       scale.domain([domain[0], d.threshold]);
     }
 
-    g = this.chart().base.select('g');
+    g = this.chart().base.select('g')
+      .append('g').style('opacity', 0);
 
     g.append('line')
       .attr('x1', 5)
@@ -138,7 +139,10 @@ groups.each(function(d, i) {
       .style('font-size', '10px')
       .attr('transform', 'translate(-5,' + scale(d.threshold) + ')rotate(-90)')
       .style('text-anchor', d.sign == '-' ? 'end' : '');
+
+    g.transition().duration(500).style('opacity', 1);
   });
+
 
   barChart.draw(d.values);
 });
