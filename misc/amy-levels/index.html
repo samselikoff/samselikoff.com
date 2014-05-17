@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="/js/libs/d3.v3.min.js"></script>
+  <script src="/js/libs/d3.chart.0.2.js"></script>
+  <script src="/js/libs/origin.0.1.2.js"></script>
+  <style>
+    body {
+      width: 940px;
+      margin: 0 auto;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    #charts {
+      width: 920px;
+      border: 1px solid #eee;
+      height: 600px;
+      margin: 50px auto 0;
+    }
+
+    .axis path, .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+
+    .axis text {
+      font-size: 12px;
+      fill: #999;
+    }
+
+    .labels text {
+      font-size: 12px;
+      fill: white;
+    }
+
+
+  </style>
+</head>
+<body>
+  <h1>Amy's levels</h1>
+  <div id="charts"></div>
+  <script src='script.js'></script>
+
+</body>
+</html>
