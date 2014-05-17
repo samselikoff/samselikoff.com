@@ -1,0 +1,43 @@
+{
+  "indicators": [
+    {"key": "plateletCount", "label": "Platelet Count", "threshold": 100, "sign": "+"},
+    {"key": "neutAbs", "label": "Neut Abs", "threshold": 1.5, "sign": "+"},
+    {"key": "creatininePlasma", "label": "Creatinine/Plasma", "threshold": 1.5, "sign": "-"},
+    {"key": "bilirubin", "label": "Bilirubin", "threshold": 1.5, "sign": "-"}
+  ],
+
+  "data": [
+    {
+      "date": "5/8/14",
+      "label": "Before fourth infusion",
+      "plateletCount": 202,
+      "neutAbs": 15.1,
+      "creatininePlasma": 0.69,
+      "bilirubin": 0.1
+    },
+    {
+      "date": "4/24/14",
+      "label": "Before third infusion",
+      "plateletCount": 194,
+      "neutAbs": 8.4,
+      "creatininePlasma": 0.7,
+      "bilirubin": 0.1
+    },
+    {
+      "date": "4/10/14",
+      "label": "Before second infusion",
+      "plateletCount": 170,
+      "neutAbs": 6.2,
+      "creatininePlasma": 0.9,
+      "bilirubin": 0.1
+    },
+    {
+      "date": "3/27/14",
+      "label": "Before first infusion",
+      "plateletCount": 222,
+      "neutAbs": 4.2,
+      "creatininePlasma": 0.8,
+      "bilirubin": 0.3
+    }
+  ]
+}
