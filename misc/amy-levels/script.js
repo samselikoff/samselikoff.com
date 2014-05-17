@@ -76,7 +76,9 @@ var allSeries = groupNames.map(function(group) {
   };
 });
 
-var svg = d3.select('#charts').append('svg');
+var svg = d3.select('#charts').append('svg')
+  .attr('width', '920px')
+  .attr('height', '600px');
 
 var groups = svg.selectAll('.group').data(allSeries),
     groupsEnter = groups.enter();
@@ -100,6 +102,7 @@ groups.each(function(d, i) {
   var barChart = d3.select(this).chart('bar-chart')
     .asideWidth(0)
     .width(100)
+    .height(550)
     .color(colors[i])
     .margin({top: 80, right: 10, bottom: 80, left: 15});
 
