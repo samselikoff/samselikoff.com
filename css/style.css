@@ -1635,37 +1635,41 @@ article .byline {
   clear: both;
 }
 /* line 12, ../_sass/modules/_blog.scss */
+#blog img {
+  max-width: 100%;
+}
+/* line 16, ../_sass/modules/_blog.scss */
 #blog section {
   clear: both;
 }
-/* line 15, ../_sass/modules/_blog.scss */
+/* line 19, ../_sass/modules/_blog.scss */
 #blog section .keep-reading {
   text-decoration: none;
 }
-/* line 22, ../_sass/modules/_blog.scss */
+/* line 26, ../_sass/modules/_blog.scss */
 #blog article .subtitle {
   display: block;
   margin-top: 0.7em;
 }
-/* line 27, ../_sass/modules/_blog.scss */
+/* line 31, ../_sass/modules/_blog.scss */
 #blog article ul {
   list-style-type: disc;
   margin-left: 1em;
   padding-left: 1em;
 }
-/* line 34, ../_sass/modules/_blog.scss */
+/* line 38, ../_sass/modules/_blog.scss */
 #blog .previous {
   float: left;
 }
-/* line 35, ../_sass/modules/_blog.scss */
+/* line 39, ../_sass/modules/_blog.scss */
 #blog .next {
   float: right;
 }
-/* line 37, ../_sass/modules/_blog.scss */
+/* line 41, ../_sass/modules/_blog.scss */
 #blog .pages {
   list-style-type: none;
 }
-/* line 40, ../_sass/modules/_blog.scss */
+/* line 44, ../_sass/modules/_blog.scss */
 #blog .pages li {
   float: left;
   margin-right: 10px;
