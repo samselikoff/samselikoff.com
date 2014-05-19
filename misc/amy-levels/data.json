@@ -1,43 +1,63 @@
 {
   "indicators": [
-    {"key": "plateletCount", "label": "Platelet Count", "threshold": 100, "sign": "+"},
-    {"key": "neutAbs", "label": "Neut Abs", "threshold": 1.5, "sign": "+"},
-    {"key": "creatininePlasma", "label": "Creatinine/Plasma", "threshold": 1.5, "sign": "-"},
-    {"key": "bilirubin", "label": "Bilirubin", "threshold": 1.5, "sign": "-"}
+    {"key": "wbc", "label": "White Blood Cells", "thresholdHigh": 10.5, "thresholdLow": 4.1},
+    {"key": "rbc", "label": "Red Blood Cells", "thresholdHigh": 3.9},
+    {"key": "plateletCount", "label": "Platelet Count", "thresholdHigh": 100},
+    {"key": "neutAbs", "label": "Neut Abs", "thresholdHigh": 1.5},
+    {"key": "creatininePlasma", "label": "Creatinine/Plasma", "thresholdHigh": 1.5},
+    {"key": "potassium", "label": "Potassium", "thresholdLow": 4.5},
+    {"key": "bilirubin", "label": "Bilirubin", "thresholdHigh": 1.5},
+    {"key": "protein", "label": "Protein", "thresholdHigh": 6.6}
   ],
 
   "data": [
     {
       "date": "5/8/14",
       "label": "Before fourth infusion",
+      "wbc": 17.9,
+      "rbc": 3.57,
       "plateletCount": 202,
       "neutAbs": 15.1,
       "creatininePlasma": 0.69,
-      "bilirubin": 0.1
+      "potassium": 4.0,
+      "bilirubin": 0.1,
+      "protein": 6.5
     },
     {
       "date": "4/24/14",
       "label": "Before third infusion",
+      "wbc": 10.5,
+      "rbc": 3.87,
       "plateletCount": 194,
       "neutAbs": 8.4,
       "creatininePlasma": 0.7,
-      "bilirubin": 0.1
+      "potassium": 3.8,
+      "bilirubin": 0.1,
+      "protein": 6.4
     },
     {
       "date": "4/10/14",
       "label": "Before second infusion",
+      "wbc": 8.3,
+      "rbc": 4.23,
       "plateletCount": 170,
       "neutAbs": 6.2,
       "creatininePlasma": 0.9,
-      "bilirubin": 0.1
+      "potassium": 5.1,
+      "bilirubin": 0.1,
+      "protein": 7.1
     },
     {
-      "date": "3/27/14",
+      "date": "3/25/14",
       "label": "Before first infusion",
+      "wbc": 6.3,
+      "rbc": 4.28,
       "plateletCount": 222,
       "neutAbs": 4.2,
       "creatininePlasma": 0.8,
-      "bilirubin": 0.3
+      "potassium": 4.6,
+      "bilirubin": 0.3,
+      "protein": 6.9
     }
   ]
 }

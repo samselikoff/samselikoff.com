@@ -4,9 +4,11 @@
   <meta charset="utf-8">
   <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1'>
   <link rel="stylesheet" href="/css/libs/origin.css">
+  <script src="/js/libs/jquery.1.10.2.js"></script>
   <script src="/js/libs/d3.v3.min.js"></script>
   <script src="/js/libs/d3.chart.0.2.js"></script>
   <script src="/js/libs/origin.0.1.2.js"></script>
+  <script src="/js/libs/moment.2.1.0.js"></script>
   <style>
     body {
       max-width: 940px;
@@ -30,6 +32,7 @@
     h2 {
       font-weight: normal;
       font-size: 1em;
+      color: #333;
     }
 
     .chart-container {
@@ -50,9 +53,9 @@
       height: 200px;
     }
 
-    .axis path, .axis line {
+    .chart .axis path, .chart .axis line {
       fill: none;
-      stroke: #000;
+      stroke: #999;
       shape-rendering: crispEdges;
     }
 
@@ -68,6 +71,29 @@
 
     .line {
       fill: none;
+      stroke-width: 2px;
+    }
+
+    .area {
+      fill: none !important;
+    }
+
+    .threshold {
+      stroke-width: 2px;
+      stroke: black;
+      stroke-dasharray: 2px;
+      fill: #ABABAB;
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    .tooltip-label {
+      line-height: 1.5;
+      text-align: center;
+      padding: 4px 7px;
+    }
+    .tooltip-label strong {
+      color: #666;
     }
 
 
@@ -76,6 +102,7 @@
 <body>
   <h1>Amy's levels</h1>
 
+  <script src='threshold-chart.js'></script>
   <script src='script.js'></script>
 
 </body>

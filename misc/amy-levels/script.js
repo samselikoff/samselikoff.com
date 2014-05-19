@@ -4,7 +4,8 @@ d3.json('data.json', function(response) {
     return {
       key: group.key,
       label: group.label,
-      threshold: group.threshold,
+      thresholdHigh: group.thresholdHigh,
+      thresholdLow: group.thresholdLow,
       sign: group.sign,
       values: response.data
         .sort(function(a, b) {return a.date > b.date;})
@@ -22,21 +23,28 @@ d3.json('data.json', function(response) {
 
   containers.each(function(d, i) {
 
+    d3.select(this).append('h2')
+      .text(d.label);
+
     var chart = d3.select(this).append('div').attr('class', 'chart')
       .append('svg')
-        .chart('core-line-chart')
+        .chart('threshold-chart', {threshold: {high: d.thresholdHigh, low: d.thresholdLow}})
         .asideWidth(0)
         .brushHeight(0)
         .color(colors[i % 4])
         .parseDate(d3.time.format('%m/%d/%y').parse)
+        .margin({top: 10, right: 10, bottom: 10, left: 20})
         // .width(100)
         // .height(200)
         ;
 
+
     chart.line().interpolate('linear');
     chart.area().interpolate('linear');
 
-    chart.tooltip.template(function(d) {return d.value;});
+    chart.tooltip.template(function(d) {
+      return moment(d.time).format("MMM Do") + '<br><strong>' + d.value + '</strong>';
+    });
 
     chart.unlayer('brush');
     chart.unlayer('lines-brush');
@@ -48,40 +56,8 @@ d3.json('data.json', function(response) {
 
     chart.legend.hidden(true);
 
-    // Add the threshold
-    var scale = chart.yScale();
-    chart.layer('lines').on('enter:transition', function() {
-      var domain = scale.domain();
-
-      if (domain[1] < d.threshold) {
-        scale.domain([domain[0], d.threshold]);
-      }
-
-      g = this.chart().base.select('g')
-        .append('g').style('opacity', 0);
-
-      g.append('line')
-        .attr('x1', 0)
-        .attr('y1', scale(d.threshold))
-        .attr('x2', chart.xScale().range()[1])
-        .attr('y2', scale(d.threshold))
-        .style('stroke', 'black')
-        .style('stroke-dasharray', '9')
-        // .style('stroke-width', '2px')
-        ;
-
-      var text = (d.sign == '+') ? 'normal ('+d.threshold+') -->' : '<-- normal ('+d.threshold+')';
-      g.append('text')
-        .text(text)
-        .style('font-size', '10px')
-        .attr('transform', 'translate(-5,' + scale(d.threshold) + ')rotate(-90)')
-        .style('text-anchor', d.sign == '-' ? 'end' : '');
-
-      g.transition().duration(500).style('opacity', 1);
-    });
 
 
     chart.draw(d.values);
-
   });
 });
