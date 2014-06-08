@@ -12,7 +12,7 @@
 
   "data": [
     {
-      "date": "6/5/14",
+      "date": "06/05/14",
       "label": "Before second T infusion",
       "wbc": 4.2,
       "rbc": 3.32,
@@ -24,7 +24,7 @@
       "protein": 6.4
     },
     {
-      "date": "5/29/14",
+      "date": "05/29/14",
       "label": "Before first T infusion",
       "wbc": 4.5,
       "rbc": 3.67,
@@ -36,7 +36,7 @@
       "protein": 6.8
     },
     {
-      "date": "5/8/14",
+      "date": "05/08/14",
       "label": "Before fourth A/C infusion",
       "wbc": 17.9,
       "rbc": 3.57,
@@ -48,7 +48,7 @@
       "protein": 6.5
     },
     {
-      "date": "4/24/14",
+      "date": "04/24/14",
       "label": "Before third A/C infusion",
       "wbc": 10.5,
       "rbc": 3.87,
@@ -60,7 +60,7 @@
       "protein": 6.4
     },
     {
-      "date": "4/10/14",
+      "date": "04/10/14",
       "label": "Before second A/C infusion",
       "wbc": 8.3,
       "rbc": 4.23,
@@ -72,7 +72,7 @@
       "protein": 7.1
     },
     {
-      "date": "3/25/14",
+      "date": "03/25/14",
       "label": "Before first A/C infusion",
       "wbc": 6.3,
       "rbc": 4.28,
