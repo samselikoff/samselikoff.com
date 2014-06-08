@@ -12,8 +12,32 @@
 
   "data": [
     {
+      "date": "6/5/14",
+      "label": "Before second T infusion",
+      "wbc": 4.2,
+      "rbc": 3.32,
+      "plateletCount": 265,
+      "neutAbs": 3.1,
+      "creatininePlasma": 0.84,
+      "potassium": 4.4,
+      "bilirubin": 0.2,
+      "protein": 6.4
+    },
+    {
+      "date": "5/29/14",
+      "label": "Before first T infusion",
+      "wbc": 4.5,
+      "rbc": 3.67,
+      "plateletCount": 209,
+      "neutAbs": 3.3,
+      "creatininePlasma": 0.75,
+      "potassium": 4.6,
+      "bilirubin": 0.2,
+      "protein": 6.8
+    },
+    {
       "date": "5/8/14",
-      "label": "Before fourth infusion",
+      "label": "Before fourth A/C infusion",
       "wbc": 17.9,
       "rbc": 3.57,
       "plateletCount": 202,
@@ -25,7 +49,7 @@
     },
     {
       "date": "4/24/14",
-      "label": "Before third infusion",
+      "label": "Before third A/C infusion",
       "wbc": 10.5,
       "rbc": 3.87,
       "plateletCount": 194,
@@ -37,7 +61,7 @@
     },
     {
       "date": "4/10/14",
-      "label": "Before second infusion",
+      "label": "Before second A/C infusion",
       "wbc": 8.3,
       "rbc": 4.23,
       "plateletCount": 170,
@@ -49,7 +73,7 @@
     },
     {
       "date": "3/25/14",
-      "label": "Before first infusion",
+      "label": "Before first A/C infusion",
       "wbc": 6.3,
       "rbc": 4.28,
       "plateletCount": 222,
