@@ -38,3 +38,4 @@ build/buildinfo.properties
 build/config/buildinfo.properties
 
 sftp-config.json
+.sass-cache
