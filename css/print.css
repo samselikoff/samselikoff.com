@@ -22,7 +22,7 @@
     content: " (" attr(title) ")";
   }
 
-  /* line 28, ../_sass/print.scss */
+  /* line 26, ../_sass/print.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
@@ -52,21 +52,20 @@
 
   @page {
     margin: 0.5cm;
-}
-
+  }
   /* line 53, ../_sass/print.scss */
   p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
 
-  /* line 59, ../_sass/print.scss */
+  /* line 58, ../_sass/print.scss */
   h2,
   h3 {
     page-break-after: avoid;
   }
 
-  /* line 68, ../_sass/print.scss */
+  /* line 64, ../_sass/print.scss */
   .sidebar,
   .page-navigation,
   .wp-prev-next,
