@@ -1,6 +1,9 @@
-@import 'susyone';
-
+// Vendor
 @import 'tools/normalize';
+@import 'compass';
+@import 'susy';
+
+
 @import 'tools/settings';
 @import 'tools/mixins';
 @import 'tools/utility';
@@ -8,16 +11,18 @@
 @import 'base';
 
 // Syntax
-@import 'syntax/default';
+// @import 'syntax/default';
 
-@import 'layouts/header';
-@import 'layouts/content';
-@import 'layouts/footer';
+// @import 'layouts/header';
+// @import 'layouts/content';
+// @import 'layouts/footer';
 
-@import 'modules/article';
-@import 'modules/page-header';
+// @import 'modules/article';
+// @import 'modules/page-header';
 @import 'modules/home';
-@import 'modules/blog';
-@import 'modules/writing';
-@import 'modules/resume';
-@import 'modules/about';
+// @import 'modules/blog';
+// @import 'modules/writing';
+// @import 'modules/resume';
+// @import 'modules/about';
+
+@import 'modules/events';

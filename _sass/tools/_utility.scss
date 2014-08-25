@@ -110,9 +110,9 @@
   margin: 0 auto;
 }
 
-.col-1-2 { @include span-columns(6,12); }
+// .col-1-2 { @include span-columns(6,12); }
 
-.col-1-2.last { @include span-columns(6 omega,12); }
+// .col-1-2.last { @include span-columns(6 omega,12); }
 
 
 // Move these somewhere else

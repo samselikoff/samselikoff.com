@@ -1,29 +1,30 @@
 ---
-layout: default
+layout: base
 title: Sam Selikoff
 ---
 
 <div id="home">
 
-  {% for post in site.posts limit:1 %}
-    <article>
-      <header class="page-header">
-        <p class="thin subtitle">Latest blog post:</p>
-        <h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <!-- <p class="byline">{{ post.date | date: '%B %-d, %Y' }} &#183; {{ post.categories | array_to_sentence_string }}</p> -->
-        <p class="byline">{{ post.date | date: '%B %-d, %Y' }}</p>
-      </header>
-      <section>
-        {{ post.content }}
-      </section>
+  <header>
+    <h1>Sam <span>Selikoff</span></h1>
+  </header>
 
-      <hr>
-
-      <a href="{{ post.url }}/#disqus_thread">Comments</a>
-  </article>
-  {% endfor %}
-
-  <h3 class="text-center"><a href="/blog">See all blog posts »</a></h3>
+  <div class="events">
+    {% for event in site.data.events %}
+      <section class="event">
+        <!-- <div class="label">
+          <p>{{ event.datetime | date: "%B %d, %Y" }}</p>
+        </div> -->
+        <div class="summary">
+          <img class='icon' src="images/icons/microphone.png"></img>
+          <div class='info'>
+            <a href="#" class='title'>{{ event.title }}</a>
+            <p class='location'>{{ event.location }}</p>
+          </div>
+        </div>
+      </section> 
+    {% endfor %}
+  </div>
 
 </div>
 

@@ -4,7 +4,7 @@
 @import url(http://fonts.googleapis.com/css?family=Oleo+Script);
 $sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
-$h1: 'Oleo Script', cursive;
+// $h1: 'Oleo Script', cursive;
 
 /*
   Colors
@@ -30,7 +30,13 @@ $desktop-breakpoint: 1030px;
 /*
   Susy config
 */
-$total-columns  : 12;             // a 12-column grid
-$column-width   : 4em;            // each column is 4em wide
-$gutter-width   : 1em;            // 1em gutters between columns
-$grid-padding   : $gutter-width; 
+// $total-columns  : 12;             // a 12-column grid
+// $column-width   : 4em;            // each column is 4em wide
+// $gutter-width   : 1em;            // 1em gutters between columns
+// $grid-padding   : $gutter-width; 
+
+$susy: (
+  global-box-sizing: border-box,
+  use-custom: (rem: true
+    )
+  );

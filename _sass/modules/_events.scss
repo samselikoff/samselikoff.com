@@ -1,0 +1,96 @@
+// $susy: (
+//   columns: 12,
+//   gutter-position: inside,
+//   math: fluid,
+//   output: float,
+//   flow: rtl,
+// );
+
+$susy: (
+  gutter-position: inside
+);
+
+.events {
+  text-align: center;
+  margin-top: 20px;
+}
+.event {
+  @include container();
+
+  .label {
+    @include span(25%);
+
+    img {
+      max-width: 40px;
+    }
+
+    p {
+      font-size: 11px;
+    }
+  }
+
+  .summary {
+    @include span(100%);
+    // background:
+    //   linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25) ),
+    //   url('/images/talks/intro_to_ember.png') no-repeat center center;
+
+    // White background
+    background: url('/images/talks/intro_to_ember.png') no-repeat 180px 50%;
+    background-size: 70%;
+    color: #3D3D3D;
+    border: 1px solid #DDD;
+    text-align: left;
+    position: relative;
+    border-radius: 2px;
+    padding: 0;
+
+    .icon {
+      height: 25px;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      padding: 4px;
+      opacity: 0.75;
+    }
+
+    .info {
+      @include span(50%);
+      @include clearfix;
+      margin-left: 5.4%;
+
+      padding: 14px;
+      text-align: center;
+
+      .title {
+        display: inline-block;
+
+        margin-top: 0;
+        margin-bottom: 6px;
+        padding-bottom: 2px;
+        border-bottom: 1px solid #999;
+        text-decoration: none;
+
+        color: #3D3D3D;
+        font-weight: 400;
+        font-size: 21px;
+        @include transition(color .2s, border-color .2s);
+
+        &:hover, &:active {
+          text-decoration: none;
+          color: rgb(223, 101, 6);
+          border-color: rgb(223, 101, 6);
+        }
+      }
+
+      .location {
+        margin-top: 4px;
+        font-weight: 100;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 15px;
+      }
+    }
+  }
+
+}

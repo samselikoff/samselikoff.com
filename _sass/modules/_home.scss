@@ -1,8 +1,15 @@
 #home {
 
-  img {
-    display: block;
-    margin: 10px auto;
+  h1 {
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 19px;
+    color: #444;
+
+    span {
+      font-weight: 500;
+    }
   }
 
   // article h3 {
