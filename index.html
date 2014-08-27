@@ -14,7 +14,7 @@ title: Sam Selikoff
       <section class="story">
         <p class='date'>{{ story.date | date: "%b %d, %Y" }}</p>
         <div class="summary">
-          <img class='icon' src="images/icons/microphone.png"></img>
+          <img class='icon' src="images/icons/{{story.type}}.png"></img>
           <div class='info'>
             <a href="{{ story.url }}" class='title'>{{ story.title }}</a>
             <p class='subtitle'>{{ story.subtitle }}</p>
