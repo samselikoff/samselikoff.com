@@ -1,5 +1,6 @@
-- date: 2014-09-11 00:00:00
+- date: 2014-09-11 12:00:00
   type: 'talk'
   title: 'Intro to Ember'
+  stub: 'intro-to-ember'
   subtitle: 'Boston, MA'
   link: ''

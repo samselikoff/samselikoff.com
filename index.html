@@ -10,18 +10,22 @@ title: Sam Selikoff
   </header>
 
   <div class="stories">
-    {% for story in site.data.posts_and_events %}
-      <section class="story">
-        <p class='date'>{{ story.date | date: "%b %d, %Y" }}</p>
-        <div class="summary">
-          <img class='icon' src="images/icons/{{story.type}}.png"></img>
-          <div class='info'>
-            <a href="{{ story.url }}" class='title'>{{ story.title }}</a>
-            <p class='subtitle'>{{ story.subtitle }}</p>
-          </div>
-        </div>
-      </section> 
+
+    {% if site.data.future_stories.size > 0 %}
+
+      <h3>Upcoming</h3>
+
+      {% for story in site.data.future_stories %}
+        {% include future_stories/{{story.type}}.html %}
+      {% endfor %}
+
+      <hr>
+    {% endif %}
+
+    {% for story in site.data.stories %}
+      {% include stories/{{story.type}}.html %}
     {% endfor %}
+
   </div>
 
 </div>

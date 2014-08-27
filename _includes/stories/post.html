@@ -1,0 +1,11 @@
+<section class="story post">
+  <p class='date'>{{ story.date | date: "%b %d, %Y" }}</p>
+
+  <div class="summary">
+    <img class='icon' src="images/icons/{{story.type}}.png"></img>
+    <div class='info'>
+      <a href="{{ story.url }}" class='title'>{{ story.title }}</a>
+      <p>{{story.excerpt}}<a href="{{story.url}}">...keep reading</a></p>
+    </div>
+  </div>
+</section> 

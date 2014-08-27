@@ -14,8 +14,10 @@ $susy: (
   text-align: center;
   margin-top: 20px;
 }
+
 .story {
   @include container();
+  margin-bottom: 1em;
 
   .date {
     margin: 0;
@@ -32,7 +34,8 @@ $susy: (
     //   url('/images/talks/intro_to_ember.png') no-repeat center center;
 
     // White background
-    background: url('/images/talks/intro_to_ember.png') no-repeat 180px 50%;
+    background-repeat: no-repeat;
+    background-position: 180px 50%;
     background-size: 70%;
     color: #3D3D3D;
     border: 1px solid #DDD;
@@ -47,30 +50,31 @@ $susy: (
       top: 3px;
       left: 3px;
       padding: 4px;
-      opacity: 0.75;
+      opacity: 0.6;
     }
 
     .info {
-      @include span(60%);
       @include clearfix;
       margin-left: 8%;
-
-      padding: 14px;
+      padding: 16px 14px;
 
       .title {
         display: inline-block;
 
         margin-top: 0;
         margin-bottom: 3px;
-        padding-bottom: 2px;
-        border-bottom: 1px solid #999;
-        text-decoration: none;
         line-height: 1;
 
         color: #444;
         font-weight: 300;
         font-size: 20px;
         @include transition(color .2s, border-color .2s);
+      }
+      
+      a.title {
+        padding-bottom: 2px;
+        border-bottom: 1px solid #999;
+        text-decoration: none;
 
         &:hover, &:active {
           text-decoration: none;
@@ -89,4 +93,12 @@ $susy: (
     }
   }
 
+}
+
+.story.talk .info {
+  @include span(60%);
+}
+
+.story.post .info {
+  @include span(90%);
 }
