@@ -10,23 +10,19 @@ $susy: (
   gutter-position: inside
 );
 
-.events {
+.stories {
   text-align: center;
   margin-top: 20px;
 }
-.event {
+.story {
   @include container();
 
-  .label {
-    @include span(25%);
-
-    img {
-      max-width: 40px;
-    }
-
-    p {
-      font-size: 11px;
-    }
+  .date {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 200;
+    color: #999;
+    text-align: right;
   }
 
   .summary {
@@ -55,25 +51,25 @@ $susy: (
     }
 
     .info {
-      @include span(50%);
+      @include span(60%);
       @include clearfix;
-      margin-left: 5.4%;
+      margin-left: 8%;
 
       padding: 14px;
-      text-align: center;
 
       .title {
         display: inline-block;
 
         margin-top: 0;
-        margin-bottom: 6px;
+        margin-bottom: 3px;
         padding-bottom: 2px;
         border-bottom: 1px solid #999;
         text-decoration: none;
+        line-height: 1;
 
-        color: #3D3D3D;
-        font-weight: 400;
-        font-size: 21px;
+        color: #444;
+        font-weight: 300;
+        font-size: 20px;
         @include transition(color .2s, border-color .2s);
 
         &:hover, &:active {
@@ -83,12 +79,12 @@ $susy: (
         }
       }
 
-      .location {
+      .subtitle {
         margin-top: 4px;
         font-weight: 100;
         margin-top: 0;
         margin-bottom: 0;
-        font-size: 15px;
+        font-size: 14px;
       }
     }
   }

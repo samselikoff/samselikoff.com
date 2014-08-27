@@ -9,17 +9,15 @@ title: Sam Selikoff
     <h1>Sam <span>Selikoff</span></h1>
   </header>
 
-  <div class="events">
-    {% for event in site.data.events %}
-      <section class="event">
-        <!-- <div class="label">
-          <p>{{ event.datetime | date: "%B %d, %Y" }}</p>
-        </div> -->
+  <div class="stories">
+    {% for story in site.data.posts_and_events %}
+      <section class="story">
+        <p class='date'>{{ story.date | date: "%b %d, %Y" }}</p>
         <div class="summary">
           <img class='icon' src="images/icons/microphone.png"></img>
           <div class='info'>
-            <a href="#" class='title'>{{ event.title }}</a>
-            <p class='location'>{{ event.location }}</p>
+            <a href="{{ story.url }}" class='title'>{{ story.title }}</a>
+            <p class='subtitle'>{{ story.subtitle }}</p>
           </div>
         </div>
       </section> 
