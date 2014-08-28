@@ -1,10 +1,12 @@
 module Stories
   class Generator < Jekyll::Generator
     def generate(site)
-      posts_hashes = site.posts.map(&:to_liquid).each{ |post| post['type'] = 'post'}
-      all_stories = posts_hashes.concat(site.data['events']).sort_by{ |item| item['date'] }.reverse
+      talks = site.collections['talks'].docs.map(&:to_liquid).each{ |item| item['type'] = 'talk'}
+      posts = site.posts.map(&:to_liquid).each{ |item| item['type'] = 'post'}
 
-      stories, future_stories = all_stories.partition{ |story| story['date'] < Time.now }
+      all_stories = posts.concat(talks).sort_by{ |item| item['date'].to_date }.reverse
+
+      stories, future_stories = all_stories.partition{ |story| story['date'].to_date < Date.today }
 
       site.data['stories'] = stories
       site.data['future_stories'] = future_stories
