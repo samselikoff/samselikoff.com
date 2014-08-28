@@ -11,94 +11,123 @@ $susy: (
 );
 
 .stories {
-  text-align: center;
   margin-top: 20px;
+
+  .upcoming {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 2em;
+    padding: 4px 7px;
+
+    .label {
+      text-transform: uppercase;
+      font-size: .6em;
+      line-height: 1.3em;
+      margin-top: 0em;
+      margin-bottom: 1em;
+      color: #777;
+    }
+
+    .story, .info {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .story {
   @include container();
-  margin-bottom: 1em;
+  position: relative;
+  margin-bottom: 2em;
+  overflow: hidden;
 
   .date {
     margin: 0;
-    font-size: 12px;
-    font-weight: 200;
+    font-size: 0.75em;
     color: #999;
     text-align: right;
   }
 
-  .summary {
-    @include span(100%);
-    // background:
-    //   linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25) ),
-    //   url('/images/talks/intro_to_ember.png') no-repeat center center;
 
-    // White background
-    background-repeat: no-repeat;
-    background-position: 180px 50%;
-    background-size: 70%;
-    color: #3D3D3D;
-    border: 1px solid #DDD;
-    text-align: left;
-    position: relative;
-    border-radius: 2px;
-    padding: 0;
+  .title {
+    // display: inline-block;
 
-    .icon {
-      height: 25px;
-      position: absolute;
-      top: 3px;
-      left: 3px;
-      padding: 4px;
-      opacity: 0.6;
-    }
+    margin-top: 0;
+    margin-bottom: 3px;
+    line-height: 1;
 
-    .info {
-      @include clearfix;
-      margin-left: 10%;
-      padding: 16px 14px;
+    color: #444;
+    font-weight: 300;
+    font-size: 20px;
+    @include transition(color .2s, border-color .2s);
+  }
+  
+  a.title {
+    padding-bottom: 2px;
+    border-bottom: 1px solid #999;
+    text-decoration: none;
 
-      .title {
-        display: inline-block;
-
-        margin-top: 0;
-        margin-bottom: 3px;
-        line-height: 1;
-
-        color: #444;
-        font-weight: 300;
-        font-size: 20px;
-        @include transition(color .2s, border-color .2s);
-      }
-      
-      a.title {
-        padding-bottom: 2px;
-        border-bottom: 1px solid #999;
-        text-decoration: none;
-
-        &:hover, &:active {
-          text-decoration: none;
-          color: rgb(223, 101, 6);
-          border-color: rgb(223, 101, 6);
-        }
-      }
-
-      .subtitle {
-        margin-top: 4px;
-        font-weight: 100;
-        margin-top: 0;
-        margin-bottom: 0;
-        font-size: 14px;
-      }
+    &:hover, &:active {
+      text-decoration: none;
+      color: rgb(223, 101, 6);
+      border-color: rgb(223, 101, 6);
     }
   }
 
+  .subtitle {
+    margin-top: 4px;
+    font-weight: 100;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  .icon {
+    height: 20px;
+    opacity: 0.6;
+    background-color: whitesmoke;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.1em;
+  }
+
+  .storyimg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+
+  // .summary {
+  //   @include span(100%);
+  //   // background:
+  //   //   linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25) ),
+  //   //   url('/images/talks/intro_to_ember.png') no-repeat center center;
+
+  //   // White background
+  //   background-repeat: no-repeat;
+  //   background-position: 180px 50%;
+  //   background-size: 70%;
+  //   color: #3D3D3D;
+  //   text-align: left;
+  //   position: relative;
+  //   padding: 0;
+
+
+  //   .info {
+  //     @include clearfix;
+  //     margin-left: 10%;
+  //     padding: 16px 14px;
+
+
+  //   }
+  // }
+
 }
 
-.story.talk .info {
-  @include span(60%);
-}
+// .story.talk .info {
+//   @include span(60%);
+// }
 
-.story.post .info {
-  @include span(90%);
-}
+// .story.post .info {
+//   @include span(90%);
+// }

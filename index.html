@@ -6,24 +6,45 @@ title: Sam Selikoff
 <div id="home">
 
   <header>
-    <h1>Sam <span>Selikoff</span></h1>
+    <h1>Sam<span>Selikoff</span></h1>
   </header>
 
   <div class="stories">
 
     {% if site.data.future_stories.size > 0 %}
 
-      <h3>Upcoming</h3>
+      <div class='upcoming'>
+        <p class='label'>Upcoming</p>
 
       {% for story in site.data.future_stories %}
-        {% include future_stories/{{story.type}}.html %}
+        <section class='story talk'>
+          <h2 class='title'>{{ story.title }}</h2>
+          <h3 class='subtitle'>{{ story.subtitle }}</h3>
+
+          <p class='info'>
+            <img class='icon' src='images/icons/{{story.type}}.png'></img>
+            <span class='date'>{{ story.date | date: '%b %d, %Y' }}</span>
+          </p>
+
+          {% include future_stories/{{story.type}}.html %}
+        </section> 
       {% endfor %}
 
-      <hr>
+      </div>
     {% endif %}
 
     {% for story in site.data.stories %}
-      {% include stories/{{story.type}}.html %}
+      <section class='story talk'>
+        <h2 class='title'>{{ story.title }}</h2>
+        <h3 class='subtitle'>{{ story.subtitle }}</h3>
+
+        <p class='info'>
+          <img class='icon' src='images/icons/{{story.type}}.png'></img>
+          <span class='date'>{{ story.date | date: '%b %d, %Y' }}</span>
+        </p>
+
+        {% include stories/{{story.type}}.html %}
+      </section> 
     {% endfor %}
 
   </div>

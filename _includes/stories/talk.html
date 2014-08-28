@@ -1,11 +1,1 @@
-<section class="story talk">
-  <p class='date'>{{ story.date | date: "%b %d, %Y" }}</p>
-
-  <div class="summary" style="background-image: url('/images/{{story.type}}s/{{story.stub}}.png');">
-    <img class='icon' src="images/icons/{{story.type}}.png"></img>
-    <div class='info'>
-      <a href="{{ story.url }}" class='title'>{{ story.title }}</a>
-      <p class='subtitle'>{{ story.subtitle }}</p>
-    </div>
-  </div>
-</section> 
+<img class='storyimg' src='/images/{{story.type}}s/{{story.stub}}.png'>
