@@ -6,6 +6,8 @@ categories: economics
 
 Some clear, common-sense economics on the Fed’s latest gimmick:
 
+<!-- more -->
+
 <a href="http://mises.org/daily/5691/The-Feds-Long-Shot" target="_blank">http://mises.org/daily/5691/The-Feds-Long-Shot</a>
 
 Here’s my favorite part:

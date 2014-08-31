@@ -1,24 +1,30 @@
 ---
-layout: base
+layout: default
 title: Sam Selikoff
 ---
 
 <div id="home">
 
-  <header>
-    <h1>Sam<span>Selikoff</span></h1>
-  </header>
+  <div class="u-container">
+    <div class="stories">
 
-  <div class="stories">
+      {% if site.data.future_stories.size > 0 %}
 
-    {% if site.data.future_stories.size > 0 %}
+        <div class='upcoming'>
+          <p class='label'>Upcoming</p>
 
-      <div class='upcoming'>
-        <p class='label'>Upcoming</p>
+        {% for story in site.data.future_stories %}
+          <section class='story upcoming-story {{story.type}}'>
+            {% include future_stories/{{story.type}}.html %}
+          </section> 
+        {% endfor %}
 
-      {% for story in site.data.future_stories %}
-        <section class='story talk'>
-          <h2 class='title'>{{ story.title }}</h2>
+        </div>
+      {% endif %}
+
+      {% for story in site.data.stories %}
+        <section class='story {{story.type}}'>
+          <h2 class='title'><a href='{{story.url}}'>{{ story.title }}</a></h2>
           <h3 class='subtitle'>{{ story.subtitle }}</h3>
 
           <p class='info'>
@@ -26,27 +32,11 @@ title: Sam Selikoff
             <span class='date'>{{ story.date | date: '%b %d, %Y' }}</span>
           </p>
 
-          {% include future_stories/{{story.type}}.html %}
+          {% include stories/{{story.type}}.html %}
         </section> 
       {% endfor %}
 
-      </div>
-    {% endif %}
-
-    {% for story in site.data.stories %}
-      <section class='story talk'>
-        <h2 class='title'>{{ story.title }}</h2>
-        <h3 class='subtitle'>{{ story.subtitle }}</h3>
-
-        <p class='info'>
-          <img class='icon' src='images/icons/{{story.type}}.png'></img>
-          <span class='date'>{{ story.date | date: '%b %d, %Y' }}</span>
-        </p>
-
-        {% include stories/{{story.type}}.html %}
-      </section> 
-    {% endfor %}
-
+    </div>
   </div>
 
 </div>

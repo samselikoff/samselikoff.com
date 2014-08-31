@@ -9,6 +9,8 @@ Friends of OpenVis Conf - I did an injustice to you. I presented but a cursory o
 
 Fear not! For I have remedied this with a **52-minute talk** just for you, chock-full of Ember and D3 goodness. (Okay, it's also for any other people out there who may be interested. But it's mainly for you.)
 
+<!-- more -->
+
 Please let me know if you have any questions. It was an absolute pleasure to meet you all, and I hope to see you next year.
 
 Links:

@@ -10,6 +10,8 @@ Here’s another email I wrote in response to concerns about a firm in the free 
 
 There will never be utopia on this side of Eden. The question is, which system minimizes waste, damage, etc. while protecting human rights.
 
+<!-- more -->
+
 In a free market, plots of the ocean could be owned, just as plots of the earth’s surface are. The way somebody comes to own land is to ‘homestead’ it, by ‘mixing their labor’ with it. Since government has made this illegal with respect to certain lakes, oceans, etc. there has been little entrepreneurial creativity in this area (check out www.seasteading.org), and it is hard to know exactly how people would section off parts of the ocean they have homesteaded (buoys?). But let’s just assume they have.
 
 Well, now that people can own parts of the ocean, they have an economic incentive to preserve it, since they can realize future gains from the resource. In econ lingo, this is called ‘maintaining the capital value’ \[of the asset\]. It’s the same thing with you and your house. It’s certainly possible that you could drive your car through your house, destroy the grass and trees, pour oil in the yard and litter the place with plastic, but this would have serious adverse effects on the property value. That is, you face a large opportunity cost (implicit, but nonetheless real) for environmentally destructive behavior. This is a big reason why we (largely) see people behaving in ways that preserve rather than destroy their property. We would expect them to do this; it is in their economic interest.

@@ -1,44 +1,48 @@
-.muted {
+.u-container {
+  @include container(90%);
+}
+
+.u-muted {
   color: #999;
 }
 
-.soft {
+.u-soft {
   color: #666;
 }
 
-.subtle {
+.u-subtle {
   color: #999;
 }
 
-.no-bottom-margin {
+.u-no-bottom-margin {
   margin-bottom: 0;
 }
 
-.no-top-margin {
+.u-no-top-margin {
   margin-top: 0;
 }
 
-.margin-top {
+.u-margin-top {
   margin-top: 10px;
 }
 
-.margin-top-large {
+.u-margin-top-large {
   margin-top: 30px;
 }
 
-.margin-left {
+.u-margin-left {
   margin-left: 10px;
 }
 
-.clear {
+.u-clear {
   clear: both;
 }
 
-.padding {
+.u-padding {
   padding: 1em;
 }
 
-.well {
+.u-well {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 1em;
@@ -46,22 +50,22 @@
   margin: 14px 0;
 }
 
-.clearfix {
+.u-clearfix {
   zoom: 1;
   &:before, &:after { content: ""; display: table; }
   &:after { clear: both; }
 }
 
-.row {
+.u-row {
   display: inline-block;
   width: 100%;
 }
 
-.text-center {text-align: center;}
-.text-right {text-align: right;}
-.text-left {text-align: left;}
+.u-text-center {text-align: center;}
+.u-text-right {text-align: right;}
+.u-text-left {text-align: left;}
 
-.thin {
+.u-thin {
   font-weight: 300;
   font-family: 'Raleway', 'Lato', sans-serif;
   // color: #999;
@@ -69,23 +73,23 @@
   // line-height: 26px;
 }
 
-.invisible {
+.u-invisible {
   visibility: hidden;
 }
 
-.hide {
+.u-hide {
   display: none;
 }
 
-.pull-left {
+.u-pull-left {
   float: left;
 }
 
-.pull-right {
+.u-pull-right {
   float: right;
 }
 
-.visible-tablet {
+.u-visible-tablet {
   display: none !important;
 }
 
@@ -98,17 +102,17 @@
   }
 }
 
-.wrap {
+.u-wrap {
   @include below(tablet) {
     width: 96%;
     margin: 0 auto;
   }
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-}
+// .u-container {
+//   max-width: 960px;
+//   margin: 0 auto;
+// }
 
 // .col-1-2 { @include span-columns(6,12); }
 
@@ -116,7 +120,7 @@
 
 
 // Move these somewhere else
-.subtitle {
+.u-subtitle {
   font-size: 20px;
   line-height: 26px;
 
@@ -125,3 +129,14 @@
   }
 }
 
+.u-subtle-link,
+.u-subtle-link:visited {
+  color: #999;
+}
+
+.u-subtle-link:hover,
+.u-subtle-link:focus,
+.u-subtle-link:visited:hover,
+.u-subtle-link:visited:focus {
+  text-decoration: none;
+}

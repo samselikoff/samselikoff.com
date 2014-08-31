@@ -8,6 +8,7 @@ exclude: ['node_modules', 'gulpfile.js']
 
 # markdown: maruku
 markdown: redcarpet
+excerpt_separator: "<!-- more -->"
 
 gems:
   - 'pry'

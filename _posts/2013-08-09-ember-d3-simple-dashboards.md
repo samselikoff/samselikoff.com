@@ -9,6 +9,8 @@ published: true
 
 Last night I gave a talk at the [Boston Ember.js](http://www.meetup.com/Boston-Ember-js/) meetup group. Here are the materials from my presentation.
 
+<!-- more -->
+
 **Slides:** [http://slid.es/samselikoff/ember-and-d3-aug-2013](http://slid.es/samselikoff/ember-and-d3-aug-2013)
 
 **Video:** [http://www.youtube.com/watch?v=gz7Jy2abm10](http://www.youtube.com/watch?v=gz7Jy2abm10).

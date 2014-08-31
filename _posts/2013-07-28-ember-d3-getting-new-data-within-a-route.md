@@ -6,6 +6,8 @@ categories: Programming Ember D3 Datavis
 
 When doing datavis, you'll often want to display new data without changing the route of your appplication. For example, you may want to supplement a time series chart with a baseline render. These types of UI interactions are not meaningful enough to change the URL[^1], but they still may require an additional call to the server.
 
+<!-- more -->
+
 Ember places a lot of emphasis on routing, so examples of fetching data from the server when switching routes are prevalent. But here, I want to look at fetching data without changing the route. Let's say part of our `IndexRoute` has a datepicker, and each time a user selects a month, we want to add some data to an existing chart. 
 
 The first thing to remember is that in Ember, controllers can be thought of as data containers. Models act as proxies to your actual data on the server, but when it comes to actually displaying and manipulating data in your Ember app, controllers take center stage. So, to get some new data, the first step is to make a new controller. We'll use an `ArrayController` to hold all the months the user has selected:

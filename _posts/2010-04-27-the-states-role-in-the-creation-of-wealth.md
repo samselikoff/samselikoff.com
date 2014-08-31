@@ -10,6 +10,8 @@ Here’s a response I posted to a discussion about the causes of man’s creatio
 
 I think you’re giving the State all the credit for man’s achievements. To be clear, I define the State as an entity which claims sole right to the use of force, and extracts its tax revenues via coercion.
 
+<!-- more -->
+
 It is true that private property enforcement is a precondition for prosperous free markets; however, this enforcement need not be provided by the State. In fact, the State violates private property rights by simply existing, as it is an institution based on coercion. But let’s put that aside for now.
 
 It must be understood that the State is not now or can not ever be responsible for the gains made through the institution of capitalism. By its very nature, it is anti-capitalist, for its method of capital accumulation requires that capital in some form already exist. In other words, since the State finds its lifeblood in stealing, something must already exist for it to steal.

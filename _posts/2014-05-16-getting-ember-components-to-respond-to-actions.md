@@ -9,6 +9,8 @@ I'm building a map application in Ember, and I need one of my components to invo
 
 ![Map](/images/posts/2014-05/map.png)
 
+<!-- more -->
+
 The router looks something like this:
 
 ```js

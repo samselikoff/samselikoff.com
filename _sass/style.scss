@@ -3,10 +3,9 @@
 @import 'compass';
 @import 'susy';
 
-
 @import 'tools/settings';
 @import 'tools/mixins';
-@import 'tools/utility';
+@import 'tools/utilities';
 
 @import 'base';
 
@@ -19,10 +18,13 @@
 
 // @import 'modules/article';
 // @import 'modules/page-header';
-@import 'modules/home';
+
 // @import 'modules/blog';
 // @import 'modules/writing';
 // @import 'modules/resume';
 // @import 'modules/about';
 
+@import 'modules/header';
+@import 'modules/container';
+@import 'modules/article';
 @import 'modules/stories';

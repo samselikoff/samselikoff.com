@@ -6,6 +6,8 @@ categories: economics
 
 Daniel Danta and I submitted this essay to the NR Institute 2010 contest:
 
+<!-- more -->
+
 > Newton’s law of universal gravitation says that the force one object has over another decreases exponentially as their distance increases. Surprisingly, this idea holds true in modern-day politics. Any hope that a resident has of influencing his civic representatives is eroded the day he sends his tax dollars 2,000 miles away. While the thrust of this claim may seem to have its origins in conservatism, we claim that it is in fact axiomatic: there is no reason why liberals and conservatives cannot agree on the virtue of decentralized government power.
 > 
 > Imagine you’re an investor living in San Francisco, California who specializes in residential rental property. Where do you suppose you’d have the most difficulty maintaining the property, collecting rent, and keeping an eye on your manager: San Francisco, Sacramento, or Washington, D.C.? The obvious answer is Washington. It is going to be more difficult to take care of your property because it’s thousands of miles away. Even if you had the time to travel back and forth, your visits wouldn’t be as frequent, and the tenants and managers could get away with things more easily.

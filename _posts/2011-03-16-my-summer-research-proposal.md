@@ -6,6 +6,8 @@ categories: economics
 
 I recently was awarded a summer fellowship to conduct research at the Mises Institute. Here is the proposal that I submitted:
 
+<!-- more -->
+
 --------------
 
 As an amateur Austrian economist, I often find it difficult to clearly and concisely explain differences in first principles to people who have been trained as mainstream economists. Austrian economics notably devotes much more time and energy to elaborating the philosophical fundamentals of economic science than mainstream and neoclassical economics does, and this may partially explain why talking about first principles with a mainstream economist often leads nowhere.

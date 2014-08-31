@@ -9,3 +9,5 @@ categories: economics
 Alcohol prohibition sprouted organized crime in the US. Keeping drugs illegal ensures their price stays high, which in turn attracts teenagers and thugs into a potentially lucrative career path.
 
 Watch Judge Jim Gray systematically demolish all rationale for keeping drugs illegal.
+
+<!-- more -->

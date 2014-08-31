@@ -6,6 +6,8 @@ categories: general
 
 Read Richard Epstein’s view on the [constitutionality of the Reid Bill](http://www.pointoflaw.com/columns/archives/2009/12/impermissible-ratemaking-in-he.php).
 
+<!-- more -->
+
 Basically, the bill creates an insurer exchange on a state-by-state basis, where all participating firms have access to a pool of heavily-subsidized consumers in exchange for complying with numerous burdensome regulations.
 
 The kicker is that if your firm decides it doesn’t want to operate within the exchange, it still doesn’t escape much of the regulation – in particular, if your firm doesn’t meet all of the new regulatory obligations using only 10% or less of the premiums it collects from its customers, the federal government will require the insurer to issue rebates to its consumers.

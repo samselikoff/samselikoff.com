@@ -8,6 +8,8 @@ A response I wrote to concerns about potential problems in an anarchist society:
 
 My version of a libertarian society requires no magic genies or perfectly rational actors for the things I’m saying to apply. It is not a utopian vision of some future world, but rather a set of beliefs that results from clear and precise reflection on social interaction between imperfect human beings. I suffer no illusions about the likelihood of all of us living in a state of heavenly bliss on this planet; in fact, any system which claims to be able to achieve such an ideal is at best confused and at worst a tool for malevolence.
 
+<!-- more -->
+
 Because of this, the only relevant questions we should concern ourselves with are those which aim at reducing injustice, and not expunging it. By this I mean to say that there will always be murder, there will always be rape, and there will always be theft, in any large society. Thus, pointing out a hypothetical example of how someone could possibly murder someone else is not a death knell for any particular system of social arrangement, but rather an unfortunate common characteristic of the world we live in.
 
 Along this same line of thinking, there will always be invasions of property in the area if environmental protection. You’ll notice many times throughout my post that I said it would be possible for a company to dump waste into the ocean. Of course, the important point is that this happens now. The government has an abysmal track record of protecting natural resources. The question is, why?

@@ -8,6 +8,8 @@ published: true
 
 Writing reusable D3 code can be tough. The community shines at providing one-off examples of really cool charts, but it's hard to find a conventional approach to building out a small library of reusable components. [d3.chart](http://misoproject.com/d3-chart/) is a library from Bocoup that aims to simplify the development of reusable D3 charts.
 
+<!-- more -->
+
 If you're not familiar with d3.chart at all, [this walkthrough](https://github.com/misoproject/d3.chart/wiki/quickstart) on Github is a great place to start. You should be able to go through it without too much trouble, but as always, the devil is in the details. In this post I'll walk you through building a slightly more complex chart than what's in the walkthrough. Hopefully it will save you some time as you learn the library.
 
 Now, it wouldn't make much sense to create an isolated chart with d3.chart; after all, the whole point is composability. So let's start out by making a base chart, which we can then extend to make other visualizations.

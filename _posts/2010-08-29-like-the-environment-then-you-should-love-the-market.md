@@ -6,6 +6,8 @@ categories: economics
 
 If the government actually enforced property rights in the area of environmental protection, the monetary costs of energy use would reflect the total opportunity cost of using that energy, environmental impact included. This is one of most beautiful things about market prices – they carry with them information about the entire economy.
 
+<!-- more -->
+
 To see how, consider going shopping at Publix for groceries. At the checkout line, you can either choose paper or plastic. When you unload your groceries at home, you throw away (or recycle) the bags. Since waste management is municipalized, you don’t pay (directly) a price for the garbage man to come pick up the trash. Throwing away a paper bag is monetarily equivalent to throwing away a plastic bag.
 
 Yet everyone knows that plastic leaves a greater environmental footprint than paper. Another way of saying this is that the cost of disposal is higher for plastic than paper. Right now, somebody is paying those costs. But since waste management is owned by the government, those individuals who are choosing plastic rather than paper are externalizing the costs of their decision on to the rest of us.

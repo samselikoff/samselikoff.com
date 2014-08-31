@@ -1,1 +1,9 @@
 <img class='storyimg' src='/images/{{story.type}}s/{{story.stub}}.png'>
+<h2 class='title'>{{ story.title }}</h2>
+<h3 class='subtitle'>{{ story.subtitle }}</h3>
+
+<p class='info'>
+  <img class='icon' src='images/icons/{{story.type}}.png'></img>
+  <span class='date'>{{ story.date | date: '%b %d, %Y' }}</span>
+</p>
+
