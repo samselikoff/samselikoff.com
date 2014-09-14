@@ -11,13 +11,15 @@ $susy: (
 );
 
 .stories {
-  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .stories .upcoming {
   border: 1px solid #ddd;
-  border-radius: 4px;
+  @include border-radius(4px);
   margin-bottom: 2em;
   padding: 4px 7px;
+  background-color: white;
 }
 .stories .label {
   text-transform: uppercase;
@@ -44,8 +46,11 @@ $susy: (
 .story {
   @include container();
   position: relative;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   overflow: hidden;
+  background-color: white;
+  @include border-radius(4px);
+  padding: 14px;
 }
 .story .date {
   margin: 0;
@@ -56,7 +61,7 @@ $susy: (
 .story .title {
   margin-top: 0;
   margin-bottom: 3px;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 20px;
   line-height: 22px;
   color: #444;

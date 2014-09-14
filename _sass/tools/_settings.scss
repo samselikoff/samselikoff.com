@@ -9,17 +9,28 @@ $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
 /*
   Colors
 */
-$main-color: #2185C5;
-$off-white: #fafafa;
+// $main-color: #2185C5;
+// $off-white: #fafafa;
+
+$main-color: #8E2800;
+$secondary-color: #B64926;
+$tertiary-color: #DC3522;
+$subtle-color: #FCFAE1;
+$off-white: #FEFEFE;
+
+$header-background: darken($main-color, 7%);
+$header-text: $off-white;
 
 $background-primary: white;
 $background-alt: $off-white;
 
-$link-color: $main-color;
+$link-color: #DC3522;
 $link-color-alt: #777;
 $link-hover: darken($link-color, 30%);
 $link-hover-alt: darken($link-color-alt, 30%);
 $link-active: $main-color;
+
+$body-text: #333;
 
 /*
   Other variables
