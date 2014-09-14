@@ -9,17 +9,17 @@ $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
 /*
   Colors
 */
-$main-color: #8E2800;
-$secondary-color: #B64926;
-$tertiary-color: #DC3522;
+$main-color: #193441;
+$secondary-color: #3E606F;
+$tertiary-color: #E74C3C;
 $subtle-color: #FCFAE1;
 $off-white: #FEFEFE;
 
-$header-background: darken($main-color, 7%);
+$header-background: darken($secondary-color, 9%);
 $header-text: $off-white;
 
 $background-primary: white;
-$background-alt: $off-white;
+$background-alt: $secondary-color;
 
 $link-color: $tertiary-color;
 $link-color-alt: #777;
