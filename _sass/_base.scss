@@ -57,7 +57,7 @@ p code, ul code {
 }
 
 ul, ol {
-  padding-left: 40px;
+  padding-left: 30px;
   list-style-type: initial;
 }
 
@@ -102,6 +102,7 @@ p {
   margin: 0.5em 0;
   line-height: 1.4;
   color: $body-text;
+  font-size: 0.9em;
 }
 
 /******************************************************************
@@ -158,42 +159,6 @@ h5 {
   letter-spacing: 2px;
 }
 
-/*********************
-NAVIGATION STYLES
-*********************/
-nav {
-
-  ul {
-    clear: both;
-    margin-top: 0;
-    margin-bottom: 10px;
-    // text-align: center;
-
-    li {
-
-      // display: inline;
-      // float: left;
-
-      a {
-        text-decoration: none;
-        padding: 10px;
-        font-size: 1.1em;
-        // color: $link-color-alt;
-
-        /*
-        remember this is for mobile ONLY, so there's no need
-        to even declare hover styles here, you can do it in
-        the style.scss file where it's relevant. We want to
-        keep this file as small as possible!
-        */
-        &:hover, &:focus {
-          text-decoration: underline;
-          // color: $link-hover-alt;
-        }
-      }
-    } /* end .menu li */
-  } /* end .nav */
-}
 
 
 [class^="icon-"], [class*=" icon-"] {
