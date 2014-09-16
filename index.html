@@ -24,8 +24,11 @@ title: Sam Selikoff
 
       {% for story in site.data.stories %}
         <section class='story {{story.type}}'>
+          {% if story.type == 'talk' %}
+            <img class='story-image' src='/images/{{story.type}}s/{{story.stub}}.png'>
+          {% endif %}
           <h2 class='title'><a href='{{story.url}}'>{{ story.title }}</a></h2>
-          <h3 class='subtitle'>{{ story.subtitle }}</h3>
+          <h3 class='story-subtitle'>{{ story.subtitle }}</h3>
 
           <p class='info'>
             <img class='icon' src='images/icons/{{story.type}}.png'></img>
