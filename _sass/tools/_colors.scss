@@ -1,0 +1,21 @@
+$main-color: #193441;
+$off-main-color: rgb(130, 149, 163);
+$secondary-color: #3E606F;
+// $tertiary-color: #E74C3C;
+$tertiary-color: #DB4D3E;
+$subtle-color: #FCFAE1;
+$off-white: #FEFEFE;
+
+$header-background: darken($secondary-color, 9%);
+$header-text: $off-white;
+
+$background-primary: white;
+$background-alt: $secondary-color;
+
+$link-color: $tertiary-color;
+$link-color-alt: #777;
+$link-hover: darken($link-color, 30%);
+$link-hover-alt: darken($link-color-alt, 30%);
+$link-active: $main-color;
+
+$body-text: #333;

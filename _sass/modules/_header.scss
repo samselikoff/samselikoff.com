@@ -9,7 +9,7 @@ header h1 {
   font-weight: 100;
   font-size: 1.6em;
   opacity: 0.9;
-  margin: 0;
+  margin-top: 0;
 }
 header span {
   font-weight: 500;
@@ -26,4 +26,9 @@ header a:visited:focus {
   color: white;
   text-decoration: none;
   border-bottom: 1px solid rgb(200,200,200);
+}
+header p {
+  color: $off-main-color;
+  // font-weight: 200;
+  margin: 0;
 }

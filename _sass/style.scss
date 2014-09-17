@@ -3,6 +3,7 @@
 @import 'compass';
 @import 'susy';
 
+@import 'tools/colors';
 @import 'tools/settings';
 @import 'tools/mixins';
 @import 'tools/utilities';
@@ -28,3 +29,5 @@
 @import 'modules/container';
 @import 'modules/article';
 @import 'modules/stories';
+
+@import 'modules/mainHeader';
