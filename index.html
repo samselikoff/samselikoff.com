@@ -11,7 +11,7 @@ title: Sam Selikoff
       {% if site.data.future_stories.size > 0 %}
 
         <div class='upcoming'>
-          <p class='label'>Upcoming</p>
+          <p class='story-label'>Upcoming</p>
 
         {% for story in site.data.future_stories %}
           <section class='story upcoming-story {{story.type}}'>
@@ -22,7 +22,9 @@ title: Sam Selikoff
         </div>
       {% endif %}
 
-      {% for story in site.data.stories %}
+      <p class='label'>Recent activity</p>
+
+      {% for story in site.data.stories limit:5 %}
         <section class='story {{story.type}}'>
           {% if story.type == 'talk' %}
             <img class='story-image' src='/images/{{story.type}}s/{{story.stub}}.png'>

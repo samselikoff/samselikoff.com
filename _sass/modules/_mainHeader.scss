@@ -1,10 +1,13 @@
 .mainHeader {
-  box-shadow: 0px 1px 5px 2px rgba(0,0,0,0.5);
+  @include box-shadow(0px 1px 5px 2px rgba(0,0,0,0.5));
   position: relative;
-  padding: 4em 0 10em;
+  padding: 6em 0 5em;
+  text-align: center;
 }
 .mainHeader-info h1 {
   font-size: 1.8em;
+  margin-bottom: 0.1em;
+  text-align: center;
 }
 .mainHeader-info p {
   font-size: 0.9em;
@@ -14,10 +17,17 @@
 }
 .mainHeader-menu a,
 .mainHeader-menu a:visited {
-  border: 1px solid white;
-  font-size: 0.9em;
-  padding: 1px 3px;
-  border: 1px solid $off-main-color;
-  color: lighten($off-main-color, 30%);
+  font-size: 0.8em;
+  padding: 3px 6px;
+  border: 1px solid #8295a3;
+  color: #dae0e4;
   text-transform: uppercase;
+}
+.mainHeader-aboutLink {
+  margin-top: 3em;
+}
+.mainHeader-aboutLink a,
+.mainHeader-aboutLink a:visited {
+  font-size: 0.85em;
+  color: lighten($off-main-color, 30%);
 }
