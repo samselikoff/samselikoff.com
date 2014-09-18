@@ -3,17 +3,16 @@ footer {
   background-color: $main-color;
   // text-align: center;
   font-size: 1.1em;
-
   ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
   }
-
   p {
     margin: 0;
   }
-  a, a:visited {
+  .footer-link,
+  .footer-link:visited {
     display: block;
     padding: 15px;
     // border-left: 6px solid #DB4D3E;
@@ -24,8 +23,25 @@ footer {
     color: #2980B9;
     color: white;
   }
-
-  a:hover, a:visited:hover {
+  .footer-link:hover,
+  .footer-link:visited:hover {
     color: darken(#2980B9, 30%);
+  }
+  aside {
+    background-color: #111;
+    padding: 2em 0;
+    font-size: 0.75em;
+  }
+  .aside-text {
+    color: #555;
+  }
+  .aside-info {
+    width: 70%;
+  }
+  .aside-social img {
+    background-color: #bbb;
+    float: right;
+    border: 1px solid #666;
+    height: 35px;
   }
 }
