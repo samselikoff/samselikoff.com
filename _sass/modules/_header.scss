@@ -16,16 +16,15 @@ header span {
   padding-left: 2px;
 }
 header a,
-header a:visited {
-  color: $header-text;
-}
+header a:visited,
 header a:hover,
 header a:focus,
 header a:visited:hover,
 header a:visited:focus {
-  color: white;
+  color: $header-text;
   text-decoration: none;
-  border-bottom: 1px solid rgb(200,200,200);
+  // color: white;
+  // border-bottom: 1px solid rgb(200,200,200);
 }
 header p {
   color: $off-main-color;
