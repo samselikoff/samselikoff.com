@@ -1,8 +1,24 @@
 footer {
   clear: both;
 
-  .copyright {
-    text-align: center;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  a, a:visited {
+    display: block;
+    padding: 10px 15px;
+    border-left: 6px solid #DB4D3E;
+    border-bottom: 3px solid #2e4752;
+    text-transform: uppercase;
+    font-weight: bold;
     font-size: 0.8em;
+    color: #2980B9;
+  }
+
+  a:hover, a:visited:hover {
+    color: darken(#2980B9, 30%);
   }
 }
