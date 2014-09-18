@@ -14,18 +14,17 @@ footer {
   .footer-link,
   .footer-link:visited {
     display: block;
-    padding: 15px;
-    // border-left: 6px solid #DB4D3E;
+    padding: 10px 15px;
+    border-left: 3px solid #DB4D3E;
     border-bottom: 3px solid #2e4752;
-    // text-transform: uppercase;
+    text-transform: uppercase;
     font-weight: bold;
-    font-size: 0.8em;
-    color: #2980B9;
-    color: white;
+    font-size: 0.7em;
+    color: #DDD;
   }
   .footer-link:hover,
   .footer-link:visited:hover {
-    color: darken(#2980B9, 30%);
+    color: darken(#DDD, 30%);
   }
   aside {
     background-color: #111;
