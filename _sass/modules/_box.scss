@@ -1,0 +1,13 @@
+.box {
+  margin-bottom: 1em;
+  background-color: white;
+  border-top: 8px solid $red;
+  padding: 14px;
+}
+.box-small {
+  padding: 0.5em;
+}
+.box-left {
+  border-top: none;
+  border-left: 4px solid #DB4D3E;
+}

@@ -45,12 +45,6 @@ $susy: (
 .story {
   @include container();
   position: relative;
-  margin-bottom: 1em;
-  overflow: hidden;
-  background-color: white;
-  // @include border-radius(4px);
-  border-top: 8px solid $red;
-  padding: 14px;
 }
 .story .date {
   margin: 0;
