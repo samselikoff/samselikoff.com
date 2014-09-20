@@ -11,9 +11,9 @@
 @import 'base';
 
 // Syntax
-// @import 'syntax/default';
+@import 'syntax/default';
 
-// @import 'layouts/header';
+@import 'layouts/header';
 // @import 'layouts/content';
 @import 'layouts/footer';
 
@@ -26,10 +26,11 @@
 // @import 'modules/about';
 
 
-@import 'modules/header';
 @import 'modules/container';
 @import 'modules/article';
 @import 'modules/stories';
 @import 'modules/label';
+@import 'modules/listing';
+@import 'modules/title';
 
 @import 'modules/mainHeader';

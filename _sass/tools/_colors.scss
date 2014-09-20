@@ -1,24 +1,26 @@
-$main-color: #193441;
-$off-main-color: rgb(130, 149, 163);
-$off-main-color-lighter: #CAD1D8;
-$secondary-color: #3E606F;
-// $tertiary-color: #E74C3C;
-$tertiary-color: #DB4D3E;
+$darkBlue: rgb(46, 71, 82);
+$blue: #3E606F;
+$red: #DB4D3E;
+$white: rgb(250,250,250);
+
+$darkBlue-subtle: rgb(94, 112, 125);
+$darkBlue-lighter: #CAD1D8;
+$blue-subtle: #637F8C;
 $subtle-color: #FCFAE1;
 $really-subtle-color: #768B9A;
-$off-white: #FEFEFE;
+$white-subtle: rgba($white, 0.5);
 $light-blue: #2980B9;
 
-$header-background: darken($secondary-color, 9%);
-$header-text: $off-white;
+$header-background: darken($blue, 9%);
+$header-text: $white;
 
 $background-primary: white;
-$background-alt: $secondary-color;
+$background-alt: $blue;
 
-$link-color: $tertiary-color;
+$link-color: $red;
 $link-color-alt: #777;
 $link-hover: darken($link-color, 30%);
 $link-hover-alt: darken($link-color-alt, 30%);
-$link-active: $main-color;
+$link-active: $darkBlue;
 
 $body-text: #333;

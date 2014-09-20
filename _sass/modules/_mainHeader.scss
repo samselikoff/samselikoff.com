@@ -1,20 +1,25 @@
 .mainHeader {
   text-align: center;
 }
-.mainHeader-large {
+.mainHeader_large {
   @extend .mainHeader;
   padding: 6em 0 5em;
 }
-.mainHeader-info h1 {
-  font-size: 1.8em;
+.mainHeader-logo {
+  text-transform: uppercase;
+  font-weight: 100;
+  opacity: 0.9;
+  font-size: 1.4em;
+  line-height: 1.1;
+  margin-top: 0;
   margin-bottom: 0.1em;
   text-align: center;
 }
+.mainHeader_large .mainHeader-logo {
+  font-size: 1.8em;
+}
 .mainHeader-info p {
   font-size: 0.9em;
-}
-.mainHeader-menu {
-  margin-top: 0.1em;
 }
 .mainHeader-menu a,
 .mainHeader-menu a:visited {
@@ -30,5 +35,5 @@
 .mainHeader-aboutLink a,
 .mainHeader-aboutLink a:visited {
   font-size: 0.85em;
-  color: lighten($off-main-color, 30%);
+  color: lighten($darkBlue-subtle, 30%);
 }

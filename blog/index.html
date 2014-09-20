@@ -3,78 +3,21 @@ layout: default
 title: Sam Selikoff - Blog
 ---
 
-<div id="blog" class="reading">
-  <ul>
-    {% for post in site.posts %}
-      <li class="post">
-        <div class="twocol first">
-          <p><small class="thin byline">{{ post.date | date: '%B %-d, %Y' }}</small></p>
-        </div>
-        <div class="tencol last">
-          <h3 class="title">
-            <a  href="{{ post.url }}">{{ post.title }}</a>
-          </h3>
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
-
-  {% comment %}
-  <div id="post-pagination" class="pagination">
-    <div class="onecol">
-      {% if paginator.previous_page %}
-        <p class="previous">
-          {% if paginator.previous_page == 1 %}
-            <a href="/blog">Previous</a>
-          {% else %}
-            <a href="{{ paginator.previous_page_path }}">Previous</a>
-          {% endif %}
-        </p>
-      {% else %}
-        <p class="previous disabled">
-          <span>Previous</span>
-        </p>
-      {% endif %}
+<div id="blog" class="reading u-inverted">
+  <div class="u-container">
+    <div class="title">
+      <h1>Blog</h1>
+      <p>Thoughts on front-end devlopment, data visualization and economics</p>
     </div>
-
-    <div class="ninecol text-center">
-      <ul class="pages">
-        <li class="page">
-          {% if paginator.page == 1 %}
-            <span class="current-page">1</span>
-          {% else %}
-            <a href="/blog">1</a>
-          {% endif %}
+    <ul class='listing'>
+      {% for post in site.posts %}
+        <li>
+          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          <span class='listing-date'>{{ post.date | date: '%B %-d, %Y' }}</span>
         </li>
-      
-        {% for count in (2..paginator.total_pages) %}
-          <li class="page">
-            {% if count == paginator.page %}
-              <span class="current-page">{{ count }}</span>
-            {% else %}
-              <a href="/blog/page{{ count }}">{{ count }}</a>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-
-    <div class="onecol">
-      {% if paginator.next_page %}
-        <p class="next">
-          <a href="{{ paginator.next_page_path }}">Next</a>
-        </p>
-      {% else %}
-        <p class="next disabled">
-          <span>Next</span>
-        </p>
-      {% endif %}
-     </div>
-
-    <div class="clear"></div>
+      {% endfor %}
+    </ul>
   </div>
-  {% endcomment %}
-
 </div>
 
 <script type="text/javascript">

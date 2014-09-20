@@ -1,5 +1,6 @@
 .u-container {
   @include container(90%);
+  @include clearfix;
 }
 .u-muted {
   color: #999;
@@ -11,7 +12,7 @@
   color: #999;
 }
 .u-accent {
-  color: $tertiary-color;
+  color: $red;
 }
 .u-inverted {
   background-color: $background-alt;
@@ -42,7 +43,7 @@
   position: relative;
 }
 .u-subtle-shadow {
-  @include box-shadow(0px 2px 7px 0 rgba(0,0,0,0.35));
+  @include box-shadow(0px 1px 2px 0 rgba(0,0,0,0.35));
 }
 .u-well {
   border: 1px solid #ddd;
