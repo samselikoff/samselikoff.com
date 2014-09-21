@@ -2,17 +2,23 @@
 layout: default
 ---
 
-<div id="{{ page.site-section }}" class="u-container">
+<div id="{{ page.site-section }}">
   <article>
-    <h1>{{ page.title }}
-      <span class="subtitle thin">{{ page.subtitle }}</span>
-    </h1>
-    <p class="attribution" itemscope="" itemtype="http://schema.org/Person">
-      by <a href="/about/" class="u-subtle-link" itemprop="name">Sam Selikoff</a>
-      <span class="u-pull-right">{{ page.date | date: "%B %-d, %Y" }}</span>
-    </p>
+    <div class="article-info">
+      <div class="u-container">
+        <h1>{{ page.title }}
+          <span class="subtitle thin">{{ page.subtitle }}</span>
+        </h1>
+        <p class="attribution">
+          by <a href="/about/">Sam Selikoff</a>
+          <span class="u-pull-right">{{ page.date | date: "%B %-d, %Y" }}</span>
+        </p>
+      </div>
+    </div>
 
-    {{ content }}
+    <div class="article-content u-container">
+      {{ content }}
+    </div>
   </article>
 
   <div class="comments">

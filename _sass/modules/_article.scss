@@ -4,6 +4,12 @@ article {
   margin-right: auto;
   margin-bottom: 50px;
 }
+.article-info {
+  background-color: $blue;
+}
+article h1 {
+  margin-bottom: 0;
+}
 article h2 {
   margin-top: 5px;
   border-top: 1px solid #eee;
@@ -15,8 +21,8 @@ article h3 {
 }
 article .attribution {
   font-size: 0.85em;
-  border-bottom: 1px dashed #999;
-  color: #999;
+  // border-bottom: 1px dashed #999;
+  color: $white-subtle;
   padding-bottom: 0.4em;
 }
 article aside {
