@@ -4,11 +4,8 @@ article {
   margin-right: auto;
   margin-bottom: 50px;
 }
-.article-info {
-  background-color: $blue;
-}
 article h1 {
-  margin-bottom: 0;
+  color: #333;
 }
 article h2 {
   margin-top: 5px;
@@ -21,8 +18,8 @@ article h3 {
 }
 article .attribution {
   font-size: 0.85em;
-  // border-bottom: 1px dashed #999;
-  color: $white-subtle;
+  border-bottom: 1px dashed #999;
+  color: #999;
   padding-bottom: 0.4em;
 }
 article aside {
