@@ -1,6 +1,6 @@
 footer {
   clear: both;
-  background-color: $darkerBlue;
+  background-color: $blue;
   // text-align: center;
   font-size: 1.1em;
   ul {
@@ -12,7 +12,6 @@ footer {
     margin: 0;
   }
   .footer-topNavLink {
-    background-color: #3E606F;
     text-align: right;
     padding-right: 1em;
     padding-bottom: 0.5em;
@@ -26,9 +25,16 @@ footer {
     color: $white-subtle;
     text-decoration: none;
   }
+  &.inverted .footer-topNavLink {
+    background-color: white;
+  }
+  &.inverted .footer-topNavLink a {
+    color: #333;
+  }
   .footer-link,
   .footer-link:visited {
     display: block;
+    background-color: $darkerBlue;
     padding: 10px 15px;
     border-left: 3px solid $red;
     border-bottom: 3px solid $darkBlue;

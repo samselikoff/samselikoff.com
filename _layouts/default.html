@@ -1,17 +1,13 @@
 ---
 layout: base
 ---
-<header class='mainHeader u-subtle-shadow'>
-  <div class="mainHeader-info u-pull-left">
-    <a class='mainHeader-logo' href='/'>Sam<span>Selikoff</span></a>
-  </div>
-  <div class="mainHeader-menu u-pull-right">
-    <a href="#menu">Menu</a>
-  </div>
-</header>
+
+{% include header.html %}
 
 <section class="main">
   {{ content }}
 </section>
 
-{% include footer.html %}
+<footer id="menu">
+  {% include footer.html %}
+</footer>

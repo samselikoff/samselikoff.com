@@ -100,7 +100,6 @@ H1, H2, H3, H4, H5 STYLES
 h1, h2, h3, h4, h5 {
   text-rendering: optimizelegibility;
   font-weight: 500;
-  color: $white;
   /*
   if you're going to use webfonts, be sure to check your weights
   http://css-tricks.com/watch-your-font-weight/
@@ -117,6 +116,7 @@ h1, h2, h3, h4, h5 {
 }
 h2, h3, h4, h5 {
   font-family: $sans-serif;
+  color: #333;
 }
 h1 {
   font-size: 1.8em;
@@ -125,6 +125,7 @@ h1 {
   display: inline-block;
   padding-bottom: 0.1em;
   font-family: $serif;
+  color: $white;
 }
 
 h2 {
