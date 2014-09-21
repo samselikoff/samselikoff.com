@@ -5,7 +5,15 @@ article {
   margin-bottom: 50px;
 }
 article h1 {
-  color: #333;
+  color: $darkBlue;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.article-info {
+  border-bottom: 3px solid $red;
+  // padding-left: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 article h2 {
   margin-top: 5px;
@@ -17,10 +25,10 @@ article h3 {
   padding-top: 1em;
 }
 article .attribution {
-  font-size: 0.85em;
-  border-bottom: 1px dashed #999;
-  color: #999;
-  padding-bottom: 0.4em;
+  font-size: 0.8em;
+  color: $black-subtle;
+  margin-top: 1em;
+  margin-bottom: 0.8em;
 }
 article aside {
   margin-left: 1em;

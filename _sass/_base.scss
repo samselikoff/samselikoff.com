@@ -88,10 +88,9 @@ a, a:visited {
 }
 
 p {
-  margin: 0.5em 0;
+  margin: 0 0 1.1em;
   line-height: 1.4;
   color: $body-text;
-  font-size: 0.9em;
 }
 
 /******************************************************************
@@ -121,7 +120,7 @@ h2, h3, h4, h5 {
 }
 h1 {
   font-size: 1.9em;
-  line-height: 1.1;
+  line-height: 1;
   margin: 0.5em 0;
   display: inline-block;
   padding-bottom: 0.1em;
