@@ -1,17 +1,23 @@
-$darkBlue: rgb(46, 71, 82);
-$blue: #3E606F;
-$red: #DB4D3E;
-$white: rgb(250,250,250);
+$darkerBlue: #193441;
 
+$darkBlue: #2e4752;
 $darkBlue-subtle: rgb(94, 112, 125);
 $darkBlue-lighter: #CAD1D8;
+
+$blue: #3E606F;
 $blue-subtle: #637F8C;
-$subtle-color: #FCFAE1;
-$really-subtle-color: #768B9A;
-$white-subtle: rgba($white, 0.5);
+
 $light-blue: #2980B9;
 
-$header-background: darken($blue, 9%);
+$red: #DB4D3E;
+
+$white: rgb(250,250,250);
+$white-subtle: rgba($white, 0.5);
+
+$subtle-color: #FCFAE1;
+$really-subtle-color: #768B9A;
+
+$header-background: $darkBlue;
 $header-text: $white;
 
 $background-primary: white;
