@@ -7,12 +7,9 @@ article {
 article h1 {
   color: $darkBlue;
   margin-top: 0;
-  margin-bottom: 0;
 }
 .article-info {
   border-bottom: 3px solid $red;
-  // padding-left: 0.5em;
-  margin-top: 1em;
   margin-bottom: 1em;
 }
 article h2 {
@@ -27,7 +24,6 @@ article h3 {
 article .attribution {
   font-size: 0.8em;
   color: $black-subtle;
-  margin-top: 1em;
   margin-bottom: 0.8em;
 }
 article aside {

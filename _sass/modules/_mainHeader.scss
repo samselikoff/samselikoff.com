@@ -1,5 +1,7 @@
 .mainHeader {
   text-align: center;
+  padding: 1em 5%;
+  @include clearfix;
 }
 .mainHeader_large {
   @extend .mainHeader;

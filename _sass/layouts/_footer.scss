@@ -43,8 +43,9 @@ footer {
   }
   aside {
     background-color: #111;
-    padding: 2em 0;
+    padding: 2em 1em;
     font-size: 0.75em;
+    @include clearfix;
   }
   .aside-text {
     color: #555;

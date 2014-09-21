@@ -1,5 +1,6 @@
 .u-container {
-  @include container(90%);
+  @include container(100%);
+  padding: 5% 5% 0 5%;
   @include clearfix;
 }
 .u-muted {
