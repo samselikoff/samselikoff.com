@@ -3,7 +3,7 @@ layout: default
 title: Sam Selikoff - Blog
 ---
 
-<div id="blog" class="reading u-inverted">
+<div id="blog" class="reading inverted">
   <div class="u-container">
     <div class="title">
       <h1>Blog</h1>
@@ -12,8 +12,8 @@ title: Sam Selikoff - Blog
     <ul class='listing'>
       {% for post in site.posts %}
         <li class='box box-small box-left'>
-          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-          <span class='listing-date'>{{ post.date | date: '%B %-d, %Y' }}</span>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <span class='date'>{{ post.date | date: '%B %-d, %Y' }}</span>
         </li>
       {% endfor %}
     </ul>
