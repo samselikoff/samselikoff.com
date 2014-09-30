@@ -4,21 +4,30 @@
   border-top: 8px solid $red;
   padding: 14px;
   color: $black;
+
+  .title {
+    font-weight: 500;
+    // font-size: 1.1em;
+    line-height: 1.1;
+    margin: 0;
+    display: block;
+  }
+  .date {
+    font-size: 0.75em;
+  }
 }
+
 .box-small {
   padding: 0.5em;
+
+  a {
+    font-size: 1.1em;
+  }
+  .date {
+    font-size: 0.8em;
+  }
 }
 .box-left {
   border-top: none;
   border-left: 4px solid #DB4D3E;
-}
-.box a {
-  font-weight: 500;
-  font-size: 1.1em;
-  line-height: 1.1;
-  margin: 0;
-  display: block;
-}
-.box .date {
-  font-size: 0.8em;
 }
