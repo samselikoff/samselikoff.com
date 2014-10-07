@@ -1,3 +1,8 @@
+---
+layout: writing
+published: false
+---
+
 I still consider myself a Javascript neophyte, but at this point I've used all three major frameworks. I don't have a strong personal preference for any particular one; what I look for is which tool is most appropriate for the job at hand.
 
 So, what job are we dealing with? The OP mentioned several things:

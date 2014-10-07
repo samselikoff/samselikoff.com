@@ -20,6 +20,10 @@ gems:
 collections:
   talks:
     output: true
+  writing:
+    output: true
+    permalink: /:collection/:title/
+
 
 # redcarpet:
 #     extensions: [with_toc_data]
