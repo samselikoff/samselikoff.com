@@ -2,6 +2,8 @@
 layout: post
 title:  "Anarchy is not utopia"
 categories: economics
+redirect_from:
+  - /blog/2010/08/31/anarchy-is-not-utopia/
 ---
 
 A response I wrote to concerns about potential problems in an anarchist society:

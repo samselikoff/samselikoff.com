@@ -2,6 +2,8 @@
 layout: post
 title:  "The meaning of apriori"
 categories: economics
+redirect_from:
+  - /blog/2010/09/29/the-meaning-of-apriori/
 ---
 
 My latest response in an ongoing discussion about the Austrian approach to the science of economics:

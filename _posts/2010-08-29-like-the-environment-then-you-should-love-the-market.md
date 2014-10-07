@@ -2,6 +2,8 @@
 layout: post
 title:  "Like the environment? Then you should love the market"
 categories: economics
+redirect_from:
+  - /blog/2010/08/29/like-the-environment-then-you-should-love-the-market/
 ---
 
 If the government actually enforced property rights in the area of environmental protection, the monetary costs of energy use would reflect the total opportunity cost of using that energy, environmental impact included. This is one of most beautiful things about market prices – they carry with them information about the entire economy.

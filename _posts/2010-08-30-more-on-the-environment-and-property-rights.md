@@ -2,6 +2,8 @@
 layout: post
 title:  "More on the environment and property rights"
 categories: economics
+redirect_from:
+  - /blog/2010/08/30/more-on-the-environment-and-property-rights/
 ---
 
 Here’s another email I wrote in response to concerns about a firm in the free market dumping waste:

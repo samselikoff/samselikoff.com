@@ -2,6 +2,8 @@
 layout: post
 title:  "Robert Murphys thoughts on Operation Twist"
 categories: economics
+redirect_from:
+  - /blog/2011/11/29/robert-murphys-thoughts-on-operation-twist/
 ---
 
 Some clear, common-sense economics on the Fed’s latest gimmick:

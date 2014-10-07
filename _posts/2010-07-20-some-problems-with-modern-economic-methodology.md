@@ -2,6 +2,8 @@
 layout: post
 title:  "Some problems with modern economic methodology"
 categories: economics
+redirect_from:
+  - /blog/2010/07/20/some-problems-with-modern-economic-methodology/
 ---
 
 I dissect some of the problems with empiricism in this letter to a professor:

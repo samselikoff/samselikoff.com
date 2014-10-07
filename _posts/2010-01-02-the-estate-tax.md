@@ -2,6 +2,8 @@
 layout: post
 title:  "The estate tax"
 categories: economics
+redirect_from:
+  - /blog/2010/01/02/the-estate-tax/
 ---
 
 As it is now 2010, the Estate Tax, which taxes the largest 2% of all estates in the country, is in abeyance. Unfortunately, the repeal of the Estate Tax will expire in 2011, as will the rest of the Bush tax cuts.

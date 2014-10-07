@@ -2,6 +2,8 @@
 layout: post
 title:  "Ember and D3: Starting out"
 categories: programming ember d3 datavis
+redirect_from:
+  - /blog/2013/07/23/ember-d3-starting-out/
 ---
 
 Over the past few months I've worked on several data reporting projects. For the actual visualizations I've been using [D3.js](http://www.d3js.org), but at the start I was writing the rest of the architecture by hand. It didn't take long for my projects to become unwieldy; adding just a few filters and controls introduced the need to maintain application state, which dramatically increased each project's complexity. Without much experience in Javascript or application design, my apps quickly turned into unmaintainable piles of spaghetti.

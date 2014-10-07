@@ -2,6 +2,8 @@
 layout: post
 title:  "Merry Christmas!"
 categories: general
+redirect_from:
+  - /blog/2009/12/25/merry-christmas/
 ---
 
 Over the past year, I have taken a strong liking to those figures in our world who ardently and intelligently champion freedom; in particular, Milton Friedman, Thomas Sowell, and Friedrich August von Hayek have greatly influenced my way of thinking.

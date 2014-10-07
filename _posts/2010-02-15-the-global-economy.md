@@ -2,6 +2,8 @@
 layout: post
 title:  "The global economy"
 categories: economics
+redirect_from:
+  - /blog/2010/02/15/the-global-economy/
 ---
 
 <aside>I wrote this in response to a statement about American consumers’ detachment from the means of production of the goods they consume.</aside>

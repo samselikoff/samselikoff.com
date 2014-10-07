@@ -2,6 +2,8 @@
 layout: post
 title:  "Mercantilism"
 categories: economics
+redirect_from:
+  - /blog/2010/03/13/mercantilism/
 ---
 
 This protectionist nonsense coming out of Congress is killing me. If China subsidizes sectors of its manufacturing industry, and sells those goods to us at the reduced price, we are better off. That is, so long as we allow US firms using these goods as inputs to purchase them tariff-free from China. This would be undeniably clear if the situation were taken to absudity. If China decided to give us valuable goods in exhange for nothing in return, we should surely be willing to accept this deal. We would be able to produce the same amount of goods and services with fewer resources, which is the definition of an increase in productivity. The US manufacturing workers would have new opportunities for work in the US as a result of the free Chinese inputs.

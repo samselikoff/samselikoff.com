@@ -2,6 +2,8 @@
 layout: post
 title:  "The state's role in the creation of wealth"
 categories: economics
+redirect_from:
+  - /blog/2010/04/27/the-states-role-in-the-creation-of-wealth/
 ---
 
 Here’s a response I posted to a discussion about the causes of man’s creation of wealth.

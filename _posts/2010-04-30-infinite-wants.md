@@ -2,6 +2,8 @@
 layout: post
 title:  "Infinite wants"
 categories: economics
+redirect_from:
+  - /blog/2010/04/30/infinite-wants/
 ---
 
 A common cry today among politicians, professors and even the laity is that of job protection. They say we must increase tariffs to protect American workers; subsidize car companies to protect auto workers; and even ‘tax the rich’ to protect the middle-class workers.

@@ -2,6 +2,8 @@
 layout: post
 title:  "Morality and Legality"
 categories: economics
+redirect_from:
+  - /blog/2010/07/20/morality-and-legality/
 ---
 
 A response to someone about drugs and the relationship between a moral and legal framework:

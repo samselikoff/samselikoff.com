@@ -2,6 +2,8 @@
 layout: post
 title:  "Ember and D3: Getting new data within a route"
 categories: Programming Ember D3 Datavis
+redirect_from:
+  - /blog/2013/07/28/ember-d3-getting-new-data-within-a-route/
 ---
 
 When doing datavis, you'll often want to display new data without changing the route of your appplication. For example, you may want to supplement a time series chart with a baseline render. These types of UI interactions are not meaningful enough to change the URL[^1], but they still may require an additional call to the server.

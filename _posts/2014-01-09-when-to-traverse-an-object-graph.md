@@ -3,6 +3,8 @@ layout: post
 title:  "When to traverse an object graph"
 categories: programming
 published: true
+redirect_from:
+  - /blog/2014/01/09/when-to-traverse-an-object-graph/
 ---
 
 I've been refactoring a .NET app for the past several weeks. It's my first time really digging into a desktop app, and the architectural similarities with Javascript applications are surprising. Each type of app, being long-lived, requires management of a UI that is typically nested, which in turn raises some interesting questions regarding object responsibility.

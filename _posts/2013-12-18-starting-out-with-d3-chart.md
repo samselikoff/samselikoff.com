@@ -4,6 +4,8 @@ title:  "Starting out with d3.chart"
 slug: "starting-out-with-d3-chart"
 categories: programming d3
 published: true
+redirect_from:
+  - /blog/2013/12/18/starting-out-with-d3-chart/
 ---
 
 Writing reusable D3 code can be tough. The community shines at providing one-off examples of really cool charts, but it's hard to find a conventional approach to building out a small library of reusable components. [d3.chart](http://misoproject.com/d3-chart/) is a library from Bocoup that aims to simplify the development of reusable D3 charts.

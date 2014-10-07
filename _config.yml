@@ -1,7 +1,8 @@
 name: Sam Selikoff
 # pygments: true
 highlighter: pygments
-permalink: /blog/:year/:month/:day/:title
+# permalink: /blog/:year/:month/:day/:title
+permalink: /blog/:title
 # paginate: 5
 # paginate_path: "blog/page:num"
 exclude: ['node_modules', 'gulpfile.js']
@@ -14,6 +15,7 @@ gems:
   - 'pry'
   - 'pry-debugger'
   - 'jekyll-compass'
+  - 'jekyll-redirect-from'
 
 collections:
   talks:

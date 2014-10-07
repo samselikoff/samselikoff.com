@@ -2,6 +2,8 @@
 layout: post
 title:  "NR Institute 2010 Contest"
 categories: economics
+redirect_from:
+  - /blog/2010/02/01/nr-institute-2010-contest/
 ---
 
 Daniel Danta and I submitted this essay to the NR Institute 2010 contest:

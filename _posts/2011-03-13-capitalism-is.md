@@ -2,6 +2,8 @@
 layout: post
 title:  "Capitalism is..."
 categories: economics
+redirect_from:
+  - /blog/2011/03/13/capitalism-is/
 ---
 
 **Life enhancing.** During Spring Break this week, I video chatted with my friends and family, received a personalized tour of the Museum of Natural History using the museum’s free app, and catalogued my trip to New York City with photos and videos (automatically tagged with location and people) and shared them with everyone on Dropbox – all on my iPhone. I can’t imagine how I would stay in touch with as many people I do if it weren’t for the amazingly innovate products that capitalists have developed over the past ten years.

@@ -3,6 +3,8 @@ layout: post
 title:  "An Epilogue for Ember"
 subtitle: 'at OpenVis Conf'
 published: true
+redirect_from:
+  - /blog/2014/04/26/epilogue-for-ember-at-openvisconf/
 ---
 
 Friends of OpenVis Conf - I did an injustice to you. I presented but a cursory overview to one of the most complex, exciting and powerful JavaScript frameworks of our time: Ember.js.

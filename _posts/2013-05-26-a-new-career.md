@@ -2,6 +2,8 @@
 layout: post
 title:  "A new career"
 categories: personal
+redirect_from:
+  - /blog/2013/05/26/a-new-career/
 ---
 
 It's been a while since my last blog post - and a lot has happened. I originally started blogging to write about my future career in economics. I became enthralled with the subject towards the end of my undergraduate years, and moved to Boston to start a PhD program. I truly loved economics, and a career as an academic made all the sense in the world. I had experience teaching, and loved it. I read economics literature in my spare time, and went to seminars in the summer to learn more and meet others like myself. Unfortunately, graduate school didn't turn out to be all I had hoped for.

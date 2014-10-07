@@ -2,6 +2,8 @@
 layout: post
 title:  "Prohibition"
 categories: economics
+redirect_from:
+  - /blog/2010/03/14/prohibition/
 ---
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/b6t1EM4Onao" frameborder="0">      </iframe>

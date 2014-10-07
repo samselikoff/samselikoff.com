@@ -3,6 +3,8 @@ layout: post
 title:  "Ember and D3: Building a simple dashboard"
 categories: Programming Ember D3
 published: true
+redirect_from:
+  - /blog/2013/08/09/ember-d3-simple-dashboards/
 ---
 
 <aside><strong>UPDATE 9/26/13:</strong> I gave an updated version of this talk in September. There's no video, but you can find the materials <a href="http://www.samselikoff.com/blog/2013/09/26/updated-ember-d3-talk/">here</a>. The big changes are the upgrade to Ember 1.0, and the use of components over views.</aside>

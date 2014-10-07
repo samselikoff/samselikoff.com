@@ -2,6 +2,8 @@
 layout: post
 title:  "Constitutionality of the Reid Bill"
 categories: general
+redirect_from:
+  - /blog/2009/12/21/constitutionality-of-the-reid-bill/
 ---
 
 Read Richard Epstein’s view on the [constitutionality of the Reid Bill](http://www.pointoflaw.com/columns/archives/2009/12/impermissible-ratemaking-in-he.php).

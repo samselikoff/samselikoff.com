@@ -3,6 +3,8 @@ layout: post
 title:  "Ideas in programming"
 categories: programming
 published: true
+redirect_from:
+  - /blog/2013/08/25/ideas-in-programming/
 ---
 
 I am fond of learning new ideas. It's what drove me to endure hours of prerequisites, tedious standardized tests, and a detestable application process to attend graduate school. Ideas sparked my most meaningful conversations while there; the best ones were like hidden treasures we were all trying to find, but could only catch glimpses of. A good idea is elusive yet discoverable, and this is what draws many to a lifetime of scholarship.

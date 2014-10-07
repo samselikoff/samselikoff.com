@@ -2,6 +2,8 @@
 layout: post
 title:  "Making money, not taking advantage"
 categories: economics
+redirect_from:
+  - /blog/2010/01/22/making-money-not-taking-advantage/
 ---
 
 The latest stroke of brilliance from Mr. Obama: “We know that we need insurance reform, that the health insurance companies are taking advantage of people.”

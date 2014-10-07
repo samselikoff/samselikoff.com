@@ -3,6 +3,8 @@ layout: post
 title:  "Getting Ember components to respond to actions"
 published: true
 categories: ember TIL
+redirect_from:
+  - /blog/2014/05/16/getting-ember-components-to-respond-to-actions/
 ---
 
 I'm building a map application in Ember, and I need one of my components to invoke a method in another component. The UI is similar to Google Maps, with an overlay panel showing details about the selected pin:
