@@ -3,6 +3,7 @@ layout: writing
 title: "'The Problem of Pain,' by C.S. Lewis"
 subtitle: An outline
 date: April 9, 2013
+category: book_review
 ---
 
 - [Chapter 1: Introduction](#intro)

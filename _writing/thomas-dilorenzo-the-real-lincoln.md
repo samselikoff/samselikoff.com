@@ -1,6 +1,7 @@
 ---
 layout: writing  
 title:  "'The Real Lincoln,' by Thomas DiLorenzo"  
+category: book_review
 ---
 
 ## Outline  

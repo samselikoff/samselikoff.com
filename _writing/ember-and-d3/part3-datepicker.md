@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: writing
+title: "part3"
+primary: false
 ---
 
 The datepicker, our first Ember component

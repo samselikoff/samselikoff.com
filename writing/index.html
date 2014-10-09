@@ -10,8 +10,29 @@ title: Sam Selikoff - Writing
       <p>Tutorials and articles on JavaScript, economics and more</p>
     </div>
 
-    <h2>Tutorials</h2>
 
+    <h2>Tutorials</h2>
+    {% for article in site.data.writing.tutorials %}
+      <div class='box box-small box-left'>
+        <a class='title' href="{{article.url}}">{{article.title}}</a>
+      </div>
+    {% endfor %}
+
+    <h2>Book notes</h2>
+    {% for article in site.data.writing.book_reviews %}
+      <div class='box box-small box-left'>
+        <a class='title' href="{{article.url}}">{{article.title}}</a>
+      </div>
+    {% endfor %}
+
+    <h2>Economics</h2>
+    {% for article in site.data.writing.economics %}
+      <div class='box box-small box-left'>
+        <a class='title' href="{{article.url}}">{{article.title}}</a>
+      </div>
+    {% endfor %}
+
+    <!-- <h2>Tutorials</h2>
     <ul class="listing">
       <li class='box box-small box-left'>
         <a class='title' href="/tutorials/d3-backbone-angular-ember/1_original.html">Using D3 with Backbone, Angular and Ember</a>
@@ -25,7 +46,7 @@ title: Sam Selikoff - Writing
         <a class='title' href="/tutorials/starting-out-with-d3-chart.html">Starting out with d3.chart</a>
         <span class='date'>May 4, 2014</span>
       </li>
-    </ul>
+    </ul> -->
     
 
     <!-- <ul class='listing'>

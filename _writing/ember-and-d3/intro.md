@@ -1,3 +1,10 @@
+---
+layout: writing
+title: "Ember and D3"
+category: tutorial
+published: false
+---
+
 Ember and D3: Building a simple dashboard
 =========================================
 

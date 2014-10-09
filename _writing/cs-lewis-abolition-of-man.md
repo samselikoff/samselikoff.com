@@ -4,6 +4,7 @@ title:  "'The Abolition of Man,' by C.S. Lewis"
 subtitle: "A summary"
 toc: ["Chapter 1: Men without chests", "Chapter 2", "Chapter 3"]
 date: March 23, 2012
+category: book_review
 ---
 
 Chapter 1: Men Without Chests

@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: writing
+title: "part2"
+primary: false
 ---
 
 Ember and D3: Building a simple dashboard

@@ -16,13 +16,14 @@ gems:
   - 'pry-debugger'
   - 'jekyll-compass'
   - 'jekyll-redirect-from'
+  - 'active_support'
 
 collections:
   talks:
     output: true
   writing:
     output: true
-    permalink: /:collection/:title/
+    permalink: /:collection/:path/
 
 
 # redcarpet:

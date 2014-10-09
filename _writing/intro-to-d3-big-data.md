@@ -4,6 +4,7 @@ title:  "An Introduction to D3"
 subtitle:  "With applications to big data"
 slug: "intro-to-d3-big-data"
 date: February 24, 2014
+category: tutorial
 ---
 
 [D3.js](http://www.d3js.org) is a JavaScript library used to create interactive visualizations in the browser. This tutorial discusses some motivations for learning D3, presents a brief introduction to the library, and concludes with some thoughts on big data.

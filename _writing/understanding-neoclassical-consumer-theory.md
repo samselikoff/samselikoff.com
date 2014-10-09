@@ -1,6 +1,7 @@
 ---
 layout: writing
 title: Understanding Neoclassical Consumer Theory 
+category: economics
 ---
 
 <a href="understanding-neoclassical.pdf">Download the full article.</a>
