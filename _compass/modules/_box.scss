@@ -8,6 +8,7 @@
   .box-title {
     font-weight: 500;
     // font-size: 1.1em;
+    font-size: 20px;
     line-height: 1.1;
     margin: 0;
     display: block;
@@ -24,8 +25,8 @@
 .box-small {
   padding: 0.5em;
 
-  a {
-    font-size: 1.1em;
+  .box-title {
+    font-size: 17px;
   }
   .box-date {
     font-size: 0.8em;
