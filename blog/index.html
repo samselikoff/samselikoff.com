@@ -12,8 +12,8 @@ title: Sam Selikoff - Blog
     <ul class='listing'>
       {% for post in site.posts %}
         <li class='box box-small box-left'>
-          <a class='title' href="{{ post.url }}">{{ post.title }}</a>
-          <span class='date'>{{ post.date | date: '%B %-d, %Y' }}</span>
+          <a class='box-title' href="{{ post.url }}">{{ post.title }}</a>
+          <span class='box-date'>{{ post.date | date: '%B %-d, %Y' }}</span>
         </li>
       {% endfor %}
     </ul>

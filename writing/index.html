@@ -14,64 +14,23 @@ title: Sam Selikoff - Writing
     <h2>Tutorials</h2>
     {% for article in site.data.writing.tutorials %}
       <div class='box box-small box-left'>
-        <a class='title' href="{{article.url}}">{{article.title}}</a>
+        <a class='box-title' href="{{article.url}}">{{article.title}}</a>
       </div>
     {% endfor %}
 
     <h2>Book notes</h2>
     {% for article in site.data.writing.book_reviews %}
       <div class='box box-small box-left'>
-        <a class='title' href="{{article.url}}">{{article.title}}</a>
+        <a class='box-title' href="{{article.url}}">{{article.title}}</a>
       </div>
     {% endfor %}
 
     <h2>Economics</h2>
     {% for article in site.data.writing.economics %}
       <div class='box box-small box-left'>
-        <a class='title' href="{{article.url}}">{{article.title}}</a>
+        <a class='box-title' href="{{article.url}}">{{article.title}}</a>
       </div>
     {% endfor %}
-
-    <!-- <h2>Tutorials</h2>
-    <ul class="listing">
-      <li class='box box-small box-left'>
-        <a class='title' href="/tutorials/d3-backbone-angular-ember/1_original.html">Using D3 with Backbone, Angular and Ember</a>
-        <span class='date'>May 4, 2014</span>
-      </li>
-      <li class='box box-small box-left'>
-        <a class='title' href="/tutorials/intro-to-d3-big-data.html">An Introduction to D3, with applications to big data</a>
-        <span class='date'>May 4, 2014</span>
-      </li>
-      <li class='box box-small box-left'>
-        <a class='title' href="/tutorials/starting-out-with-d3-chart.html">Starting out with d3.chart</a>
-        <span class='date'>May 4, 2014</span>
-      </li>
-    </ul> -->
     
-
-    <!-- <ul class='listing'>
-      {% for post in site.posts %}
-        <li class='box box-small box-left'>
-          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-          <span class='listing-date'>{{ post.date | date: '%B %-d, %Y' }}</span>
-        </li>
-      {% endfor %}
-    </ul>
   </div>
 </div>
-
-
-<h2 class="thin subtitle muted">Economics</h2>   
-
- - <h3><a href="/writing/economics/understanding-neoclassical-consumer-theory">Understanding Neoclassical Consumer Theory</a></h3>
-
-<h2 class="thin subtitle muted">Book outlines</h2> 
-
- - <h3><a href="/writing/book-outlines/cs-lewis-abolition-of-man.html">"The Abolition of Man," by C.S. Lewis</a></h3>
-
- - <h3><a href="/writing/book-outlines/cs-lewis-problem-of-pain.html">"The Problem of Pain," by C.S. Lewis</a></h3>   
-
- - <h3><a href="/writing/book-outlines/thomas-dilorenzo-the-real-lincoln.html">"The Real Lincoln," by Thomas DiLorenzo</a></h3>   
- 
- - <h3><a href="/writing/book-outlines/ron-paul-case-for-gold.html">"The Case for Gold," by Ron Paul</a></h3>   
- -->

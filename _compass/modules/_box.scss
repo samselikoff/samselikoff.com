@@ -5,7 +5,7 @@
   padding: 14px;
   color: $black;
 
-  .title {
+  .box-title {
     font-weight: 500;
     // font-size: 1.1em;
     line-height: 1.1;
@@ -13,10 +13,10 @@
     display: block;
     text-decoration: none;
   }
-  .title-link {
+  .box-link {
     color: $link-color;
   }
-  .date {
+  .box-date {
     font-size: 0.75em;
   }
 }
@@ -27,10 +27,11 @@
   a {
     font-size: 1.1em;
   }
-  .date {
+  .box-date {
     font-size: 0.8em;
   }
 }
+
 .box-left {
   border-top: none;
   border-left: 4px solid #DB4D3E;

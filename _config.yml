@@ -21,6 +21,7 @@ gems:
 collections:
   talks:
     output: true
+    permalink: /:collection/:path/
   writing:
     output: true
     permalink: /:collection/:path/
@@ -32,6 +33,12 @@ defaults:
       type: 'posts'
     values:
       layout: 'post'
+  -
+    scope:
+      path: 'writing'
+      type: 'writing'
+    values:
+      layout: 'article'
   -
     scope:
       path: 'writing'
