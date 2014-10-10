@@ -19,12 +19,12 @@ gems:
   - active_support
 
 collections:
-  talks:
-    output: true
-    permalink: /:collection/:path/
   writing:
     output: true
     permalink: /:collection/:path/
+  talks:
+    output: true
+    permalink: /speaking/:path/
 
 defaults:
   -
