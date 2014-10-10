@@ -1,5 +1,4 @@
 ---
-layout: writing
 title:  "'The Abolition of Man,' by C.S. Lewis"
 subtitle: "A summary"
 toc: ["Chapter 1: Men without chests", "Chapter 2", "Chapter 3"]

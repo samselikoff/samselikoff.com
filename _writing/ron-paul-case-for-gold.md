@@ -1,5 +1,4 @@
 ---
-layout: writing
 title:  "'The Case for Gold,' by Ron Paul"
 subtitle:  Some notes
 category: book_review

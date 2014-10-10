@@ -1,5 +1,4 @@
 ---
-layout: writing
 published: false
 ---
 

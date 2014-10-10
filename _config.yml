@@ -25,6 +25,20 @@ collections:
     output: true
     permalink: /:collection/:path/
 
+defaults:
+  -
+    scope:
+      path: 'posts' # an empty string here means all files in the project
+      type: 'posts'
+    values:
+      layout: 'post'
+  -
+    scope:
+      path: 'writing'
+      type: 'writing'
+    values:
+      layout: 'article'
+
 
 # redcarpet:
 #     extensions: [with_toc_data]

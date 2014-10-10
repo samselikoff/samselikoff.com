@@ -1,5 +1,4 @@
 ---
-layout: writing
 title:  "Ember Examples"
 categories: ember examples
 published: false

@@ -1,5 +1,4 @@
 ---
-layout: writing
 title: Understanding Neoclassical Consumer Theory 
 category: economics
 ---
