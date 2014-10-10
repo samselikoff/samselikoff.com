@@ -61,17 +61,17 @@ $susy: (
   color: #444;
   @include transition(color .2s, border-color .2s);
 }
-.story a.title {
-  padding-bottom: 2px;
-  border-bottom: 1px solid #999;
-  text-decoration: none;
+// .story a.title {
+//   padding-bottom: 2px;
+//   border-bottom: 1px solid #999;
+//   text-decoration: none;
 
-  &:hover, &:active {
-    text-decoration: none;
-    color: rgb(223, 101, 6);
-    border-color: rgb(223, 101, 6);
-  }
-}
+//   &:hover, &:active {
+//     text-decoration: none;
+//     color: rgb(223, 101, 6);
+//     border-color: rgb(223, 101, 6);
+//   }
+// }
 .story-subtitle {
   margin-top: 5px;
   font-weight: 200;

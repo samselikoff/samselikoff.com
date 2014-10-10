@@ -11,6 +11,11 @@
     line-height: 1.1;
     margin: 0;
     display: block;
+    text-decoration: none;
+    padding-bottom: 2px;
+  }
+  .title-link {
+    color: $link-color;
   }
   .date {
     font-size: 0.75em;
