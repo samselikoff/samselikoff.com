@@ -7,15 +7,19 @@
 
   .box-title {
     font-weight: 500;
-    // font-size: 1.1em;
     font-size: 20px;
     line-height: 1.1;
     margin: 0;
     display: block;
     text-decoration: none;
   }
-  .box-link {
-    color: $link-color;
+  .box-subtitle {
+    margin-top: 7px;
+    font-weight: 200;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 16px;
+    color: #555;
   }
   .box-date {
     font-size: 0.75em;
