@@ -5,6 +5,6 @@ title: 'Ember and D3: Building a simple dashboard'
 location: 'Boston, MA'
 ---
 
-<p class="u-lead">Lorem ipsum Duis incididunt voluptate eiusmod adipisicing sint irure do consequat anim ut.</p>
+<p class='u-lead'>Watch me build a simple interactive dashboard using D3.js for visualizations and Ember.js for architecture.</p>
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eius, nobis beatae perferendis. A, similique expedita molestiae adipisci minus modi. Fugit voluptatem consequatur laborum in expedita vel enim ea iure.
+**Video**
