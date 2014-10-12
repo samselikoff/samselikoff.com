@@ -11,11 +11,11 @@ title: Sam Selikoff - Speaking
 
     {% for talk in site.talks %}
       <div class='box box-small box-left'>
-        <a class='box-title' href="{{talk.url}}">{{talk.title}}</a>
-        <div class='subtitle'>
-          <span class='box-date'>{{ talk.date | date: '%B %-d, %Y' }}</span>
+        <p><a class='box-title' href="{{talk.url}}">{{talk.title}}</a></p>
+        <p class='box-subtitle'>{{talk.subtitle}}</p>
+        <p>{{ talk.date | date: '%B %-d, %Y' }}
           <span class="pull-right">{{talk.location}}</span>
-        </div>
+        </p>
       </div>
     {% endfor %}
 

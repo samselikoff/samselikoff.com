@@ -13,7 +13,7 @@ title: Sam Selikoff - Blog
       {% for post in site.posts %}
         <li class='box box-small box-left'>
           <a class='box-title' href="{{ post.url }}">{{ post.title }}</a>
-          <span class='box-date'>{{ post.date | date: '%B %-d, %Y' }}</span>
+          <p>{{ post.date | date: '%B %-d, %Y' }}</p>
         </li>
       {% endfor %}
     </ul>

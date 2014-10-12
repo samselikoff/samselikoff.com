@@ -14,14 +14,15 @@
     text-decoration: none;
   }
   .box-subtitle {
-    margin-top: 7px;
+    margin: 7px 0;
     font-weight: 200;
-    margin-bottom: 0;
     font-size: 14px;
     line-height: 16px;
     color: #555;
   }
-  .box-date {
+  p {
+    margin-bottom: 0;
+    line-height: 2;
     font-size: 0.75em;
   }
 }
@@ -32,7 +33,10 @@
   .box-title {
     font-size: 17px;
   }
-  .box-date {
+  .box-subtitle {
+    margin: 4px 0 7px;
+  }
+  p {
     font-size: 0.8em;
   }
 }
