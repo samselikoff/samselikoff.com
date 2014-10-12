@@ -1,23 +1,22 @@
 ---
-layout: default
+layout: inverted
 title: Sam Selikoff - Speaking
 ---
 
-<div id="speaking" class="inverted">
-  <div class="u-container">
-    <div class="title">
-      <h1>Speaking</h1>
-    </div>
+<div id="speaking">
 
-    {% for talk in site.talks %}
-      <div class='box box-small box-left'>
-        <p><a class='box-title' href="{{talk.url}}">{{talk.title}}</a></p>
-        <p class='box-subtitle'>{{talk.subtitle}}</p>
-        <p>{{ talk.date | date: '%B %-d, %Y' }}
-          <span class="pull-right">{{talk.location}}</span>
-        </p>
-      </div>
-    {% endfor %}
-
+  <div class="title">
+    <h1>Speaking</h1>
   </div>
+
+  {% for talk in site.talks %}
+    <div class='box box-small box-left'>
+      <p><a class='box-title' href="{{talk.url}}">{{talk.title}}</a></p>
+      <p class='box-subtitle'>{{talk.subtitle}}</p>
+      <p>{{ talk.date | date: '%B %-d, %Y' }}
+        <span class="pull-right">{{talk.location}}</span>
+      </p>
+    </div>
+  {% endfor %}
+
 </div>

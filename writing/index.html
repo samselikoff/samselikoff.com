@@ -1,36 +1,35 @@
 ---
-layout: default
+layout: inverted
 title: Sam Selikoff - Writing
 ---
 
-<div id="writing" class="inverted">
-  <div class="u-container">
-    <div class="title">
-      <h1>Writing</h1>
-      <p>Tutorials and articles on JavaScript, economics and more</p>
-    </div>
+<div id="writing">
 
-
-    <h2>Tutorials</h2>
-    {% for article in site.data.writing.tutorials %}
-      <div class='box box-small box-left'>
-        <a class='box-title' href="{{article.url}}">{{article.title}}</a>
-      </div>
-    {% endfor %}
-
-    <h2>Book notes</h2>
-    {% for article in site.data.writing.book_reviews %}
-      <div class='box box-small box-left'>
-        <a class='box-title' href="{{article.url}}">{{article.title}}</a>
-      </div>
-    {% endfor %}
-
-    <h2>Economics</h2>
-    {% for article in site.data.writing.economics %}
-      <div class='box box-small box-left'>
-        <a class='box-title' href="{{article.url}}">{{article.title}}</a>
-      </div>
-    {% endfor %}
-    
+  <div class="title">
+    <h1>Writing</h1>
+    <p>Tutorials and articles on JavaScript, economics and more</p>
   </div>
+
+
+  <h2>Tutorials</h2>
+  {% for article in site.data.writing.tutorials %}
+    <div class='box box-small box-left'>
+      <a class='box-title' href="{{article.url}}">{{article.title}}</a>
+    </div>
+  {% endfor %}
+
+  <h2>Book notes</h2>
+  {% for article in site.data.writing.book_reviews %}
+    <div class='box box-small box-left'>
+      <a class='box-title' href="{{article.url}}">{{article.title}}</a>
+    </div>
+  {% endfor %}
+
+  <h2>Economics</h2>
+  {% for article in site.data.writing.economics %}
+    <div class='box box-small box-left'>
+      <a class='box-title' href="{{article.url}}">{{article.title}}</a>
+    </div>
+  {% endfor %}
+
 </div>
