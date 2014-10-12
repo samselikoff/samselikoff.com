@@ -8,23 +8,18 @@ article h1 {
   color: $black;
   margin-top: 0;
 }
-.article-info {
-  border-bottom: 1px dotted #999;
-  margin-bottom: 1em;
-}
 article h2 {
   margin-top: 5px;
   border-top: 1px solid #eee;
   padding-top: 1em;
 }
+article .divider-main + h2 {
+  border-top: none;
+  padding-top: 0;
+}
 article h3 {
   border-top: 1px solid #eee;
   padding-top: 1em;
-}
-article .attribution {
-  font-size: 0.8em;
-  color: $black-subtle;
-  margin-bottom: 0.8em;
 }
 article aside {
   margin-left: 1em;

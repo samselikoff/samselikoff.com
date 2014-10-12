@@ -7,15 +7,15 @@ layout: base
 <section class="main">
   <div id="{{ page.site-section }}" class="u-container">
     <article>
-      <div class="article-info">
-        <h1>{{ page.title }}
-          <span class="subtitle thin">{{ page.subtitle }}</span>
-        </h1>
-        <p class="attribution" itemscope="" itemtype="http://schema.org/Person">
-          by <a href="/about/" itemprop="name">Sam Selikoff</a>
-          <span class="u-pull-right">{{ page.date | date: "%B %-d, %Y" }}</span>
-        </p>
-      </div>
+      <h1>{{ page.title }}
+        <span class="subtitle thin">{{ page.subtitle }}</span>
+      </h1>
+      <p class="attribution" itemscope="" itemtype="http://schema.org/Person">
+        by <a href="/about/" itemprop="name">Sam Selikoff</a>
+        <span class="u-pull-right">{{ page.date | date: "%B %-d, %Y" }}</span>
+      </p>
+
+      <hr class="divider-main">
 
       {{ content }}
     </article>

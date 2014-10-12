@@ -4,11 +4,12 @@ layout: default
 
 <div id="{{ page.site-section }}">
   <h1>{{ page.title }}</h1>
-  <h2>{{ page.subtitle }}</h2>
+  {% if page.subtitle %}<h2>{{ page.subtitle }}</h2>{% endif %}
   <p class="attribution" itemscope="" itemtype="http://schema.org/Person">
-    by <a href="/about/" class="u-subtle-link" itemprop="name">Sam Selikoff</a>
-    <span class="u-pull-right">{{ page.date | date: "%B %-d, %Y" }}</span>
+    <a href="/about/" class="u-subtle-link" itemprop="name">Sam Selikoff</a>
   </p>
+
+  <hr class="divider-main">
 
   {{ content }}
 
