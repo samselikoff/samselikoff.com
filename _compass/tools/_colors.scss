@@ -32,5 +32,7 @@ $link-color-alt: #777;
 $link-hover: darken($link-color, 30%);
 $link-hover-alt: darken($link-color-alt, 30%);
 $link-active: $darkBlue;
+$link-color-inverted: rgb(224, 224, 224);
+$link-color-inverted-hover: darken($link-color-inverted, 15%);
 
 $body-text: #333;

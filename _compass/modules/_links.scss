@@ -1,0 +1,11 @@
+.link-inverted,
+.link-inverted:visited {
+  color: $link-color-inverted;
+  text-decoration: underline;
+
+  &:focus,
+  &:hover:focus,
+  &:hover {
+    color: $link-color-inverted-hover;
+  }
+}

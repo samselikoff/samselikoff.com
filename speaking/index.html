@@ -7,13 +7,20 @@ title: Sam Selikoff - Speaking
 
   <div class="title">
     <h1>Speaking</h1>
+    <p>I love speaking and teaching (for free) on all things front-end web development.</p>
+    <p><a class='link-inverted' href="mailto:sam.selikoff@gmail.com">Reach out to me</a> if you'd like me to speak at your event.</p>
   </div>
 
-  {% for talk in site.talks %}
+  {% assign sorted_talks = (site.talks | sort: 'date') %}
+  {% for talk in sorted_talks reversed %}
     <div class='box box-small box-left'>
-      <p><a class='box-title' href="{{talk.url}}">{{talk.title}}</a></p>
-      <p class='box-subtitle'>{{talk.subtitle}}</p>
-      <p>{{ talk.date | date: '%B %-d, %Y' }}
+      <p class='box-title'><a href="{{talk.url}}">
+        {{talk.title}}
+        {% if talk.subtitle %}
+          {{talk.subtitle}}
+        {% endif %}
+      </a></p>
+      <p class='box-byline'>{{ talk.date | date: '%B %-d, %Y' }}
         <span class="pull-right">{{talk.location}}</span>
       </p>
     </div>
