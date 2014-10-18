@@ -14,15 +14,17 @@ title: Sam Selikoff - Speaking
   {% assign sorted_talks = (site.talks | sort: 'date') %}
   {% for talk in sorted_talks reversed %}
     <div class='box box-small box-left'>
-      <p class='box-title'><a href="{{talk.url}}">
-        {{talk.title}}
-        {% if talk.subtitle %}
-          {{talk.subtitle}}
-        {% endif %}
-      </a></p>
-      <p class='box-byline'>{{ talk.date | date: '%B %-d, %Y' }}
-        <span class="pull-right">{{talk.location}}</span>
-      </p>
+      <div class="box-body">
+        <p class='box-title'><a href="{{talk.url}}">
+          {{talk.title}}
+          {% if talk.subtitle %}
+            {{talk.subtitle}}
+          {% endif %}
+        </a></p>
+        <p class='box-byline'>{{ talk.date | date: '%B %-d, %Y' }}
+          <span class="pull-right">{{talk.location}}</span>
+        </p>
+      </div>
     </div>
   {% endfor %}
 
