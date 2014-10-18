@@ -1,8 +1,13 @@
 .title {
   margin-bottom: 1.5em;
-}
-.title p {
-  font-size: 0.8em;
-  color: $white-subtle;
-  line-height: 1.2;
+
+  .title-label,
+  p {
+    font-size: 0.8em;
+    color: $white-subtle;
+    line-height: 1.2;
+  }
+  .title-label-strong {
+    color: $white;
+  }
 }

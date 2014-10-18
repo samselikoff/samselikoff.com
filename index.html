@@ -8,7 +8,48 @@ title: Sam Selikoff
   <div class="u-container">
     <div class="stories">
 
-      {% if site.data.future_stories.size > 0 %}
+      <!-- <section class='box story {{story.type}}'>
+        <a class='box-title' href='/blog'>Blog</a>
+        <h3 class='box-subtitle'>blah</h3>
+
+        <p class='info'>
+          <span class='box-date'>yada</span>
+        </p>
+
+      </section>  -->
+      <div class="title title-inverted">
+        <h1><a class='link-inverted' href="/blog">Blog</a></h1>
+        <p class='title-label'>Thoughts on front-end devlopment, data visualization and economics</p>
+      </div>
+      <div class='box box-small'>
+        <div class='box-header'>
+          <p class='box-header-title'><span class="u-subtle-on-red">Recent posts</span></p>
+        </div>
+        <div class='box-body'>
+          <ul class='box-listing'>
+            {% for post in site.posts limit:3 %}
+              <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                <small class='u-subtle'>—{{ post.date | date: '%B %-d, %Y' }}</small>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div> 
+      <!-- {% for post in site.posts limit:5 %}
+        <section class='box story'>
+          <a class='box-title' href='{{post.url}}'>{{ post.title }}</a>
+          <h3 class='box-subtitle'>{{ post.subtitle }}</h3>
+
+          <p class='info'>
+            <img class='icon' src='images/icons/post.png'></img>
+            <span class='box-date'>{{ post.date | date: '%b %d, %Y' }}</span>
+          </p>
+
+          {{ post.excerpt | markdownify }}
+        </section> 
+      {% endfor %}
+      <!-- {% if site.data.future_stories.size > 0 %}
 
         <div class='upcoming'>
           <p class='story-label'>Upcoming</p>
@@ -39,7 +80,7 @@ title: Sam Selikoff
 
           {% include stories/{{story.type}}.html %}
         </section> 
-      {% endfor %}
+      {% endfor %} -->
 
     </div>
   </div>
