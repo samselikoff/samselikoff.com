@@ -8,20 +8,11 @@ title: Sam Selikoff
   <div class="u-container">
     <div class="stories">
 
-      <!-- <section class='box story {{story.type}}'>
-        <a class='box-title' href='/blog'>Blog</a>
-        <h3 class='box-subtitle'>blah</h3>
-
-        <p class='info'>
-          <span class='box-date'>yada</span>
-        </p>
-
-      </section>  -->
       <div class="title title-inverted">
         <h1><a class='link-inverted' href="/blog">Blog</a></h1>
-        <p class='title-label'>Thoughts on front-end devlopment, data visualization and economics</p>
+        <p class='title-label'>Thoughts on front-end web devlopment, data visualization and economics</p>
       </div>
-      <div class='box box-small'>
+      <div class='box box-small u-margin-bottom'>
         <div class='box-header'>
           <p class='box-header-title'><span class="u-subtle-on-red">Recent posts</span></p>
         </div>
@@ -39,6 +30,31 @@ title: Sam Selikoff
           </ul>
         </div>
       </div> 
+
+      <div class="title title-inverted">
+        <h1><a class='link-inverted' href="/speaking">Speaking</a></h1>
+        <p class='title-label'>Talks about web development</p>
+      </div>
+      <div class='box box-small u-margin-bottom'>
+        <div class='box-header'>
+          <p class='box-header-title'><span class="u-subtle-on-red">Latest talks</span></p>
+        </div>
+        <div class='box-body'>
+          <ul class='box-listing'>
+            {% assign sorted_talks = (site.talks | sort: 'date' | reverse) %}
+            {% for talk in sorted_talks limit:3 %}
+              <li>
+                <a href="{{ talk.url }}">{{ talk.title }}</a>
+                <small class='u-subtle'>—{{ talk.date | date: '%B %-d, %Y' }}</small>
+              </li>
+            {% endfor %}
+              <li>
+                <a href="/speaking"><small>See all...</small></a>
+              </li>
+          </ul>
+        </div>
+      </div> 
+
       <!-- {% for post in site.posts limit:5 %}
         <section class='box story'>
           <a class='box-title' href='{{post.url}}'>{{ post.title }}</a>
