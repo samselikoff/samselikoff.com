@@ -2,7 +2,7 @@
 title:  "An Introduction to D3"
 subtitle:  "With applications to big data"
 slug: "intro-to-d3-big-data"
-date: February 24, 2014
+date: 2014-02-24
 category: tutorial
 ---
 

@@ -1,7 +1,7 @@
 ---
 title:  "Starting out with d3.chart"
 slug: "starting-out-with-d3-chart"
-date: February 24, 2014
+date: 2013-12-18
 category: tutorial
 ---
 

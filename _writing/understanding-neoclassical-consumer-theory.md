@@ -1,6 +1,7 @@
 ---
 title: Understanding Neoclassical Consumer Theory 
 category: economics
+date: 2011-08-15
 ---
 
 <a href="understanding-neoclassical.pdf">Download the full article.</a>

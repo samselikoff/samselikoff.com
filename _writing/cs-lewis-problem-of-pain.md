@@ -1,7 +1,7 @@
 ---
 title: "'The Problem of Pain,' by C.S. Lewis"
 subtitle: An outline
-date: April 9, 2013
+date: 2013-04-09
 category: book_review
 ---
 

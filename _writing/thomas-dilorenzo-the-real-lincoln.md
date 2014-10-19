@@ -1,6 +1,7 @@
 ---
 title:  "'The Real Lincoln,' by Thomas DiLorenzo"  
 category: book_review
+date: 2012-11-28
 ---
 
 ## Outline  
