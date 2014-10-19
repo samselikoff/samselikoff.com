@@ -1,0 +1,24 @@
+---
+layout: inverted
+title: Sam Selikoff - Work
+---
+
+<div id="work">
+
+  <div class="title">
+    <h1>Work</h1>
+  </div>
+
+  {% assign sorted_projects = (site.projects | sort: 'date' | reverse) %}
+  {% for project in sorted_projects %}
+    <div class='box box-small box-left'>
+      <div class="box-body">
+        <p class='box-title'><a href="{{project.project_url}}">
+          {{project.title}}
+        </a></p>
+        <p class='box-byline'>{{ project.date | date: '%B %-d, %Y' }}</p>
+      </div>
+    </div>
+  {% endfor %}
+
+</div>

@@ -25,6 +25,8 @@ collections:
   talks:
     output: true
     permalink: /speaking/:path/
+  projects:
+    permalink: /work/:path/
 
 defaults:
   -
