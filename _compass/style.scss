@@ -14,11 +14,11 @@
 @import 'syntax/default';
 
 @import 'layouts/header';
-// @import 'layouts/content';
 @import 'layouts/footer';
 
+// @import 'layouts/content';
+
 // @import 'modules/article';
-// @import 'modules/page-header';
 
 // @import 'modules/blog';
 // @import 'modules/writing';
@@ -26,6 +26,7 @@
 // @import 'modules/about';
 
 
+@import 'modules/page-header';
 @import 'modules/links';
 @import 'modules/dividers';
 @import 'modules/attribution';
