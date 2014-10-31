@@ -3,9 +3,103 @@ layout: home
 title: Sam Selikoff
 ---
 
-<div id="home" class='inverted u-subtle-shadow'>
+<style>
+  ul {
+    list-style-type: none;
+    padding-left: 10px;
+    margin-bottom: 0;
+/*    padding: 0;
+    margin: 0;
+*/  }
+  /*li::before {
+    content: "-";
+    color: #999;
+    padding-right: 2px;
+  }
+*/  li {
+    line-height: 1.1;
+    margin-bottom: 7px;
+  }
+  /*.mainHeader_large {
+    padding: 2em 0 2em;
+  }
+  .mainHeader-aboutLink {
+    margin-top: 1em;
+  }
+*/</style>
 
-  <div class="u-container">
+<div id="home">
+
+  <section class='home-section home-nav inverted'>
+    <div class='super-link'>
+      <a class='super-link-title' href="/blog">Blog</a>
+      <ul>
+        {% for post in site.posts limit:3 %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <small class='u-subtle'>—{{ post.date | date: '%B %-d, %Y' }}</small>
+          </li>
+        {% endfor %}
+        <small><a href="/blog"><small>See all...</small></a></small>
+      </ul>
+    </div>
+
+    <div class='super-link'>
+      <a class='super-link-title' href='/speaking'>Talks</a>
+      <ul>
+        {% assign sorted_talks = (site.talks | sort: 'date' | reverse) %}
+        {% for talk in sorted_talks limit:3 %}
+          <li>
+            <a href="{{ talk.url }}">{{ talk.title }}</a>
+            <small class='u-subtle'>—{{ talk.date | date: '%B %-d, %Y' }}</small>
+          </li>
+        {% endfor %}
+        <a href="/speaking"><small>See all...</small></a>
+      </ul>  
+    </div>
+
+    <div class='super-link'>
+      <a class='super-link-title' href='/writing'>Writings</a>
+      <ul>
+        {% assign sorted_writings = (site.writing | sort: 'date' | reverse) %}
+        {% for article in sorted_writings limit:3 %}
+          <li>
+            <a href="{{ article.url }}">{{ article.title }}</a>
+          </li>
+        {% endfor %}
+        <a href="/writing"><small>See all...</small></a>
+      </ul>
+    </div>
+
+    <div class='super-link'>
+      <a class='super-link-title' href='/work'>Code + Design</a>
+      <ul>
+        {% assign sorted_projects = (site.projects | sort: 'date' | reverse) %}
+        {% for project in sorted_projects limit:3 %}
+          <li>
+            <a href="{{ project.project_url }}">{{ project.title }}</a>
+          </li>
+        {% endfor %}
+        <a href="/work"><small>See all...</small></a>
+      </ul>
+    </div>
+  </section>
+
+  <!-- <section class='home-section home-recent inverted-strong'>
+    <h2>From the blog</h2>
+    <ul>
+      {% for post in site.posts limit:3 %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <small class='u-subtle'>—{{ post.date | date: '%B %-d, %Y' }}</small>
+        </li>
+      {% endfor %}
+      <li>
+        <a href="/blog"><small>See all...</small></a>
+      </li>
+    </ul>
+  </section> -->
+<!--   <div class="u-container">
     <div class="stories">
 
       <section>
@@ -158,7 +252,6 @@ title: Sam Selikoff
 
     </div>
   </div>
-
 </div>
 
 
