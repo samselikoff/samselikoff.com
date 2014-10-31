@@ -8,99 +8,107 @@ title: Sam Selikoff
   <div class="u-container">
     <div class="stories">
 
-      <div class="title title-inverted">
-        <h1><a class='link-inverted' href="/blog">Blog</a></h1>
-        <p class='title-label'>Thoughts on front-end web devlopment, data visualization and economics</p>
-      </div>
-      
-      <div class='box box-small u-margin-bottom'>
-        <div class='box-header'>
-          <p class='box-header-title'><span class="u-subtle-on-red">Recent posts</span></p>
+      <section>
+        <div class="title title-inverted">
+          <h1><a class='link-inverted' href="/blog">Blog</a></h1>
+          <p class='title-label'>Thoughts on front-end web devlopment, data visualization and economics</p>
         </div>
-        <div class='box-body'>
-          <ul class='box-listing'>
-            {% for post in site.posts limit:3 %}
-              <li>
-                <a href="{{ post.url }}">{{ post.title }}</a>
-                <small class='u-subtle'>—{{ post.date | date: '%B %-d, %Y' }}</small>
-              </li>
-            {% endfor %}
-              <li>
-                <a href="/blog"><small>See all...</small></a>
-              </li>
-          </ul>
+        
+        <div class='box box-small u-margin-bottom'>
+          <div class='box-header'>
+            <p class='box-header-title'><span class="u-subtle-on-red">Recent posts</span></p>
+          </div>
+          <div class='box-body'>
+            <ul class='box-listing'>
+              {% for post in site.posts limit:3 %}
+                <li>
+                  <a href="{{ post.url }}">{{ post.title }}</a>
+                  <small class='u-subtle'>—{{ post.date | date: '%B %-d, %Y' }}</small>
+                </li>
+              {% endfor %}
+                <li>
+                  <a href="/blog"><small>See all...</small></a>
+                </li>
+            </ul>
+          </div>
         </div>
-      </div> 
+      </section>
 
-      <div class="title title-inverted">
-        <h1><a class='link-inverted' href="/speaking">Speaking</a></h1>
-        <p class='title-label'>Talks about web development</p>
-      </div>
-      <div class='box box-small u-margin-bottom'>
-        <div class='box-header'>
-          <p class='box-header-title'><span class="u-subtle-on-red">Latest talks</span></p>
+      <section>
+        <div class="title title-inverted">
+          <h1><a class='link-inverted' href="/speaking">Speaking</a></h1>
+          <p class='title-label'>Talks about web development</p>
         </div>
-        <div class='box-body'>
-          <ul class='box-listing'>
-            {% assign sorted_talks = (site.talks | sort: 'date' | reverse) %}
-            {% for talk in sorted_talks limit:3 %}
-              <li>
-                <a href="{{ talk.url }}">{{ talk.title }}</a>
-                <small class='u-subtle'>—{{ talk.date | date: '%B %-d, %Y' }}</small>
-              </li>
-            {% endfor %}
-              <li>
-                <a href="/speaking"><small>See all...</small></a>
-              </li>
-          </ul>
+        <div class='box box-small u-margin-bottom'>
+          <div class='box-header'>
+            <p class='box-header-title'><span class="u-subtle-on-red">Latest talks</span></p>
+          </div>
+          <div class='box-body'>
+            <ul class='box-listing'>
+              {% assign sorted_talks = (site.talks | sort: 'date' | reverse) %}
+              {% for talk in sorted_talks limit:3 %}
+                <li>
+                  <a href="{{ talk.url }}">{{ talk.title }}</a>
+                  <small class='u-subtle'>—{{ talk.date | date: '%B %-d, %Y' }}</small>
+                </li>
+              {% endfor %}
+                <li>
+                  <a href="/speaking"><small>See all...</small></a>
+                </li>
+            </ul>
+          </div>
         </div>
-      </div> 
+      </section>
 
-      <div class="title title-inverted">
-        <h1><a class='link-inverted' href="/writing">Writing</a></h1>
-        <p class='title-label'>Tutorials and articles</p>
-      </div>
-      <div class='box box-small u-margin-bottom'>
-        <div class='box-header'>
-          <p class='box-header-title'><span class="u-subtle-on-red">Latest articles</span></p>
+      <section>
+        <div class="title title-inverted">
+          <h1><a class='link-inverted' href="/writing">Writing</a></h1>
+          <p class='title-label'>Tutorials and articles</p>
         </div>
-        <div class='box-body'>
-          <ul class='box-listing'>
-            {% assign sorted_writings = (site.writing | sort: 'date' | reverse) %}
-            {% for article in sorted_writings limit:3 %}
-              <li>
-                <a href="{{ article.url }}">{{ article.title }}</a>
-              </li>
-            {% endfor %}
-              <li>
-                <a href="/writing"><small>See all...</small></a>
-              </li>
-          </ul>
+        <div class='box box-small u-margin-bottom'>
+          <div class='box-header'>
+            <p class='box-header-title'><span class="u-subtle-on-red">Latest articles</span></p>
+          </div>
+          <div class='box-body'>
+            <ul class='box-listing'>
+              {% assign sorted_writings = (site.writing | sort: 'date' | reverse) %}
+              {% for article in sorted_writings limit:3 %}
+                <li>
+                  <a href="{{ article.url }}">{{ article.title }}</a>
+                </li>
+              {% endfor %}
+                <li>
+                  <a href="/writing"><small>See all...</small></a>
+                </li>
+            </ul>
+          </div>
         </div>
-      </div> 
+      </section>
 
-      <div class="title title-inverted">
-        <h1><a class='link-inverted' href="/work">Code + Design</a></h1>
-        <p class='title-label'>My work, past and present</p>
-      </div>
-      <div class='box box-small u-margin-bottom'>
-        <div class='box-header'>
-          <p class='box-header-title'><span class="u-subtle-on-red">Latest projects</span></p>
+      <section>
+        <div class="title title-inverted">
+          <h1><a class='link-inverted' href="/work">Code + Design</a></h1>
+          <p class='title-label'>My work, past and present</p>
         </div>
-        <div class='box-body'>
-          <ul class='box-listing'>
-            {% assign sorted_projects = (site.projects | sort: 'date' | reverse) %}
-            {% for project in sorted_projects limit:3 %}
-              <li>
-                <a href="{{ project.project_url }}">{{ project.title }}</a>
-              </li>
-            {% endfor %}
-              <li>
-                <a href="/work"><small>See all...</small></a>
-              </li>
-          </ul>
+        <div class='box box-small u-margin-bottom'>
+          <div class='box-header'>
+            <p class='box-header-title'><span class="u-subtle-on-red">Latest projects</span></p>
+          </div>
+          <div class='box-body'>
+            <ul class='box-listing'>
+              {% assign sorted_projects = (site.projects | sort: 'date' | reverse) %}
+              {% for project in sorted_projects limit:3 %}
+                <li>
+                  <a href="{{ project.project_url }}">{{ project.title }}</a>
+                </li>
+              {% endfor %}
+                <li>
+                  <a href="/work"><small>See all...</small></a>
+                </li>
+            </ul>
+          </div>
         </div>
-      </div> 
+      </section>
 
       <!-- {% for post in site.posts limit:5 %}
         <section class='box story'>
