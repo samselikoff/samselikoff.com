@@ -49,7 +49,15 @@
   }
 }
 
-.box-small {
+.box-left {
+  border-top: none;
+  border-left: 4px solid $red;
+}
+
+/*
+  Sizes
+*/
+.box-sm {
 
   .box-header {
     padding: 0 8px 6px;
@@ -68,7 +76,16 @@
   }
 }
 
-.box-left {
-  border-top: none;
-  border-left: 4px solid #DB4D3E;
+.box-lg {
+  border-width: 10px;
+
+  .box-left {
+    border-top: none;
+    border-left: 4px solid $red;
+  }
+  .box-title {
+    font-size: 22px;
+    margin-bottom: 10px; 
+  }
 }
+

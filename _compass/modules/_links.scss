@@ -9,3 +9,17 @@
     color: $link-color-inverted-hover;
   }
 }
+.dark-link,
+.dark-link:visited {
+  color: $black;
+  border-bottom: 1px solid lighten($black, 10%);
+
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    text-decoration: none;
+    color: $black;
+    border-color: $black;
+  }
+}
+
