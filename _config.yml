@@ -19,12 +19,12 @@ gems:
   - active_support
 
 collections:
-  writing:
+  writings:
     output: true
     permalink: /:collection/:path/
   talks:
     output: true
-    permalink: /speaking/:path/
+    permalink: /talks/:path/
   projects:
     permalink: /work/:path/
 
@@ -37,14 +37,8 @@ defaults:
       layout: 'post'
   -
     scope:
-      path: 'writing'
-      type: 'writing'
-    values:
-      layout: 'article'
-  -
-    scope:
-      path: 'writing'
-      type: 'writing'
+      path: 'writings'
+      type: 'writings'
     values:
       layout: 'article'
 

@@ -1,18 +1,18 @@
 ---
 layout: inverted
-title: Sam Selikoff - Writing
+title: Sam Selikoff - Writings
 ---
 
-<div id="writing">
+<div id="writings">
 
   <div class="title">
-    <h1>Writing</h1>
+    <h1>Writings</h1>
     <p>Tutorials and articles on JavaScript, economics and more</p>
   </div>
 
 
   <h2>Tutorials</h2>
-  {% for article in site.data.writing.tutorials %}
+  {% for article in site.data.writings.tutorials %}
     <div class='box box-sm box-left'>
       <div class="box-body">
         <a class='box-title' href="{{article.url}}">{{article.title}}</a>
@@ -21,7 +21,7 @@ title: Sam Selikoff - Writing
   {% endfor %}
 
   <h2>Book notes</h2>
-  {% for article in site.data.writing.book_reviews %}
+  {% for article in site.data.writings.book_reviews %}
     <div class='box box-sm box-left'>
       <div class="box-body">
         <a class='box-title' href="{{article.url}}">{{article.title}}</a>
@@ -30,7 +30,7 @@ title: Sam Selikoff - Writing
   {% endfor %}
 
   <h2>Economics</h2>
-  {% for article in site.data.writing.economics %}
+  {% for article in site.data.writings.economics %}
     <div class='box box-sm box-left'>
       <div class="box-body">
         <a class='box-title' href="{{article.url}}">{{article.title}}</a>

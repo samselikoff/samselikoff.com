@@ -8,25 +8,8 @@ title: Sam Selikoff
     list-style-type: none;
     padding-left: 10px;
     margin-bottom: 0;
-/*    padding: 0;
-    margin: 0;
-*/  }
-  li::before {
-    content: "-";
-    color: #999;
-    padding-right: 2px;
   }
-  li {
-    line-height: 1.1;
-    margin-bottom: 7px;
-  }
-  /*.mainHeader_large {
-    padding: 2em 0 2em;
-  }
-  .mainHeader-aboutLink {
-    margin-top: 1em;
-  }
-*/</style>
+</style>
 
 <div id="home">
   <div class='home-section home-nav inverted u-clearfix'>
@@ -48,7 +31,7 @@ title: Sam Selikoff
 
     <div class='shadow-floating box box-left box-lg'>
       <div class="box-body">
-        <h1 class='box-title'><a class='dark-link' href='/speaking'>Talks</a></h1>
+        <h1 class='box-title'><a class='dark-link' href='/talks'>Talks</a></h1>
         <ul>
           {% assign sorted_talks = (site.talks | sort: 'date' | reverse) %}
           {% for talk in sorted_talks limit:3 %}
@@ -57,22 +40,22 @@ title: Sam Selikoff
               <small class='u-subtle'>—{{ talk.date | date: '%B %-d, %Y' }}</small>
             </li>
           {% endfor %}
-          <a href="/speaking"><small>See all...</small></a>
+          <a href="/talks"><small>See all...</small></a>
         </ul>
       </div>
     </div>
 
     <div class='shadow-floating box box-left box-lg'>
       <div class="box-body">
-        <h1 class='box-title'><a class='dark-link' href='/writing'>Writings</a></h1>
+        <h1 class='box-title'><a class='dark-link' href='/writings'>Writings</a></h1>
         <ul>
-          {% assign sorted_writings = (site.writing | sort: 'date' | reverse) %}
+          {% assign sorted_writings = (site.writings | sort: 'date' | reverse) %}
           {% for article in sorted_writings limit:3 %}
             <li class='box-list-item'>
               <a href="{{ article.url }}">{{ article.title }}</a>
             </li>
           {% endfor %}
-          <a href="/writing"><small>See all...</small></a>
+          <a href="/writings"><small>See all...</small></a>
         </ul>
       </div>
     </div>
@@ -92,174 +75,6 @@ title: Sam Selikoff
       </div>
     </div>
 
-  </div>
-
-  <!-- <section class='home-section home-recent inverted-strong'>
-    <h2>From the blog</h2>
-    <ul>
-      {% for post in site.posts limit:3 %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-          <small class='u-subtle'>—{{ post.date | date: '%B %-d, %Y' }}</small>
-        </li>
-      {% endfor %}
-      <li>
-        <a href="/blog"><small>See all...</small></a>
-      </li>
-    </ul>
-  </section> -->
-<!--   <div class="u-container">
-    <div class="stories">
-
-      <section>
-        <div class="title title-inverted">
-          <h1><a class='link-inverted' href="/blog">Blog</a></h1>
-          <p class='title-label'>Thoughts on front-end web devlopment, data visualization and economics</p>
-        </div>
-        
-        <div class='box box-sm u-margin-bottom'>
-          <div class='box-header'>
-            <p class='box-header-title'><span class="u-subtle-on-red">Recent posts</span></p>
-          </div>
-          <div class='box-body'>
-            <ul class='box-listing'>
-              {% for post in site.posts limit:3 %}
-                <li>
-                  <a href="{{ post.url }}">{{ post.title }}</a>
-                  <small class='u-subtle'>—{{ post.date | date: '%B %-d, %Y' }}</small>
-                </li>
-              {% endfor %}
-                <li>
-                  <a href="/blog"><small>See all...</small></a>
-                </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="title title-inverted">
-          <h1><a class='link-inverted' href="/speaking">Speaking</a></h1>
-          <p class='title-label'>Talks about web development</p>
-        </div>
-        <div class='box box-sm u-margin-bottom'>
-          <div class='box-header'>
-            <p class='box-header-title'><span class="u-subtle-on-red">Latest talks</span></p>
-          </div>
-          <div class='box-body'>
-            <ul class='box-listing'>
-              {% assign sorted_talks = (site.talks | sort: 'date' | reverse) %}
-              {% for talk in sorted_talks limit:3 %}
-                <li>
-                  <a href="{{ talk.url }}">{{ talk.title }}</a>
-                  <small class='u-subtle'>—{{ talk.date | date: '%B %-d, %Y' }}</small>
-                </li>
-              {% endfor %}
-                <li>
-                  <a href="/speaking"><small>See all...</small></a>
-                </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="title title-inverted">
-          <h1><a class='link-inverted' href="/writing">Writing</a></h1>
-          <p class='title-label'>Tutorials and articles</p>
-        </div>
-        <div class='box box-sm u-margin-bottom'>
-          <div class='box-header'>
-            <p class='box-header-title'><span class="u-subtle-on-red">Latest articles</span></p>
-          </div>
-          <div class='box-body'>
-            <ul class='box-listing'>
-              {% assign sorted_writings = (site.writing | sort: 'date' | reverse) %}
-              {% for article in sorted_writings limit:3 %}
-                <li>
-                  <a href="{{ article.url }}">{{ article.title }}</a>
-                </li>
-              {% endfor %}
-                <li>
-                  <a href="/writing"><small>See all...</small></a>
-                </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="title title-inverted">
-          <h1><a class='link-inverted' href="/work">Code + Design</a></h1>
-          <p class='title-label'>My work, past and present</p>
-        </div>
-        <div class='box box-sm u-margin-bottom'>
-          <div class='box-header'>
-            <p class='box-header-title'><span class="u-subtle-on-red">Latest projects</span></p>
-          </div>
-          <div class='box-body'>
-            <ul class='box-listing'>
-              {% assign sorted_projects = (site.projects | sort: 'date' | reverse) %}
-              {% for project in sorted_projects limit:3 %}
-                <li>
-                  <a href="{{ project.project_url }}">{{ project.title }}</a>
-                </li>
-              {% endfor %}
-                <li>
-                  <a href="/work"><small>See all...</small></a>
-                </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- {% for post in site.posts limit:5 %}
-        <section class='box story'>
-          <a class='box-title' href='{{post.url}}'>{{ post.title }}</a>
-          <h3 class='box-subtitle'>{{ post.subtitle }}</h3>
-
-          <p class='info'>
-            <img class='icon' src='images/icons/post.png'></img>
-            <span class='box-date'>{{ post.date | date: '%b %d, %Y' }}</span>
-          </p>
-
-          {{ post.excerpt | markdownify }}
-        </section> 
-      {% endfor %}
-      <!-- {% if site.data.future_stories.size > 0 %}
-
-        <div class='upcoming'>
-          <p class='story-label'>Upcoming</p>
-
-        {% for story in site.data.future_stories %}
-          <section class='story upcoming-story {{story.type}} box'>
-            {% include future_stories/{{story.type}}.html %}
-          </section> 
-        {% endfor %}
-
-        </div>
-      {% endif %}
-
-      <p class='label'>Recent activity</p>
-
-      {% for story in site.data.stories limit:5 %}
-        <section class='box story {{story.type}}'>
-          {% if story.type == 'talk' %}
-            <img class='story-image' src='/images/{{story.type}}s/{{story.stub}}.png'>
-          {% endif %}
-          <a class='box-title' href='{{story.url}}'>{{ story.title }}</a>
-          <h3 class='box-subtitle'>{{ story.subtitle }}</h3>
-
-          <p class='info'>
-            <img class='icon' src='images/icons/{{story.type}}.png'></img>
-            <span class='box-date'>{{ story.date | date: '%b %d, %Y' }}</span>
-          </p>
-
-          {% include stories/{{story.type}}.html %}
-        </section> 
-      {% endfor %} -->
-
-    </div>
   </div>
 </div>
 

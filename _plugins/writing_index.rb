@@ -1,22 +1,22 @@
 require 'active_support/inflector'
 
-module WritingIndex
+module WritingsIndex
   class Generator < Jekyll::Generator
     def generate(site)
-      writing = site.collections['writing']
-      index_writing = writing.docs.map(&:to_liquid).select do |doc|
+      writings = site.collections['writings']
+      index_writings = writings.docs.map(&:to_liquid).select do |doc|
         doc['published'] != false && doc['primary'] != false
       end
 
-      categorized_writing = {}
-      index_writing.each do |article|
+      categorized_writings = {}
+      index_writings.each do |article|
         cat = article['category'].pluralize
-        if !categorized_writing[cat] then categorized_writing[cat] = [] end
+        if !categorized_writings[cat] then categorized_writings[cat] = [] end
 
-        categorized_writing[cat].push article
+        categorized_writings[cat].push article
       end
 
-      site.data['writing'] = categorized_writing
+      site.data['writings'] = categorized_writings
     end
   end
 end
