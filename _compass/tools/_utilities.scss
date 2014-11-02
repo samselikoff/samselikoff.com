@@ -47,7 +47,7 @@
   position: relative;
 }
 .u-subtle-shadow {
-  @include box-shadow(0px 2px 4px 0px rgba(0,0,0,0.55));
+  @include box-shadow(0px 1px 4px 0px rgba(0,0,0,0.55));
 }
 .u-well {
   border: 1px solid #ddd;
