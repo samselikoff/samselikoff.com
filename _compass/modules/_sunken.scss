@@ -1,0 +1,13 @@
+.sunken {
+  position: relative;
+}
+.sunken::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  @include box-shadow(0 3px 4px -1px rgba(0,0,0,0.45) inset, 0 -3px 4px -1px rgba(0,0,0,0.45) inset);
+}

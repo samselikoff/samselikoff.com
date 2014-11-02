@@ -11,12 +11,12 @@ title: Sam Selikoff
 /*    padding: 0;
     margin: 0;
 */  }
-  /*li::before {
+  li::before {
     content: "-";
     color: #999;
     padding-right: 2px;
   }
-*/  li {
+  li {
     line-height: 1.1;
     margin-bottom: 7px;
   }
@@ -29,14 +29,14 @@ title: Sam Selikoff
 */</style>
 
 <div id="home">
-  <section class='home-section home-nav inverted'>
+  <div class='home-section home-nav inverted'>
 
-    <div class='box box-left box-lg'>
+    <div class='shadow-floating box box-left box-lg'>
       <div class='box-body'>
         <h1 class='box-title'><a class='dark-link' href="/blog">Blog</a></h1>
         <ul>
           {% for post in site.posts limit:3 %}
-            <li>
+            <li class='box-list-item'>
               <a href="{{ post.url }}">{{ post.title }}</a>
               <small class='u-subtle'>—{{ post.date | date: '%B %-d, %Y' }}</small>
             </li>
@@ -46,13 +46,13 @@ title: Sam Selikoff
       </div>
     </div>
 
-    <div class='box box-left box-lg'>
+    <div class='shadow-floating box box-left box-lg'>
       <div class="box-body">
         <h1 class='box-title'><a class='dark-link' href='/speaking'>Talks</a></h1>
         <ul>
           {% assign sorted_talks = (site.talks | sort: 'date' | reverse) %}
           {% for talk in sorted_talks limit:3 %}
-            <li>
+            <li class='box-list-item'>
               <a href="{{ talk.url }}">{{ talk.title }}</a>
               <small class='u-subtle'>—{{ talk.date | date: '%B %-d, %Y' }}</small>
             </li>
@@ -62,13 +62,13 @@ title: Sam Selikoff
       </div>
     </div>
 
-    <div class='box box-left box-lg'>
+    <div class='shadow-floating box box-left box-lg'>
       <div class="box-body">
         <h1 class='box-title'><a class='dark-link' href='/writing'>Writings</a></h1>
         <ul>
           {% assign sorted_writings = (site.writing | sort: 'date' | reverse) %}
           {% for article in sorted_writings limit:3 %}
-            <li>
+            <li class='box-list-item'>
               <a href="{{ article.url }}">{{ article.title }}</a>
             </li>
           {% endfor %}
@@ -77,13 +77,13 @@ title: Sam Selikoff
       </div>
     </div>
 
-    <div class='box box-left box-lg'>
+    <div class='shadow-floating box box-left box-lg'>
       <div class="box-body">
         <h1 class='box-title'><a class='dark-link' href='/work'>Code + Design</a></h1>
         <ul>
           {% assign sorted_projects = (site.projects | sort: 'date' | reverse) %}
           {% for project in sorted_projects limit:3 %}
-            <li>
+            <li class='box-list-item'>
               <a href="{{ project.project_url }}">{{ project.title }}</a>
             </li>
           {% endfor %}
@@ -91,7 +91,8 @@ title: Sam Selikoff
         </ul>
       </div>
     </div>
-  </section>
+
+  </div>
 
   <!-- <section class='home-section home-recent inverted-strong'>
     <h2>From the blog</h2>

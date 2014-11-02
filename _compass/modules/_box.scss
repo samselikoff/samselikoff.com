@@ -47,6 +47,17 @@
       margin-bottom: 10px;
     }
   }
+  .box-list-item {
+    line-height: 1.1;
+    margin-bottom: 7px;
+
+    &::before {
+      content: "\2022";
+      color: $red;
+      padding-right: 2px;
+      opacity: 0.3;
+    }
+  }
 }
 
 .box-left {
@@ -84,8 +95,8 @@
     border-left: 4px solid $red;
   }
   .box-title {
-    font-size: 22px;
-    margin-bottom: 10px; 
+    font-size: 26px;
+    margin-bottom: 1em;
   }
 }
 
