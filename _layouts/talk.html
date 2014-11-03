@@ -12,18 +12,20 @@ layout: default
 
   <hr class="divider-main">
 
-  {% if page.video %}
-    <section class='u-margin-bottom'>
+  {% if page.youtubeId %}
+    <section class='u-margin-bottom u-clearfix'>
       <h2>Video</h2>
-      {{ page.video }}
+      <div class="fixed-ratio fixed-ratio-video">
+        <iframe class='fixed-ratio-inner' src="//www.youtube.com/embed/{{page.youtubeId}}?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> 
+      </div>
     </section>
   {% endif %}
 
   {% if page.slides %}
     <section class='u-margin-bottom'>
       <h2>Slides</h2>
-      <div class="fixed-ar-container fixed-ar-container-slides u-negative-margin-top">
-        <iframe class='fixed-ar-container-inner' src="{{page.slides}}/embed" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <div class="fixed-ratio fixed-ratio-slides">
+        <iframe class='fixed-ratio-inner' src="{{page.slides}}/embed" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
     </section>
   {% endif %}
@@ -32,6 +34,13 @@ layout: default
     <h2>Description</h2>
     {{ content }}
   </section>
+
+  {% if page.demos %}
+    <section class='u-margin-bottom'>
+      <h2>Demos</h2>
+      <a href="{{page.demos}}">View the demos</a>
+    </section>
+  {% endif %}
 
   {% if page.code %}
     <section class='u-margin-bottom'>
