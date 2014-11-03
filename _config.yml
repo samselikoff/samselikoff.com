@@ -24,7 +24,7 @@ collections:
     permalink: /:collection/:path/
   talks:
     output: true
-    permalink: /talks/:path/
+    permalink: /talks/:title/
   projects:
     permalink: /work/:path/
 
