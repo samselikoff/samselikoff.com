@@ -12,7 +12,53 @@ layout: default
 
   <hr class="divider-main">
 
-  {{ content }}
+  {% if page.video %}
+    <section class='u-margin-bottom'>
+      <h2>Video</h2>
+      {{ page.video }}
+    </section>
+  {% endif %}
+
+  {% if page.slides %}
+    <section class='u-margin-bottom'>
+      <h2>Slides</h2>
+      <div class="fixed-ar-container fixed-ar-container-slides u-negative-margin-top">
+        <iframe class='fixed-ar-container-inner' src="{{page.slides}}/embed" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+    </section>
+  {% endif %}
+
+  <section class='u-margin-bottom'>
+    <h2>Description</h2>
+    {{ content }}
+  </section>
+
+  {% if page.code %}
+    <section class='u-margin-bottom'>
+      <h2>Code</h2>
+      <a href="{{page.code}}">View on GitHub</a>
+    </section>
+  {% endif %}
+
+  <section class="u-margin-bottom">
+    <h2>Presented at</h2>
+    
+    {% for event in page.events %}
+      <p class='u-no-bottom-margin'>
+        {% if event.venueUrl %}
+          <a href="{{event.venueUrl}}">{{event.venue}} - {{event.location}}</a>
+        {% else %}
+          {{event.venue}} - {{event.location}}
+        {% endif %}
+      </p>
+
+      <p class='u-no-bottom-margin'>
+        <small>{{event.date | date: "%B %-d, %Y"}}</small>
+      </p>
+
+      <hr class='divider-subtle'>
+    {% endfor %}
+  </section>
 
   {% include comments.html %} 
 </div>

@@ -1,0 +1,18 @@
+.fixed-ar-container {
+  position: relative;
+  padding-top: 62.25%;  // Video height / width.
+  height: 0;
+  @include clearfix;
+}
+.fixed-ar-container-inner {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.fixed-ar-container-widescreen {
+  padding-top: 62.25%;  // Video height / width.
+}
+.fixed-ar-container-slides {
+  padding-top: 72.916%;  // Video height / width.
+}
