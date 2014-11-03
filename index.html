@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: base
 title: Sam Selikoff
 ---
 
@@ -11,83 +11,102 @@ title: Sam Selikoff
   }
 </style>
 
-<div id="home">
-  <div class='home-section home-nav inverted u-clearfix'>
-
-    <div class='shadow-floating box box-left box-lg'>
-      <div class='box-body'>
-        <h1 class='box-title'><a class='dark-link' href="/blog">Blog</a></h1>
-        <ul>
-          {% for post in site.posts limit:3 %}
-            <li class='box-list-item'>
-              <a href="{{ post.url }}">{{ post.title }}</a>
-              <small class='u-subtle'>—{{ post.date | date: '%B %-d, %Y' }}</small>
-            </li>
-          {% endfor %}
-          <small><a href="/blog"><small>See all...</small></a></small>
-        </ul>
-      </div>
+<header class='mainHeader_large shadow'>
+  <div class="u-container">
+    <div class="mainHeader-info">
+      <a class='mainHeader-logo' href='/'>Sam<span>Selikoff</span></a>
+      <p>web development · economics</p>
     </div>
-
-    <div class='shadow-floating box box-left box-lg'>
-      <div class="box-body">
-        <h1 class='box-title'><a class='dark-link' href='/talks'>Talks</a></h1>
-        <ul>
-          {% assign sorted_talks = (site.talks | sort: 'date' | reverse) %}
-          {% for talk in sorted_talks limit:3 %}
-            <li class='box-list-item'>
-              <a href="{{ talk.url }}">{{ talk.title }}</a>
-              <small class='u-subtle'>—{{ talk.date | date: '%B %-d, %Y' }}</small>
-            </li>
-          {% endfor %}
-          <a href="/talks"><small>See all...</small></a>
-        </ul>
-      </div>
-    </div>
-
-    <div class='shadow-floating box box-left box-lg'>
-      <div class="box-body">
-        <h1 class='box-title'><a class='dark-link' href='/writings'>Writings</a></h1>
-        <ul>
-          {% assign sorted_writings = (site.writings | sort: 'date' | reverse) %}
-          {% for article in sorted_writings limit:3 %}
-            <li class='box-list-item'>
-              <a href="{{ article.url }}">{{ article.title }}</a>
-            </li>
-          {% endfor %}
-          <a href="/writings"><small>See all...</small></a>
-        </ul>
-      </div>
-    </div>
-
-    <div class='shadow-floating box box-left box-lg'>
-      <div class="box-body">
-        <h1 class='box-title'><a class='dark-link' href='/work'>Code + Design</a></h1>
-        <ul>
-          {% assign sorted_projects = (site.projects | sort: 'date' | reverse) %}
-          {% for project in sorted_projects limit:3 %}
-            <li class='box-list-item'>
-              <a href="{{ project.project_url }}">{{ project.title }}</a>
-            </li>
-          {% endfor %}
-          <a href="/work"><small>See all...</small></a>
-        </ul>
-      </div>
-    </div>
-
+    
+    <p class='mainHeader-aboutLink'><a href="/about">
+      <span class="u-accent">[</span> about <span class="u-accent">]</span>
+    </a></p>
   </div>
-</div>
+</header>
+
+<section class="main">
+  <div id="home">
+    <div class='home-section home-nav inverted u-clearfix'>
+
+      <div class='shadow-floating box box-left box-lg'>
+        <div class='box-body'>
+          <h1 class='box-title'><a class='dark-link' href="/blog">Blog</a></h1>
+          <ul>
+            {% for post in site.posts limit:3 %}
+              <li class='box-list-item'>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                <small class='u-subtle'>—{{ post.date | date: '%B %-d, %Y' }}</small>
+              </li>
+            {% endfor %}
+            <small><a href="/blog"><small>See all...</small></a></small>
+          </ul>
+        </div>
+      </div>
+
+      <div class='shadow-floating box box-left box-lg'>
+        <div class="box-body">
+          <h1 class='box-title'><a class='dark-link' href='/talks'>Talks</a></h1>
+          <ul>
+            {% assign sorted_talks = (site.talks | sort: 'date' | reverse) %}
+            {% for talk in sorted_talks limit:3 %}
+              <li class='box-list-item'>
+                <a href="{{ talk.url }}">{{ talk.title }}</a>
+                <small class='u-subtle'>—{{ talk.date | date: '%B %-d, %Y' }}</small>
+              </li>
+            {% endfor %}
+            <a href="/talks"><small>See all...</small></a>
+          </ul>
+        </div>
+      </div>
+
+      <div class='shadow-floating box box-left box-lg'>
+        <div class="box-body">
+          <h1 class='box-title'><a class='dark-link' href='/writings'>Writings</a></h1>
+          <ul>
+            {% assign sorted_writings = (site.writings | sort: 'date' | reverse) %}
+            {% for article in sorted_writings limit:3 %}
+              <li class='box-list-item'>
+                <a href="{{ article.url }}">{{ article.title }}</a>
+              </li>
+            {% endfor %}
+            <a href="/writings"><small>See all...</small></a>
+          </ul>
+        </div>
+      </div>
+
+      <div class='shadow-floating box box-left box-lg'>
+        <div class="box-body">
+          <h1 class='box-title'><a class='dark-link' href='/work'>Code + Design</a></h1>
+          <ul>
+            {% assign sorted_projects = (site.projects | sort: 'date' | reverse) %}
+            {% for project in sorted_projects limit:3 %}
+              <li class='box-list-item'>
+                <a href="{{ project.project_url }}">{{ project.title }}</a>
+              </li>
+            {% endfor %}
+            <a href="/work"><small>See all...</small></a>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 
-<script type="text/javascript">
-/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-var disqus_shortname = 'samselikoff'; // required: replace example with your forum shortname
+  <script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'samselikoff'; // required: replace example with your forum shortname
 
-/* * * DON'T EDIT BELOW THIS LINE * * */
-(function () {
-    var s = document.createElement('script'); s.async = true;
-    s.type = 'text/javascript';
-    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-}());
-</script>
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function () {
+      var s = document.createElement('script'); s.async = true;
+      s.type = 'text/javascript';
+      s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  }());
+  </script>
+</section>
+
+<footer id="home">
+  {% include contact.html %}
+</footer>

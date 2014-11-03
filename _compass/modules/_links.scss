@@ -22,4 +22,14 @@
     border-color: $black;
   }
 }
+.link-subtle,
+.link-subtle:visited {
+  color: #999;
+}
+.link-subtle:hover,
+.link-subtle:focus,
+.link-subtle:visited:hover,
+.link-subtle:visited:focus {
+  text-decoration: none;
+}
 
