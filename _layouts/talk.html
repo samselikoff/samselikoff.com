@@ -6,7 +6,8 @@ layout: default
   <h1>{{ page.title }}</h1>
   {% if page.subtitle %}<h2>{{ page.subtitle }}</h2>{% endif %}
   <p class="attribution" itemscope="" itemtype="http://schema.org/Person">
-    <a href="/about/" class="link-subtle" itemprop="name">Sam Selikoff</a>
+    by <a href="/about/" itemprop="name">Sam Selikoff</a>
+    <span class="u-pull-right">{{ page.date | date: "%B %-d, %Y" }}</span>
   </p>
 
   <hr class="divider-main">
