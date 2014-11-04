@@ -1,33 +1,67 @@
-header {
+.header {
+  text-align: center;
+  padding: 0.5em 5%;
+  position: relative;
   background-color: $header-background;
   color: white;
-  padding: 0.5em 0;
+  @include clearfix;
 }
-header h1 {
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: 100;
-  font-size: 1.6em;
-  opacity: 0.9;
-  margin-top: 0;
+
+.header p {
+  color: $darkBlue-subtle;
+  margin: 0;
 }
-header span {
+.header span {
   font-weight: 400;
   padding-left: 2px;
 }
-header a,
-header a:visited,
-header a:hover,
-header a:focus,
-header a:visited:hover,
-header a:visited:focus {
+.header a,
+.header a:visited,
+.header a:hover,
+.header a:focus,
+.header a:visited:hover,
+.header a:visited:focus {
   color: $header-text;
   text-decoration: none;
-  // color: white;
-  // border-bottom: 1px solid rgb(200,200,200);
 }
-header p {
-  color: $darkBlue-subtle;
-  // font-weight: 200;
-  margin: 0;
+.header_large {
+  @extend .header;
+  // padding: 6em 0 5em;
+  padding: 6em 0;
+  // @include background-image(linear-gradient(to bottom, #2e4752 90%,#3e606f 100%));
+}
+.header-logo {
+  text-transform: uppercase;
+  font-weight: 100;
+  opacity: 0.7;
+  font-size: 1.4em;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 0.1em;
+  text-align: center;
+}
+.header_large .header-logo {
+  font-size: 2em;
+  opacity: 0.9;
+}
+.header-info p {
+  font-size: 0.9em;
+}
+.header-menu a,
+.header-menu a:visited {
+  font-size: 0.8em;
+  padding: 3px 6px;
+  border: 1px solid #8295a3;
+  color: #dae0e4;
+  text-transform: uppercase;
+}
+.header-aboutLink {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  // margin-top: 3em;
+}
+.header-aboutLink a,
+.header-aboutLink a:visited {
+  font-size: 0.85em;
+  color: lighten($darkBlue-subtle, 30%);
 }

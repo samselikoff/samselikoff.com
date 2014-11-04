@@ -8,30 +8,23 @@
 @import 'tools/mixins';
 @import 'tools/utilities';
 
-@import 'base';
-
 // Syntax
 @import 'syntax/default';
+
+// Styles
+@import 'base';
 
 @import 'layouts/header';
 @import 'layouts/footer';
 
-// @import 'layouts/content';
-
-// @import 'modules/article';
-
-// @import 'modules/blog';
-// @import 'modules/writing';
 // @import 'modules/resume';
-// @import 'modules/about';
-
 
 @import 'modules/page-header';
 @import 'modules/links';
 @import 'modules/dividers';
 @import 'modules/attribution';
 @import 'modules/container';
-@import 'modules/article';
+// @import 'modules/article';
 @import 'modules/label';
 @import 'modules/listing';
 @import 'modules/title';
@@ -41,6 +34,5 @@
 @import 'modules/shadow';
 @import 'modules/fixed-ratio';
 
-@import 'modules/mainHeader';
 
 @import 'pages/home';
