@@ -1,0 +1,13 @@
+$size: 840px;
+
+.hidden-lg {
+  @include above($size) {
+    display: none;
+  }
+}
+
+.visible-lg {
+  @include below($size) {
+    display: none;
+  }
+}

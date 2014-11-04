@@ -39,10 +39,9 @@
 }
 
 @mixin below($point) {
-  @if $point == desktop {
-    @media (max-width: $desktop-breakpoint - 1) { @content; }
-  }
-  @else if $point == tablet {
-    @media (max-width: $tablet-breakpoint - 1)  { @content; }
-  }
+  @media only screen and (max-width: $point - 1) { @content; }
+}
+
+@mixin above($point) {
+  @media only screen and (min-width: $point) { @content; }
 }
