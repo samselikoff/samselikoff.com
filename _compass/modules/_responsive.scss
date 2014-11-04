@@ -1,13 +1,11 @@
-$size: 840px;
-
 .hidden-lg {
-  @include above($size) {
+  @include above($main-breakpoint) {
     display: none;
   }
 }
 
 .visible-lg {
-  @include below($size) {
+  @include below($main-breakpoint) {
     display: none;
   }
 }

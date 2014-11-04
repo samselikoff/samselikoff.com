@@ -1,51 +1,15 @@
 .header {
-  text-align: center;
   padding: 0.5em 5%;
   position: relative;
   background-color: $header-background;
-  color: white;
   @include clearfix;
-}
-
-.header p {
-  color: $darkBlue-subtle;
-  margin: 0;
-}
-.header span {
-  font-weight: 400;
-  padding-left: 2px;
-}
-.header a,
-.header a:visited,
-.header a:hover,
-.header a:focus,
-.header a:visited:hover,
-.header a:visited:focus {
-  color: $header-text;
-  text-decoration: none;
 }
 .header_large {
   @extend .header;
+  text-align: center;
   // padding: 6em 0 5em;
   padding: 6em 0;
   // @include background-image(linear-gradient(to bottom, #2e4752 90%,#3e606f 100%));
-}
-.header-logo {
-  text-transform: uppercase;
-  font-weight: 100;
-  opacity: 0.7;
-  font-size: 1.4em;
-  line-height: 1.1;
-  margin-top: 0;
-  margin-bottom: 0.1em;
-  text-align: center;
-}
-.header_large .header-logo {
-  font-size: 2em;
-  opacity: 0.9;
-}
-.header-info p {
-  font-size: 0.9em;
 }
 .header-menu a,
 .header-menu a:visited {
@@ -55,6 +19,7 @@
   color: #dae0e4;
   text-transform: uppercase;
 }
+.header_large .header-aboutLink,
 .header-aboutLink {
   margin-top: 1em;
   margin-bottom: 1em;

@@ -5,12 +5,19 @@
   .box {
     margin-bottom: 1.8em;
   }
+  @include above($main-breakpoint) {
+    padding: 5% 5% 0 5%;
+  }
 }
 [role='complementary'] {
   width: 30%;
   float: left;
+  color: $white;
+  padding: 5% 0 0 2%;
 }
 [role='main'] {
-  width: 70%;
-  float: left;
+  @include above($main-breakpoint) {
+    width: 70%;
+    float: left;
+  }
 }
