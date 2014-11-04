@@ -1,3 +1,11 @@
 .container {
+  @include container(100%);
+  @include clearfix;
+
+  @media screen and (min-width: 52em) {
+    max-width: 62.5em;
+  }
+}
+.container-padding {
   padding: 5% 5% 0 5%;
 }
