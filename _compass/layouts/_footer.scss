@@ -1,11 +1,11 @@
 .footer {
   clear: both;
   background-color: #111;
-  font-size: 0.85em;
   @include clearfix;
   
   .footer-content {
     padding: 2em 1em;
+    font-size: 0.85em;
     color: #555;
   }
   .footer-link {
