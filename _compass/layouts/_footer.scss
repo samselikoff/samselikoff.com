@@ -3,49 +3,8 @@ footer {
   background-color: $blue;
   // text-align: center;
   font-size: 1.1em;
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-  }
   p {
     margin: 0;
-  }
-  .footer-topNavLink {
-    text-align: right;
-    padding-right: 1em;
-    padding-bottom: 0.5em;
-    padding-top: 1em;
-    font-size: 0.7em;
-    text-transform: uppercase;
-  }
-  .footer-topNavLink a,
-  .footer-topNavLink a:link,
-  .footer-topNavLink a:visited {
-    color: $white-subtle;
-    text-decoration: none;
-  }
-  &.inverted .footer-topNavLink {
-    background-color: white;
-  }
-  &.inverted .footer-topNavLink a {
-    color: #333;
-  }
-  .footer-link,
-  .footer-link:visited {
-    display: block;
-    background-color: $darkerBlue;
-    padding: 10px 15px;
-    border-left: 3px solid $red;
-    border-bottom: 3px solid $darkBlue;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.7em;
-    color: #DDD;
-  }
-  .footer-link:hover,
-  .footer-link:visited:hover {
-    color: darken(#DDD, 30%);
   }
   aside {
     background-color: #111;
