@@ -2,16 +2,28 @@
 layout: base
 ---
 
-{% include header.html %}
+<div class='hidden-lg'>
+  {% include mobile-header.html %}
+</div>
 
-<section class="inverted">
-  <div class="container container-padding">
-    {{ content }}
+<div class="content">
+  <div class="content-secondary-wrapper visible-lg">
+    <div class="content-secondary" role="complementary">
+      {% include header.html %}
+    </div>
   </div>
-</section>
+
+  <div class="content-main-wrapper">
+    <div class="content-main">
+      <section class="container container-padding inverted">
+        {{ content }}
+      </section>
+    </div>
+  </div>
+</div>
 
 <div class="inverted">
-  {% include nav.html %}
+  {% include mobile-nav.html %}
 </div>
 
 {% include footer.html %}

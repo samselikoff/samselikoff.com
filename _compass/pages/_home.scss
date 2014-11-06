@@ -1,32 +1,3 @@
-.home-wrapper {
-  @include clearfix;
-  position: relative;
-}
-.left-side {
-  @include above($main-breakpoint) {
-    float: left;
-    width: 30%;
-    background-color: $darkBlue;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-  }
-  @include above(1000px) {
-    width: calc(50% - 200px);
-  }
-}
-.right-side {
-  @include above($main-breakpoint) {
-    float: right;
-    width: 70%;
-    background-color: $blue;
-    @include box-shadow(-5px 0 1px -3px rgba(0, 0, 0, 0.2));
-    position: relative;
-  }
-  @include above(1000px) {
-    width: calc(50% + 200px);
-  }
-}
 .home-section {
   padding-top: 1.8em;
 
@@ -38,14 +9,14 @@
   }
 }
 [role='complementary'] {
-  width: 100%;
-  max-width: 300px;
-  float: right;
+  // width: 100%;
+  // max-width: 300px;
+  // float: right;
   color: $white;
   padding: 3em 0 0 1em;
 }
 [role='main'] {
   @include above($main-breakpoint) {
-    max-width: 700px;
+    // max-width: 700px;
   }
 }
