@@ -3,7 +3,7 @@
   color: $white;
 
   @include above($main-breakpoint) {
-    background-color: transparent;
+    // background-color: transparent;
   }
 }
 .inverted-strong {

@@ -4,9 +4,9 @@
 }
 .left-side {
   @include above($main-breakpoint) {
-    background-color: $darkBlue;
     float: left;
     width: 30%;
+    background-color: $darkBlue;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -17,9 +17,11 @@
 }
 .right-side {
   @include above($main-breakpoint) {
-    background-color: $blue;
     float: right;
     width: 70%;
+    background-color: $blue;
+    @include box-shadow(-5px 0 1px -3px rgba(0, 0, 0, 0.2));
+    position: relative;
   }
   @include above(1000px) {
     width: calc(50% + 200px);
