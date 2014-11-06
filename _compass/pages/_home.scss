@@ -1,5 +1,31 @@
+.home-wrapper {
+  @include clearfix;
+  position: relative;
+}
+.left-side {
+  @include above($main-breakpoint) {
+    background-color: $darkBlue;
+    float: left;
+    width: 30%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+  @include above(1000px) {
+    width: calc(50% - 200px);
+  }
+}
+.right-side {
+  @include above($main-breakpoint) {
+    background-color: $blue;
+    float: right;
+    width: 70%;
+  }
+  @include above(1000px) {
+    width: calc(50% + 200px);
+  }
+}
 .home-section {
-  // padding: 1.5em 1em;
   padding-top: 1.8em;
 
   .box {
@@ -10,14 +36,14 @@
   }
 }
 [role='complementary'] {
-  width: 30%;
-  float: left;
+  width: 100%;
+  max-width: 300px;
+  float: right;
   color: $white;
-  padding: 5% 0 0 2%;
+  padding: 3em 0 0 1em;
 }
 [role='main'] {
   @include above($main-breakpoint) {
-    width: 70%;
-    float: left;
+    max-width: 700px;
   }
 }

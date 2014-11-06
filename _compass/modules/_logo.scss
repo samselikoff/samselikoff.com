@@ -20,16 +20,28 @@
   margin-top: 0;
   margin-bottom: 0.1em;
   text-align: center;
+
+  @include above($main-breakpoint) {
+    font-size: 1.1em;
+  }
 }
-.header_large .logo-title {
+.logo-title-strong {
   font-size: 2em;
   opacity: 0.9;
+
+  @include above($main-breakpoint) {
+    font-size: 1.85em;
+  }
 }
-.logo-strong {
+.logo-accent {
   font-weight: 400;
   padding-left: 2px;
 }
 .logo-subtitle {
   color: $darkBlue-subtle;
   font-size: 0.9em;
+
+  @include above($main-breakpoint) {
+    font-size: 0.875em;
+  }
 }
