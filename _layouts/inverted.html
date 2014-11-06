@@ -9,13 +9,15 @@ layout: base
 <div class="content">
   <div class="content-secondary-wrapper visible-lg">
     <div class="content-secondary" role="complementary">
-      {% include header.html %}
+      {% include logo.html %}
     </div>
   </div>
 
   <div class="content-main-wrapper">
     <div class="content-main">
-      <section class="container container-padding inverted">
+      <section class="container-padding inverted">
+        {% include nav.html %}
+        
         {{ content }}
       </section>
     </div>

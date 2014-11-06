@@ -1,7 +1,7 @@
 .box {
   margin-bottom: 1em;
   background-color: white;
-  border-top: 8px solid $red;
+  border-top: 6px solid $red;
   color: $black;
 
   .box-header {
@@ -23,7 +23,7 @@
     line-height: 1.1;
     margin: 0;
     display: block;
-    text-decoration: none;
+    // text-decoration: none;
   }
   .box-subtitle {
     margin: 7px 0;

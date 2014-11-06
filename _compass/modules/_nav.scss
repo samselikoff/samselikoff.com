@@ -1,0 +1,32 @@
+.nav {
+  .nav-list {
+    @include clearfix;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-bottom: 1px solid $white;
+  }
+  .nav-list-item {
+    float: left;
+    color: white;
+    padding-left: 0;
+    padding-right: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+  .nav-list-item a {
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+
+    &:hover,
+    &:visited:hover {
+      text-decoration: none;
+    }
+
+    &.active {
+      color: $white;
+      border-bottom: 4px solid $red;
+    }
+  }
+}
