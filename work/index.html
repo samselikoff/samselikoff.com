@@ -3,22 +3,44 @@ layout: inverted
 title: Sam Selikoff - Work
 ---
 
+{% assign sorted_projects = (site.projects | sort: 'date' | reverse) %}
+
 <div id="work">
 
   <div class="title">
     <h1>Code + Design</h1>
   </div>
 
-  {% assign sorted_projects = (site.projects | sort: 'date' | reverse) %}
-  {% for project in sorted_projects %}
-    <div class='box box-sm'>
-      <div class="box-body">
-        <p class='box-title'><a href="{{project.project_url}}">
-          {{project.title}}
-        </a></p>
-        <p class='box-byline'>{{ project.date | date: '%B %-d, %Y' }}</p>
-      </div>
+  <ul>
+    {% for project in sorted_projects %}
+      <li class='u-margin-bottom-small'>
+        <a class='link-white' href="{{ project.url }}">{{ project.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <!-- <div class='box box-lg'>
+    <div class='box-body'>
+      <ul class='listing'>
+        {% for project in sorted_projects %}
+          <li class='box-list-item'>
+            <a href="{{ project.url }}">{{ project.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
     </div>
-  {% endfor %}
+  </div> -->
+
+  <!-- <div class='box box-sm'>
+    <div class="box-body">
+      <ul class='listing'>
+        {% for project in sorted_projects %}
+          <li class='listing-item'>
+            <a class='link-primary' href="{{project.project_url}}">{{project.title}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div> -->
 
 </div>

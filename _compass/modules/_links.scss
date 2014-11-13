@@ -1,3 +1,8 @@
+.link-primary {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.1;
+}
 .link-inverted,
 .link-inverted:visited {
   color: $link-color-inverted;
@@ -38,4 +43,14 @@
 .link-deunderlined:visited:focus {
   text-decoration: none;
 }
+.link-white {
+  color: $white;
+  border-bottom: 1px solid rgba($white, 0.5);
+  padding-bottom: 1px;
 
+  &:hover {
+    color: $white;
+    text-decoration: none;
+    border-bottom-color: $white;
+  }
+}
