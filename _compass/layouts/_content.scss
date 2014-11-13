@@ -1,3 +1,9 @@
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
 .content {
   @include clearfix;
   position: relative;
@@ -24,11 +30,12 @@
   }
   .content-main-wrapper {
     @include above($main-breakpoint) {
+      position: relative;
       float: right;
       width: 70%;
+      min-height: calc(100vh - 88px); // 88px is the height of the footer
       background-color: $blue;
       @include box-shadow(-5px 0 1px -3px rgba(0, 0, 0, 0.2));
-      position: relative;
     }
     @include above(1000px) {
       width: calc(50% + 200px);
