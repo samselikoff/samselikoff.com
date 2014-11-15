@@ -43,9 +43,10 @@
 .link-deunderlined:visited:focus {
   text-decoration: none;
 }
-.link-white {
+.link-white,
+.link-white:visited {
   color: $white;
-  border-bottom: 1px solid rgba($white, 0.5);
+  border-bottom: 1px solid rgba($white, 0.25);
   padding-bottom: 1px;
 
   &:hover {

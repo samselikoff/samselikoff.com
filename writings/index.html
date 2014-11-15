@@ -11,31 +11,53 @@ title: Sam Selikoff - Writings
   </div>
 
 
-  <h2>Tutorials</h2>
+  <!-- <h2>Tutorials</h2>
   {% for article in site.data.writings.tutorials %}
     <div class='box box-sm'>
       <div class="box-body">
         <a class='box-title' href="{{article.url}}">{{article.title}}</a>
       </div>
     </div>
-  {% endfor %}
+  {% endfor %} -->
+
+  <!-- <div class='box box-sm'>
+    <div class="box-header">
+      <div class="box-header-title">Tutorials</div>
+    </div>
+    <div class="box-body">
+      <ul>
+        {% for article in site.data.writings.tutorials %}
+          <li><a href="{{article.url}}">{{article.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div> -->
+
+  <h2>Tutorials</h2>
+  <ul class='listing listing-indented'>
+    {% for article in site.data.writings.tutorials %}
+      <li class='u-margin-bottom-small'>
+        <a class='link-white' href="{{ article.url }}">{{ article.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 
   <h2>Book notes</h2>
-  {% for article in site.data.writings.book_reviews %}
-    <div class='box box-sm'>
-      <div class="box-body">
-        <a class='box-title' href="{{article.url}}">{{article.title}}</a>
-      </div>
-    </div>
-  {% endfor %}
+  <ul class='listing listing-indented'>
+    {% for article in site.data.writings.book_reviews %}
+      <li class='u-margin-bottom-small'>
+        <a class='link-white' href="{{ article.url }}">{{ article.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 
   <h2>Economics</h2>
-  {% for article in site.data.writings.economics %}
-    <div class='box box-sm'>
-      <div class="box-body">
-        <a class='box-title' href="{{article.url}}">{{article.title}}</a>
-      </div>
-    </div>
-  {% endfor %}
+  <ul class='listing listing-indented'>
+    {% for article in site.data.writings.economics %}
+      <li class='u-margin-bottom-small'>
+        <a class='link-white' href="{{ article.url }}">{{ article.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 
 </div>
