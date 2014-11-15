@@ -100,3 +100,13 @@
   }
 }
 
+.box-desktop {
+  @include below($main-breakpoint) {
+    margin-bottom: 0;
+    border-top: none;
+
+    .box-body {
+      padding: 0;
+    }
+  }
+}

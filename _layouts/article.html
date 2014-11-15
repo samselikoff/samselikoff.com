@@ -4,25 +4,24 @@ layout: base
 
 {% include mobile-header.html %}
 
-<section class="main">
-  <div id="{{ page.site-section }}" class="container container-padding">
-    <article>
-      <h1>{{ page.title }}
-        <span class="subtitle thin">{{ page.subtitle }}</span>
-      </h1>
-      <p class="attribution" itemscope="" itemtype="http://schema.org/Person">
-        by <a href="/about/" itemprop="name">Sam Selikoff</a>
-        <span class="u-pull-right">{{ page.date | date: "%B %-d, %Y" }}</span>
-      </p>
+<div class="content">
+  {% include sidebar.html %}
 
-      <hr class="divider-main">
-
-      {{ content }}
-    </article>
-
-    {% include comments.html %} 
+  <div class="content-main-wrapper">
+    <div class="content-main">
+      <section class="container-padding clearfix">
+        {% include nav.html %}
+        
+        <div class="box box-desktop shadow-standout shadow-desktop">
+          <div class="box-body">
+            {{ content }}
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
-</section>
+</div>
 
 {% include mobile-nav.html %}
+
 {% include footer.html %}

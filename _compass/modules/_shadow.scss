@@ -4,12 +4,19 @@
   z-index: 9;
 }
 .shadow-subtle {
+  @extend .shadow;
   @include box-shadow(0px 0px 2px 2px rgba(0, 0, 0, 0.35));
-  position: relative;
-  z-index: 9;
 }
 .shadow-floating {
+  @extend .shadow;
   @include box-shadow(0 0px 6px 4px rgba(0,0,0,0.25));
-  position: relative;
-  z-index: 9;
+}
+.shadow-standout {
+  @extend .shadow;
+  @include box-shadow(8px 10px 7px -4px rgba(0, 0, 0, 0.25));
+}
+.shadow-desktop {
+  @include below($main-breakpoint) {
+    @include box-shadow(none);
+  }
 }
