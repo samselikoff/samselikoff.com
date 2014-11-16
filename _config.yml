@@ -40,7 +40,7 @@ defaults:
       path: 'writings'
       type: 'writings'
     values:
-      layout: 'article'
+      layout: 'writing'
 
 
 # redcarpet:

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Projects - Sam Selikoff
+site-section: projects
 ---
 
 

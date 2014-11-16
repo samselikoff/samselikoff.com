@@ -1,5 +1,5 @@
 ---
-layout: writing
+layout: default
 title: "part3"
 primary: false
 ---

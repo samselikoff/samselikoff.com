@@ -1,6 +1,9 @@
 ---
 layout: default
+site-section: talks
 ---
+  
+{% assign site-section = "talks %}
 
 <div id="{{ page.site-section }}">
   <h1>{{ page.title }}</h1>
@@ -11,6 +14,10 @@ layout: default
   </p>
 
   <hr class="divider-main">
+
+  <section class='u-margin-bottom'>
+    {{ content }}
+  </section>
 
   {% if page.youtubeId %}
     <section class='u-margin-bottom u-clearfix'>
@@ -29,11 +36,6 @@ layout: default
       </div>
     </section>
   {% endif %}
-
-  <section class='u-margin-bottom'>
-    <h2>Description</h2>
-    {{ content }}
-  </section>
 
   {% if page.demos %}
     <section class='u-margin-bottom'>

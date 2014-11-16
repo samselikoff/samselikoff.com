@@ -1,19 +1,16 @@
 <nav class='nav visible-lg'>
   <ul class='nav-list'>
     <li class='nav-list-item'>
-      <a {% if page.url == '/blog/index.html' %}class='active'{% endif %} href="/blog">Blog</a>
+      <a {% if page.site-section == 'blog' %}class='active'{% endif %} href="/blog">Blog</a>
     </li>
     <li class='nav-list-item'>
-      <a {% if page.url == '/talks/index.html' %}class='active'{% endif %} href="/talks">Talks</a>
+      <a {% if page.site-section == 'talks' %}class='active'{% endif %} href="/talks">Talks</a>
     </li>
     <li class='nav-list-item'>
-      <a {% if page.url == '/writings/index.html' %}class='active'{% endif %} href="/writings">Writings</a>
+      <a {% if page.site-section == 'writings' %}class='active'{% endif %} href="/writings">Writings</a>
     </li>
     <li class='nav-list-item'>
-      <a {% if page.url == '/work/index.html' %}class='active'{% endif %} href="/work">Code + design</a>
+      <a {% if page.site-section == 'work' %}class='active'{% endif %} href="/work">Code + design</a>
     </li>
-    <!-- <li class='nav-list-item'>
-      <a {% if page.url == '/about/index.html' %}class='active'{% endif %} href="/about">About</a>
-    </li> -->
   </ul>
 </nav>

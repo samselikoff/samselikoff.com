@@ -1,5 +1,5 @@
 ---
-layout: writing
+layout: default
 title: "Ember and D3"
 category: tutorial
 published: false
