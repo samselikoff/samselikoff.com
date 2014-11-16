@@ -1,16 +1,19 @@
+{% assign urlSections = page.url | split:'/' %}
+{% assign siteSection = urlSections[1] %}
+
 <nav class='nav visible-lg'>
   <ul class='nav-list'>
     <li class='nav-list-item'>
-      <a {% if page.site-section == 'blog' %}class='active'{% endif %} href="/blog">Blog</a>
+      <a {% if siteSection == 'blog' %}class='active'{% endif %} href="/blog">Blog</a>
     </li>
     <li class='nav-list-item'>
-      <a {% if page.site-section == 'talks' %}class='active'{% endif %} href="/talks">Talks</a>
+      <a {% if siteSection == 'talks' %}class='active'{% endif %} href="/talks">Talks</a>
     </li>
     <li class='nav-list-item'>
-      <a {% if page.site-section == 'writings' %}class='active'{% endif %} href="/writings">Writings</a>
+      <a {% if siteSection == 'writings' %}class='active'{% endif %} href="/writings">Writings</a>
     </li>
     <li class='nav-list-item'>
-      <a {% if page.site-section == 'work' %}class='active'{% endif %} href="/work">Code + design</a>
+      <a {% if siteSection == 'work' %}class='active'{% endif %} href="/work">Code + design</a>
     </li>
   </ul>
 </nav>

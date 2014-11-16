@@ -1,6 +1,5 @@
 ---
 layout: talk
-site-section: talks
 date: 2013-08-08
 title: 'Ember and D3: Building a simple dashboard'
 location: 'Boston, MA'
