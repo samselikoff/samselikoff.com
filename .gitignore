@@ -2,6 +2,7 @@ _site
 node_modules
 
 # Numerous always-ignore extensions
+.DS_Store
 *.diff
 *.err
 *.orig
