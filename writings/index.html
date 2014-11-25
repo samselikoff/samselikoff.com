@@ -15,7 +15,7 @@ site-section: writings
   <ul class='listing listing-indented'>
     {% for article in site.data.writings.tutorials %}
       <li class='u-margin-bottom-small'>
-        <a class='link-white' href="{{ article.url }}">{{ article.title }}</a>
+        <a class='link-white' href="{{ article.linkOrUrl }}">{{ article.title }}</a>
       </li>
     {% endfor %}
   </ul>

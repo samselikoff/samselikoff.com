@@ -15,7 +15,7 @@ site-section: work
   <ul class='listing listing-indented'>
     {% for project in sorted_projects %}
       <li class='u-margin-bottom-small'>
-        <a class='link-white' href="{{ project.url }}">{{ project.title }}</a>
+        <a class='link-white' href="{{ project.link }}">{{ project.title }}</a>
       </li>
     {% endfor %}
   </ul>

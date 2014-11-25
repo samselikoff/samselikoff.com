@@ -13,6 +13,10 @@ module WritingsIndex
         cat = article['category'].pluralize
         if !categorized_writings[cat] then categorized_writings[cat] = [] end
 
+        # Some writings are just placeholders that redirect, so we want the link
+        # to go directly to the real content.
+        article['linkOrUrl'] = article['link'] || article['url']
+
         categorized_writings[cat].push article
       end
 
