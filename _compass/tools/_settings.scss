@@ -7,22 +7,20 @@ $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
 // $h1: 'Oleo Script', cursive;
 
 /*
-  Other variables
+  Breakpoints
 */
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1030px;
 $main-breakpoint: 840px;
 
 /*
-  Susy config
+  Layout
 */
-// $total-columns  : 12;             // a 12-column grid
-// $column-width   : 4em;            // each column is 4em wide
-// $gutter-width   : 1em;            // 1em gutters between columns
-// $grid-padding   : $gutter-width; 
+$max-width: 1000px;
+$main-width: 0.8;
+$secondary-width: 0.2;
 
-$susy: (
-  global-box-sizing: border-box,
-  use-custom: (rem: true
-    )
-  );
+.content-home {
+  $main-width: 0.7;
+  $secondary-width: 0.3;
+}

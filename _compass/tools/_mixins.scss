@@ -45,3 +45,18 @@
 @mixin above($point) {
   @media only screen and (min-width: $point) { @content; }
 }
+
+@mixin content-wrapper($width) {
+  @include above($main-breakpoint) {
+    width: percentage($width);
+  }
+  @include above($max-width) {
+    $offset: (0.5 - $width) * $max-width;
+    width: calc(50% - #{$offset});
+  }
+}
+@mixin content-inner($width) {
+  @include above($main-breakpoint) {
+    max-width: $max-width * $width;
+  }
+}
