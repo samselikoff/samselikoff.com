@@ -16,6 +16,7 @@
 
 @import 'layouts/header';
 @import 'layouts/footer';
+@import 'layouts/home';
 @import 'layouts/content';
 
 // @import 'modules/resume';
@@ -41,5 +42,6 @@
 @import 'modules/utilities';
 @import 'modules/nav';
 @import 'modules/text';
+@import 'modules/sidebar';
 
 @import 'pages/home';

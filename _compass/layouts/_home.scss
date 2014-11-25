@@ -1,0 +1,35 @@
+.home {
+  @include clearfix;
+  position: relative;
+  
+  .home-secondary-wrapper {
+    @include content-wrapper($home-secondary-width);
+    @include above($main-breakpoint) {
+      float: left;
+      background-color: $darkBlue;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+  }
+  .home-secondary {
+    @include content-inner($home-secondary-width);
+    @include above($main-breakpoint) {
+      width: 100%;
+      float: right;
+    }
+  }
+  .home-main-wrapper {
+    @include content-wrapper($home-main-width);
+    @include above($main-breakpoint) {
+      position: relative;
+      float: right;
+      min-height: calc(100vh - 88px); // 88px is the height of the footer
+      background-color: $blue;
+      @include box-shadow(-5px 0 1px -3px rgba(0, 0, 0, 0.2));
+    }
+  }
+  .home-main {
+    @include content-inner($home-main-width);
+  }
+}

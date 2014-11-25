@@ -17,8 +17,12 @@ $main-breakpoint: 840px;
   Layout
 */
 $max-width: 1000px;
-$main-width: 0.8;
-$secondary-width: 0.2;
+
+$home-main-width: 0.7;
+$home-secondary-width: 0.3;
+
+$main-width: 0.75;
+$secondary-width: 0.25;
 
 .content-home {
   $main-width: 0.7;

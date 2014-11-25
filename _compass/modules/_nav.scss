@@ -18,6 +18,7 @@
   .nav-list-item a {
     display: block;
     color: rgba(255, 255, 255, 0.5);
+    border-bottom: 3px solid transparent;
 
     &:hover,
     &:visited:hover {
@@ -27,7 +28,7 @@
 
     &.active {
       color: $white;
-      border-bottom: 3px solid $red;
+      border-bottom-color: $red;
     }
   }
 }
