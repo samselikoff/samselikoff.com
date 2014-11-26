@@ -71,7 +71,7 @@ title: Sam Selikoff
     
           <div class='shadow-floating box box-left box-lg'>
             <div class="box-body">
-              <h1 class='box-title'><a class='dark-link' href='/work'>Code + Design</a></h1>
+              <h1 class='box-title'><a class='dark-link' href='/projects'>Code + Design</a></h1>
               <ul>
                 {% assign sorted_projects = (site.projects | sort: 'date' | reverse) %}
                 {% for project in sorted_projects limit:3 %}
@@ -79,7 +79,7 @@ title: Sam Selikoff
                     <a href="{{ project.project_url }}">{{ project.title }}</a>
                   </li>
                 {% endfor %}
-                <a href="/work"><small>See all...</small></a>
+                <a href="/projects"><small>See all...</small></a>
               </ul>
             </div>
           </div>
