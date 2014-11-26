@@ -4,7 +4,7 @@ title:  "Data down, actions up"
 categories: ember
 ---
 
-Ember 2.0 is embracing some new patterns to ensure your apps are easy for others to understand as they grow in complexity. One of these patterns is "data down, actions up." But what does that mean?
+Ember 2.0 is embracing some new patterns to ensure your apps stay clear and maintainable as they grow in complexity. One of these patterns is "data down, actions up." But what does that mean?
 
 Here's a good way to think about it. Let's say we're making something like Trello, and our index route looks like this:
 
