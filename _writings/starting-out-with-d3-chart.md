@@ -4,7 +4,7 @@ slug: "starting-out-with-d3-chart"
 date: 2013-12-18
 category: tutorial
 redirect_from:
-  - /tutorials/starting-out-with-d3-chart
+  - /tutorials/starting-out-with-d3-chart/
   - /tutorials/starting-out-with-d3-chart/index.html
 ---
 
