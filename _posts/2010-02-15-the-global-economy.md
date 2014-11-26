@@ -2,11 +2,15 @@
 layout: post
 title:  "The global economy"
 categories: economics
+redirect_from:
+  - /blog/2010/02/15/the-global-economy/
 ---
 
 <aside>I wrote this in response to a statement about American consumers’ detachment from the means of production of the goods they consume.</aside>
 
 It may seem at times that Americans are getting fat off of the labor of others in the world. But once you understand the mutually beneficial nature of free markets, you’ll see this picture quite differently. Americans used to be just as poor as everyone else. But nearly 100 years of unfettered free markets and little government intervention gave rise to 19th century America, in which there was more economic growth and more people escaping from grinding poverty than during any other 100-year period of time in all of human history. It is a truly amazing phenomenon, and something I think we should keep in mind when talking about this kind of poverty and how it still occupies many countries in the present.
+
+<!-- more -->
 
 Bangladesh is a particularly good case study, because they gained independence after a war in 1971. For a couple of decades they suffered famines and extreme poverty, but democracy was restored in 1991. Since then they have experienced tremendous economic growth, and poverty has fallen dramatically. I think economic freedom has a huge part to do with it. That freedom allows them to trade with countries that are richer than them so they may develop more goods and services for themselves. It allows them to compete on a global stage on the basis of cheap (to us) labor, and rewards them for this competitive edge. This is the hallmark of a well-lubricated international market system, and it benefits all of its participants through specialization, the same way it benefitted America in the 1900s.
 

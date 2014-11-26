@@ -2,9 +2,13 @@
 layout: post
 title:  "NR Institute 2010 Contest"
 categories: economics
+redirect_from:
+  - /blog/2010/02/01/nr-institute-2010-contest/
 ---
 
 Daniel Danta and I submitted this essay to the NR Institute 2010 contest:
+
+<!-- more -->
 
 > Newton’s law of universal gravitation says that the force one object has over another decreases exponentially as their distance increases. Surprisingly, this idea holds true in modern-day politics. Any hope that a resident has of influencing his civic representatives is eroded the day he sends his tax dollars 2,000 miles away. While the thrust of this claim may seem to have its origins in conservatism, we claim that it is in fact axiomatic: there is no reason why liberals and conservatives cannot agree on the virtue of decentralized government power.
 > 

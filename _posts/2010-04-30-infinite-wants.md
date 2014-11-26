@@ -2,9 +2,13 @@
 layout: post
 title:  "Infinite wants"
 categories: economics
+redirect_from:
+  - /blog/2010/04/30/infinite-wants/
 ---
 
 A common cry today among politicians, professors and even the laity is that of job protection. They say we must increase tariffs to protect American workers; subsidize car companies to protect auto workers; and even ‘tax the rich’ to protect the middle-class workers.
+
+<!-- more -->
 
 All of these claims suffer the fatal economic flaw of focusing on the immediate effects of a change in the economy, while ignoring the distant consequences that follow and that are just as real and important. If the Chinese sell American consumers tires at a lower price than American tire producers can, it is true that American tire producers may lose their jobs. But to keep them in business by arbitrarily raising the price (i.e. instating a tariff) would mean to keep these producers in an industry in which they are relatively worse at than their Chinese counterparts. This means real resources would be diverted into a comparatively less-efficient industry, and would not be available for alternative production processes.
 

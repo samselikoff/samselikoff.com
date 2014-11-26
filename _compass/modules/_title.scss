@@ -1,0 +1,12 @@
+.title {
+  margin-bottom: 1em;
+
+  .title-label,
+  p {
+    color: $white-subtle;
+    line-height: 1.2;
+  }
+  .title-label-strong {
+    color: $white;
+  }
+}

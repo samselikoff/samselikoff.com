@@ -1,0 +1,23 @@
+---
+layout: inverted
+title: Sam Selikoff - Projects
+site-section: projects
+---
+
+{% assign sorted_projects = (site.projects | sort: 'date' | reverse) %}
+
+<div id="projects">
+
+  <div class="title">
+    <h1>Code + Design</h1>
+  </div>
+
+  <ul class='listing listing-indented'>
+    {% for project in sorted_projects %}
+      <li class='u-margin-bottom-small'>
+        <a class='link-white' href="{{ project.link }}">{{ project.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>

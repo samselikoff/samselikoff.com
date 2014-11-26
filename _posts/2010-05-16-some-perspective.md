@@ -2,9 +2,13 @@
 layout: post
 title:  "Some perspective"
 categories: economics
+redirect_from:
+  - /blog/2010/05/16/some-perspective/
 ---
 
 I just read a book review for the book "Eaarth," which is about the ecological crisis our planet will face if we "continue on our present course." Just to present some perspective on the issue, here are some of the hilarious, spectacularly wrong predictions made (by experts) on the occasion of Earth Day in 1970:
+
+<!-- more -->
 
 > "We have about five more years at the outside to do something."  
 > <small>Kenneth Watt, ecologist</small>

@@ -1,0 +1,57 @@
+.link-primary {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.1;
+}
+.link-inverted,
+.link-inverted:visited {
+  color: $link-color-inverted;
+  text-decoration: underline;
+
+  &:focus,
+  &:hover:focus,
+  &:hover {
+    color: $link-color-inverted-hover;
+  }
+}
+.dark-link,
+.dark-link:visited {
+  color: $black;
+  border-bottom: 1px solid lighten($black, 10%);
+
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    text-decoration: none;
+    color: $black;
+    border-color: $black;
+  }
+}
+.link-subtle,
+.link-subtle:visited {
+  color: #999;
+}
+.link-subtle:hover,
+.link-subtle:focus,
+.link-subtle:visited:hover,
+.link-subtle:visited:focus {
+  text-decoration: none;
+}
+.link-deunderlined:hover,
+.link-deunderlined:focus,
+.link-deunderlined:visited:hover,
+.link-deunderlined:visited:focus {
+  text-decoration: none;
+}
+.link-white,
+.link-white:visited {
+  color: $white;
+  border-bottom: 1px solid rgba($white, 0.25);
+  padding-bottom: 1px;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+    border-bottom-color: $white;
+  }
+}

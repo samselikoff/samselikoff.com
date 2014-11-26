@@ -2,6 +2,8 @@
 layout: post
 title:  "Morality and Legality"
 categories: economics
+redirect_from:
+  - /blog/2010/07/20/morality-and-legality/
 ---
 
 A response to someone about drugs and the relationship between a moral and legal framework:
@@ -9,6 +11,8 @@ A response to someone about drugs and the relationship between a moral and legal
 --------------------
 
 You hinted at the main reason why libertarians are libertarians, and it exactly boils down to the moral justification for the use of force. Libertarians believe force is only justified in self-defense i.e. when force (or the immediate threat of force) is present. More concisely, libertarians are completely against the initiation of force. This ultimately stems from their belief in property rights, namely that people have a legal right to their body, and any elements of nature they ‘mix their labor with’, or any good they receive via exchange or gift.
+
+<!-- more -->
 
 Ultimately, though, whether or not you find something (whether it be a belief in property rights, a belief in the non-initiation of force, or something else) morally compelling is attributable to your epistemology. There are atheists who contend that you can argue for a ‘rational ethics’; that is, that people can argue about what is objectively morally right and wrong. There are also atheists who argue that humanity’s sense of ethics is merely a result of sociobiology, an objectively insignificant evolutionary result of the development of human societies. These people would fall in the group you mentioned, who think that there is no basis for objective morality, and that therefore what is right or wrong in one culture has no bearing on what is right or wrong in another. My boilerplate response to people who hold this view is to bring up past human atrocities such as Nazi Germany, or even hypotheticals such as slashing a baby across the face. Most people will not deny that these actions are inherently evil.
 

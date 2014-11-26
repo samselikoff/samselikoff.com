@@ -3,11 +3,14 @@ layout: post
 title:  "Updated Ember and D3 talk"
 categories: Programming Ember D3
 published: true
+redirect_from:
+  - /blog/2013/09/26/updated-ember-d3-talk/
 ---
 
 Last night I gave an updated version of my *Ember and D3: Building a Simple Dashboard* talk at the [Boston D3.js](http://www.meetup.com/Boston-d3-js-User-Group/) meetup group. The biggest changes are the use of components instead of views, and the upgrade to Ember 1.0.0.  
-
 Here are the materials from my presentation.  
+
+<!-- more -->
 
 **Code:** [view on github](https://github.com/samselikoff/talks/tree/master/2-sep2013-d3-ember-simple-dashboard).
 

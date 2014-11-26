@@ -2,9 +2,13 @@
 layout: post
 title:  "Graduate school"
 categories: economics
+redirect_from:
+  - /blog/2011/01/03/graduate-school/
 ---
 
 Having just finished my first semester of graduate school in economics, I find myself confirming some of my skepticisms about the the economics profession. The mainstream treatment of economics – the study of human choice – is set in the world of mathematics and statistics, mostly devoid of intuition and critical thought, and replete with models which only superficially resemble reality. All of us are aware of the order that exists in the market, the regular rotation of events that takes place on a daily basis. The spontaneity of order in our everyday lives is apparent, and yet is almost completely ignored by mainstream textbooks. We go to Starbucks and pay $1.40 for a cup of coffee, a seeming mundanity that is in reality the result of millions of individual actions, guided not by mathematical equations but purposeful human beings. Economists should be students of this phenomenon – the market – and study it, instead of trying to control and design it. Unfortunately, ranks of graduate students are being trained to see market phenomena like prices and output as simple choice variables in complex equations that only ‘professionals’ can comprehend.
+
+<!-- more -->
 
 This past summer I read several different perspectives on the current state of economics in academia. I was excited to learn about an unspoken debate that took place among professors, but never made it to the rows of students sitting in the principles classes. Economics is one of a small number of fields where two similarly trained professionals can disagree not only on conclusions (appropriate policy prescriptions, ultimate causal events, etc.) but also on more fundamental issues (the nature of economic statements, the proper methodology for economic “truth-seeking”, etc.). Coming across two such individuals who are diametrically opposed on almost every dimension, one would almost hesitate to call them both ‘economists’. Yet the fact remains that economists of every shape and size exist, write books, conduct research, and advise governments.
 

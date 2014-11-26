@@ -1,0 +1,10 @@
+// Tried "separating" the two halves of the home page with this gradient,
+// but there were some glitches.
+// .page-splitter {
+//   @include above($main-breakpoint) {
+//     @include background-image(linear-gradient(to right, $darkBlue 30%, $blue 30%));
+//   }
+//   @include above(1000px) {
+//     @include background-image(linear-gradient(to right, #2e4752 calc(50% - 200px), #3e606f calc(50% - 200px)));
+//   }
+// }

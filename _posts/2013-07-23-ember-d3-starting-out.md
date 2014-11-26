@@ -2,9 +2,13 @@
 layout: post
 title:  "Ember and D3: Starting out"
 categories: programming ember d3 datavis
+redirect_from:
+  - /blog/2013/07/23/ember-d3-starting-out/
 ---
 
 Over the past few months I've worked on several data reporting projects. For the actual visualizations I've been using [D3.js](http://www.d3js.org), but at the start I was writing the rest of the architecture by hand. It didn't take long for my projects to become unwieldy; adding just a few filters and controls introduced the need to maintain application state, which dramatically increased each project's complexity. Without much experience in Javascript or application design, my apps quickly turned into unmaintainable piles of spaghetti.
+
+<!-- more -->
 
 As I looked into cleaning up my Javascript, one of the first resources I came across was [this slideshare presentation](http://www.slideshare.net/rmurphey/cleaner-leaner-meaner-refactoring-your-jquery). It's a great introduction to using OOP to organize JS DOM manipulations and event handling. After that, I started using [Backbone.js](http://backbonejs.org/). (For anyone starting out with Backbone, I highly recommend taking a look at [this article](https://github.com/kjbekkelund/writings/blob/master/published/understanding-backbone.md).) I learned a great deal through writing and re-writing several of my JS projects in Backbone, though I still felt ill-equipped in my decision-making - and Backbone certainly left me with a lot of decisions to make.
 

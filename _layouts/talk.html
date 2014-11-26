@@ -1,0 +1,73 @@
+---
+layout: default
+site-section: talks
+---
+  
+{% assign site-section = "talks %}
+
+<div id="{{ page.site-section }}">
+  <h1>{{ page.title }}</h1>
+  {% if page.subtitle %}<h2>{{ page.subtitle }}</h2>{% endif %}
+  <p class="attribution" itemscope="" itemtype="http://schema.org/Person">
+    by <a href="/about/" itemprop="name">Sam Selikoff</a>
+    <span class="u-pull-right">{{ page.date | date: "%B %-d, %Y" }}</span>
+  </p>
+
+  <hr class="divider-main">
+
+  <section class='u-margin-bottom'>
+    {{ content }}
+  </section>
+
+  {% if page.youtubeId %}
+    <section class='u-margin-bottom u-clearfix'>
+      <h2>Video</h2>
+      <div class="fixed-ratio fixed-ratio-video">
+        <iframe class='fixed-ratio-inner' src="//www.youtube.com/embed/{{page.youtubeId}}?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> 
+      </div>
+    </section>
+  {% endif %}
+
+  {% if page.slides %}
+    <section class='u-margin-bottom'>
+      <h2>Slides</h2>
+      <div class="fixed-ratio fixed-ratio-slides">
+        <iframe class='fixed-ratio-inner' src="{{page.slides}}/embed?style=hidden" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+    </section>
+  {% endif %}
+
+  {% if page.demos %}
+    <section class='u-margin-bottom'>
+      <h2>Demos</h2>
+      <a href="{{page.demos}}">View the demos</a>
+    </section>
+  {% endif %}
+
+  {% if page.code %}
+    <section class='u-margin-bottom'>
+      <h2>Code</h2>
+      <a href="{{page.code}}">View on GitHub</a>
+    </section>
+  {% endif %}
+
+  <section class="u-margin-bottom">
+    <h2>Presented at</h2>
+    
+    {% for event in page.events %}
+      <p class='u-no-bottom-margin'>
+        {% if event.venueUrl %}
+          <a href="{{event.venueUrl}}">{{event.venue}} - {{event.location}}</a>
+        {% else %}
+          {{event.venue}} - {{event.location}}
+        {% endif %}
+      </p>
+
+      <p class='u-no-bottom-margin'>
+        <small>{{event.date | date: "%B %-d, %Y"}}</small>
+      </p>
+
+      <hr class='divider-subtle'>
+    {% endfor %}
+  </section>
+</div>

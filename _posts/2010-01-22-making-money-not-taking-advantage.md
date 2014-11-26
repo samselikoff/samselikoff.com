@@ -2,9 +2,13 @@
 layout: post
 title:  "Making money, not taking advantage"
 categories: economics
+redirect_from:
+  - /blog/2010/01/22/making-money-not-taking-advantage/
 ---
 
 The latest stroke of brilliance from Mr. Obama: “We know that we need insurance reform, that the health insurance companies are taking advantage of people.”
+
+<!-- more -->
 
 Insurance companies add value to markets by pooling risk. This reduces uncertainty in people’s lives. This is the service that insurance companies provide. They cannot “take advantage of people” for the same reason McDonald’s cannot: people have a choice to either give their money to these firms, or keep it.
 

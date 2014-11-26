@@ -1,0 +1,162 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  box-sizing:         border-box;
+}
+
+body {
+  font-family: $sans-serif;
+  line-height: 1.6em;
+  color: #333;
+  background-color: $background-primary;
+  // @include container(90%); 
+}
+
+small {
+  font-size: small;
+}
+
+hr {
+  margin: 18px 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #ffffff;
+}
+
+aside {
+}
+pre {
+  line-height: 16px;
+  font-size: 14px;
+  word-wrap: normal;
+  white-space: pre;
+  overflow-x: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1em;
+  box-shadow: 0 0 15px 0px rgba(0,0,0,0.05) inset;
+}
+p code, ul code {
+  // margin: 0 2px;
+  // padding: 0px 5px;
+  // border: 1px solid #ddd;
+  // background-color: #f8f8f8;
+  // border-radius: 3px;
+  font-family: "Menlo", monospace;
+  font-size: 0.8em;
+  line-height: 1em;
+}
+ul, ol {
+  padding-left: 30px;
+  list-style-type: initial;
+}
+ol {
+  list-style-type: decimal;
+}
+
+a, a:visited {
+  color: $link-color;
+  text-decoration: none;
+
+  /* on hover */
+  &:hover, &:focus {
+    color: $link-hover;
+    text-decoration: underline;
+  }
+
+  /* on click */
+  &:active {
+
+  }
+
+  /* mobile tap color */
+  &:link {
+    /*
+    this highlights links on iPhones/iPads.
+    so it basically works like the :hover selector
+    for mobile devices.
+    */
+    -webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+  }
+}
+
+p {
+  margin: 0 0 1.1em;
+  line-height: 1.4;
+  color: $body-text;
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, h2, h3, h4, h5 {
+  text-rendering: optimizelegibility;
+  font-weight: 500;
+  /*
+  if you're going to use webfonts, be sure to check your weights
+  http://css-tricks.com/watch-your-font-weight/
+  */
+
+  /* removing text decoration from all headline links */
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+h2, h3, h4, h5 {
+  font-family: $sans-serif;
+}
+h1 {
+  font-size: 1.8em;
+  line-height: 1;
+  margin: 0 0 0.3em;
+  display: inline-block;
+  padding-bottom: 0.1em;
+  font-family: $serif;
+}
+
+h2 {
+  font-size: 1.1em;
+  line-height: 1.4em;
+  margin-bottom: 0.375em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.125em;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 0.846em;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+
+[class^="icon-"], [class*=" icon-"] {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+a [class^="icon-"], a [class*=" icon-"] {
+  opacity: .4;
+}
+a [class^="icon-"]:hover, a [class*=" icon-"]:hover {
+  opacity: 1;
+}
+
+img {
+  max-width: 100%;
+}

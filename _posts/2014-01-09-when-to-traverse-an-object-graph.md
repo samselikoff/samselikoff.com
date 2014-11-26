@@ -3,9 +3,13 @@ layout: post
 title:  "When to traverse an object graph"
 categories: programming
 published: true
+redirect_from:
+  - /blog/2014/01/09/when-to-traverse-an-object-graph/
 ---
 
 I've been refactoring a .NET app for the past several weeks. It's my first time really digging into a desktop app, and the architectural similarities with Javascript applications are surprising. Each type of app, being long-lived, requires management of a UI that is typically nested, which in turn raises some interesting questions regarding object responsibility.
+
+<!-- more -->
 
 One 'rule' I've found many Javascripters agree on is that child UI elements should never reach into their parents. So, a UserCollectionView object may render a `<ul>`, and many UserView objects would render their own `<li>` elements; but an individual UserView would never reach into the parent collection to, let's say, check whether another user was currently selected. That's probably a code smell, pointing to the need for a `selectedUser` property on the collection.
 

@@ -2,10 +2,13 @@
 layout: post
 title:  "Some Javascript constructor patterns, and when to use them"
 categories: Javascript
-published: true
+redirect_from:
+  - /blog/2013/11/14/some-Javascript-constructor-patterns/
 ---
 
 As I've been writing more and more JavaScript, I've learned something about the community: Javascripters like to do things differently. Ask two developers, or look at two different popular open-source projects, and you'll probably come across two different solutions for doing the same thing, whether it's as trivial as writing getter/setter methods or as complicated as loading modules. Sometimes I'm able to find a consensus around these solutions, but often I get lost among the alternatives, and find it difficult to determine which is most appropriate for my specific use case.
+
+<!-- more -->
 
 One example is writing constructors. I've come across several ways to do it - but which way is right? Why do some libraries choose one method, and some another? In this post, I'd like to explore some of the techniques I've encountered for writing constructor functions, their pros and cons, and when to use them.
 
@@ -14,7 +17,7 @@ Generic advice - using the `new` keyword (Mozilla)
 
 If I had to describe the 'standard' constructor pattern I've seen, it's probably this:
 
-{% highlight javascript %}
+```js
 // The constructor - like a class, but actually, not really
 function Person(firstName, lastName) {
   this.firstName = firstName;
@@ -32,7 +35,7 @@ sam.fullName();   // "Sam Selikoff"
 
 sam.firstName = 'Samuel';
 sam.fullName(); // Samuel Selikoff
-{% endhighlight %}
+```
 
 This looks a lot like something you'd see in other languages - but don't get too comfortable. If you instantiate two objects this way, they won't necessarily always have the same properties and methods. This is because Javascript lets you mutate objects at run-time:
 

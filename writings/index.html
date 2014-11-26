@@ -1,0 +1,41 @@
+---
+layout: inverted
+title: Sam Selikoff - Writings
+site-section: writings
+---
+
+<div id="writings">
+
+  <div class="title">
+    <h1>Writings</h1>
+    <p class='text-lead'>Tutorials and articles on JavaScript, economics and more</p>
+  </div>
+
+  <h2 class='listing-heading'>Tutorials</h2>
+  <ul class='listing listing-indented'>
+    {% for article in site.data.writings.tutorials %}
+      <li class='u-margin-bottom-small'>
+        <a class='link-white' href="{{ article.linkOrUrl }}">{{ article.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h2 class='listing-heading'>Book notes</h2>
+  <ul class='listing listing-indented'>
+    {% for article in site.data.writings.book_reviews %}
+      <li class='u-margin-bottom-small'>
+        <a class='link-white' href="{{ article.url }}">{{ article.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h2 class='listing-heading'>Economics</h2>
+  <ul class='listing listing-indented'>
+    {% for article in site.data.writings.economics %}
+      <li class='u-margin-bottom-small'>
+        <a class='link-white' href="{{ article.url }}">{{ article.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>

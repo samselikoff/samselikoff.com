@@ -1,0 +1,11 @@
+.hidden-lg {
+  @include above($main-breakpoint) {
+    display: none;
+  }
+}
+
+.visible-lg {
+  @include below($main-breakpoint) {
+    display: none;
+  }
+}

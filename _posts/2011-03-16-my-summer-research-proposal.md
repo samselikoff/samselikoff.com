@@ -2,9 +2,13 @@
 layout: post
 title:  "My summer research proposal"
 categories: economics
+redirect_from:
+  - /blog/2011/03/16/my-summer-research-proposal/
 ---
 
 I recently was awarded a summer fellowship to conduct research at the Mises Institute. Here is the proposal that I submitted:
+
+<!-- more -->
 
 --------------
 

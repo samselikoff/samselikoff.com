@@ -2,6 +2,8 @@
 layout: post
 title:  "The state's role in the creation of wealth"
 categories: economics
+redirect_from:
+  - /blog/2010/04/27/the-states-role-in-the-creation-of-wealth/
 ---
 
 Here’s a response I posted to a discussion about the causes of man’s creation of wealth.
@@ -9,6 +11,8 @@ Here’s a response I posted to a discussion about the causes of man’s creatio
 ----------------------
 
 I think you’re giving the State all the credit for man’s achievements. To be clear, I define the State as an entity which claims sole right to the use of force, and extracts its tax revenues via coercion.
+
+<!-- more -->
 
 It is true that private property enforcement is a precondition for prosperous free markets; however, this enforcement need not be provided by the State. In fact, the State violates private property rights by simply existing, as it is an institution based on coercion. But let’s put that aside for now.
 

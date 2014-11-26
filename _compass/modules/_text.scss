@@ -1,0 +1,9 @@
+.text-lead {
+  font-size: 16px;
+  font-weight: 200;
+}
+@include above($main-breakpoint) {
+  p {
+    font-size: 0.95em;
+  }
+}

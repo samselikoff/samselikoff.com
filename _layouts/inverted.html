@@ -1,0 +1,25 @@
+---
+layout: base
+---
+
+{% include mobile-header.html %}
+
+<div class="content">
+  {% include sidebar.html %}
+
+  <div class="content-main-wrapper">
+    <div class="content-main">
+      <section class="container-padding inverted clearfix">
+        {% include nav.html %}
+        
+        {{ content }}
+      </section>
+    </div>
+  </div>
+</div>
+
+<div class="inverted">
+  {% include mobile-nav.html %}
+</div>
+
+{% include footer.html %}

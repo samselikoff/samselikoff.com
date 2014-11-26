@@ -2,11 +2,15 @@
 layout: post
 title:  "The meaning of apriori"
 categories: economics
+redirect_from:
+  - /blog/2010/09/29/the-meaning-of-apriori/
 ---
 
 My latest response in an ongoing discussion about the Austrian approach to the science of economics:
 
 The Austrian response to your letter is two-fold. First, let me distinguish apriori statements from aposteriori statements, to the best of my ability; then I will present some problems with mainstream methodology. Aposteriori statements are hypotheses for which observations are necessary (although not sufficient) to determine their validity, while all other statements are apriori. The statement “2 + 2 = 4” is thus an apriori statement, because its truth is determined solely by its logical consistency with the basic axioms of mathematics. It would be ludicrous to try to falsify the statement with empirical data or through measurement. Similarly, the Pythagorean theorem is apriori, within the framework of the mathematical axioms. Measuring the three sides of a triangle could never invalidate the theorem; it is true by logical necessity.
+
+<!-- more -->
 
 What’s important to note is that just because a statement is apriori, and requires no observations to verify, does not make the statement meaningless or trivial. With the axioms of mathematics in place, all the ingredients were present for the discovery of the conclusions and implications of the Pythagorean theorem. But Pythagoras still had to make the deductions; they didn’t just fall out of the axioms. This method of deductive rumination – apriori reasoning – produces statements which are completely true by logical necessity. These statements apply to the empirical world whenever the conditions assumed in the reasoning are present in reality.
 

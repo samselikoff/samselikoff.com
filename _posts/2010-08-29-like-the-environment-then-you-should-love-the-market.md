@@ -2,9 +2,13 @@
 layout: post
 title:  "Like the environment? Then you should love the market"
 categories: economics
+redirect_from:
+  - /blog/2010/08/29/like-the-environment-then-you-should-love-the-market/
 ---
 
 If the government actually enforced property rights in the area of environmental protection, the monetary costs of energy use would reflect the total opportunity cost of using that energy, environmental impact included. This is one of most beautiful things about market prices – they carry with them information about the entire economy.
+
+<!-- more -->
 
 To see how, consider going shopping at Publix for groceries. At the checkout line, you can either choose paper or plastic. When you unload your groceries at home, you throw away (or recycle) the bags. Since waste management is municipalized, you don’t pay (directly) a price for the garbage man to come pick up the trash. Throwing away a paper bag is monetarily equivalent to throwing away a plastic bag.
 

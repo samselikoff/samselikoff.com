@@ -1,0 +1,20 @@
+.footer {
+  clear: both;
+  background-color: #111;
+  @include clearfix;
+  
+  .footer-content {
+    padding: 2em 1em;
+    font-size: 0.85em;
+    color: #555;
+  }
+  .footer-link {
+    float: right;
+    padding-left: 10px;
+  }
+  .footer-link-img {
+    background-color: #bbb;
+    height: 35px;
+    border: 1px solid #666;
+  }
+}

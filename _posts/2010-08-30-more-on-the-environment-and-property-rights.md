@@ -2,6 +2,8 @@
 layout: post
 title:  "More on the environment and property rights"
 categories: economics
+redirect_from:
+  - /blog/2010/08/30/more-on-the-environment-and-property-rights/
 ---
 
 Here’s another email I wrote in response to concerns about a firm in the free market dumping waste:
@@ -9,6 +11,8 @@ Here’s another email I wrote in response to concerns about a firm in the free 
 ---------------------------------
 
 There will never be utopia on this side of Eden. The question is, which system minimizes waste, damage, etc. while protecting human rights.
+
+<!-- more -->
 
 In a free market, plots of the ocean could be owned, just as plots of the earth’s surface are. The way somebody comes to own land is to ‘homestead’ it, by ‘mixing their labor’ with it. Since government has made this illegal with respect to certain lakes, oceans, etc. there has been little entrepreneurial creativity in this area (check out www.seasteading.org), and it is hard to know exactly how people would section off parts of the ocean they have homesteaded (buoys?). But let’s just assume they have.
 

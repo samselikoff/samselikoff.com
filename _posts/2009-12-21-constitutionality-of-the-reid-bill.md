@@ -2,9 +2,13 @@
 layout: post
 title:  "Constitutionality of the Reid Bill"
 categories: general
+redirect_from:
+  - /blog/2009/12/21/constitutionality-of-the-reid-bill/
 ---
 
 Read Richard Epstein’s view on the [constitutionality of the Reid Bill](http://www.pointoflaw.com/columns/archives/2009/12/impermissible-ratemaking-in-he.php).
+
+<!-- more -->
 
 Basically, the bill creates an insurer exchange on a state-by-state basis, where all participating firms have access to a pool of heavily-subsidized consumers in exchange for complying with numerous burdensome regulations.
 
