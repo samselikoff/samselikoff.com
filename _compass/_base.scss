@@ -53,6 +53,12 @@ ul, ol {
 ol {
   list-style-type: decimal;
 }
+ul ul {
+  margin-top: 0;
+}
+li > p {
+  margin-bottom: 0;
+}
 
 a, a:visited {
   color: $link-color;
