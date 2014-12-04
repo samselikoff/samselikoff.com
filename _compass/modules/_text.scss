@@ -3,7 +3,10 @@
   font-weight: 200;
 }
 @include above($main-breakpoint) {
-  p {
+  p, li {
     font-size: 0.95em;
   }
+}
+.text-center {
+  text-align: center;
 }
