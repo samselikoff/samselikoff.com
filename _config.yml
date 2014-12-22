@@ -13,7 +13,6 @@ excerpt_separator: "<!-- more -->"
 
 gems:
   - pry
-  - pry-debugger
   - jekyll-compass
   - jekyll-redirect-from
   - active_support
