@@ -5,6 +5,7 @@ title: How Ember Data affects data down, actions up
 In anticipation of Ember 2.0 I've been experimenting with writing one of my applications as a tree of nested components. Something like
 
 ```handlebars
+{% raw %}
 <lesson-creator>
   <main-intro> .. </main-intro>
 
@@ -14,6 +15,7 @@ In anticipation of Ember 2.0 I've been experimenting with writing one of my appl
     {{/each}}
   </question-list>
 </lesson-creator>
+{% endraw %}
 ```
 
 Building my app like this has forced me to think about how exactly data down, actions up (DDAU) should work in Ember.
@@ -40,12 +42,14 @@ In a React app, data is being passed around every which way. Each component has 
 With Ember + Ember Data, though, we're not just dealing with POJOs. Ember Data's store gives us an identity map, and together Ember and ED are responsible for data consistency. I think this has implications for the "actions up" part of DDAU. For instance, say I'm working with an `<answer-list>` that's deeply nested somewhere within my app. This component takes a question and an array of answers (think a teacher writing a multiple-choice question for a test). The `<answer-list>` contains a button that allows the teacher to add a new answer to the question:
 
 ```handlebars
-//components/answer-list/template.handlebars
+{% raw %}
+{{!-- components/answer-list/template.handlebars --}}
 {{#each answer in answers}}
   ...
 {{/each}}
 
 <button {{action 'addAnswer' question}}>Add a new answer</button>
+{% endraw %}
 ```
 
 Say I handle the action directly in the `<answer-list>` component, like this:
