@@ -1,13 +1,13 @@
 name: Sam Selikoff
-# pygments: true
+rss_name: Sam Selikoff - Blog
+rss_description: 'Javascript, web development and and economics'
+url: http://www.samselikoff.com
 highlighter: pygments
-# permalink: /blog/:year/:month/:day/:title
 permalink: /blog/:title
 # paginate: 5
 # paginate_path: "blog/page:num"
-exclude: ['node_modules', 'gulpfile.js']
+exclude: ['node_modules']
 
-# markdown: maruku
 markdown: redcarpet
 excerpt_separator: "<!-- more -->"
 
