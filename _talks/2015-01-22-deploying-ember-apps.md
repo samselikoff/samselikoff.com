@@ -3,7 +3,7 @@ layout: talk
 date: 2015-01-22
 title: Deploying Ember Apps
 location: New York, New York
-slides: http://slides.com/samselikoff/react
+slides: https://slides.com/samselikoff/deploying-ember-apps-with-front_end_builds
 events:
   - 
     venue: Ember NYC
