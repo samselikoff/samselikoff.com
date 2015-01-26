@@ -23,7 +23,7 @@ site-section: talks
     <section class='u-margin-bottom u-clearfix'>
       <h2>Video</h2>
       <div class="fixed-ratio fixed-ratio-video">
-        <iframe class='fixed-ratio-inner' src="//www.youtube.com/embed/{{page.youtubeId}}?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> 
+        <iframe class='fixed-ratio-inner' src="//www.youtube.com/embed/{{page.youtubeId}}?rel=0&amp;controls=1&amp;showinfo=0{% if page.youtubeLocation %}#t={{page.youtubeLocation}}{% endif %}" frameborder="0" allowfullscreen></iframe> 
       </div>
     </section>
   {% endif %}
