@@ -37,6 +37,15 @@ site-section: talks
     </section>
   {% endif %}
 
+  {% if page.slideshareId %}
+    <section class='u-margin-bottom'>
+      <h2>Slides</h2>
+      <div class="fixed-ratio fixed-ratio-slides">
+        <iframe class='fixed-ratio-inner' src="//www.slideshare.net/slideshow/embed_code/{{page.slideshareId}}" frameborder="0" scrolling="no" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
+      </div>
+    </section>
+  {% endif %}
+
   {% if page.demos %}
     <section class='u-margin-bottom'>
       <h2>Demos</h2>
