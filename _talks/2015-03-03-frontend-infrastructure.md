@@ -3,6 +3,7 @@ layout: talk
 date: 2015-03-03
 title: Bring Sanity to your Frontend Infrastructure with EmberJS
 location: Portland, Oregon
+youtubeId: iwPsNTkyCcA
 slideshareId: 45456235
 events:
   -
