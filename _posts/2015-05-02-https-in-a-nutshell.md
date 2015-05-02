@@ -8,14 +8,15 @@ I'll assume that you're familiar with HTTP requests at a high level, but don't k
 
 ## What is HTTPS?
 
-HTTPS is a *protocol*, which is a set of rules that govern data transfer. It is the final layer in a stack of protocols:
+HTTPS is a *protocol*, which is a set of rules that governs data transfer. The various internet protocols are built on top of each other:
 
   - HTTPS (HTTP over TLS)
   - HTTP
+  - TLS
   - TCP
   - IP
 
-Each protocol exists to improve the layer beneath it in some way. Let's briefly discuss each one.
+Each protocol exists to improve the layer beneath it in some way. Understanding each protocol is useful for understanding the benefits that HTTPS provides.
 
 *IP* stands for Internet Protocol, and it is the primary mechanism for all data transfer on the Internet. IP transfers data in chunks called *packets* from a *source* to a *destination*. Somewhat surprisingly, it makes little guarantees about each packet it sends. In fact, when a source sends a packet, the destination could receive that packet once, twice (i.e. receive a duplicate), or not at all.
 
@@ -53,7 +54,7 @@ In short, TCP is able to improve upon the unreliable IP layer by sending *acknow
 
 ## The web, security and TLS
 
-*HTTP* stands for Hypertext Transfer Protocol, and it's built on top of TCP. Its model of transfer is quite simple: a client makes a single request to a server, and the server sends back a single response. The web as we know it runs on HTTP: typing `www.facebook.com` into your address bar sends an HTTP request to Facebook's servers, and the web site you view and interact with is the server's response.
+*HTTP* stands for Hypertext Transfer Protocol, and it's built on top of TCP. Its transfer model is quite simple: a client makes a single request to a server, and the server sends back a single response. The web as we know it runs on HTTP: typing `www.facebook.com` into your address bar sends an HTTP request to Facebook's servers, and the web site you view and interact with is the server's response.
 
 Because HTTP runs on top of TCP, new browser sessions must first establish a TCP connection before receiving any data. This involves the three-way handshake described in the previous section. Once the session is established, data transfer can begin between the client and server.
 
@@ -67,4 +68,4 @@ One final interesting bit I learned from the article was how the handshakes affe
 
 ---
 
-I hope you have a better idea of what HTTPS is, and how drastistically it improves your site's security! If you'd like to learn more, I recommend [this thorough, well-written article](http://www.objc.io/issue-10/ip-tcp-http.html).
+I hope you have a better idea of what HTTPS is, and how drastistically it can improve your site's security! If you'd like to learn more, I recommend [this thorough, well-written article](http://www.objc.io/issue-10/ip-tcp-http.html) by [@danielboedewadt](https://twitter.com/danielboedewadt).
