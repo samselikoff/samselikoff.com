@@ -61,6 +61,10 @@ As the web integrates more and more with every aspect of our lives, a strong sec
 
 *TLS* stands for Transport Layer Security, and it's a cryptographic layer that sits on top of TCP. It solves both of these problems by verifying the identity of hosts, and encrypting the messages they transfer. Establishing a TLS connection involves an additional three-way handshake that executes after TCP's initial handshake. Once a TLS connection is established, HTTP requests and responses are made to known, trusted hosts, and HTTP message bodies are encrypted. This is known as HTTP Secure, or HTTPS.
 
+## Latency
+
+One final interesting bit I learned from the article was how the handshakes affect page load time. When initializing a new session with a server, the three-step TCP handshake can potentially take 750ms or more, depending on the user's latency. Since a TLS connection requires an additional three-step handshake, simply adding HTTPS to your site can mean users on low-latency connections (such as mobile devices) could wait 1.5 seconds before your server can even begin sending data.
+
 ---
 
-I hope you have a better idea of what HTTPS is, and how drastistically it improves your site's security! One final interesting bit I noted from the article was how the handshakes affect page load time. When initializing a new session with a server, the three-step TCP handshake can potentially take 750ms or more, depending on the user's latency. Since a TLS connection requires an additional three-step handshake, simply adding HTTPS to your site can mean users on low-latency connections (such as mobile devices) could wait 1.5 seconds before your server can even begin sending data.
+I hope you have a better idea of what HTTPS is, and how drastistically it improves your site's security! If you'd like to learn more, I recommend [this thorough, well-written article](http://www.objc.io/issue-10/ip-tcp-http.html).
