@@ -58,13 +58,15 @@ In short, TCP is able to improve upon the unreliable IP layer by sending *acknow
 
 Because HTTP runs on top of TCP, new browser sessions must first establish a TCP connection before receiving any data. This involves the three-way handshake described in the previous section. Once the session is established, data transfer can begin between the client and server.
 
-As the web integrates more and more with every aspect of our lives, a strong security model has become desirable. Using HTTP over a TCP connection is *insecure*, and it's easy to see why. Think back to the analogy of the phone call. After you had established contact with Susan, you both acknowledged that you were receiving each other's messages. But how did you know for sure you were speaking with Susan? Also, if someone else had tapped the phone line, they'd be able to listen in on your conversation.
+As the web integrates more and more with every aspect of our lives, a strong security model has become desirable. Using HTTP over a TCP connection is *insecure*, and it's easy to see why. Think back to the analogy of the phone call. After you had established contact with Susan, you both acknowledged that you were receiving each other's messages. But how did you know for sure you were speaking with Susan, rather than someone just pretending to be Susan? Also, if someone else had tapped the phone line, they'd be able to listen in on your conversation.
 
 *TLS* stands for Transport Layer Security, and it's a cryptographic layer that sits on top of TCP. It solves both of these problems by verifying the identity of hosts, and encrypting the messages they transfer. Establishing a TLS connection involves an additional three-way handshake that executes after TCP's initial handshake. Once a TLS connection is established, HTTP requests and responses are made to known, trusted hosts, and HTTP message bodies are encrypted. This is known as HTTP Secure, or HTTPS.
 
+Thus, HTTPS improves upon the security of HTTP by sending *encrypted data* over a *verified connection*.
+
 ## Latency
 
-One final interesting bit I learned from the article was how the handshakes affect page load time. When initializing a new session with a server, the three-step TCP handshake can potentially take 750ms or more, depending on the user's latency. Since a TLS connection requires an additional three-step handshake, simply adding HTTPS to your site can mean users on low-latency connections (such as mobile devices) could wait 1.5 seconds before your server can even begin sending data.
+One final interesting bit from the article was how the TCP and TLS handshakes affect page load time. When initializing a new session with a server, the three-step TCP handshake can potentially take 750ms or more, depending on the user's latency. Since a TLS connection requires an additional three-step handshake, simply adding HTTPS to your site can mean users on low-latency connections (such as mobile devices) could wait 1.5 seconds before your server can even begin sending data.
 
 ---
 

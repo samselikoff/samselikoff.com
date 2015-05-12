@@ -21,4 +21,6 @@ Now you can
 jekyll new .
 ```
 
-and next time you push, your docs site will be up and running!
+Add a new .gitignore file (for `_site`, `node_modules` etc.). Also, be sure to `exclude` any dirs like `node_modules` or `bower_components` that may be hanging around from your project's master branch, or else Jekyll will watch + build them. ([docs](http://jekyllrb.com/docs/configuration/)).
+
+Next time you push, your docs site will be up and running!
