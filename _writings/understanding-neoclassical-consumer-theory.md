@@ -4,7 +4,7 @@ category: economics
 date: 2011-08-15
 ---
 
-<a href="understanding-neoclassical.pdf">Download the full article.</a>
+<a href="../understanding_neoclassical_consumer_theory.pdf">Download the full article.</a>
 
 <aside>This is an academic paper I wrote in the summer of 2011 at the Ludwig von Mises Institute. It explores the foundations of neoclassical consumer theory and offers a critique from the perspective of the Autrian School.</aside>
 
