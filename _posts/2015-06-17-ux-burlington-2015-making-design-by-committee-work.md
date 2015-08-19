@@ -1,7 +1,7 @@
 ---
 title: "UX Burlington 2015: Making Design by Committee Work"
 categories: ux
-published: true
+published: false
 ---
 
 Here are my notes from [James A. Rosen's](https://twitter.com/jamesarosen) talk at [UX Burlington 2015](http://uxburlington.com/).
