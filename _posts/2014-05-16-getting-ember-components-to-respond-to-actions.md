@@ -39,16 +39,16 @@ What we really want is for our `StreetViewComponent` to send out an action calle
 
 We can solve this problem by having our fullscreen component register a reference to itself upon initialization.
 
-First, add a `_register` method to the component that executes on init:
+First, add a method to the component that executes on init:
 
 ```js
 App.FullscreenMapComponent = Ember.Component.extend({
 
   ...
 
-  _register: function() {
+  _registerWithTarget: Ember.observer('init', function() {
     this.set('register-as', this); // register-as is a new property
-  }.on('init')
+  })
 
 });
 ```
