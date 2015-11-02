@@ -1,7 +1,7 @@
 ---
 title: "UX Burlington 2015: Improving the Authoring Experience"
 categories: ux
-published: false
+published: true
 ---
 
 Here are my notes from this year's [UX Burlington](http://uxburlington.com/) keynote by [Eileen Webb](https://twitter.com/webmeadow).

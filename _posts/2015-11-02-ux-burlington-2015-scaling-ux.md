@@ -1,7 +1,7 @@
 ---
 title: "UX Burlington 2015: Scaling UX"
 categories: ux
-published: false
+published: true
 ---
 
 Here are my notes from [Jeffrey Pierce's](https://twitter.com/jeffrey_pierce) talk at [UX Burlington 2015](http://uxburlington.com/).
