@@ -13,7 +13,7 @@ One of the biggest challenges when writing a JavaScript application is keeping m
 
 In the past few years, the JavaScript community has learned a lot about how to deal with this problem. The solution involves the principle of the **Lowest Common Ancestor**. To explain this principle, let's look at some interface elements you might build while working on a real-world application.
 
-The examples use Ember, but the principles are and apply to any technology used for building long-lived JavaScript applications.
+The examples use Ember, but the principles are high-level and apply to any technology used for building long-lived JavaScript applications.
 
 ## A collapsible panel (a single view of app state)
 
@@ -76,7 +76,7 @@ We have a new feature request: adding a separate button which can also toggle th
 
 We now have two elements in our application whose view depends on the same piece of state. What should we do?
 
-One option is to add an `isOpen` property to our `Button` component, and try to keep both properties in sync:
+One option is to add an `isOpen` property to our `<button>` component, and try to keep both properties in sync:
 
 <div class="text-center u-90p">
   <img class='image-bordered' src="/images/posts/lowest-common-ancestor5.png" alt="Collapsible panel">
@@ -116,7 +116,7 @@ export default Ember.Component.extend({
 });
 ```
 
-When the user clicks either the `<collapsible-panel>` or the `<button>`, we'll send an action up to `<app>`, which will then change its property. The new value of `isOpen` propogates throughout the rest of the app, and the problem of inconsistent interface elements goes away.
+When the user clicks either the `<collapsible-panel>` or the `<button>`, we'll send an action up to `<app>`, which will then change its `isOpen` property. The new value of `isOpen` propogates throughout the rest of the app, and the problem of inconsistent interface elements goes away.
 
 Crucially, we've made sure that only the owner of the state - `<app>`, in this case - is able to change that state. The children delegate their actions up to the owner.
 
@@ -146,9 +146,9 @@ Note that it can sometimes be convenient to create a new common ancestor compone
 
 In many situations, the principle of LCA is sufficient. State has a single source of truth, and is passed down to all children who need it. The problem you can run into, however, is when the LCA is very far away in your component hierarchy from the relevant children.
 
-In this case, you can end up with many components acting as middlemen. These components must know about and pass along various pieces of shared state to leaf components, making your UI difficult to refactor. There's even a [code smell of the same name](https://sourcemaking.com/refactoring/smells/middle-man) in object-oriented design, further suggesting that this is indeed a problem.
+In this case, you can end up with many components acting as middlemen. These components must know about and pass along various pieces of shared state to leaf components, making your UI difficult to refactor. There's even a [code smell of the same name](https://sourcemaking.com/refactoring/smells/middle-man) in object-oriented design, suggesting that this is indeed a concern.
 
-An example of how this could happen is if many components in your app needed to know about the current user.
+An example of how this could happen is if many components in your app needed to know about the current user:
 
 <div class="text-center u-90p">
   <img class='image-bordered' src="/images/posts/lowest-common-ancestor8.png" alt="Collapsible panel">
@@ -158,9 +158,9 @@ An example of how this could happen is if many components in your app needed to 
 
 Assuming this many nodes need to know about the current user, the LCA would be `<app>`, and every component would need to pass along `currentUser` to every other component. This definitely smells like Middle Man.
 
-The solution to this problem is to *pull the state out of the UI hierarchy*. The idea here is that, while `isOpen` in our earlier example corresponded directly to a particular onscreen UI element (whether a panel was open), `currentUser` does not. So, it doesn't really make sense for `<app>` (or any other UI element) to "own" `currentUser`.
+The solution to this problem is to *pull the state out of the UI hierarchy*. The idea here is that, while `isOpen` in our earlier example corresponded directly to a particular onscreen UI element (whether the panel was open), `currentUser` does not. So, it doesn't really make sense for `<app>` (or any other UI element) to "own" `currentUser`.
 
-In Ember, we can use a Service to solve this problem. A Service is a long-lived data container that exists independent of the UI tree. After we set it up, components can ask for the data in the Service using dependency injection. Importantly, their parent components are none the wiser.
+In Ember, we can use a Service to solve this problem. A Service is a long-lived data container that exists independent of the UI tree. After we set it up, components can use *dependency injection* to ask for the data in the Service. Importantly, their parent components are none the wiser.
 
 ```js
 // app/services/current-user.js
@@ -189,9 +189,9 @@ Now, `<sidebar>` can access `currentUser` in its template:
 
 ## Conclusion
 
-So, when should application state exist in the UI hierarchy, and when should it be pulled out? As in most areas of software design, the answer is not black and white. Instead, we must understand the tradeoffs involved, and make decisions on a case-by-case basis.
+So, when should application state exist in the UI hierarchy, and when should it be pulled out? As in most areas of software design, there is no black and white answer. Instead, we must understand the tradeoffs involved, and make decisions on a case-by-case basis.
 
-State that's stored directly in the UI hierarchy is often easier to understand and requires less boilerplate; but, the more components that need a particular piece of state, the more brittle your UI hierarchy can become. Eventually, it makes sense to move "popular state" into a UI-independent data container, such as an Ember Service.
+State that's stored directly in the UI hierarchy is often easier to understand and requires less boilerplate; but, the more components that need a particular piece of state, the more brittle your UI hierarchy becomes. Eventually, it makes sense to move "popular state" into a UI-independent data container, such as an Ember Service.
 
 The key insight is that *all changing application state should have a single owner*, and thus a single source of truth. Further, only the owner should be allowed to mutate that state. If the state lives in the UI hierarchy, the single owner should be the Lowest Common Ancestor of all components that need that state.
 
@@ -199,6 +199,6 @@ To summarize,
 
   1. Start by storing state on local component instances
   2. Once a piece of application state is needed by more than one component, move that state up to the LCA
-  3. Once there are many components acting as middlemen, or it feels wrong for a particular component to own some state, pull that state out of the UI hierarchy and into a data container (an Ember Service, a Flux store, etc.)
+  3. Once there are many components acting as middlemen, or it feels wrong for any particular component to own some state, pull that state out of the UI hierarchy and into a data container (an Ember Service, a Flux store, etc.)
 
 While our example above might seem simple enough, this pattern goes a long way in keeping your application's architecture consistent and easy to reason about.
