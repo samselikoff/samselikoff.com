@@ -160,7 +160,7 @@ Assuming this many nodes need to know about the current user, the LCA would be `
 
 The solution to this problem is to *pull the state out of the UI hierarchy*. The idea here is that, while `isOpen` in our earlier example corresponded directly to a particular onscreen UI element (whether the panel was open), `currentUser` does not. So, it doesn't really make sense for `<app>` (or any other UI element) to "own" `currentUser`.
 
-In Ember, we can use a Service to solve this problem. A Service is a long-lived data container that exists independent of the UI tree. After we set it up, components can use *dependency injection* to ask for the data in the Service. Importantly, their parent components are none the wiser.
+In Ember, we can use a Service to solve this problem (in React, you might use a Flux store). A Service is a long-lived data container that exists independent of the UI tree. After we set it up, components can use *dependency injection* to ask for the data in the Service. Importantly, their parent components are none the wiser.
 
 ```js
 // app/services/current-user.js
