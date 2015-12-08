@@ -95,9 +95,9 @@ Think of the `isOpen` properties on the two children as read-only pointers to th
 Here's the template for `<app>`:
 
 ```handlebars{% raw %}
-{{collapsible-panel isOpen=isOpen onClick='toggleIsOpen'}}
+{{collapsible-panel isOpen=isOpen onClick=(action 'toggleIsOpen')}}
 
-{{button isOpen=isOpen onClick='toggleIsOpen'}}
+{{button isOpen=isOpen onClick=(action 'toggleIsOpen')}}
 ```{% endraw %}
 
 And here's the JS, which looks exactly the same as `<collapsible-panel>` did in the first example:
@@ -191,7 +191,7 @@ Now, `<sidebar>` can access `currentUser` in its template:
 
 So, when should application state exist in the UI hierarchy, and when should it be pulled out? As in most areas of software design, there is no black and white answer. Instead, we must understand the tradeoffs involved, and make decisions on a case-by-case basis.
 
-State that's stored directly in the UI hierarchy is often easier to understand and requires less boilerplate; but, the more components that need a particular piece of state, the more brittle your UI hierarchy becomes. Eventually, it makes sense to move "popular state" into a UI-independent data container.
+State that's stored directly in the UI hierarchy is often easier to understand and requires less boilerplate; but, the more components that need a particular piece of state, the more brittle your UI hierarchy becomes. Eventually, it makes sense to move "popular state" into a UI-independent data container Eventually, it makes sense to move "popular state" into a UI-independent data container, an identity map which other components can read from.
 
 The key insight is that *all changing application state should have a single owner*, and thus a single source of truth. Further, only the owner should be allowed to mutate that state. If the state lives in the UI hierarchy, the single owner should be the Lowest Common Ancestor of all components that need that state.
 
