@@ -76,7 +76,7 @@ title: Sam Selikoff
                 {% assign sorted_projects = (site.projects | sort: 'date' | reverse) %}
                 {% for project in sorted_projects limit:3 %}
                   <li class='box-list-item'>
-                    <a href="{{ project.project_url }}">{{ project.title }}</a>
+                    <a href="{{ project.link }}">{{ project.title }}</a>
                   </li>
                 {% endfor %}
                 <a href="/projects"><small>See all...</small></a>
