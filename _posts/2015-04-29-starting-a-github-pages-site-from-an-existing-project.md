@@ -12,7 +12,7 @@ git checkout --orphan github-pages
 This gives you a clean branch, but preserves the working files in your directory. Run this command to remove them:
 
 ```
-git clean -fd
+git rm -rf .
 ```
 
 Now you can
