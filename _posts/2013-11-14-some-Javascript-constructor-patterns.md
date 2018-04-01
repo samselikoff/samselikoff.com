@@ -110,10 +110,7 @@ function Person(firstName, lastName) {
   var _firstName = firstName,
       _lastName = lastName;
 
-  var my = {
-    firstName: _firstName,
-    lastName: _lastName
-  };
+  var my = {};
 
   my.fullName = function() {
     return _firstName + ' ' + _lastName;
