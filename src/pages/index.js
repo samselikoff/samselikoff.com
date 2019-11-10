@@ -78,34 +78,8 @@ export default function IndexPage({ data }) {
             have since made my way back to the Northeast.
           </p>
           <p className="mt-4">
-            I currently live in New York City. I absolutely love it here!
+            I currently live in New York City + absolutely love it here!
           </p>
-
-          {/* <div className="mt-8 -mx-6">
-            <div className="flex flex-wrap">
-              <div className="w-full bg-green-500 pb-9/16">
-                <Img
-                  fluid={{
-                    ...data.file.childImageSharp.fluid,
-                    aspectRatio: 1,
-                  }}
-                />
-              </div>
-              <div className="w-1/2 bg-red-500 pb-1/2 relative">
-                <Img
-                  fluid={{
-                    ...data.file.childImageSharp.fluid,
-                    aspectRatio: 1,
-                  }}
-                />
-                <div className="absolute bottom-0 text-white px-6 pb-2">
-                  <p className="text-sm font-medium">New York City</p>
-                  <p className="text-xs font-medium">2015–Present</p>
-                </div>
-              </div>
-              <div className="w-1/2 bg-blue-500 pb-1/2" />
-            </div>
-          </div> */}
 
           <div className="mt-8 -mx-6">
             <div className="relative">
@@ -181,21 +155,21 @@ export const query = graphql`
   query {
     newYork: file(relativePath: { eq: "new-york.jpeg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 3000) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
     burlington: file(relativePath: { eq: "burlington.jpeg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 3000) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
     boston: file(relativePath: { eq: "boston.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 3000) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
