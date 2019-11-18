@@ -74,19 +74,6 @@ Layout.propTypes = {
 
 export default Layout
 
-function CollapsiblePanel({ open, children }) {
-  const [bind, { height }] = useMeasure()
-  const props = useSpring({ height: open ? height : 0 })
-
-  return (
-    <>
-      <animated.div style={{ overflow: "hidden", ...props }}>
-        <div {...bind}>{children}</div>
-      </animated.div>
-    </>
-  )
-}
-
 function useMeasure() {
   const ref = React.useRef()
   const [bounds, set] = React.useState({ left: 0, top: 0, width: 0, height: 0 })

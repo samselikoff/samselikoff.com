@@ -19,8 +19,8 @@ export default function IndexPage({ data }) {
           </p>
           <p className="mt-4">
             I'm <Link href="https://twitter.com/samselikoff">@samselikoff</Link>
-            , and I've made a living teaching JavaScript UI development on the
-            web since 2016.
+            , and since 2016 I've made a living teaching JavaScript UI
+            development on the web.
           </p>
         </section>
 
