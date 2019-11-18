@@ -5,8 +5,6 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
 export default function IndexPage({ data }) {
-  console.log(data)
-
   return (
     <Layout>
       <SEO />
@@ -14,15 +12,15 @@ export default function IndexPage({ data }) {
       <div className="leading-normal">
         <section className="text-lg">
           <p>
-            Hi!{" "}
+            Hi there!{" "}
             <span role="img" aria-label="wave">
               👋
             </span>
           </p>
           <p className="mt-4">
             I'm <Link href="https://twitter.com/samselikoff">@samselikoff</Link>
-            , and since 2016 I've made a living teaching JavaScript UI
-            development on the web.
+            , and I've made a living teaching JavaScript UI development on the
+            web since 2016.
           </p>
         </section>
 
@@ -30,14 +28,14 @@ export default function IndexPage({ data }) {
           <h2 className="text-lg font-bold">Projects</h2>
           <p className="mt-2">
             I'm currently working on{" "}
-            <Link href="https://miragejs.com/">Mirage JS</Link>, a
-            framework-agnostic library that helps frontend developers mock out
-            backend APIs.{" "}
+            <Link href="https://miragejs.com/">Mirage JS</Link>, an API mocking
+            library that lets frontend developers build complete features
+            without touching their backends.{" "}
           </p>
           <p className="mt-4">
-            I run <Link href="https://embermap.com/">embermap.com</Link> where I
-            make videos about design, development and testing using Ember.js
-            along with my friend{" "}
+            I also run <Link href="https://embermap.com/">embermap.com</Link>{" "}
+            where I make videos about design, development and testing with
+            Ember.js, along with my friend{" "}
             <Link href="https://twitter.com/ryantotweets">Ryan Toronto</Link>.
           </p>
         </section>
@@ -59,7 +57,7 @@ export default function IndexPage({ data }) {
           <h2 className="text-lg font-bold">Conference talks & interviews</h2>
           <p className="mt-2">
             I've given several conference talks and talked about my open source
-            on a few podcasts. <Link>Check them out here.</Link>
+            work on a few podcasts. <Link>Check them out here.</Link>
           </p>
         </section>
 
@@ -67,7 +65,7 @@ export default function IndexPage({ data }) {
           <h2 className="text-lg font-bold">Blog</h2>
           <p className="mt-2">
             You can find my writing on <Link>my blog</Link>. I haven't been
-            writing much lately but I'm planning on starting up again soon.
+            writing much lately but I'm planning on starting up again.
           </p>
         </section>
 
