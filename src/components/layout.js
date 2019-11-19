@@ -2,25 +2,26 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./layout.css"
 import { useSpring, animated } from "react-spring"
+import { Link } from "gatsby"
 
 const Layout = ({ children }) => {
   let [isOpen, setIsOpen] = React.useState(false)
   const [bind, { height }] = useMeasure()
-  const headerStyleProps = useSpring({
-    backgroundColor: isOpen ? "#edf2f7" : "white",
-  })
   const props = useSpring({
     height: isOpen ? height : 0,
   })
 
   return (
     <>
-      <div className="font-sans antialiased leading-tight text-gray-900">
+      <div className="font-sans antialiased text-gray-900">
         <div className="max-w-4xl mx-auto">
-          {/* <header className="p-6"> */}
-          <animated.header className="pl-6 pr-4 pt-4" style={headerStyleProps}>
-            <div className="flex justify-between items-center">
-              <span className="text-xl font-semibold">Sam Selikoff</span>
+          <header>
+            <div className="p-4 flex justify-between items-center">
+              <Link to="/" className="p-2">
+                <span className="text-sm uppercase font-light tracking-wide">
+                  Sam<span className="font-bold">Selikoff</span>
+                </span>
+              </Link>
               <button
                 className="p-2 focus:outline-none text-gray-500"
                 onClick={() => setIsOpen(!isOpen)}
@@ -46,7 +47,7 @@ const Layout = ({ children }) => {
             </div>
             <animated.div style={{ overflow: "hidden", ...props }}>
               <div {...bind}>
-                <nav className="pt-4 pb-6">
+                <nav className="px-6 py-4 bg-gray-100 shadow-inner">
                   <a href="www.twitter.com" className="block py-2 my-1">
                     Twitter
                   </a>
@@ -59,9 +60,8 @@ const Layout = ({ children }) => {
                 </nav>
               </div>
             </animated.div>
-          </animated.header>
-          {/* </header> */}
-          <main className="py-10 px-6">{children}</main>
+          </header>
+          <main className="pt-4 px-6 pb-8">{children}</main>
         </div>
       </div>
     </>

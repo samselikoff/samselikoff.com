@@ -3,6 +3,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+import { Link as InternalLink } from "gatsby"
+import { A } from "../components/ui"
 
 export default function IndexPage({ data }) {
   return (
@@ -18,53 +20,61 @@ export default function IndexPage({ data }) {
             </span>
           </p>
           <p className="mt-4">
-            I'm <Link href="https://twitter.com/samselikoff">@samselikoff</Link>
-            , and since 2016 I've made a living teaching JavaScript UI
-            development on the web.
+            I'm <A href="https://twitter.com/samselikoff">@samselikoff</A>, and
+            since 2016 I've made a living teaching JavaScript UI development on
+            the web.
           </p>
         </section>
 
         <section className="mt-10">
-          <h2 className="text-lg font-bold">Projects</h2>
+          <h2 className="text-lg font-bold">
+            <InternalLink to="/projects">Projects</InternalLink>
+          </h2>
           <p className="mt-2">
             I'm currently working on{" "}
-            <Link href="https://miragejs.com/">Mirage JS</Link>, an API mocking
+            <A href="https://miragejs.com/">Mirage JS</A>, an API mocking
             library that lets frontend developers build complete features
             without touching their backends.{" "}
           </p>
           <p className="mt-4">
-            I also run <Link href="https://embermap.com/">embermap.com</Link>{" "}
-            where I make videos about design, development and testing with
-            Ember.js, along with my friend{" "}
-            <Link href="https://twitter.com/ryantotweets">Ryan Toronto</Link>.
+            I also run <A href="https://embermap.com/">embermap.com</A> where I
+            make videos about design, development and testing with Ember.js,
+            along with my friend{" "}
+            <A href="https://twitter.com/ryantotweets">Ryan Toronto</A>.
           </p>
         </section>
 
         <section className="mt-10">
-          <h2 className="text-lg font-bold">Podcast</h2>
+          <h2 className="text-lg font-bold">
+            <InternalLink to="/podcast">Podcast</InternalLink>
+          </h2>
           <p className="mt-2">
             Join me, Ryan + guests on a weekly podcast where we chat about all
             things JavaScript UI development – not just Ember!
           </p>
           <p className="mt-4">
-            <Link href="https://embermap.com/podcast">
+            <A href="https://embermap.com/podcast">
               → Check out The EmberMap podcast
-            </Link>
+            </A>
           </p>
         </section>
 
         <section className="mt-10">
-          <h2 className="text-lg font-bold">Conference talks & interviews</h2>
+          <h2 className="text-lg font-bold">
+            <InternalLink to="/talks">Talks & interviews</InternalLink>
+          </h2>
           <p className="mt-2">
             I've given several conference talks and talked about my open source
-            work on a few podcasts. <Link>Check them out here.</Link>
+            work on a few podcasts. <A to="/talks">Check them out here.</A>
           </p>
         </section>
 
         <section className="mt-10">
-          <h2 className="text-lg font-bold">Blog</h2>
+          <h2 className="text-lg font-bold">
+            <InternalLink to="/blog">Blog</InternalLink>
+          </h2>
           <p className="mt-2">
-            You can find my writing on <Link>my blog</Link>. I haven't been
+            You can find my writing on <A to="/blog">my blog</A>. I haven't been
             writing much lately but I'm planning on starting up again.
           </p>
         </section>
@@ -142,12 +152,6 @@ export default function IndexPage({ data }) {
     </Layout>
   )
 }
-
-const Link = ({ children, ...props }) => (
-  <a {...props} className="underline text-blue-600 font-semibold">
-    {children}
-  </a>
-)
 
 export const query = graphql`
   query {
