@@ -33,8 +33,8 @@ export default function TalksPage({ data }) {
       image: "uipatterns2017",
       links: [
         {
-          label: "Talk",
-          url: "https://www.youtube.com/watch?v=PVzutIELrf4",
+          label: "Slides",
+          url: "https://www.slideshare.net/samselikoff/common-ui-patterns",
         },
       ],
     },
