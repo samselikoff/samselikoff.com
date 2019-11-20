@@ -1,15 +1,24 @@
 import React from "react"
 import PropTypes from "prop-types"
+import "@reach/dialog/styles.css"
 import "./layout.css"
-import { useSpring, animated } from "react-spring"
+import { useSpring, animated, useTransition } from "react-spring"
+import { Dialog, DialogOverlay, DialogContent } from "@reach/dialog"
 import { Link } from "gatsby"
 
 const Layout = ({ children }) => {
-  let [isOpen, setIsOpen] = React.useState(false)
-  const [bind, { height }] = useMeasure()
-  const props = useSpring({
-    height: isOpen ? height : 0,
+  const [isOpen, setIsOpen] = React.useState(false)
+  const AnimatedDialogOverlay = animated(DialogOverlay)
+  const AnimatedDialogContent = animated(DialogContent)
+  const transitions = useTransition(isOpen, null, {
+    from: { opacity: 0, y: -10 },
+    enter: { opacity: 1, y: 0 },
+    leave: { opacity: 0, y: 10 },
   })
+  // const [bind, { height }] = useMeasure()
+  // const props = useSpring({
+  //   height: isOpen ? height : 0,
+  // })
 
   return (
     <>
@@ -45,21 +54,29 @@ const Layout = ({ children }) => {
                 )}
               </button>
             </div>
-            <animated.div style={{ overflow: "hidden", ...props }}>
-              <div {...bind}>
-                <nav className="px-6 py-4 bg-gray-100 shadow-inner">
-                  <a href="www.twitter.com" className="block py-2 my-1">
-                    Twitter
-                  </a>
-                  <a href="www.twitter.com" className="block py-2 my-1">
-                    YouTube
-                  </a>
-                  <a href="www.twitter.com" className="block py-2 my-1">
-                    GitHub
-                  </a>
-                </nav>
-              </div>
-            </animated.div>
+
+            {transitions.map(
+              ({ item, key, props: styles }) =>
+                item && (
+                  <AnimatedDialogOverlay
+                    style={{ opacity: styles.opacity }}
+                    key={key}
+                    onDismiss={() => setIsOpen(false)}
+                  >
+                    <AnimatedDialogContent
+                      className="mt-0 w-full h-full"
+                      style={{
+                        transform: styles.y.interpolate(
+                          value => `translate3d(0px, ${value}px, 0px)`
+                        ),
+                      }}
+                      aria-label="Site nav"
+                    >
+                      <p>React Spring makes it too easy!</p>
+                    </AnimatedDialogContent>
+                  </AnimatedDialogOverlay>
+                )
+            )}
           </header>
           <main className="pt-4 px-6 pb-8">{children}</main>
         </div>
