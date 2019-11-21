@@ -1,11 +1,10 @@
 import React from "react"
-import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 export default function BlogPage({ data }) {
   return (
-    <Layout>
+    <>
       <h1 className="text-3xl font-semibold text-center">Projects</h1>
 
       <div className="mt-12">
@@ -30,7 +29,7 @@ export default function BlogPage({ data }) {
       <div className="mt-16">
         <p className="text-xl text-center">Past</p>
       </div>
-    </Layout>
+    </>
   )
 }
 

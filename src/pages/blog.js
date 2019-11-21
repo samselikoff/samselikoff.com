@@ -1,5 +1,4 @@
 import React from "react"
-import Layout from "../components/layout"
 
 export default function BlogPage() {
   let articles = [
@@ -36,7 +35,7 @@ export default function BlogPage() {
   ]
 
   return (
-    <Layout>
+    <>
       <h1 className="text-3xl font-semibold text-center">Blog</h1>
 
       <ul className="mt-12">
@@ -47,6 +46,6 @@ export default function BlogPage() {
           </li>
         ))}
       </ul>
-    </Layout>
+    </>
   )
 }

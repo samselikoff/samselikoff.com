@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "@reach/dialog/styles.css"
-import "./layout.css"
+import "./index.css"
 import { animated, useTransition, useChain } from "react-spring"
 import { DialogOverlay, DialogContent } from "@reach/dialog"
 import { Link, navigate } from "gatsby"
@@ -11,7 +11,6 @@ const AnimatedDialogOverlay = animated(DialogOverlay)
 
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = React.useState(false)
-  const [locationIntent, setLocationIntent] = React.useState(null)
 
   const springRef = React.useRef()
   const overlayTransitions = useTransition(isOpen, null, {
@@ -25,12 +24,6 @@ const Layout = ({ children }) => {
     from: { alpha: 0, blur: 0 },
     leave: { alpha: 0, blur: 0 },
     enter: { alpha: 0.5, blur: 7 },
-    onRest() {
-      if (locationIntent) {
-        setLocationIntent(null)
-        navigate(locationIntent)
-      }
-    },
   })
 
   const transRef = React.useRef()
@@ -57,7 +50,7 @@ const Layout = ({ children }) => {
 
   function handleClick(location) {
     setIsOpen(false)
-    setLocationIntent(location)
+    navigate(location)
   }
 
   return (
@@ -208,7 +201,7 @@ const ToolboxInternalLink = props => {
       to={props.to}
       style={props.style}
       onClick={handleClick}
-      className="block w-full text-center bg-gray-600 text-white mx-2 rounded shadow-md py-8 text-xl font-semibold"
+      className="block w-full text-center bg-gray-800 text-white mx-2 rounded shadow-md py-8 text-xl font-semibold"
     >
       {props.children}
     </AnimatedLink>

@@ -1,5 +1,4 @@
 import React from "react"
-import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -64,7 +63,7 @@ export default function TalksPage({ data }) {
   ]
 
   return (
-    <Layout>
+    <>
       <h1 className="text-3xl font-semibold text-center">Talks & Interviews</h1>
 
       {talks.map(talk => (
@@ -95,7 +94,7 @@ export default function TalksPage({ data }) {
           </p>
         </div>
       ))}
-    </Layout>
+    </>
   )
 }
 

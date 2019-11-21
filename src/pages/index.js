@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layout"
+// import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
@@ -8,7 +8,7 @@ import { A } from "../components/ui"
 
 export default function IndexPage({ data }) {
   return (
-    <Layout>
+    <>
       <SEO />
 
       <div className="leading-normal">
@@ -149,7 +149,7 @@ export default function IndexPage({ data }) {
           </div>
         </section>
       </div>
-    </Layout>
+    </>
   )
 }
 
