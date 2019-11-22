@@ -8,22 +8,26 @@ export default function BlogPage({ data }) {
       <h1 className="text-3xl font-semibold text-center">Projects</h1>
 
       <div className="mt-12">
-        <Img
-          className="shadow-lg rounded-lg "
-          fluid={{
-            ...data.mirage.childImageSharp.fluid,
-            aspectRatio: 16 / 9,
-          }}
-        />
+        <a href="https://miragejs.com/">
+          <Img
+            className="shadow-lg rounded-lg "
+            fluid={{
+              ...data.mirage.childImageSharp.fluid,
+              aspectRatio: 16 / 9,
+            }}
+          />
+        </a>
       </div>
       <div className="mt-12">
-        <Img
-          className="shadow-lg rounded-lg"
-          fluid={{
-            ...data.embermap.childImageSharp.fluid,
-            aspectRatio: 16 / 9,
-          }}
-        />
+        <a href="https://embermap.com/">
+          <Img
+            className="shadow-lg rounded-lg"
+            fluid={{
+              ...data.embermap.childImageSharp.fluid,
+              aspectRatio: 16 / 9,
+            }}
+          />
+        </a>
       </div>
 
       <div className="mt-16">

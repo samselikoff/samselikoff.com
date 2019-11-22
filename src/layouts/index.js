@@ -94,10 +94,10 @@ const Layout = ({ children }) => {
                   >
                     {transitions.length > 0 && (
                       <DialogContent
-                        className="m-0 w-full bg-transparent flex flex-wrap p-4 ml-auto"
+                        className="m-0 w-full bg-transparent p-4"
                         aria-label="Site nav"
                       >
-                        <div className="w-full flex-shrink-0 text-right">
+                        <div className="text-right">
                           <animated.button
                             style={{ ...transitions[0].props }}
                             className="focus:outline-none p-2 text-gray-700"
@@ -112,60 +112,62 @@ const Layout = ({ children }) => {
                             </svg>
                           </animated.button>
                         </div>
-                        <div className="mt-4 w-1/3 px-2">
-                          <animated.a
-                            style={{
-                              ...transitions[1].props,
-                              backgroundColor: "#00aced",
-                            }}
-                            href="https://twitter.com/samselikoff"
-                            className="w-full h-12 rounded flex items-center justify-center shadow-md text-white"
-                          >
-                            <TwitterLogo className="h-6" />
-                          </animated.a>
-                        </div>
-                        <div className="mt-4 w-1/3 px-2">
-                          <animated.a
-                            href="https://www.youtube.com/user/samselikoff"
-                            style={{ ...transitions[2].props }}
-                            className="w-full h-12 rounded flex items-center justify-center shadow-md bg-white "
-                          >
-                            <YouTubeLogo className="h-6" />
-                          </animated.a>
-                        </div>
-                        <div className="mt-4 w-1/3 px-2">
-                          <animated.a
-                            href="https://github.com/samselikoff"
-                            style={{
-                              ...transitions[3].props,
-                              backgroundColor: "#24292F",
-                            }}
-                            className="w-full h-12 rounded flex items-center justify-center shadow-md"
-                          >
-                            <GitHubLogo className="h-6" />
-                          </animated.a>
-                        </div>
-                        {[
-                          { label: "Projects", url: "/projects" },
-                          { label: "Podcast", url: "/podcast" },
-                          { label: "Talks", url: "/talks" },
-                          { label: "Blog", url: "/blog" },
-                        ].map((link, i) => (
-                          <div
-                            className="w-1/2 mt-6 flex items-center justify-center"
-                            key={link.url}
-                          >
-                            <ToolboxInternalLink
+                        <div className="w-full flex flex-wrap">
+                          <div className="mt-4 w-1/3 px-2">
+                            <animated.a
                               style={{
-                                ...transitions[4 + i].props,
+                                ...transitions[1].props,
+                                backgroundColor: "#00aced",
                               }}
-                              to={link.url}
-                              onClick={handleClick}
+                              href="https://twitter.com/samselikoff"
+                              className="w-full h-12 rounded flex items-center justify-center shadow-md text-white"
                             >
-                              {link.label}
-                            </ToolboxInternalLink>
+                              <TwitterLogo className="h-6" />
+                            </animated.a>
                           </div>
-                        ))}
+                          <div className="mt-4 w-1/3 px-2">
+                            <animated.a
+                              href="https://www.youtube.com/user/samselikoff"
+                              style={{ ...transitions[2].props }}
+                              className="w-full h-12 rounded flex items-center justify-center shadow-md bg-white "
+                            >
+                              <YouTubeLogo className="h-6" />
+                            </animated.a>
+                          </div>
+                          <div className="mt-4 w-1/3 px-2">
+                            <animated.a
+                              href="https://github.com/samselikoff"
+                              style={{
+                                ...transitions[3].props,
+                                backgroundColor: "#24292F",
+                              }}
+                              className="w-full h-12 rounded flex items-center justify-center shadow-md"
+                            >
+                              <GitHubLogo className="h-6" />
+                            </animated.a>
+                          </div>
+                          {[
+                            { label: "Projects", url: "/projects" },
+                            { label: "Podcast", url: "/podcast" },
+                            { label: "Talks", url: "/talks" },
+                            { label: "Blog", url: "/blog" },
+                          ].map((link, i) => (
+                            <div
+                              className="w-1/2 mt-6 flex items-center justify-center"
+                              key={link.url}
+                            >
+                              <ToolboxInternalLink
+                                style={{
+                                  ...transitions[4 + i].props,
+                                }}
+                                to={link.url}
+                                onClick={handleClick}
+                              >
+                                {link.label}
+                              </ToolboxInternalLink>
+                            </div>
+                          ))}
+                        </div>
                       </DialogContent>
                     )}
                   </AnimatedDialogOverlay>
