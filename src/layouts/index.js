@@ -10,7 +10,7 @@ const AnimatedLink = animated(Link)
 const AnimatedDialogOverlay = animated(DialogOverlay)
 
 const Layout = ({ children }) => {
-  const [isOpen, setIsOpen] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState(true)
 
   const springRef = React.useRef()
   const overlayTransitions = useTransition(isOpen, null, {
@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
     },
     from: { alpha: 0, blur: 0 },
     leave: { alpha: 0, blur: 0 },
-    enter: { alpha: 0.5, blur: 7 },
+    enter: { alpha: 0.3, blur: 25 },
   })
 
   const transRef = React.useRef()
@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
 
   useChain(isOpen ? [springRef, transRef] : [transRef, springRef], [
     0,
-    isOpen ? 0.1 : 0.1,
+    isOpen ? 0 : 0.1,
   ])
 
   function handleClick(location) {
@@ -87,7 +87,7 @@ const Layout = ({ children }) => {
                       backdropFilter: props.blur.to(v => `blur(${v}px)`),
                       WebkitBackdropFilter: props.blur.to(v => `blur(${v}px)`),
                       background: props.alpha.to(
-                        v => `rgba(255, 255, 255, ${v})`
+                        v => `rgba(120, 120, 120, ${v})`
                       ),
                     }}
                     onDismiss={() => setIsOpen(false)}
@@ -97,30 +97,15 @@ const Layout = ({ children }) => {
                         className="m-0 w-full bg-transparent p-4"
                         aria-label="Site nav"
                       >
-                        <div className="text-right">
-                          <animated.button
-                            style={{ ...transitions[0].props }}
-                            className="focus:outline-none p-2 text-gray-700"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            <svg
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                              className=" h-6 w-6 block"
-                            >
-                              <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"></path>
-                            </svg>
-                          </animated.button>
-                        </div>
                         <div className="w-full flex flex-wrap">
                           <div className="mt-4 w-1/3 px-2">
                             <animated.a
                               style={{
                                 ...transitions[1].props,
-                                backgroundColor: "#00aced",
+                                color: "#00aced",
                               }}
                               href="https://twitter.com/samselikoff"
-                              className="w-full h-12 rounded flex items-center justify-center shadow-md text-white"
+                              className="w-full h-12 rounded flex items-center justify-center shadow-md bg-white focus:outline-none"
                             >
                               <TwitterLogo className="h-6" />
                             </animated.a>
@@ -128,8 +113,11 @@ const Layout = ({ children }) => {
                           <div className="mt-4 w-1/3 px-2">
                             <animated.a
                               href="https://www.youtube.com/user/samselikoff"
-                              style={{ ...transitions[2].props }}
-                              className="w-full h-12 rounded flex items-center justify-center shadow-md bg-white "
+                              style={{
+                                ...transitions[2].props,
+                                color: "#ff0000",
+                              }}
+                              className="w-full h-12 rounded flex items-center justify-center shadow-md bg-white  focus:outline-none"
                             >
                               <YouTubeLogo className="h-6" />
                             </animated.a>
@@ -139,9 +127,9 @@ const Layout = ({ children }) => {
                               href="https://github.com/samselikoff"
                               style={{
                                 ...transitions[3].props,
-                                backgroundColor: "#24292F",
+                                color: "#24292F",
                               }}
-                              className="w-full h-12 rounded flex items-center justify-center shadow-md"
+                              className="w-full h-12 rounded flex items-center justify-center shadow-md bg-white focus:outline-none"
                             >
                               <GitHubLogo className="h-6" />
                             </animated.a>
@@ -203,7 +191,7 @@ const ToolboxInternalLink = props => {
       to={props.to}
       style={props.style}
       onClick={handleClick}
-      className="block w-full text-center bg-gray-800 text-white mx-2 rounded shadow-md py-8 text-xl font-semibold"
+      className="block w-full text-center bg-white text-gray-800 mx-2 rounded-lg shadow-md py-10 text-2xl font-semibold"
     >
       {props.children}
     </AnimatedLink>
@@ -230,7 +218,6 @@ const YouTubeLogo = props => (
     <g id="XMLID_1_">
       <path
         id="XMLID_3_"
-        fill="#ff0000"
         d="M172.32,19.36c-2.02-7.62-7.99-13.62-15.56-15.66C143.04,0,88,0,88,0S32.96,0,19.24,3.7
 		C11.67,5.74,5.7,11.74,3.68,19.36C0,33.18,0,62,0,62s0,28.82,3.68,42.64c2.02,7.62,7.99,13.62,15.56,15.66C32.96,124,88,124,88,124
 		s55.04,0,68.76-3.7c7.57-2.04,13.54-8.04,15.56-15.66C176,90.82,176,62,176,62S176,33.18,172.32,19.36z"
@@ -247,9 +234,6 @@ const GitHubLogo = props => (
     viewBox="0 0 32.58 31.77"
     {...props}
   >
-    <path
-      fill="#ffffff"
-      d="M16.29,0C7.29,0,0,7.29,0,16.29c0,7.2,4.67,13.3,11.14,15.46c0.81,0.15,1.11-0.35,1.11-0.79 c0-0.39-0.01-1.41-0.02-2.77c-4.53,0.98-5.49-2.18-5.49-2.18C6,24.13,4.93,23.62,4.93,23.62c-1.48-1.01,0.11-0.99,0.11-0.99 c1.63,0.12,2.5,1.68,2.5,1.68c1.45,2.49,3.81,1.77,4.74,1.35c0.15-1.05,0.57-1.77,1.03-2.18C9.7,23.08,5.9,21.68,5.9,15.44 c0-1.78,0.63-3.23,1.68-4.37C7.41,10.65,6.85,9,7.73,6.76c0,0,1.37-0.44,4.48,1.67c1.3-0.36,2.69-0.54,4.08-0.55 c1.38,0.01,2.78,0.19,4.08,0.55c3.11-2.11,4.48-1.67,4.48-1.67c0.89,2.24,0.33,3.9,0.16,4.31c1.04,1.14,1.67,2.59,1.67,4.37 c0,6.26-3.81,7.63-7.44,8.04c0.58,0.5,1.11,1.5,1.11,3.02c0,2.18-0.02,3.93-0.02,4.47c0,0.44,0.29,0.94,1.12,0.78 c6.47-2.16,11.13-8.26,11.13-15.45C32.58,7.29,25.29,0,16.29,0z"
-    />
+    <path d="M16.29,0C7.29,0,0,7.29,0,16.29c0,7.2,4.67,13.3,11.14,15.46c0.81,0.15,1.11-0.35,1.11-0.79 c0-0.39-0.01-1.41-0.02-2.77c-4.53,0.98-5.49-2.18-5.49-2.18C6,24.13,4.93,23.62,4.93,23.62c-1.48-1.01,0.11-0.99,0.11-0.99 c1.63,0.12,2.5,1.68,2.5,1.68c1.45,2.49,3.81,1.77,4.74,1.35c0.15-1.05,0.57-1.77,1.03-2.18C9.7,23.08,5.9,21.68,5.9,15.44 c0-1.78,0.63-3.23,1.68-4.37C7.41,10.65,6.85,9,7.73,6.76c0,0,1.37-0.44,4.48,1.67c1.3-0.36,2.69-0.54,4.08-0.55 c1.38,0.01,2.78,0.19,4.08,0.55c3.11-2.11,4.48-1.67,4.48-1.67c0.89,2.24,0.33,3.9,0.16,4.31c1.04,1.14,1.67,2.59,1.67,4.37 c0,6.26-3.81,7.63-7.44,8.04c0.58,0.5,1.11,1.5,1.11,3.02c0,2.18-0.02,3.93-0.02,4.47c0,0.44,0.29,0.94,1.12,0.78 c6.47-2.16,11.13-8.26,11.13-15.45C32.58,7.29,25.29,0,16.29,0z" />
   </svg>
 )
