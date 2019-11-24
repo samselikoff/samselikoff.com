@@ -42,7 +42,7 @@ export default function BlogPage() {
         {articles.map((article, i) => (
           <li className="mt-6" key={i}>
             <p className="text-xs font-medium text-gray-500">{article.date}</p>
-            <h2 className="mt-1 text-lg font-medium ">{article.title}</h2>
+            <h2 className="mt-1 text-lg font-semibold">{article.title}</h2>
           </li>
         ))}
       </ul>

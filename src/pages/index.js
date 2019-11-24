@@ -25,7 +25,10 @@ export default function IndexPage() {
 
         <section className="mt-10">
           <h2 className="text-lg font-bold">
-            <InternalLink to="/projects">Projects</InternalLink>
+            <InternalLink to="/projects" className="inline-block">
+              Projects
+              <Chevron className="w-4 h-4" />
+            </InternalLink>
           </h2>
           <p className="mt-2">
             I'm currently working on{" "}
@@ -35,7 +38,7 @@ export default function IndexPage() {
           </p>
           <p className="mt-4">
             I also run <A href="https://embermap.com/">embermap.com</A> where I
-            make videos about design, development and testing with Ember.js,
+            make videos about design, development and testing using Ember.js,
             along with my friend{" "}
             <A href="https://twitter.com/ryantotweets">Ryan Toronto</A>.
           </p>
@@ -43,7 +46,10 @@ export default function IndexPage() {
 
         <section className="mt-10">
           <h2 className="text-lg font-bold">
-            <InternalLink to="/podcast">Podcast</InternalLink>
+            <InternalLink to="/podcast" className="inline-block">
+              Podcast
+              <Chevron className="w-4 h-4" />
+            </InternalLink>
           </h2>
           <p className="mt-2">
             Join me, Ryan + guests on a weekly podcast where we chat about all
@@ -58,7 +64,10 @@ export default function IndexPage() {
 
         <section className="mt-10">
           <h2 className="text-lg font-bold">
-            <InternalLink to="/talks">Talks & interviews</InternalLink>
+            <InternalLink to="/talks" className="inline-block">
+              Talks & interviews
+              <Chevron className="w-4 h-4" />
+            </InternalLink>
           </h2>
           <p className="mt-2">
             I've given several conference talks and talked about my open source
@@ -68,7 +77,10 @@ export default function IndexPage() {
 
         <section className="mt-10">
           <h2 className="text-lg font-bold">
-            <InternalLink to="/blog">Blog</InternalLink>
+            <InternalLink to="/blog" className="inline-block">
+              Blog
+              <Chevron className="w-4 h-4" />
+            </InternalLink>
           </h2>
           <p className="mt-2">
             You can find my writing on <A to="/blog">my blog</A>. I haven't been
@@ -134,3 +146,16 @@ export default function IndexPage() {
     </>
   )
 }
+
+const Chevron = props => (
+  <svg className={`inline fill-current ${props.className}`} viewBox="0 0 20 20">
+    <g id="Page-1" stroke="none" strokeWidth="1">
+      <g id="icon-shape">
+        <polygon
+          id="Combined-Shape"
+          points="12.9497475 10.7071068 13.6568542 10 8 4.34314575 6.58578644 5.75735931 10.8284271 10 6.58578644 14.2426407 8 15.6568542 12.9497475 10.7071068"
+        ></polygon>
+      </g>
+    </g>
+  </svg>
+)

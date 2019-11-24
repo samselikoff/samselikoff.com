@@ -12,15 +12,13 @@ export default function() {
           about whatever's going on in my day-to-day life doing frontend
           development, along with my co-host Ryan Toronto.
         </p>
-        <p className="text-lg mt-4">
-          While originally we focused on the Ember.js framework, it has since
-          become more broad. These days we talk about anything going on in the
-          world of JavaScript UI development.
-        </p>
-        <p className="text-lg mt-4">
-          Check out some of my favorite episodes below.
+
+        <p className="mt-8">
+          While we originally focused on Ember.js, these days we talk about
+          anything going on in the world of JavaScript UI development.
         </p>
 
+        <p className="mt-4">Check out some of my favorite episodes below.</p>
         <div className="mt-8">
           <hr />
         </div>
@@ -42,10 +40,9 @@ export default function() {
             url="https://embermap.com/podcast/yehuda-katz-on-paradigms-vs-abstractions-in-ui-development"
             imageUrl="podcasts/yehuda-katz-on-paradigms-vs-abstractions-in-ui-development.jpg"
           >
-            Yehuda is a wealth of knowledge I've learned so much from. In this
-            episode he shares why he believes abstractions should get more
-            attention than paradigms – an interesting distinction I wasn't yet
-            familiar with.
+            Yehuda is a wealth of knowledge. In this episode he shares why he
+            believes abstractions should get more attention than paradigms – an
+            interesting distinction I wasn't yet familiar with.
           </PodcastCard>
         </div>
 
@@ -66,9 +63,9 @@ export default function() {
             url="https://embermap.com/podcast/edward-faulkner-on-embroider-ember-cli-s-modern-build-system"
             imageUrl="podcasts/edward-faulkner-on-embroider-ember-cli-s-modern-build-system.jpg"
           >
-            Ed is one of those developers who can pull knowledge from so many
-            different areas and provide some truly unique insights. I loved
-            learning more about compilers in this episode.
+            Ed is one of those developers who can pull together insights from so
+            many different areas. I loved learning more about compilers in this
+            episode.
           </PodcastCard>
         </div>
 
@@ -90,9 +87,7 @@ export default function() {
         </div>
 
         <div className="mt-8 mb-24">
-          <p>
-            View the rest of the episodes by checking out the show's website:
-          </p>
+          <p>View the rest of the episodes on the show's website:</p>
           <p className="mt-4">
             <a
               className="font-medium text-blue-500 underline"
