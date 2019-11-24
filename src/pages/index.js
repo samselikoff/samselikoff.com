@@ -65,7 +65,7 @@ export default function IndexPage() {
         <section className="mt-10">
           <h2 className="text-lg font-bold">
             <InternalLink to="/talks" className="inline-block">
-              Talks & interviews
+              Talks & Interviews
               <Chevron className="w-4 h-4" />
             </InternalLink>
           </h2>
