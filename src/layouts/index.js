@@ -10,7 +10,7 @@ const AnimatedLink = animated(Link)
 const AnimatedDialogOverlay = animated(DialogOverlay)
 
 const Layout = ({ children }) => {
-  const [isOpen, setIsOpen] = React.useState(true)
+  const [isOpen, setIsOpen] = React.useState(false)
 
   const springRef = React.useRef()
   const overlayTransitions = useTransition(isOpen, null, {
@@ -55,7 +55,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div className="font-sans antialiased text-gray-900">
+      <div className="font-sans antialiased text-gray-800">
         <div className="max-w-4xl mx-auto">
           <header>
             <div className="p-4 flex justify-between items-center">

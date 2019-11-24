@@ -1,12 +1,9 @@
 import React from "react"
-// import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Img from "gatsby-image"
-import { graphql } from "gatsby"
 import { Link as InternalLink } from "gatsby"
-import { A } from "../components/ui"
+import { A, Img } from "../components/ui"
 
-export default function IndexPage({ data }) {
+export default function IndexPage() {
   return (
     <>
       <SEO />
@@ -91,12 +88,7 @@ export default function IndexPage({ data }) {
 
           <div className="mt-8 -mx-6">
             <div className="relative">
-              <Img
-                fluid={{
-                  ...data.newYork.childImageSharp.fluid,
-                  aspectRatio: 16 / 9,
-                }}
-              />
+              <Img src="new-york.jpeg" />
               <div
                 className="absolute bottom-0 text-white w-full pl-3 pb-2 pt-2"
                 style={{
@@ -110,12 +102,7 @@ export default function IndexPage({ data }) {
             </div>
             <div className="flex">
               <div className="w-1/2 relative">
-                <Img
-                  fluid={{
-                    ...data.burlington.childImageSharp.fluid,
-                    aspectRatio: 1,
-                  }}
-                />
+                <Img src="burlington.jpeg" />
                 <div
                   className="absolute bottom-0 text-white w-full pl-3 pb-2 pt-2"
                   style={{
@@ -128,12 +115,7 @@ export default function IndexPage({ data }) {
                 </div>
               </div>
               <div className="w-1/2 relative">
-                <Img
-                  fluid={{
-                    ...data.boston.childImageSharp.fluid,
-                    aspectRatio: 1,
-                  }}
-                />
+                <Img src="boston.jpg" />
                 <div
                   className="absolute bottom-0 text-white w-full pl-3 pb-2 pt-2"
                   style={{
@@ -152,29 +134,3 @@ export default function IndexPage({ data }) {
     </>
   )
 }
-
-export const query = graphql`
-  query {
-    newYork: file(relativePath: { eq: "new-york.jpeg" }) {
-      childImageSharp {
-        fluid(maxWidth: 3000) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
-      }
-    }
-    burlington: file(relativePath: { eq: "burlington.jpeg" }) {
-      childImageSharp {
-        fluid(maxWidth: 3000) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
-      }
-    }
-    boston: file(relativePath: { eq: "boston.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 3000) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
-      }
-    }
-  }
-`
