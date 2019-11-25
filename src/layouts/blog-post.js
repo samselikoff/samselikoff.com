@@ -16,6 +16,9 @@ const components = {
   hr: props => <hr className="mt-4" />,
   ol: props => <ol className="list-decimal ml-6">{props.children}</ol>,
   li: props => <li className="mt-4">{props.children}</li>,
+  inlineCode: props => (
+    <code className="text-sm bg-gray-100 px-1 py-px">{props.children}</code>
+  ),
   pre: props => (
     <pre className="mt-4 max-w-full overflow-x-scroll bg-gray-200 text-sm p-4">
       {props.children}
@@ -32,6 +35,17 @@ const components = {
 }
 
 export default props => {
-  console.log(props.pageContext.frontmatter)
-  return <MDXProvider components={components}>{props.children}</MDXProvider>
+  return (
+    <MDXProvider components={components}>
+      <div className="mb-10 text-center">
+        <h1 className="mt-2 text-2xl font-bold leading-tight text-gray-900">
+          {props.pageContext.frontmatter.title}
+        </h1>
+        <p className="mt-2 text-sm text-gray-600 font-medium">
+          {props.pageContext.frontmatter.date}
+        </p>
+      </div>
+      {props.children}
+    </MDXProvider>
+  )
 }
