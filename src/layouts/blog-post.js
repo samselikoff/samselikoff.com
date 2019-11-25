@@ -13,7 +13,7 @@ const components = {
     </h2>
   ),
   p: props => <p className="mt-5">{props.children}</p>,
-  hr: props => <hr className="mt-4" />,
+  hr: () => <hr className="mt-4" />,
   ol: props => <ol className="list-decimal ml-6">{props.children}</ol>,
   li: props => <li className="mt-4">{props.children}</li>,
   inlineCode: props => (
@@ -26,11 +26,12 @@ const components = {
   ),
   // img: props => {
   //   console.log(props)
-  //   let src = props.src
-  //   if (src[0] === "/") {
-  //     src = src.slice(1)
-  //   }
-  //   return <Img src={props.src} />
+  //   //   let src = props.src
+  //   //   if (src[0] === "/") {
+  //   //     src = src.slice(1)
+  //   //   }
+  //   return <span>hi</span>
+  //   // return <img src={props.src} />
   // },
 }
 

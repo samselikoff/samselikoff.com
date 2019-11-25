@@ -55,7 +55,7 @@ The default value of `isOpen` is `true`, so the panel starts out open. Whenever 
 
 Currently, our application looks like this:
 
-![Collapsible-panel](./3-panel.png)
+![Collapsible-panel](./3-panel.jpg)
 
 `isOpen` is the only piece of state in our application that changes. Further, the collapsible panel is the only part of the interface that needs to know about it. Because of this, it makes sense for the panel itself to "own" this piece of application state. So, we'll leave `isOpen` right where it is - as a simple property on the component.
 
