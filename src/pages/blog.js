@@ -38,7 +38,7 @@ export default function BlogPage() {
     <>
       <h1 className="text-3xl font-semibold text-center">Blog</h1>
 
-      <ul className="mt-12">
+      <ul className="mt-12 leading-tight">
         {articles.map((article, i) => (
           <li className="mt-6" key={i}>
             <p className="text-xs font-medium text-gray-500">{article.date}</p>
