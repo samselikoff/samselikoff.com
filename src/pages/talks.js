@@ -32,6 +32,14 @@ export default function TalksPage() {
       </div>
       <div className="mt-12">
         <Talk
+          title="Deploying Ember Apps"
+          presentedAt="Ember NYC, January 2015"
+          image="talks/embernyc2015.png"
+          url="https://youtu.be/nvB8iAwc2QQ?t=4560"
+        />
+      </div>
+      <div className="mt-12">
+        <Talk
           title="Bring Sanity to your Frontend Infrastucture with Ember JS"
           presentedAt="EmberConf 2015"
           image="talks/emberconf2015.png"
