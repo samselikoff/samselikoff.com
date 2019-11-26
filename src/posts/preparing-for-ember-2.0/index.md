@@ -12,46 +12,54 @@ Components are taking center stage in Ember 2.0. Here are some things you can do
 - Only use controllers at the top-level for receiving data from the route, and use `Ember.Controller` instead of `Ember.ArrayController` or `Ember.ObjectController`
 - Fetch data in your route, and set it as normal properties on your top-level controller. Export an `Ember.Controller`, otherwise a proxy will be generated. You can use Ember.RSVP.hash to simulate setting normal props on your controller.
 
-      ```js
-
+  ```js
   //controllers/index.js
-  import Ember from 'ember';
-  export default Ember.Controller;
+  import Ember from "ember"
+  export default Ember.Controller
 
   //routes/index.js
-  model: function() {
-  return Ember.RSVP.hash({
-  users: this.store.find('user')
-  });
+  model() {
+    return Ember.RSVP.hash({
+      users: this.store.find('user')
+    });
   },
 
-  setupController: function(controller, models) {
-  controller.setProperties(models);
+  setupController(controller, models) {
+    controller.setProperties(models);
   }
-  `Now you can just refer to the keys in your route's template:`{% raw %}
+  ```
+
+  Now you can just refer to the keys in your route's template:
+
+  ```hbs
   //templates/index.js
 
   <h1>Users</h1>
   {{user-list users=users}}
-      ```{% endraw %}
-      This controller/template pair will eventually become a routable component.
+  ```
+
+  This controller/template pair will eventually become a routable component.
 
 - In your templates, stay away from things like `ItemController`s and calls to `render()`. Use components instead.
 - Don't use views. (You can't avoid this if you need ApplicationView, for instance, but try to avoid them and use components instead.)
 - Write your app in the "data down, actions up" paradigm
-  - Not currently enforced, but you can still structure your app this way
-  - Stay away from two-way bindings and mutability, except perhaps for various `<input>` tags (similar to ReactLink).
+- Not currently enforced, but you can still structure your app this way
+- Stay away from two-way bindings and mutability, except perhaps for various `<input>` tags (similar to ReactLink).
 - Don't use `each` or `with` in the context-switching form. That is, use
 
-       {% raw %}{{#each users as |user|}}
-           {{user.firstName}}
-       {{/each}}{% endraw %}
+  ```hbs
+  {{#each users as |user|}}
+    {{user.firstName}}
+  {{/each}}
+  ```
 
   instead of
 
-       {% raw %}{{#each users}}
-           {{firstName}}
-       {{/each}}{% endraw %}
+  ```hbs
+  {{#each users}}
+    {{firstName}}
+  {{/each}}
+  ```
 
 - Use pods
 - Use `this.route` instead of `this.resource` in `Router.map`. Couple this with pods and you'll quickly understand why you don't want to use `resource` anymore - your directory structure in `pods` will now mirror the view hierarchy of your UI.

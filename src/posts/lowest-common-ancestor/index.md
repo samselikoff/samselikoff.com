@@ -1,11 +1,11 @@
 ---
 title: "Lowest Common Ancestor"
-date: December 8, 2015
+date: 2015-12-08
 ---
 
 One of the biggest challenges when writing a JavaScript application is keeping multiple parts of the interface in sync. A user interaction in one part of the interface often affects data in another. If not managed well, this data can end up in multiple places, but with inconsistent values.
 
-![Gmail animation](./1-gmail.gif)
+<!-- ![Gmail animation](./1-gmail.gif) -->
 
 _Email 1 being unread is a piece of application state that affects multiple parts of the interface. After the email is read, the title should no longer be bold, and and Inbox unread count should decrease by one._
 
@@ -17,13 +17,13 @@ The examples use Ember, but the principles are high level and apply to any techn
 
 Let's say we're building an app with a collapsible panel:
 
-![Collapsible panel](./2-panel.gif)
+<!-- ![Collapsible panel](./2-panel.gif) -->
 
 _A collapsible panel, an element that opens and closes when the user clicks on it._
 
 Here's the component's template:
 
-```hbs
+```handlebars
 <a {{action 'toggleIsOpen'}}>
   Panel Title
 </a>
@@ -63,7 +63,7 @@ Currently, our application looks like this:
 
 We have a new feature request: adding a separate button which can also toggle the panel. The button should also say "Expand" or "Collapse", depending on the state of the panel.
 
-![Collapsible-panel](./4-panel.gif)
+<!-- ![Collapsible-panel](./4-panel.gif) -->
 
 _A collapsible panel and a button, which both depend on the same state._
 
@@ -83,7 +83,7 @@ Think of the `isOpen` properties on the two children as read-only pointers to th
 
 Here's the template for `<app>`:
 
-```hbs
+```handlebars
 {{collapsible-panel isOpen=isOpen onClick=(action 'toggleIsOpen')}}
 
 {{button isOpen=isOpen onClick=(action 'toggleIsOpen')}}
@@ -159,7 +159,7 @@ export default Ember.Component.extend({
 
 Now, `<sidebar>` can access `currentUser` in its template:
 
-```hbs
+```handlebars
 <h2>{{currentUser.name}}</h2>
 ```
 

@@ -105,6 +105,9 @@ const theme = {
   punctuation: {
     color: colors.gray,
   },
+  block: {
+    display: "inline", // needed to ovverride tailwind's block class
+  },
   ".namespace": {
     Opacity: ".7",
   },

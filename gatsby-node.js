@@ -28,8 +28,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   result.data.allMdx.edges.forEach(({ node }, index) => {
-    let slug = `/blog/${node.parent.relativePath.replace(/\/index.mdx?/, "")}`
-    console.log("the path is: ", slug)
+    let slug = `/blog/${node.parent.relativePath
+      .replace(/\/index.mdx?/, "")
+      .toLowerCase()}`
 
     createPage({
       path: slug,

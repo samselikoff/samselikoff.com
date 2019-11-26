@@ -5,7 +5,9 @@ export default function BlogPage({ data }) {
   let articles = data.allMdx.edges.map(edge => ({
     title: edge.node.frontmatter.title,
     date: edge.node.frontmatter.date,
-    url: `/blog/${edge.node.parent.relativePath.replace(/\/index.mdx?/, "")}`,
+    url: `/blog/${edge.node.parent.relativePath
+      .replace(/\/index.mdx?/, "")
+      .toLowerCase()}`,
   }))
 
   return (
