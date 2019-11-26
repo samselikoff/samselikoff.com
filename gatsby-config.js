@@ -45,12 +45,13 @@ module.exports = {
               linkImagesToOriginal: false,
               // disableBgImageOnAlpha: true,
               // tracedSVG: true,
-              // disableBgImage: true,
+              disableBgImage: true,
               // wrapperStyle: `display: none`,
             },
           },
           `gatsby-remark-copy-linked-files`,
         ],
+        plugins: [`gatsby-remark-images`], // Duplicated here because of https://github.com/gatsbyjs/gatsby/issues/15486#issuecomment-510153237
       },
     },
     {
