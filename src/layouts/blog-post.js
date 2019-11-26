@@ -16,6 +16,11 @@ const components = {
     </h2>
   ),
   p: props => <p className="mt-5">{props.children}</p>,
+  a: ({ children, ...rest }) => (
+    <a className="text-blue-500 underline" {...rest}>
+      {children}
+    </a>
+  ),
   hr: () => <hr className="mt-4" />,
   ol: props => <ol className="list-decimal ml-6">{props.children}</ol>,
   ul: props => <ul className="list-disc ml-6">{props.children}</ul>,

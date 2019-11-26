@@ -15,7 +15,7 @@ Product featuritis. The Pontiac Aztec is one of the "worst cars of all time". De
 
 Why does Featuritis occur? Product teams often dive in too late in the design process:
 
-<p class="text-center"> <img class='image-medium' src="/images/posts/ux-burlington-2015-making-design-by-committee-work-stanford-design-process.png" alt=""> </p>
+![Stanford design process](./stanford-design-process.png)
 
 Many start at Ideate instead of Empathize.
 
@@ -71,7 +71,7 @@ People tend to focus on what "everybody knows." Instead, have a process to invit
 - Talk to _real users_ of the product
 - Prime your creativity before meetings (e.g., with [30 circles](http://www.skills21.org/2013/01/jumpstart-creativity-with-the-30-circles-challenge/) and Use My Line)
 
-<p class="text-center"> <img class='image-medium' src="/images/posts/ux-burlington-2015-making-design-by-committee-work-30-circles.png" alt=""> </p>
+![Stanford design process](./30-circles.png)
 
 - Generate ideas _independently_, then reveal _simultaneously_
 - Remix. Say one thing you really like about a design that wasn't yours.
