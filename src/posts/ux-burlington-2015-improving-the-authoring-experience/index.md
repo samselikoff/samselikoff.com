@@ -21,9 +21,7 @@ It's also important to identify your **content model**. Think of a content model
 - serving size
 - difficulty
 
-<p class="text-center">
-  <img class='image-medium' src="/images/posts/ux-burlington-2015-keynote-structured-content.png" alt="">
-</p>
+![Structured content](./structured-content.png)
 
 Having this structure is invaluable to building an authoring platform that will help authors produce consistent, high-quality content.
 
