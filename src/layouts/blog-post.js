@@ -8,7 +8,7 @@ import { Img } from "../components/ui"
 const components = {
   // h1: MyH1,
   h2: props => (
-    <h2 className="text-lg font-semibold leading-tight mt-8">
+    <h2 className="text-lg font-semibold leading-tight mt-12">
       {props.children}
     </h2>
   ),
