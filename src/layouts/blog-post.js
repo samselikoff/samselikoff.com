@@ -18,6 +18,7 @@ const components = {
   p: props => <p className="mt-5">{props.children}</p>,
   hr: () => <hr className="mt-4" />,
   ol: props => <ol className="list-decimal ml-6">{props.children}</ol>,
+  ul: props => <ul className="list-disc ml-6">{props.children}</ul>,
   li: props => <li className="mt-4">{props.children}</li>,
   inlineCode: props => (
     <code className="text-sm bg-gray-100 px-1 py-px">{props.children}</code>

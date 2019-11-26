@@ -38,9 +38,11 @@ Here are my notes from [Rian Van Der Merwe's](https://twitter.com/RianVDM) talk 
      - Run a design studio. Get people together, design indepedently, share simultaneously.
      - Do user research
 
-<p class="text-center">
+<!-- <p class="text-center">
   <img class='image-medium' src="/images/posts/ux-burlington-2015-why-enterprise-software-sucks-product-forces.png" alt="Product Forces diagram">
-</p>
+</p> -->
+
+![Product Forces diagram](./product-forces.png)
 
 - Process leads to better Enterprise software
 - More about facilitation than design
