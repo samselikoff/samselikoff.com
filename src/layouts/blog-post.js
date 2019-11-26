@@ -1,12 +1,10 @@
 import React from "react"
 import { MDXProvider } from "@mdx-js/react"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Img } from "../components/ui"
-
-// const MyH1 = props => <h1 style={{ color: "tomato" }} {...props} />
-// const MyParagraph = props => <p style={{ fontSize: "18px", lineHeight: 1.6 }} />
+import { graphql } from "gatsby"
 
 const components = {
-  // h1: MyH1,
   h2: props => (
     <h2 className="text-lg font-semibold leading-tight mt-12">
       {props.children}
@@ -24,29 +22,36 @@ const components = {
       {props.children}
     </pre>
   ),
-  // img: props => {
-  //   console.log(props)
-  //   //   let src = props.src
-  //   //   if (src[0] === "/") {
-  //   //     src = src.slice(1)
-  //   //   }
-  //   return <span>hi</span>
-  //   // return <img src={props.src} />
-  // },
 }
 
 export default props => {
+  let mdx = props.data.mdx
+
   return (
     <MDXProvider components={components}>
       <div className="mb-10 text-center">
         <h1 className="mt-2 text-2xl font-bold leading-tight text-gray-900">
-          {props.pageContext.frontmatter.title}
+          {props.data.mdx.frontmatter.title}
         </h1>
         <p className="mt-2 text-sm text-gray-600 font-medium">
-          {props.pageContext.frontmatter.date}
+          {props.data.mdx.frontmatter.date}
         </p>
       </div>
-      {props.children}
+
+      <MDXRenderer>{mdx.body}</MDXRenderer>
     </MDXProvider>
   )
 }
+
+export const pageQuery = graphql`
+  query BlogPostQuery($id: String) {
+    mdx(id: { eq: $id }) {
+      id
+      body
+      frontmatter {
+        date(formatString: "MMMM Do, YYYY")
+        title
+      }
+    }
+  }
+`

@@ -1,5 +1,5 @@
 ---
-title: Lowest Common Ancestor
+title: "Lowest Common Ancestor"
 date: December 8, 2015
 ---
 
@@ -147,18 +147,14 @@ In Ember, we can use a Service to solve this problem (in React, you might use a 
 ```js
 // app/services/current-user.js
 export default Ember.Service.extend({
-
-  name: 'Bob',
-  email: 'bob@acme.com'
-
-});
+  name: "Bob",
+  email: "bob@acme.com",
+})
 
 // app/components/sidebar.js
 export default Ember.Component.extend({
-
-  currentUser: Ember.inject.service('current-user')
-
-});
+  currentUser: Ember.inject.service("current-user"),
+})
 ```
 
 Now, `<sidebar>` can access `currentUser` in its template:

@@ -5,7 +5,7 @@ export default function BlogPage({ data }) {
   let articles = data.allMdx.edges.map(edge => ({
     title: edge.node.frontmatter.title,
     date: edge.node.frontmatter.date,
-    url: `/${edge.node.parent.relativePath.replace("/index.mdx", "")}`,
+    url: `/blog/${edge.node.parent.relativePath.replace(/\/index.mdx?/, "")}`,
   }))
 
   return (
@@ -33,7 +33,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            date
+            date(formatString: "MMMM Do, YYYY")
             title
           }
           parent {

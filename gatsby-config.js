@@ -27,6 +27,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        extensions: [`.mdx`, `.md`],
         defaultLayouts: {
           pages: require.resolve("./src/layouts/blog-post.js"),
         },
@@ -47,6 +48,13 @@ module.exports = {
           },
           `gatsby-remark-copy-linked-files`,
         ],
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: `${__dirname}/src/posts/`,
       },
     },
     {
