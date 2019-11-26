@@ -5,7 +5,13 @@ module.exports = {
     author: `@samselikoff`,
   },
   plugins: [
-    `gatsby-plugin-layout`,
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/layouts/base.js`),
+      },
+    },
+
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,

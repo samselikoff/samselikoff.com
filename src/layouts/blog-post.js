@@ -1,9 +1,14 @@
 import React from "react"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { Img } from "../components/ui"
+import Code from "../components/code"
 import { graphql } from "gatsby"
 
+// export const Code = ({ className, ...rest }) => (
+//   <CodeCompVonent
+//     className={`sm:rounded-lg overflow-hidden -mx-5 md:mx-0 my-8 ${className}`}
+//     {...rest}
+//   />
 const components = {
   h2: props => (
     <h2 className="text-lg font-semibold leading-tight mt-12">
@@ -17,11 +22,26 @@ const components = {
   inlineCode: props => (
     <code className="text-sm bg-gray-100 px-1 py-px">{props.children}</code>
   ),
-  pre: props => (
-    <pre className="mt-4 max-w-full overflow-x-scroll bg-gray-200 text-sm p-4">
-      {props.children}
-    </pre>
-  ),
+  pre: props => <div {...props} />,
+
+  // MDX assigns a className of something like `language-jsx{1,5-10}`
+  code: ({ className, children }) => {
+    let props = { children }
+    let languageMatch = className && className.match("language-([^{]+)")
+    if (languageMatch) {
+      props.language = languageMatch[1]
+    }
+    let highlightedLinesMatch = className && className.match("{(.+)}")
+    if (highlightedLinesMatch) {
+      props.highlightedLines = highlightedLinesMatch[1]
+    }
+
+    return (
+      <div className="sm:rounded-lg overflow-hidden my-8 -mx-6 md:mx-auto">
+        <Code {...props} />
+      </div>
+    )
+  },
 }
 
 export default props => {

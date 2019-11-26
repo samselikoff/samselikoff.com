@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "@reach/dialog/styles.css"
-import "./index.css"
+import "./base.css"
 import { animated, useTransition, useChain } from "react-spring"
 import { DialogOverlay, DialogContent } from "@reach/dialog"
 import { Link, navigate } from "gatsby"

@@ -28,7 +28,7 @@ export default function BlogPage({ data }) {
 
 export const query = graphql`
   query BlogIndexQuery {
-    allMdx {
+    allMdx(sort: { order: DESC, fields: frontmatter___date }) {
       edges {
         node {
           id
