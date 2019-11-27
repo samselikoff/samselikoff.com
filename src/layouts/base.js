@@ -59,13 +59,13 @@ const Layout = ({ children }) => {
         <div className="max-w-4xl mx-auto">
           <header>
             <div className="p-4 flex justify-between items-center">
-              <Link to="/" className="p-2">
+              <Link to="/" className="px-2 py-1">
                 <span className="text-sm uppercase font-light tracking-wide">
                   Sam<span className="font-bold">Selikoff</span>
                 </span>
               </Link>
               <button
-                className="p-2 focus:outline-none text-gray-500"
+                className="px-2 py-1 focus:outline-none text-gray-500"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <svg

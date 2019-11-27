@@ -10,7 +10,7 @@ I was working on an app that needed to connect to a node server over web sockets
 ```js
 //some-file.js
 
-/* global io */ // <---- gahhh!
+/* global io */ // <---- eek!
 
 export default Ember.Object.extend({
   someMethod: function() {

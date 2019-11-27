@@ -5,9 +5,7 @@ date: 2014-05-16
 
 I'm building a map application in Ember, and I need one of my components to invoke a method in another component. The UI is similar to Google Maps, with an overlay panel showing details about the selected pin:
 
-![Map](/images/posts/2014-05/map.png)
-
-<!-- more -->
+![Map](./map.png)
 
 The router looks something like this:
 
@@ -37,40 +35,36 @@ First, add a method to the component that executes on init:
 
 ```js
 App.FullscreenMapComponent = Ember.Component.extend({
+  // ...
 
-  ...
-
-  _registerWithTarget: Ember.observer('init', function() {
-    this.set('register-as', this); // register-as is a new property
-  })
-
-});
+  _registerWithTarget: Ember.observer("init", function() {
+    this.set("register-as", this) // register-as is a new property
+  }),
+})
 ```
 
 Then, when rendering the component, supply a property to bind `register-as` to:
 
-```js
-// templates/pins.hbs
+```handlebars
+<!-- templates/pins.hbs -->
 
-{% raw %}{{fullscreen-map data=mapData register-as=fullscreenMap }}{% endraw %}
+{{fullscreen-map data=mapData register-as=fullscreenMap }}
 ```
 
 Now, our controller has a reference to the component, and can call methods directly on it. For example, if clicking our street view component sends out a `focusSelectedPin` action, we could handle it like this:
 
 ```js
 App.PinsRoute = Em.Route.extend({
-
-  ...
+  // ...
 
   actions: {
     focusSelectedPin: function() {
-      this.controller.get('fullscreenMap').panToSelectedPin();
-    }
-  }
-
-});
+      this.controller.get("fullscreenMap").panToSelectedPin()
+    },
+  },
+})
 ```
 
 Presto! Now our components can respond to actions.
 
-<em>Thanks to <a href="http://www.twitter.com/ebryn">@ebryn</a> for this solution.</em>
+_Thanks to [@ebryn](http://www.twitter.com/ebryn) for this solution._

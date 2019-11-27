@@ -22,9 +22,12 @@ const components = {
     </a>
   ),
   hr: () => <hr className="mt-4" />,
-  ol: props => <ol className="list-decimal ml-6">{props.children}</ol>,
-  ul: props => <ul className="list-disc ml-6">{props.children}</ul>,
-  li: props => <li className="mt-4">{props.children}</li>,
+  ol: props => <ol className="list-decimal ml-6" {...props} />,
+  ul: props => <ul className="list-disc ml-6" {...props} />,
+  li: props => <li className="mt-4" {...props} />,
+  blockquote: props => (
+    <blockquote className="border-l-4 pl-4 italic">{props.children}</blockquote>
+  ),
   inlineCode: props => (
     <code className="text-sm bg-gray-100 px-1 py-px">{props.children}</code>
   ),
