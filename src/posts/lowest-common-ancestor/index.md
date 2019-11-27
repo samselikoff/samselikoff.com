@@ -5,7 +5,7 @@ date: 2015-12-08
 
 One of the biggest challenges when writing a JavaScript application is keeping multiple parts of the interface in sync. A user interaction in one part of the interface often affects data in another. If not managed well, this data can end up in multiple places, but with inconsistent values.
 
-<!-- ![Gmail animation](./1-gmail.gif) -->
+![Gmail animation](./1-gmail.gif)
 
 _Email 1 being unread is a piece of application state that affects multiple parts of the interface. After the email is read, the title should no longer be bold, and and Inbox unread count should decrease by one._
 
@@ -17,7 +17,7 @@ The examples use Ember, but the principles are high level and apply to any techn
 
 Let's say we're building an app with a collapsible panel:
 
-<!-- ![Collapsible panel](./2-panel.gif) -->
+![Collapsible panel](./2-panel.gif)
 
 _A collapsible panel, an element that opens and closes when the user clicks on it._
 
@@ -63,7 +63,7 @@ Currently, our application looks like this:
 
 We have a new feature request: adding a separate button which can also toggle the panel. The button should also say "Expand" or "Collapse", depending on the state of the panel.
 
-<!-- ![Collapsible-panel](./4-panel.gif) -->
+![Collapsible-panel](./4-panel.gif)
 
 _A collapsible panel and a button, which both depend on the same state._
 
@@ -84,9 +84,15 @@ Think of the `isOpen` properties on the two children as read-only pointers to th
 Here's the template for `<app>`:
 
 ```handlebars
-{{collapsible-panel isOpen=isOpen onClick=(action 'toggleIsOpen')}}
+{{collapsible-panel
+  isOpen=isOpen
+  onClick=(action 'toggleIsOpen')
+}}
 
-{{button isOpen=isOpen onClick=(action 'toggleIsOpen')}}
+{{button
+  isOpen=isOpen
+  onClick=(action 'toggleIsOpen')
+}}
 ```
 
 And here's the JS, which looks exactly the same as `<collapsible-panel>` did in the first example:
@@ -136,6 +142,7 @@ In this case, you can end up with many components acting as middlemen. These com
 An example of how this could happen is if many components in your app needed to know about the current user:
 
 ![Collapsible-panel](./8-panel.png)
+
 _In this app, many components need to know about the current user._
 
 Assuming this many nodes need to know about the current user, the LCA would be `<app>`, and every component would need to pass along `currentUser` to every other component. This definitely smells like Middle Man.
