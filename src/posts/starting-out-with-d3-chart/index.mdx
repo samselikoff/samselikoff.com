@@ -3,9 +3,9 @@ title: "Starting out with d3.chart"
 date: 2013-12-18
 ---
 
-Writing reusable D3 code can be tough. The community shines at providing one-off examples of really cool charts, but it's hard to find a conventional approach to building out a small library of reusable components. [d3.chart](http://misoproject.com/d3-chart/) is a library from Bocoup that aims to simplify the development of reusable D3 charts.
+import Demo from "./demo"
 
-<!-- more -->
+Writing reusable D3 code can be tough. The community shines at providing one-off examples of really cool charts, but it's hard to find a conventional approach to building out a small library of reusable components. [d3.chart](http://misoproject.com/d3-chart/) is a library from Bocoup that aims to simplify the development of reusable D3 charts.
 
 If you're not familiar with d3.chart at all, [this walkthrough](https://github.com/misoproject/d3.chart/wiki/quickstart) on Github is a great place to start. You should be able to go through it without too much trouble, but as always, the devil is in the details. In this post I'll walk you through building a slightly more complex chart than what's in the walkthrough. Hopefully it will save you some time as you learn the library.
 
@@ -62,7 +62,7 @@ d3.chart('BaseChart', {
 
 We'll render our extended charts to this element. Since the charts will reference the inner dimensions, they will implicitly recognize our base chart's margins.
 
-### Getter/setters
+## Getter/setters
 
 To make the dimensions accessible, we can write getter/setters. Let's start with width:
 
@@ -193,7 +193,7 @@ d3.chart("BaseChart").extend("BarChart", {
 })
 ```
 
-### Transform
+## Transform
 
 Layers in d3.chart are where we actually create our data-driven elements - in our case, the bars. But before we get there, we need to make sure our data is in the correct format. To find out if we need to first transform our data, lets ask ourselves the following:
 
@@ -236,7 +236,7 @@ d3.chart('BaseChart').extend('BarChart', {
 
 Note that we have to return `data`, even though we didn't actually do anything to it, because d3.chart hands off the return value of this method to the rest of our chart.
 
-### Layers
+## Layers
 
 Now we're ready to add a layer, where we will actually render the bars. We add the layer in the `initialize` method. Layers take a name, a D3 selection, and an options object in their definition ([docs](http://misoproject.com/d3-chart/api.html#d3chart_i_layer)):
 
@@ -373,7 +373,7 @@ var barChart = d3
 
 <div id="wide-bar-chart"></div>
 
-### Transitions
+## Transitions
 
 Working with transitions is quite easy, because transitions are lifecycle events just like the `enter` event. You can access a transition event by adding `:transition` to any of the four standard lifecycle events.
 
@@ -444,54 +444,4 @@ d3.chart("AnimatedBarChart").extend("ProfitLossBarChart", {
 
 Suffice it to say, d3.chart provides a very good solution to the perennial problem of chart configuration. I encourage you to try it out, and remember to [show off your work on d3.chart's website](http://misoproject.com/d3-chart/charts.html)!
 
-<script src="/js/d3.v3.min.js"></script>
-<script src="/js/d3.chart.js"></script>
-<script src="/attachments/{{page.slug}}/BaseChart.js"></script>
-<script src="/attachments/{{page.slug}}/BarChart.js"></script>
-<script src="/attachments/{{page.slug}}/AnimatedBarChart.js"></script>
-<script src="/attachments/{{page.slug}}/ProfitLossBarChart.js"></script>
-<script>
-
-var data = [
-  {name: 'A', value: 4},
-  {name: 'B', value: -36},
-  {name: 'C', value: 19},
-  {name: 'D', value: -2},
-  {name: 'E', value: 6},
-];
-
-// Standard bar chart
-var barChart = d3.select("#bar-chart")
-  .append("svg")
-  .chart("BarChart");
-
-barChart.draw(data);
-
-// Wide bar chart
-var wideBarChart = d3.select("#wide-bar-chart")
-  .append("svg")
-  .chart("BarChart")
-  .width(500);
-
-wideBarChart.draw(data);
-
-// Animated bar chart
-function drawAnimatedBarChart() {
-  var animatedBarChart = d3.select("#animated-bar-chart")
-    .html('')
-    .append("svg")
-    .chart("AnimatedBarChart")
-    .draw(data);
-}
-
-$('#draw-animated-bar-chart').on('click', drawAnimatedBarChart);
-
-// Profit and loss bar chart
-var profitLossBarChart = d3.select("#profit-loss-bar-chart")
-  .append("svg")
-  .chart("ProfitLossBarChart");
-
-profitLossBarChart.draw(data);
-
-
-</script>
+<Demo />

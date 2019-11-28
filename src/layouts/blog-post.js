@@ -15,6 +15,9 @@ const components = {
       {props.children}
     </h2>
   ),
+  h3: () => {
+    throw new Error("Selikoff: Don't use an h3 in your blog posts, dude")
+  },
   p: props => <p className="mt-5">{props.children}</p>,
   a: ({ children, ...rest }) => (
     <a className="text-blue-500 underline" {...rest}>
