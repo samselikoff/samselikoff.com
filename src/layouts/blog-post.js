@@ -71,20 +71,20 @@ export default props => {
         </MDXProvider>
       </article>
 
-      <hr className="mt-12" />
+      <hr className="mt-10" />
 
-      <div className="mt-8 clearfix">
-        <div className="float-left pr-4">
+      <div className="mt-10">
+        <div>
           <Link to="/">
             <Img
-              className="rounded-full w-16 h-16"
+              className="mx-auto rounded-full w-16 h-16"
               src="profile.jpeg"
               aspectRatio={1}
             />
           </Link>
         </div>
 
-        <div className="leading-none">
+        <div className="mt-2 leading-none text-center">
           <p className="pt-2 text-gray-600 font-medium uppercase text-xs tracking-wider">
             Written by
           </p>
@@ -94,7 +94,7 @@ export default props => {
         </div>
       </div>
 
-      <div className="mt-8 mb-16">
+      <div className="mt-8 mb-16 text-center">
         <Link className="text-blue-500 font-medium" to="/blog">
           ← View all posts
         </Link>
