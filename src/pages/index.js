@@ -10,12 +10,20 @@ export default function IndexPage() {
 
       <div className="leading-normal">
         <section className="text-lg">
+          <div className="float-right pt-2 pl-6 pb-4">
+            <Img
+              className="rounded-full w-24 h-24"
+              src="profile.jpeg"
+              aspectRatio={1}
+            />
+          </div>
           <p>
             Hi there!{" "}
             <span role="img" aria-label="wave">
               👋
             </span>
           </p>
+
           <p className="mt-4">
             I'm <A href="https://twitter.com/samselikoff">@samselikoff</A>, and
             since 2016 I've made a living teaching JavaScript UI development on
