@@ -2,13 +2,9 @@ import React from "react"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Code from "../components/code"
-import { graphql } from "gatsby"
+import { Img } from "../components/ui"
+import { Link, graphql } from "gatsby"
 
-// export const Code = ({ className, ...rest }) => (
-//   <CodeCompVonent
-//     className={`sm:rounded-lg overflow-hidden -mx-5 md:mx-0 my-8 ${className}`}
-//     {...rest}
-//   />
 const components = {
   h2: ({ children, ...rest }) => (
     <h2 className="text-lg font-semibold leading-tight mt-12" {...rest}>
@@ -60,18 +56,50 @@ export default props => {
   let mdx = props.data.mdx
 
   return (
-    <MDXProvider components={components}>
-      <article className="mb-10 text-center">
-        <h1 className="mt-2 text-2xl font-bold leading-tight text-gray-900">
-          {props.data.mdx.frontmatter.title}
-        </h1>
-        <p className="mt-2 text-sm text-gray-600 font-medium">
-          {props.data.mdx.frontmatter.date}
-        </p>
+    <>
+      <article>
+        <MDXProvider components={components}>
+          <div className="mb-10 text-center">
+            <h1 className="mt-2 text-2xl font-bold leading-tight text-gray-900">
+              {props.data.mdx.frontmatter.title}
+            </h1>
+            <p className="mt-2 text-sm text-gray-600 font-medium">
+              {props.data.mdx.frontmatter.date}
+            </p>
+          </div>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
+        </MDXProvider>
       </article>
 
-      <MDXRenderer>{mdx.body}</MDXRenderer>
-    </MDXProvider>
+      <hr className="mt-12" />
+
+      <div className="mt-8 clearfix">
+        <div className="float-left pr-4">
+          <Link to="/">
+            <Img
+              className="rounded-full w-16 h-16"
+              src="profile.jpeg"
+              aspectRatio={1}
+            />
+          </Link>
+        </div>
+
+        <div className="leading-none">
+          <p className="pt-2 text-gray-600 font-medium uppercase text-xs tracking-wider">
+            Written by
+          </p>
+          <p className="pt-1 font-semibold text-xl">
+            <Link to="/">Sam Selikoff</Link>
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-8 mb-16">
+        <Link className="text-blue-500 font-medium" to="/blog">
+          ← View all posts
+        </Link>
+      </div>
+    </>
   )
 }
 
