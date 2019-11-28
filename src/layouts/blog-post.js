@@ -10,9 +10,9 @@ import { graphql } from "gatsby"
 //     {...rest}
 //   />
 const components = {
-  h2: props => (
-    <h2 className="text-lg font-semibold leading-tight mt-12">
-      {props.children}
+  h2: ({ children, ...rest }) => (
+    <h2 className="text-lg font-semibold leading-tight mt-12" {...rest}>
+      {children}
     </h2>
   ),
   h3: () => {
@@ -25,8 +25,8 @@ const components = {
     </a>
   ),
   hr: () => <hr className="mt-4" />,
-  ol: props => <ol className="list-decimal ml-6" {...props} />,
-  ul: props => <ul className="list-disc ml-6" {...props} />,
+  ol: props => <ol className="list-decimal pl-6" {...props} />,
+  ul: props => <ul className="list-disc pl-6" {...props} />,
   li: props => <li className="mt-4" {...props} />,
   blockquote: props => (
     <blockquote className="border-l-4 pl-4 italic">{props.children}</blockquote>
@@ -61,14 +61,14 @@ export default props => {
 
   return (
     <MDXProvider components={components}>
-      <div className="mb-10 text-center">
+      <article className="mb-10 text-center">
         <h1 className="mt-2 text-2xl font-bold leading-tight text-gray-900">
           {props.data.mdx.frontmatter.title}
         </h1>
         <p className="mt-2 text-sm text-gray-600 font-medium">
           {props.data.mdx.frontmatter.date}
         </p>
-      </div>
+      </article>
 
       <MDXRenderer>{mdx.body}</MDXRenderer>
     </MDXProvider>
