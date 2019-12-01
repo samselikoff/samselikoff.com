@@ -7,7 +7,7 @@ import { Link, graphql } from "gatsby"
 
 const components = {
   h2: ({ children, ...rest }) => (
-    <h2 className="text-lg font-semibold leading-tight mt-12" {...rest}>
+    <h2 className="mt-12 text-lg font-semibold leading-tight" {...rest}>
       {children}
     </h2>
   ),
@@ -21,14 +21,14 @@ const components = {
     </a>
   ),
   hr: () => <hr className="mt-4" />,
-  ol: props => <ol className="list-decimal pl-6" {...props} />,
-  ul: props => <ul className="list-disc pl-6" {...props} />,
+  ol: props => <ol className="pl-6 list-decimal" {...props} />,
+  ul: props => <ul className="pl-6 list-disc" {...props} />,
   li: props => <li className="mt-4" {...props} />,
   blockquote: props => (
-    <blockquote className="border-l-4 pl-4 italic">{props.children}</blockquote>
+    <blockquote className="pl-4 italic border-l-4">{props.children}</blockquote>
   ),
   inlineCode: props => (
-    <code className="text-sm bg-gray-100 px-1 py-px">{props.children}</code>
+    <code className="px-1 py-px text-sm bg-gray-100">{props.children}</code>
   ),
   pre: props => <div {...props} />,
 
@@ -45,7 +45,7 @@ const components = {
     }
 
     return (
-      <div className="sm:rounded-lg overflow-hidden my-8 -mx-6 md:mx-auto">
+      <div className="my-8 -mx-6 overflow-hidden sm:rounded-lg md:mx-auto">
         <Code {...props} />
       </div>
     )
@@ -63,7 +63,7 @@ export default props => {
             <h1 className="mt-2 text-2xl font-bold leading-tight text-gray-900">
               {props.data.mdx.frontmatter.title}
             </h1>
-            <p className="mt-2 text-sm text-gray-600 font-medium">
+            <p className="mt-2 text-sm font-medium text-gray-600">
               {props.data.mdx.frontmatter.date}
             </p>
           </div>
@@ -77,7 +77,7 @@ export default props => {
         <div>
           <Link to="/">
             <Img
-              className="mx-auto rounded-full w-16 h-16"
+              className="w-16 h-16 mx-auto rounded-full"
               src="profile.jpeg"
               aspectRatio={1}
             />
@@ -85,17 +85,17 @@ export default props => {
         </div>
 
         <div className="mt-2 leading-none text-center">
-          <p className="pt-2 text-gray-600 font-medium uppercase text-xs tracking-wider">
+          <p className="pt-2 text-xs font-medium tracking-wider text-gray-600 uppercase">
             Written by
           </p>
-          <p className="pt-1 font-semibold text-xl">
+          <p className="pt-1 text-xl font-semibold">
             <Link to="/">Sam Selikoff</Link>
           </p>
         </div>
       </div>
 
       <div className="mt-8 mb-16 text-center">
-        <Link className="text-blue-500 font-medium" to="/blog">
+        <Link className="font-medium text-blue-500" to="/blog">
           ← View all posts
         </Link>
       </div>

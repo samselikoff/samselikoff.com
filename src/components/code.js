@@ -26,7 +26,7 @@ export default function(props) {
       lineProps={lineNumber => {
         let props = {}
         if (highlightedLines.includes(lineNumber)) {
-          props.className = "block -mx-5 px-5 bg-green-500"
+          props.className = "block px-5 -mx-5 bg-green-500"
           props.style = {
             background: "#343b46", // dark:303641 bright:3D4452 medium: ##343b46
           }
