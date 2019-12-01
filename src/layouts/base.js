@@ -57,8 +57,8 @@ const Layout = ({ children }) => {
     <>
       <div className="font-sans antialiased text-gray-800">
         <div className="max-w-4xl mx-auto">
-          <header className=" bg-gray-100">
-            <div className="p-4 flex justify-between items-center">
+          <header className="bg-gray-100">
+            <div className="p-4 flex justify-between items-center max-w-lg mx-auto">
               <Link to="/" className="px-2 py-1">
                 <span className="text-sm uppercase font-light tracking-wide">
                   Sam<span className="font-bold">Selikoff</span>
@@ -94,10 +94,10 @@ const Layout = ({ children }) => {
                   >
                     {transitions.length > 0 && (
                       <DialogContent
-                        className="m-0 w-full bg-transparent p-4"
+                        className="m-0 w-full max-w-lg mx-auto bg-transparent p-4"
                         aria-label="Site nav"
                       >
-                        <div className="w-full flex flex-wrap">
+                        <div className="flex flex-wrap">
                           <div className="mt-4 w-1/3 px-2">
                             <animated.a
                               style={{
@@ -162,7 +162,7 @@ const Layout = ({ children }) => {
                 )
             )}
           </header>
-          <main className="pt-6 px-6 pb-8">{children}</main>
+          <main className="pt-6 px-6 pb-8 max-w-lg mx-auto">{children}</main>
         </div>
       </div>
     </>
