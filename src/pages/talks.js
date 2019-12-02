@@ -66,58 +66,55 @@ export default function TalksPage() {
       <div className="mt-16 mb-32">
         <h1 className="text-3xl font-semibold text-center">Interviews</h1>
 
-        <div className="mt-16">
-          <Interview
-            url="http://www.fullstackradio.com/106"
-            image="interviews/fullstackradio.jpg"
-            byline="Full Stack Radio #106"
-            title="Sam Selikoff - Single Page Application Architecture"
-          />
-        </div>
-
-        <div className="mt-16">
-          <Interview
-            url="http://www.fullstackradio.com/89"
-            image="interviews/fullstackradio.jpg"
-            byline="Full Stack Radio #89"
-            title="Sam Selikoff - Choosing Ember.js in 2018"
-          />
-        </div>
-
-        <div className="mt-16">
-          <Interview
-            url="https://frontside.io/podcast/037-ember-cli-mirage-with-sam-selikoff/"
-            image="interviews/thefrontside.jpg"
-            byline="The Frontside Podcast #37"
-            title="Ember CLI Mirage with Sam Selikoff"
-          />
-        </div>
-
-        <div className="mt-16">
-          <Interview
-            url="https://emberweekend.com/episodes/consumer-driven-weekend/"
-            image="interviews/emberweekend.png"
-            byline="Ember Weekend #19"
-            title="Consumer Driven Weekend with Sam Selikoff"
-          />
-        </div>
-
-        <div className="mt-16">
-          <Interview
-            url="https://devchat.tv/js-jabber/jsj-364-ember-octane-with-sam-selikoff/"
-            image="interviews/javascriptjabber.jpg"
-            byline="JavaScript Jabber #364"
-            title="Ember Octane with Sam Selikoff"
-          />
-        </div>
-
-        <div className="mt-16">
-          <Interview
-            url="https://devchat.tv/my-javascript-story/mjs-121-sam-selikoff/"
-            image="interviews/myjavascriptstory.jpg"
-            byline="My JavaScript Story #121"
-            title="Sam Selikoff"
-          />
+        <div className="flex flex-wrap md:-mx-3">
+          <div className="w-2/3 mx-auto mt-16 md:w-1/2 md:px-3">
+            <Interview
+              url="http://www.fullstackradio.com/106"
+              image="interviews/fullstackradio.jpg"
+              byline="Full Stack Radio #106"
+              title="Sam Selikoff - Single Page Application Architecture"
+            />
+          </div>
+          <div className="w-2/3 mx-auto mt-16 md:w-1/2 md:px-3">
+            <Interview
+              url="http://www.fullstackradio.com/89"
+              image="interviews/fullstackradio.jpg"
+              byline="Full Stack Radio #89"
+              title="Sam Selikoff - Choosing Ember.js in 2018"
+            />
+          </div>
+          <div className="w-2/3 mx-auto mt-16 md:w-1/2 md:px-3">
+            <Interview
+              url="https://frontside.io/podcast/037-ember-cli-mirage-with-sam-selikoff/"
+              image="interviews/thefrontside.jpg"
+              byline="The Frontside Podcast #37"
+              title="Ember CLI Mirage with Sam Selikoff"
+            />
+          </div>
+          <div className="w-2/3 mx-auto mt-16 md:w-1/2 md:px-3">
+            <Interview
+              url="https://emberweekend.com/episodes/consumer-driven-weekend/"
+              image="interviews/emberweekend.png"
+              byline="Ember Weekend #19"
+              title="Consumer Driven Weekend with Sam Selikoff"
+            />
+          </div>
+          <div className="w-2/3 mx-auto mt-16 md:w-1/2 md:px-3">
+            <Interview
+              url="https://devchat.tv/js-jabber/jsj-364-ember-octane-with-sam-selikoff/"
+              image="interviews/javascriptjabber.jpg"
+              byline="JavaScript Jabber #364"
+              title="Ember Octane with Sam Selikoff"
+            />
+          </div>
+          <div className="w-2/3 mx-auto mt-16 md:w-1/2 md:px-3">
+            <Interview
+              url="https://devchat.tv/my-javascript-story/mjs-121-sam-selikoff/"
+              image="interviews/myjavascriptstory.jpg"
+              byline="My JavaScript Story #121"
+              title="Sam Selikoff"
+            />
+          </div>
         </div>
       </div>
     </>
@@ -144,7 +141,7 @@ const Talk = props => {
 
 const Interview = props => {
   return (
-    <div className="w-2/3 mx-auto">
+    <>
       <div>
         <a href={props.url} className="block shadow">
           <Img src={props.image} aspectRatio={1} />
@@ -158,6 +155,6 @@ const Interview = props => {
           <a href={props.url}>{props.title}</a>
         </p>
       </div>
-    </div>
+    </>
   )
 }

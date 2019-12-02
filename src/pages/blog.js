@@ -12,20 +12,24 @@ export default function BlogPage({ data }) {
   }))
 
   return (
-    <>
+    <div className="mb-16">
       <H1>Blog</H1>
 
       <ul className="mt-12 leading-tight">
         {articles.map(article => (
-          <li className="mt-6" key={article.url}>
-            <p className="text-xs font-medium text-gray-500">{article.date}</p>
+          <li className="mt-6 md:mt-10" key={article.url}>
+            <p className="text-xs font-medium text-gray-500 md:text-sm">
+              {article.date}
+            </p>
             <Link to={article.url}>
-              <h2 className="mt-1 text-lg font-semibold">{article.title}</h2>
+              <h2 className="mt-1 text-lg font-semibold md:text-xl">
+                {article.title}
+              </h2>
             </Link>
           </li>
         ))}
       </ul>
-    </>
+    </div>
   )
 }
 
