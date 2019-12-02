@@ -8,7 +8,7 @@ import { Link, graphql } from "gatsby"
 const components = {
   h2: ({ children, ...rest }) => (
     <h2
-      className="mt-12 text-lg font-semibold leading-tight md:text-xl"
+      className="mt-12 text-lg font-semibold leading-tight md:text-2xl"
       {...rest}
     >
       {children}
@@ -60,12 +60,12 @@ export default props => {
 
   return (
     <>
-      <div className="md:mt-4 md:-mx-escape-xl">
+      <div className="md:-mx-escape-xl">
         <div className="md:max-w-2xl md:mx-auto md:px-8">
-          <article className="">
+          <article className="md:text-lg">
             <MDXProvider components={components}>
               <div className="mb-10 text-center md:text-left">
-                <h1 className="mt-2 text-2xl font-bold leading-tight md:text-3xl">
+                <h1 className="text-2xl font-bold leading-tight md:text-4xl">
                   {props.data.mdx.frontmatter.title}
                 </h1>
                 <p className="mt-2 text-sm font-medium text-gray-600 md:text-base md:mt-1">

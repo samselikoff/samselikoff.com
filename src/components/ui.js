@@ -12,7 +12,7 @@ export const A = ({ children, font = "medium", ...props }) => {
 
 export function H1({ children }) {
   return (
-    <h1 className="text-3xl font-semibold text-center md:text-4xl">
+    <h1 className="text-3xl font-bold leading-tight text-center md:text-4xl">
       {children}
     </h1>
   )
