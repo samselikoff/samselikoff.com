@@ -10,7 +10,7 @@ export default function IndexPage() {
 
       <div className="mb-12 leading-normal md:text-xl">
         <section className="text-lg text-gray-700 md:font-light md:text-3xl md:pt-8 md:pb-4">
-          <div className="float-right pt-2 pb-1 pl-1 md:pl-4">
+          <div className="float-right pt-2 pb-1 pl-1 md:pt-5 md:pl-6">
             <Img
               className="rounded-full w-28 h-28 md:w-40 md:h-40"
               src="profile.jpeg"
@@ -25,9 +25,12 @@ export default function IndexPage() {
           </p>
 
           <p className="mt-4">
-            I'm <A href="https://twitter.com/samselikoff">@samselikoff</A>, and
-            since 2016 I've made a living teaching JavaScript UI development on
-            the web.
+            I'm{" "}
+            <A href="https://twitter.com/samselikoff" font="normal">
+              @samselikoff
+            </A>
+            , and since 2016 I've made a living teaching JavaScript UI
+            development on the web.
           </p>
         </section>
 

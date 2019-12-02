@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { H1 } from "../components/ui"
 
 export default function BlogPage({ data }) {
   let articles = data.allMdx.edges.map(edge => ({
@@ -12,7 +13,7 @@ export default function BlogPage({ data }) {
 
   return (
     <>
-      <h1 className="text-3xl font-semibold text-center">Blog</h1>
+      <H1>Blog</H1>
 
       <ul className="mt-12 leading-tight">
         {articles.map(article => (

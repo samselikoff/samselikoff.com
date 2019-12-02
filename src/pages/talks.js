@@ -1,10 +1,10 @@
 import React from "react"
-import { Img } from "../components/ui"
+import { H1, Img } from "../components/ui"
 
 export default function TalksPage() {
   return (
     <>
-      <h1 className="text-3xl font-semibold text-center">Talks</h1>
+      <H1>Talks</H1>
 
       <div className="mt-12">
         <Talk
@@ -16,7 +16,7 @@ export default function TalksPage() {
       </div>
       <div className="mt-12">
         <Talk
-          title="Better Documentation with Addon Docs"
+          title="Better Documentation with AddonDocs"
           presentedAt="EmberConf 2018"
           image="talks/emberconf2018.png"
           url="https://www.youtube.com/watch?v=PVzutIELrf4"
@@ -131,10 +131,10 @@ const Talk = props => {
         <Img src={props.image} />
       </a>
       <div className="leading-snug">
-        <p className="mt-3 text-sm font-semibold text-gray-500">
+        <p className="mt-3 text-sm font-semibold text-gray-500 md:text-base">
           {props.presentedAt}
         </p>
-        <p className="mt-1 font-semibold text-lg">
+        <p className="text-lg font-semibold md:text-2xl">
           <a href={props.url}>{props.title}</a>
         </p>
       </div>
@@ -154,7 +154,7 @@ const Interview = props => {
         <p className="mt-3 text-sm font-semibold text-gray-500">
           {props.byline}
         </p>
-        <p className="mt-1 font-semibold text-lg">
+        <p className="mt-1 text-lg font-semibold">
           <a href={props.url}>{props.title}</a>
         </p>
       </div>

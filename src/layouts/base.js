@@ -266,40 +266,64 @@ function MobileNav({ isOpen, handleClick, closeMenu }) {
 function DesktopNav() {
   return (
     <div className="items-center hidden w-full md:flex">
-      <div className="pl-2">
-        <Link className="ml-6 text-gray-600 uppercase" to="/projects">
+      <div className="flex pl-2">
+        <Link
+          className="ml-6 text-xs font-medium text-gray-700 uppercase"
+          to="/projects"
+        >
           Projects
         </Link>
-        <Link className="ml-6 text-gray-600 uppercase" to="/podcast">
+        <Link
+          className="ml-6 text-xs font-medium text-gray-700 uppercase"
+          to="/podcast"
+        >
           Podcast
         </Link>
-        <Link className="ml-6 text-gray-600 uppercase" to="/talks">
+        <Link
+          className="ml-6 text-xs font-medium text-gray-700 uppercase"
+          to="/talks"
+        >
           Talks
         </Link>
-        <Link className="ml-6 text-gray-600 uppercase" to="/blog">
+        <Link
+          className="ml-6 text-xs font-medium text-gray-700 uppercase"
+          to="/blog"
+        >
           Blog
         </Link>
       </div>
 
-      <div className="flex items-center ml-auto">
+      <div className="flex items-center ml-auto text-gray-">
         <a
-          style={{ color: "#24292F" }}
+          style={{
+            color: "#24292F", // brand color
+            // fill: "#4a5568", // gray-700
+            // fill: "#a0aec0", // gray-500
+          }}
           href="https://github.com/samselikoff"
-          className="p-1 ml-5 focus:outline-none"
+          className="p-1 ml-4 focus:outline-none"
         >
           <GitHubLogo className="h-5" />
         </a>
         <a
-          style={{ color: "#ff0000" }}
+          style={{
+            color: "#ff0000", // brand color
+            // color: "#4a5568", // gray-700
+            // color: "#a0aec0", // gray-500
+          }}
           href="https://www.youtube.com/user/samselikoff"
-          className="p-1 ml-5 focus:outline-none"
+          className="p-1 ml-4 focus:outline-none"
         >
           <YouTubeLogo className="h-5" />
         </a>
         <a
-          style={{ color: "#00aced" }}
+          style={{
+            color: "#00aced", // brand color
+            // color: "#4a5568", // gray-700
+            // color: "#a0aec0", // gray-500
+          }}
           href="https://twitter.com/samselikoff"
-          className="p-1 ml-5 focus:outline-none"
+          className="p-1 ml-4 focus:outline-none"
         >
           <TwitterLogo className="h-5" />
         </a>

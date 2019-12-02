@@ -1,44 +1,47 @@
 import React from "react"
-import { Img } from "../components/ui"
+import { H1, Img } from "../components/ui"
 
 export default function BlogPage() {
   return (
     <>
-      <h1 className="text-3xl font-semibold text-center">Projects</h1>
+      <H1>Projects</H1>
 
-      <div className="mt-12">
-        <a href="https://miragejs.com/">
-          <Img src="mirage.png" className="shadow-lg rounded-lg" />
-        </a>
-      </div>
-      <div className="mt-12">
-        <a href="https://embermap.com/">
-          <Img src="embermap4.png" className="shadow-lg rounded-lg" />
-        </a>
-      </div>
+      <div className="md:mt-4 md:-mx-escape-xl">
+        <div className="md:max-w-2xl md:mx-auto">
+          <div className="md:flex md:-mx-4">
+            <div className="mt-12 md:w-1/2 md:mx-4">
+              <a href="https://miragejs.com/">
+                <Img src="mirage.png" className="rounded-lg shadow-lg" />
+              </a>
+            </div>
+            <div className="mt-12 md:w-1/2 md:mx-4">
+              <a href="https://embermap.com/">
+                <Img src="embermap4.png" className="rounded-lg shadow-lg" />
+              </a>
+            </div>
+          </div>
 
-      <div className="mt-16 mb-32">
-        <p className="text-xl text-center">Past</p>
+          <div className="mt-16 mb-32 md:mt-24">
+            <p className="text-xl text-center md:text-2xl">Past</p>
 
-        <div className="flex mt-8 -mx-2">
-          <div className="w-1/2 mx-2">
-            <PastProjectCard href="https://ember-learn.github.io/ember-cli-addon-docs/">
-              Addon Docs
-            </PastProjectCard>
+            <div className="flex flex-wrap mt-4 -mx-2">
+              <div className="w-1/2 px-2 md:w-1/3">
+                <PastProjectCard href="https://ember-learn.github.io/ember-cli-addon-docs/">
+                  Addon Docs
+                </PastProjectCard>
+              </div>
+              <div className="w-1/2 px-2 md:w-1/3">
+                <PastProjectCard href="https://embermap.github.io/ember-data-storefront/">
+                  Storefront
+                </PastProjectCard>
+              </div>
+              <div className="w-1/2 px-2 md:w-1/3">
+                <PastProjectCard href="https://github.com/embermap/ember-cli-tailwind">
+                  Ember CLI Tailwind
+                </PastProjectCard>
+              </div>
+            </div>
           </div>
-          <div className="w-1/2 mx-2">
-            <PastProjectCard href="https://embermap.github.io/ember-data-storefront/">
-              Storefront
-            </PastProjectCard>
-          </div>
-        </div>
-        <div className="flex mt-4 -mx-2">
-          <div className="w-1/2 mx-2">
-            <PastProjectCard href="https://github.com/embermap/ember-cli-tailwind">
-              Ember CLI Tailwind
-            </PastProjectCard>
-          </div>
-          <div className="w-1/2 mx-2"></div>
         </div>
       </div>
     </>
@@ -47,7 +50,7 @@ export default function BlogPage() {
 
 const PastProjectCard = props => (
   <a
-    className="block leading-snug font-semibold border border-gray-400 rounded bg-gray-200 text-gray-900 h-24 flex items-center justify-center px-4 text-center"
+    className="flex items-center justify-center block h-24 px-4 mt-4 font-semibold leading-snug text-center text-gray-900 bg-gray-200 border border-gray-400 rounded"
     href={props.href}
   >
     <p>{props.children}</p>

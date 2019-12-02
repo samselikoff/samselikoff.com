@@ -1,19 +1,20 @@
 import React from "react"
-import { A, Img } from "../components/ui"
+import { H1, A, Img } from "../components/ui"
 
 export default function() {
   return (
     <>
-      <h1 className="text-3xl font-semibold text-center">Podcast</h1>
+      <H1>Podcast</H1>
 
-      <div className="mt-8">
-        <p className="text-lg">
-          For more than two years I've used <A>The EmberMap Podcast</A> to talk
-          about whatever's going on in my day-to-day life doing frontend
+      <div className="mt-8 md:text-xl">
+        <p className="text-lg md:text-xl">
+          For more than two years I've used{" "}
+          <A href="https://embermap.com/podcast">The EmberMap Podcast</A> to
+          talk about whatever's going on in my day-to-day life doing frontend
           development, along with my co-host Ryan Toronto.
         </p>
 
-        <p className="mt-8">
+        <p className="mt-8 md:mt-4">
           While we originally focused on Ember.js, these days we talk about
           anything going on in the world of JavaScript UI development.
         </p>
@@ -104,18 +105,21 @@ export default function() {
 
 const PodcastCard = props => (
   <div className="mt-8">
-    <a className="text-lg font-semibold leading-tight" href={props.url}>
-      {props.title}
-    </a>
+    <h2 className="text-lg font-semibold leading-tight md:text-xl">
+      <a href={props.url}>{props.title}</a>
+    </h2>
     <a
       href={props.url}
-      className="relative mt-4 block rounded shadow-md overflow-hidden"
+      className="relative block mt-4 overflow-hidden rounded shadow-md"
     >
       <Img src={props.imageUrl} />
     </a>
     <p className="mt-4">{props.children}</p>
-    <p className="mt-2">
-      <a className="text-sm font-medium text-blue-500" href={props.url}>
+    <p className="mt-2 md:mt-3">
+      <a
+        className="text-sm font-medium text-blue-500 md:text-lg"
+        href={props.url}
+      >
         Play episode →
       </a>
     </p>

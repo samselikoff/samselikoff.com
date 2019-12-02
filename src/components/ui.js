@@ -2,12 +2,20 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import GatsbyImage from "gatsby-image"
 
-export const A = ({ children, ...props }) => {
-  props.className += ` border-b border-blue-500 font-medium text-blue-600`
+export const A = ({ children, font = "medium", ...props }) => {
+  props.className += ` border-b border-blue-500 font-${font} text-blue-600`
   let isInternalLink = props.to && props.to.startsWith("/")
   let LinkComponent = isInternalLink ? Link : `a`
 
   return <LinkComponent {...props}>{children}</LinkComponent>
+}
+
+export function H1({ children }) {
+  return (
+    <h1 className="text-3xl font-semibold text-center md:text-4xl">
+      {children}
+    </h1>
+  )
 }
 
 export const Img = props => {
