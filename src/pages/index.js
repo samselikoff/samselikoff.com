@@ -9,7 +9,7 @@ export default function IndexPage() {
       <SEO />
 
       <div className="mb-12 leading-normal md:text-xl">
-        <section className="text-lg text-gray-700 md:font-light md:text-3xl md:py-4">
+        <section className="text-lg text-gray-700 md:font-light md:text-3xl md:pt-8 md:pb-4">
           <div className="float-right pt-2 pb-1 pl-1 md:pl-4">
             <Img
               className="rounded-full w-28 h-28 md:w-40 md:h-40"

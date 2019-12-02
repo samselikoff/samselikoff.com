@@ -22,13 +22,14 @@ const Layout = ({ children }) => {
       <div className="font-sans antialiased text-gray-800">
         <div className="max-w-4xl mx-auto">
           <header className="bg-gray-100 md:bg-transparent md:border-b">
-            <div className="flex items-center justify-between px-6 py-4 md:py-6">
+            <div className="flex items-center justify-between px-6 py-4 md:justify-start md:py-6">
               <Link to="/">
-                <span className="text-sm font-light tracking-wide uppercase md:text-base">
+                <span className="text-sm font-light tracking-wide text-gray-900 uppercase md:text-base">
                   Sam<span className="font-bold">Selikoff</span>
                 </span>
               </Link>
               <MobileNavButton isOpen={isOpen} setIsOpen={setIsOpen} />
+              <DesktopNav />
             </div>
             <MobileNav
               isOpen={isOpen}
@@ -36,7 +37,7 @@ const Layout = ({ children }) => {
               closeMenu={() => setIsOpen(false)}
             />
           </header>
-          <main className="max-w-lg px-6 pt-6 pb-8 mx-auto md:pt-16 md:max-w-xl">
+          <main className="max-w-lg px-6 pt-6 pb-8 mx-auto md:pt-12 md:max-w-xl">
             {children}
           </main>
         </div>
@@ -258,6 +259,51 @@ function MobileNav({ isOpen, handleClick, closeMenu }) {
             </AnimatedDialogOverlay>
           )
       )}
+    </div>
+  )
+}
+
+function DesktopNav() {
+  return (
+    <div className="items-center hidden w-full md:flex">
+      <div className="pl-2">
+        <Link className="ml-6 text-gray-600 uppercase" to="/projects">
+          Projects
+        </Link>
+        <Link className="ml-6 text-gray-600 uppercase" to="/podcast">
+          Podcast
+        </Link>
+        <Link className="ml-6 text-gray-600 uppercase" to="/talks">
+          Talks
+        </Link>
+        <Link className="ml-6 text-gray-600 uppercase" to="/blog">
+          Blog
+        </Link>
+      </div>
+
+      <div className="flex items-center ml-auto">
+        <a
+          style={{ color: "#24292F" }}
+          href="https://github.com/samselikoff"
+          className="p-1 ml-5 focus:outline-none"
+        >
+          <GitHubLogo className="h-5" />
+        </a>
+        <a
+          style={{ color: "#ff0000" }}
+          href="https://www.youtube.com/user/samselikoff"
+          className="p-1 ml-5 focus:outline-none"
+        >
+          <YouTubeLogo className="h-5" />
+        </a>
+        <a
+          style={{ color: "#00aced" }}
+          href="https://twitter.com/samselikoff"
+          className="p-1 ml-5 focus:outline-none"
+        >
+          <TwitterLogo className="h-5" />
+        </a>
+      </div>
     </div>
   )
 }
