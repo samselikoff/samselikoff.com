@@ -3,7 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import GatsbyImage from "gatsby-image"
 
 export const A = ({ children, ...props }) => {
-  props.className += ` underline text-blue-600 font-medium`
+  props.className += ` border-b border-blue-500 font-medium text-blue-600`
   let isInternalLink = props.to && props.to.startsWith("/")
   let LinkComponent = isInternalLink ? Link : `a`
 
