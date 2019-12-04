@@ -64,13 +64,13 @@ export default props => {
         <div className="md:max-w-2xl md:mx-auto md:px-8">
           <article className="md:text-lg">
             <MDXProvider components={components}>
-              <div className="mb-10 text-center md:text-left">
-                <h1 className="text-2xl font-bold leading-tight md:text-4xl">
-                  {props.data.mdx.frontmatter.title}
-                </h1>
-                <p className="mt-2 text-sm font-medium text-gray-600 md:text-base md:mt-1">
+              <div className="mb-10 md:text-left">
+                <p className="text-xs font-medium text-gray-500 md:mt-1">
                   {props.data.mdx.frontmatter.date}
                 </p>
+                <h1 className="mt-4 font-semibold leading-tight text-gray-900 text-2-5xl md:text-4xl">
+                  {props.data.mdx.frontmatter.title}
+                </h1>
               </div>
               <MDXRenderer>{mdx.body}</MDXRenderer>
             </MDXProvider>
@@ -116,7 +116,7 @@ export const pageQuery = graphql`
       id
       body
       frontmatter {
-        date(formatString: "MMMM Do, YYYY")
+        date(formatString: "MMMM D, YYYY")
         title
       }
     }

@@ -18,11 +18,11 @@ export default function BlogPage({ data }) {
       <ul className="mt-12 leading-tight">
         {articles.map(article => (
           <li className="mt-6 md:mt-10" key={article.url}>
-            <p className="text-xs font-medium text-gray-500 md:text-sm">
+            <p className="text-xs font-medium text-gray-400 md:text-sm">
               {article.date}
             </p>
             <Link to={article.url}>
-              <h2 className="mt-1 text-lg font-semibold md:text-xl">
+              <h2 className="mt-1 text-lg font-bold md:text-xl">
                 {article.title}
               </h2>
             </Link>
@@ -43,7 +43,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            date(formatString: "MMMM Do, YYYY")
+            date(formatString: "MMMM D, YYYY")
             title
           }
           parent {

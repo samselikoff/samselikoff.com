@@ -20,23 +20,25 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="font-sans antialiased text-gray-800">
-        <div className="max-w-4xl mx-auto">
-          <header className="bg-gray-100 md:bg-transparent md:border-b">
-            <div className="flex items-center justify-between px-6 py-4 md:justify-start md:py-6">
+        <header className="bg-gray-100 md:bg-transparent md:border-b">
+          <div className="max-w-3xl px-6 py-4 mx-auto md:py-6 lg:py-10">
+            <div className="flex items-center justify-between md:justify-start">
               <Link to="/">
-                <span className="text-sm font-light tracking-wide text-gray-900 uppercase md:text-base">
+                <span className="text-sm font-light tracking-wide text-gray-900 uppercase md:text-base lg:text-xl">
                   Sam<span className="font-bold">Selikoff</span>
                 </span>
               </Link>
               <MobileNavButton isOpen={isOpen} setIsOpen={setIsOpen} />
-              <DesktopNav />
             </div>
             <MobileNav
               isOpen={isOpen}
               handleClick={handleClick}
               closeMenu={() => setIsOpen(false)}
             />
-          </header>
+            <DesktopNav />
+          </div>
+        </header>
+        <div className="max-w-3xl mx-auto">
           <main className="max-w-lg px-6 pt-6 pb-8 mx-auto md:pt-12 md:max-w-xl">
             {children}
           </main>
@@ -266,31 +268,11 @@ function MobileNav({ isOpen, handleClick, closeMenu }) {
 function DesktopNav() {
   return (
     <div className="items-center hidden w-full md:flex">
-      <div className="flex pl-2">
-        <Link
-          className="ml-6 text-xs font-medium text-gray-700 uppercase"
-          to="/projects"
-        >
-          Projects
-        </Link>
-        <Link
-          className="ml-6 text-xs font-medium text-gray-700 uppercase"
-          to="/podcast"
-        >
-          Podcast
-        </Link>
-        <Link
-          className="ml-6 text-xs font-medium text-gray-700 uppercase"
-          to="/talks"
-        >
-          Talks
-        </Link>
-        <Link
-          className="ml-6 text-xs font-medium text-gray-700 uppercase"
-          to="/blog"
-        >
-          Blog
-        </Link>
+      <div className="flex">
+        <DesktopNavLink to="/projects">Projects</DesktopNavLink>
+        <DesktopNavLink to="/podcast">Podcast</DesktopNavLink>
+        <DesktopNavLink to="/talks">Talks</DesktopNavLink>
+        <DesktopNavLink to="/blog">Blog</DesktopNavLink>
       </div>
 
       <div className="flex items-center ml-auto text-gray-">
@@ -329,5 +311,16 @@ function DesktopNav() {
         </a>
       </div>
     </div>
+  )
+}
+
+function DesktopNavLink({ to, children }) {
+  return (
+    <Link
+      className="mr-6 font-medium text-gray-700 lg:text-base hover:text-gray-900"
+      to={to}
+    >
+      {children}
+    </Link>
   )
 }
