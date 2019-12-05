@@ -30,7 +30,7 @@ module.exports = {
           // "800": "#2D3748",
           // "900": "#1A202C0",
 
-          // Cool: https://hihayk.github.io/scale/#4/4/82/91/0/0/-19/-5/a6afb9/166/175/185
+          // Cool, but less cool than default: https://hihayk.github.io/scale/#4/4/82/91/0/0/-19/-5/a6afb9/166/175/185
           "100": "#F7F8F9",
           "200": "#E3E6E8",
           "300": "#CFD3D8",

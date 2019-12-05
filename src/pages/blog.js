@@ -22,7 +22,7 @@ export default function BlogPage({ data }) {
               {article.date}
             </p>
             <Link to={article.url}>
-              <h2 className="mt-1 text-lg font-bold md:text-xl">
+              <h2 className="mt-1 text-lg font-semibold md:text-xl">
                 {article.title}
               </h2>
             </Link>

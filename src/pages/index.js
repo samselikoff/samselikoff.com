@@ -9,11 +9,11 @@ export default function IndexPage() {
       <SEO />
 
       <div className="mb-12 leading-normal md:text-xl">
-        <section className="text-lg text-gray-700 md:font-light md:text-3xl md:pt-8 md:pb-4">
+        <section className="text-xl font-light md:font-light md:text-3xl md:pt-8 md:pb-4">
           <div className="float-right pt-2 pl-1 pl-2 md:pt-5 md:pl-6">
             {/* <div className="float-right overflow-hidden rounded-full"> */}
             <Img
-              className="rounded-full w-28 h-28 md:w-40 md:h-40"
+              className="w-24 h-24 rounded-full md:w-40 md:h-40"
               src="profile.jpeg"
               aspectRatio={1}
             />
@@ -144,7 +144,7 @@ function Section({ children }) {
 }
 
 function SectionTitle({ children }) {
-  return <h2 className="text-lg font-bold md:text-2xl">{children}</h2>
+  return <h2 className="text-xl font-bold md:text-2xl">{children}</h2>
 }
 
 function Chevron(props) {
