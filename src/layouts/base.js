@@ -57,7 +57,7 @@ export default Layout
 function MobileNavButton({ isOpen, setIsOpen }) {
   return (
     <button
-      className="text-gray-700 focus:outline-none md:hidden"
+      className="p-2 -m-2 text-gray-700 focus:outline-none md:hidden"
       onClick={() => setIsOpen(!isOpen)}
     >
       <svg fill="currentColor" viewBox="0 0 20 20" className="block w-4 h-4">
