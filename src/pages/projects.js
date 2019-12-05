@@ -1,13 +1,13 @@
 import React from "react"
-import { H1, Img } from "../components/ui"
+import { H1, Img, Container } from "../components/ui"
 
 export default function BlogPage() {
   return (
-    <>
+    <Container size="large">
       <H1>Projects</H1>
 
-      <div className="md:mt-4 md:-mx-escape-xl">
-        <div className="md:max-w-2xl md:mx-auto">
+      <div className="max-w-lg mx-auto md:max-w-full md:mt-4 ">
+        <div className="">
           <div className="md:flex md:-mx-4">
             <div className="mt-12 md:w-1/2 md:mx-4">
               <a href="https://miragejs.com/">
@@ -44,7 +44,7 @@ export default function BlogPage() {
           </div>
         </div>
       </div>
-    </>
+    </Container>
   )
 }
 

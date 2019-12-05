@@ -18,6 +18,15 @@ export function H1({ children }) {
   )
 }
 
+export function Container({ size, children }) {
+  let styles = {
+    narrow: "max-w-lg px-6 pt-6 pb-8 mx-auto md:pt-12 md:max-w-xl",
+    large: "max-w-2xl px-6 pt-6 pb-8 mx-auto md:pt-12 md:max-w-xl",
+  }
+
+  return <div className={styles[size]}>{children}</div>
+}
+
 export const Img = props => {
   const data = useStaticQuery(graphql`
     query {

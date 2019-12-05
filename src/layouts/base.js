@@ -20,8 +20,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="font-sans antialiased text-gray-800">
-        <header className="bg-gray-100 md:bg-transparent md:border-b">
-          <div className="max-w-3xl px-6 py-4 mx-auto md:py-6 lg:py-10">
+        <header className="bg-gray-100 md:bg-transparent md:border-b md:border-gray-200">
+          <div className="max-w-2xl px-6 py-4 mx-auto md:py-6 lg:py-10">
             <div className="flex items-center justify-between md:justify-start">
               <Link to="/">
                 <span className="text-sm font-light tracking-wide text-gray-900 uppercase md:text-base lg:text-xl">
@@ -29,19 +29,20 @@ const Layout = ({ children }) => {
                 </span>
               </Link>
               <MobileNavButton isOpen={isOpen} setIsOpen={setIsOpen} />
+              <DesktopNav />
             </div>
             <MobileNav
               isOpen={isOpen}
               handleClick={handleClick}
               closeMenu={() => setIsOpen(false)}
             />
-            <DesktopNav />
           </div>
         </header>
         <div className="max-w-3xl mx-auto">
           <main className="max-w-lg px-6 pt-6 pb-8 mx-auto md:pt-12 md:max-w-xl">
             {children}
           </main>
+          {/* <main>{children}</main> */}
         </div>
       </div>
     </>
@@ -267,7 +268,7 @@ function MobileNav({ isOpen, handleClick, closeMenu }) {
 
 function DesktopNav() {
   return (
-    <div className="items-center hidden w-full md:flex">
+    <div className="items-center hidden ml-auto md:flex">
       <div className="flex">
         <DesktopNavLink to="/projects">Projects</DesktopNavLink>
         <DesktopNavLink to="/podcast">Podcast</DesktopNavLink>
@@ -275,7 +276,7 @@ function DesktopNav() {
         <DesktopNavLink to="/blog">Blog</DesktopNavLink>
       </div>
 
-      <div className="flex items-center ml-auto text-gray-">
+      {/* <div className="flex items-center ml-auto text-gray-">
         <a
           style={{
             color: "#24292F", // brand color
@@ -309,7 +310,7 @@ function DesktopNav() {
         >
           <TwitterLogo className="h-5" />
         </a>
-      </div>
+      </div> */}
     </div>
   )
 }

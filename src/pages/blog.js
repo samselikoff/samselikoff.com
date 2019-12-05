@@ -15,13 +15,13 @@ export default function BlogPage({ data }) {
     <div className="mb-16">
       <H1>Blog</H1>
 
-      <ul className="mt-12 leading-tight">
+      <ul className="mt-12 leading-snug">
         {articles.map(article => (
           <li className="mt-6 md:mt-10" key={article.url}>
             <p className="text-xs font-medium text-gray-400 md:text-sm">
               {article.date}
             </p>
-            <Link to={article.url}>
+            <Link to={article.url} className="inline-block">
               <h2 className="mt-1 text-lg font-semibold md:text-xl">
                 {article.title}
               </h2>
