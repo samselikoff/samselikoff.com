@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
     <>
       <div className="font-sans antialiased text-gray-800">
         <header className="bg-gray-100 md:bg-transparent md:border-b md:border-gray-200">
-          <div className="max-w-2xl px-6 py-4 mx-auto md:py-6 lg:py-10">
+          <div className="max-w-5xl px-6 py-4 mx-auto md:py-6 lg:py-8">
             <div className="flex items-center justify-between md:justify-start">
               <Link to="/">
                 <span className="text-sm font-light tracking-wide text-gray-900 uppercase md:text-base lg:text-xl">
@@ -38,12 +38,10 @@ const Layout = ({ children }) => {
             />
           </div>
         </header>
-        <div className="max-w-3xl mx-auto">
-          <main className="max-w-lg px-6 pt-6 pb-8 mx-auto md:pt-12 md:max-w-xl">
-            {children}
-          </main>
-          {/* <main>{children}</main> */}
-        </div>
+        <main className="max-w-lg px-6 pt-6 pb-8 mx-auto md:pt-12 md:max-w-5xl">
+          {/* <main className="max-w-lg px-6 pt-6 pb-8 mx-auto md:pt-12 md:max-w-xl"> */}
+          {children}
+        </main>
       </div>
     </>
   )
@@ -318,7 +316,7 @@ function DesktopNav() {
 function DesktopNavLink({ to, children }) {
   return (
     <Link
-      className="mr-6 font-medium text-gray-700 lg:text-base hover:text-gray-900"
+      className="ml-6 text-gray-800 lg:text-base hover:text-gray-900"
       to={to}
     >
       {children}

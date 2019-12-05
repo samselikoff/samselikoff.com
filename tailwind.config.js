@@ -9,6 +9,7 @@ module.exports = {
         36: "9rem",
       },
       fontSize: {
+        "lg-": "1.0625rem",
         "sm-": "0.8125rem",
         "2-5xl": "1.6875rem",
       },

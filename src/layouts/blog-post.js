@@ -8,7 +8,7 @@ import { Link, graphql } from "gatsby"
 const components = {
   h2: ({ children, ...rest }) => (
     <h2
-      className="mt-12 text-lg font-semibold leading-tight md:text-2xl"
+      className="mt-12 text-lg font-semibold leading-tight text-gray-900 md:text-2xl"
       {...rest}
     >
       {children}
@@ -59,54 +59,50 @@ export default props => {
   let mdx = props.data.mdx
 
   return (
-    <>
-      <div className="md:-mx-escape-xl">
-        <div className="md:max-w-2xl md:mx-auto md:px-8">
-          <article className="md:text-lg">
-            <MDXProvider components={components}>
-              <div className="mb-10 md:text-left">
-                <p className="text-xs font-medium text-gray-600 md:mt-1">
-                  {props.data.mdx.frontmatter.date}
-                </p>
-                <h1 className="mt-4 font-semibold leading-tight text-gray-900 text-2-5xl md:text-4xl">
-                  {props.data.mdx.frontmatter.title}
-                </h1>
-              </div>
-              <MDXRenderer>{mdx.body}</MDXRenderer>
-            </MDXProvider>
-          </article>
-
-          <hr className="mt-10" />
-
-          <div className="mt-10">
-            <div>
-              <Link to="/">
-                <Img
-                  className="w-16 h-16 mx-auto rounded-full"
-                  src="profile.jpeg"
-                  aspectRatio={1}
-                />
-              </Link>
-            </div>
-
-            <div className="mt-2 leading-none text-center">
-              <p className="pt-2 text-xs font-medium tracking-wider text-gray-600 uppercase">
-                Written by
-              </p>
-              <p className="pt-1 text-xl font-semibold">
-                <Link to="/">Sam Selikoff</Link>
-              </p>
-            </div>
+    <div className="max-w-xl mx-auto">
+      <article className="md:text-lg-">
+        <MDXProvider components={components}>
+          <div className="mb-10 md:text-left">
+            <p className="text-xs font-medium text-gray-600 md:mt-1">
+              {props.data.mdx.frontmatter.date}
+            </p>
+            <h1 className="mt-4 font-semibold leading-tight text-gray-900 text-2-5xl md:text-4xl">
+              {props.data.mdx.frontmatter.title}
+            </h1>
           </div>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
+        </MDXProvider>
+      </article>
 
-          <div className="mt-8 mb-16 text-center">
-            <Link className="font-medium text-blue-500" to="/blog">
-              ← View all posts
-            </Link>
-          </div>
+      <hr className="mt-10" />
+
+      <div className="mt-10">
+        <div>
+          <Link to="/">
+            <Img
+              className="w-16 h-16 mx-auto rounded-full"
+              src="profile.jpeg"
+              aspectRatio={1}
+            />
+          </Link>
+        </div>
+
+        <div className="mt-2 leading-none text-center">
+          <p className="pt-2 text-xs font-medium tracking-wider text-gray-600 uppercase">
+            Written by
+          </p>
+          <p className="pt-1 text-xl font-semibold">
+            <Link to="/">Sam Selikoff</Link>
+          </p>
         </div>
       </div>
-    </>
+
+      <div className="mt-8 mb-16 text-center">
+        <Link className="font-medium text-blue-500" to="/blog">
+          ← View all posts
+        </Link>
+      </div>
+    </div>
   )
 }
 
