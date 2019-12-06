@@ -59,14 +59,14 @@ export default props => {
   let mdx = props.data.mdx
 
   return (
-    <div className="max-w-xl mx-auto">
-      <article className="md:text-lg-">
+    <div className="max-w-xl mx-auto lg:max-w-2xl">
+      <article className="leading-relaxed md:text-lg- lg:text-lg">
         <MDXProvider components={components}>
           <div className="mb-10 md:text-left">
-            <p className="text-xs font-medium text-gray-600 md:mt-1">
+            <p className="text-xs font-semibold text-gray-600 md:mt-1">
               {props.data.mdx.frontmatter.date}
             </p>
-            <h1 className="mt-4 font-semibold leading-tight text-gray-900 text-2-5xl md:text-4xl">
+            <h1 className="mt-4 font-semibold leading-tight text-gray-900 text-2-5xl md:text-4xl lg:text-5xl">
               {props.data.mdx.frontmatter.title}
             </h1>
           </div>
