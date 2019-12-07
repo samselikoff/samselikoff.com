@@ -1,12 +1,19 @@
 module.exports = {
   theme: {
     extend: {
+      fontFamily: {
+        // sans: `Inter`,
+        sans: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
+      },
       spacing: {
         "escape-xl": "calc((100vw -528px)/2)",
       },
       width: {
         28: "7rem",
         36: "9rem",
+      },
+      letterSpacing: {
+        "tight-": "-0.0125em",
       },
       fontSize: {
         "lg-": "1.0625rem",
@@ -101,6 +108,69 @@ module.exports = {
       },
     },
   },
-  variants: {},
-  plugins: [],
+
+  corePlugins: {
+    fontSize: false, // fonts added below
+  },
+
+  plugins: [
+    function({ addUtilities }) {
+      addUtilities(
+        {
+          ".text-xs": {
+            "font-size": ".75rem", // 12 px
+          },
+          ".text-sm-": {
+            "font-size": ".8125rem", // 13 px
+            "letter-spacing": "-0.0025rem",
+          },
+          ".text-sm": {
+            "font-size": ".875rem", // 14 px
+            "letter-spacing": "-0.006rem",
+          },
+          ".text-base": {
+            "font-size": "1rem", // 16 px
+            "letter-spacing": "-0.011rem",
+          },
+          ".text-lg-": {
+            "font-size": "1.0625rem", // 17 px
+            "letter-spacing": "-0.013rem",
+          },
+          ".text-lg": {
+            "font-size": "1.125rem", // 18 px
+            "letter-spacing": "-0.014rem",
+          },
+          ".text-xl": {
+            "font-size": "1.25rem", // 20 px
+            "letter-spacing": "-0.017rem",
+          },
+          ".text-2xl": {
+            "font-size": "1.5rem", // 24 px
+            "letter-spacing": "-0.019rem",
+          },
+          ".text-2-5xl": {
+            "font-size": "1.6875rem", // 27 px
+            "letter-spacing": "-0.021rem",
+          },
+          ".text-3xl": {
+            "font-size": "1.875rem", // 30 px
+            "letter-spacing": "-0.021rem",
+          },
+          ".text-4xl": {
+            "font-size": "2.25rem", // 36 px
+            "letter-spacing": "-0.022rem",
+          },
+          ".text-5xl": {
+            "font-size": "3rem", // 48 px
+            "letter-spacing": "-0.022rem",
+          },
+          ".text-6xl": {
+            "font-size": "4rem", // 64 px
+            "letter-spacing": "-0.022rem",
+          },
+        },
+        ["responsive"]
+      )
+    },
+  ],
 }

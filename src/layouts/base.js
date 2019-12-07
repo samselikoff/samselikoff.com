@@ -316,7 +316,7 @@ function DesktopNav() {
 function DesktopNavLink({ to, children }) {
   return (
     <Link
-      className="ml-6 text-gray-800 lg:text-base hover:text-gray-900"
+      className="ml-6 text-gray-700 lg:text-base hover:text-gray-900"
       to={to}
     >
       {children}

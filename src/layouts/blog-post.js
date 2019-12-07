@@ -17,7 +17,7 @@ const components = {
   h3: () => {
     throw new Error("Selikoff: Don't use an h3 in your blog posts, dude")
   },
-  p: props => <p className="mt-5">{props.children}</p>,
+  p: props => <p className="mt-6">{props.children}</p>,
   a: ({ children, ...rest }) => (
     <a className="text-blue-500 underline" {...rest}>
       {children}
@@ -60,7 +60,7 @@ export default props => {
 
   return (
     <div className="max-w-xl mx-auto lg:max-w-2xl">
-      <article className="leading-relaxed md:text-lg- lg:text-lg">
+      <article className="md:text-lg- lg:text-lg">
         <MDXProvider components={components}>
           <div className="mb-10 md:text-left">
             <p className="text-xs font-semibold text-gray-600 md:mt-1">
