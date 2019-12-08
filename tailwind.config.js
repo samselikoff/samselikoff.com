@@ -8,6 +8,9 @@ module.exports = {
       spacing: {
         "escape-xl": "calc((100vw -528px)/2)",
       },
+      lineHeight: {
+        tighter: "1.15",
+      },
       width: {
         28: "7rem",
         36: "9rem",

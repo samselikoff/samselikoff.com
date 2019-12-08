@@ -66,7 +66,7 @@ export default props => {
             <p className="text-xs font-semibold text-gray-600 md:mt-1">
               {props.data.mdx.frontmatter.date}
             </p>
-            <h1 className="mt-4 font-semibold leading-tight text-gray-900 text-2-5xl md:text-4xl lg:text-5xl">
+            <h1 className="mt-4 font-semibold leading-tight text-gray-900 md:leading-tighter text-2-5xl md:text-4xl lg:text-5xl">
               {props.data.mdx.frontmatter.title}
             </h1>
           </div>
