@@ -9,7 +9,7 @@ export const A = ({
   ...props
 }) => {
   let border = underline
-    ? `border-b border-blue-300 hover:border-blue-500 `
+    ? `border-b border-blue-400 hover:border-blue-500 `
     : ``
   props.className += ` ${border} font-${font} text-blue-600`
   let isInternalLink = props.to && props.to.startsWith("/")

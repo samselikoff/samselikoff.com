@@ -19,8 +19,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div className="font-sans antialiased text-gray-800">
-        <header className="">
+      <div className="font-sans text-base antialiased text-gray-800">
+        <header className="md:border-b md:border-gray-200">
           <div className="max-w-5xl px-6 py-4 mx-auto md:py-6 lg:py-8">
             <div className="flex items-center justify-between md:justify-start">
               <Link to="/">

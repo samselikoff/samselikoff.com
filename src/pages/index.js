@@ -9,7 +9,7 @@ export default function IndexPage() {
       <SEO />
 
       <div className="mb-12 leading-normal md:text-xl">
-        <section className="py-10 mx-auto font-light bg-gray-100 md:py-20 lg:py-32 text-lg- xs:text-xl sm:text-2xl sm:tracking-none lg:text-3xl">
+        <section className="py-10 mx-auto font-light bg-gray-100 md:border-b md:border-gray-200 md:py-20 lg:py-32 text-lg- xs:text-xl sm:text-2xl sm:tracking-none lg:text-3xl">
           {/* tracking-normal here is a hack, it loses to font-size */}
           <div className="max-w-xs px-6 mx-auto tracking-normal xs:max-w-sm sm:max-w-lg md:max-w-4xl lg:max-w-5xl">
             <div className="relative md:flex">
@@ -153,7 +153,7 @@ function SectionTitle({ link, children }) {
   if (link) {
     return (
       <InternalLink to={link} className="inline-block">
-        <h2 className="text-xl font-semibold text-gray-900 md:text-2xl lg:text-3xl">
+        <h2 className="text-xl font-semibold text-gray-900 md:text-2xl lg:text-2-5xl">
           {children}
           <Chevron className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
         </h2>
