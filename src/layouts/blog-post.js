@@ -59,7 +59,8 @@ export default props => {
   let mdx = props.data.mdx
 
   return (
-    <div className="max-w-xl mx-auto lg:max-w-2xl">
+    // <div className="max-w-lg px-6 pt-6 pb-8 mx-auto mb-16 md:pt-12 md:max-w-5xl"></div>
+    <div className="max-w-xl px-6 pt-6 mx-auto lg:max-w-2xl">
       <article className="md:text-lg- lg:text-lg">
         <MDXProvider components={components}>
           <div className="mb-10 md:text-left">

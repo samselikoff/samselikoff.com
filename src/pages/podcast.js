@@ -3,7 +3,7 @@ import { H1, A, Img } from "../components/ui"
 
 export default function() {
   return (
-    <>
+    <div className="max-w-xl px-6 pt-6 mx-auto lg:max-w-2xl">
       <H1>Podcast</H1>
 
       <div className="mt-8 md:text-xl">
@@ -99,7 +99,7 @@ export default function() {
           </p>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
