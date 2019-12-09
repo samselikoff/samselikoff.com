@@ -1,6 +1,16 @@
 module.exports = {
   theme: {
+    screens: {
+      xs: "375px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+    },
     extend: {
+      borderWidth: {
+        "3": "3px",
+      },
       fontFamily: {
         // sans: `Inter`,
         sans: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
@@ -19,7 +29,7 @@ module.exports = {
         "tight-": "-0.0125em",
       },
       fontSize: {
-        "lg-": "1.0625rem",
+        "lg-": "1.0625rem", // 17 px
         "sm-": "0.8125rem",
         "2-5xl": "1.6875rem",
       },

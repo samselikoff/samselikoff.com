@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="font-sans antialiased text-gray-800">
-        <header className="bg-gray-100 md:bg-transparent md:border-b md:border-gray-200">
+        <header className="">
           <div className="max-w-5xl px-6 py-4 mx-auto md:py-6 lg:py-8">
             <div className="flex items-center justify-between md:justify-start">
               <Link to="/">
@@ -38,10 +38,9 @@ const Layout = ({ children }) => {
             />
           </div>
         </header>
-        <main className="max-w-lg px-6 pt-6 pb-8 mx-auto md:pt-12 md:max-w-5xl">
-          {/* <main className="max-w-lg px-6 pt-6 pb-8 mx-auto md:pt-12 md:max-w-xl"> */}
-          {children}
-        </main>
+        {/* <main className="max-w-lg px-6 pb-8 mx-auto md:max-w-5xl"> */}
+        {/* <main className="max-w-lg px-6 pt-6 pb-8 mx-auto md:pt-12 md:max-w-xl"> */}
+        <main>{children}</main>
       </div>
     </>
   )
