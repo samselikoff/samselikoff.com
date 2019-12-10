@@ -20,7 +20,7 @@ export const A = ({
 
 export function H1({ children }) {
   return (
-    <h1 className="text-3xl font-semibold leading-tight text-center text-gray-900 md:text-4xl">
+    <h1 className="text-3xl font-semibold leading-tight text-gray-900 md:text-4xl lg:text-5xl">
       {children}
     </h1>
   )
@@ -28,8 +28,9 @@ export function H1({ children }) {
 
 export function Container({ size, children }) {
   let styles = {
-    narrow: "max-w-lg px-6 pt-6 pb-8 mx-auto md:pt-12 md:max-w-xl",
-    large: "max-w-2xl px-6 pt-6 pb-8 mx-auto md:pt-12 md:max-w-xl",
+    small: "max-w-sm mx-auto px-6 sm:max-w-lg md:max-w-xl lg:max-w-2xl",
+    medium: "max-w-xl px-6 mx-auto lg:max-w-3xl lg:px-16",
+    large: "max-w-2xl px-6 mx-auto md:max-w-xl",
   }
 
   return <div className={styles[size]}>{children}</div>

@@ -2,7 +2,7 @@ import React from "react"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Code from "../components/code"
-import { Img } from "../components/ui"
+import { Container, Img } from "../components/ui"
 import { Link, graphql } from "gatsby"
 
 const components = {
@@ -60,50 +60,51 @@ export default props => {
   let mdx = props.data.mdx
 
   return (
-    // <div className="max-w-lg px-6 pt-6 pb-8 mx-auto mb-16 md:pt-12 md:max-w-5xl"></div>
-    <div className="max-w-xl px-6 pt-6 mx-auto lg:max-w-3xl lg:px-16 md:pt-12 lg:pt-16">
-      <article className="md:text-lg- lg:text-lg">
-        <MDXProvider components={components}>
-          <div className="mb-10 md:text-left">
-            <p className="text-xs font-semibold text-gray-600 md:mt-1">
-              {props.data.mdx.frontmatter.date}
-            </p>
-            <h1 className="mt-4 font-semibold leading-tight text-gray-900 md:leading-tighter text-2-5xl md:text-4xl lg:text-5xl">
-              {props.data.mdx.frontmatter.title}
-            </h1>
+    <div className="pt-6 md:pt-12 lg:pt-16">
+      <Container size="medium">
+        <article className="md:text-lg- lg:text-lg">
+          <MDXProvider components={components}>
+            <div className="mb-10 md:text-left">
+              <p className="text-xs font-semibold text-gray-600 md:mt-1">
+                {props.data.mdx.frontmatter.date}
+              </p>
+              <h1 className="mt-4 text-3xl font-semibold leading-tight text-gray-900 md:leading-tighter md:text-4xl lg:text-5xl">
+                {props.data.mdx.frontmatter.title}
+              </h1>
+            </div>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </MDXProvider>
+        </article>
+
+        <hr className="mt-10" />
+
+        <div className="mt-10">
+          <div>
+            <Link to="/">
+              <Img
+                className="w-16 h-16 mx-auto rounded-full"
+                src="profile.jpeg"
+                aspectRatio={1}
+              />
+            </Link>
           </div>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </MDXProvider>
-      </article>
 
-      <hr className="mt-10" />
+          <div className="mt-2 leading-none text-center">
+            <p className="pt-2 text-xs font-medium tracking-wider text-gray-600 uppercase">
+              Written by
+            </p>
+            <p className="pt-1 text-xl font-semibold">
+              <Link to="/">Sam Selikoff</Link>
+            </p>
+          </div>
+        </div>
 
-      <div className="mt-10">
-        <div>
-          <Link to="/">
-            <Img
-              className="w-16 h-16 mx-auto rounded-full"
-              src="profile.jpeg"
-              aspectRatio={1}
-            />
+        <div className="mt-8 mb-16 text-center">
+          <Link className="font-medium text-blue-500" to="/blog">
+            ← View all posts
           </Link>
         </div>
-
-        <div className="mt-2 leading-none text-center">
-          <p className="pt-2 text-xs font-medium tracking-wider text-gray-600 uppercase">
-            Written by
-          </p>
-          <p className="pt-1 text-xl font-semibold">
-            <Link to="/">Sam Selikoff</Link>
-          </p>
-        </div>
-      </div>
-
-      <div className="mt-8 mb-16 text-center">
-        <Link className="font-medium text-blue-500" to="/blog">
-          ← View all posts
-        </Link>
-      </div>
+      </Container>
     </div>
   )
 }

@@ -3,23 +3,25 @@ import { H1, A, Img } from "../components/ui"
 
 export default function() {
   return (
-    <div className="max-w-xl px-6 pt-6 mx-auto lg:max-w-2xl">
+    <div className="max-w-xl px-6 pt-8 mx-auto md:pt-12 lg:pt-20 lg:max-w-2xl">
       <H1>Podcast</H1>
 
       <div className="mt-8 md:text-xl">
-        <p className="text-lg md:text-xl">
+        <p className="text-lg">
           For more than two years I've used{" "}
           <A href="https://embermap.com/podcast">The EmberMap Podcast</A> to
           talk about whatever's going on in my day-to-day life doing frontend
           development, along with my co-host Ryan Toronto.
         </p>
 
-        <p className="mt-8 md:mt-4">
+        <p className="mt-8 md:mt-6">
           While we originally focused on Ember.js, these days we talk about
           anything going on in the world of JavaScript UI development.
         </p>
 
-        <p className="mt-4">Check out some of my favorite episodes below.</p>
+        <p className="mt-4 md:mt-6">
+          Check out some of my favorite episodes below.
+        </p>
         <div className="mt-8">
           <hr />
         </div>
