@@ -27,6 +27,7 @@ const components = {
   ol: props => <ol className="pl-6 list-decimal" {...props} />,
   ul: props => <ul className="pl-6 list-disc" {...props} />,
   li: props => <li className="mt-4" {...props} />,
+
   blockquote: props => (
     <blockquote className="pl-4 italic border-l-4">{props.children}</blockquote>
   ),
@@ -60,7 +61,7 @@ export default props => {
 
   return (
     // <div className="max-w-lg px-6 pt-6 pb-8 mx-auto mb-16 md:pt-12 md:max-w-5xl"></div>
-    <div className="max-w-xl px-6 pt-6 mx-auto lg:max-w-2xl">
+    <div className="max-w-xl px-6 pt-6 mx-auto lg:max-w-3xl lg:px-16 md:pt-12 lg:pt-16">
       <article className="md:text-lg- lg:text-lg">
         <MDXProvider components={components}>
           <div className="mb-10 md:text-left">

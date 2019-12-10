@@ -2,6 +2,7 @@ import React from "react"
 import SEO from "../components/seo"
 import { Link as InternalLink } from "gatsby"
 import { A, Img } from "../components/ui"
+import { Twitter, GitHub, YouTube } from "../components/logos"
 
 export default function IndexPage() {
   return (
@@ -9,7 +10,7 @@ export default function IndexPage() {
       <SEO />
 
       <div className="mb-12 leading-normal md:text-xl">
-        <section className="py-10 mx-auto font-light bg-gray-100 md:border-b md:border-gray-200 md:py-20 lg:py-32 text-lg- xs:text-xl sm:text-2xl sm:tracking-none lg:text-3xl">
+        <section className="py-10 mx-auto font-light bg-gray-100 md:border-b md:border-t md:border-gray-200 md:py-20 lg:py-32 text-lg- xs:text-xl sm:text-2xl sm:tracking-none lg:text-3xl">
           {/* tracking-normal here is a hack, it loses to font-size */}
           <div className="max-w-xs px-6 mx-auto tracking-normal xs:max-w-sm sm:max-w-lg md:max-w-4xl lg:max-w-5xl">
             <div className="relative md:flex">
@@ -43,6 +44,30 @@ export default function IndexPage() {
                   <br className="md:hidden" /> living teaching JavaScript
                   <br className="md:hidden" /> UI development on the web.
                 </p>
+
+                <div className="items-center hidden mt-6 text-xl font-normal lg:flex">
+                  <a
+                    href="https://twitter.com/samselikoff"
+                    className="flex items-center mr-10"
+                  >
+                    <Twitter className="h-5 mr-3" />
+                    <span>Twitter</span>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/user/samselikoff"
+                    className="flex items-center mr-10"
+                  >
+                    <YouTube className="h-5 mr-3" />
+                    <span>YouTube</span>
+                  </a>
+                  <a
+                    href="https://github.com/samselikoff"
+                    className="flex items-center mr-10"
+                  >
+                    <GitHub className="h-5 mr-3" />
+                    <span>GitHub</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -117,7 +142,7 @@ export default function IndexPage() {
           </Section>
         </div>
 
-        <div className="mt-8">
+        <div className="mt-8 lg:mt-16">
           <ImageCard
             src="new-york.jpeg"
             title="New York City"
