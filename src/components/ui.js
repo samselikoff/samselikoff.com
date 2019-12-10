@@ -28,9 +28,10 @@ export function H1({ children }) {
 
 export function Container({ size, children }) {
   let styles = {
-    small: "max-w-sm mx-auto px-6 sm:max-w-lg md:max-w-xl lg:max-w-2xl",
-    medium: "max-w-xl px-6 mx-auto lg:max-w-3xl lg:px-16",
-    large: "max-w-2xl px-6 mx-auto md:max-w-xl",
+    small: "max-w-sm mx-auto px-6 sm:max-w-lg md:max-w-xl lg:max-w-2xl", // Home
+    some: "max-w-xl px-6 mx-auto lg:max-w-2xl", // Podcast
+    medium: "max-w-xl px-6 mx-auto lg:max-w-3xl lg:px-16", // Blog post
+    large: "max-w-2xl px-6 mx-auto md:max-w-xl", // Projects
   }
 
   return <div className={styles[size]}>{children}</div>
