@@ -3,7 +3,7 @@ import { H1, Img, Container } from "../components/ui"
 
 export default function BlogPage() {
   return (
-    <div className="pt-6 pb-8 md:pt-12">
+    <div className="pt-8 pb-8 md:pt-12">
       <Container size="large">
         <H1>Projects</H1>
 
@@ -23,7 +23,7 @@ export default function BlogPage() {
             </div>
 
             <div className="mt-16 mb-32 md:mt-24">
-              <p className="text-xl text-center md:text-2xl">Past</p>
+              <p className="text-2xl font-semibold md:text-2xl">Past</p>
 
               <div className="flex flex-wrap mt-4 -mx-2">
                 <div className="w-1/2 px-2 md:w-1/3">
@@ -52,7 +52,7 @@ export default function BlogPage() {
 
 const PastProjectCard = props => (
   <a
-    className="flex items-center justify-center block h-24 px-4 mt-4 font-semibold leading-snug text-center text-gray-900 bg-gray-200 border border-gray-400 rounded"
+    className="flex items-center justify-center block h-24 px-4 mt-4 font-semibold leading-snug text-center text-gray-900 bg-gray-100 border border-gray-300 rounded"
     href={props.href}
   >
     <p>{props.children}</p>

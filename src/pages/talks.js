@@ -3,7 +3,7 @@ import { H1, Img } from "../components/ui"
 
 export default function TalksPage() {
   return (
-    <div className="max-w-xl px-6 pt-6 mx-auto lg:max-w-2xl">
+    <div className="max-w-xl px-6 pt-8 mx-auto lg:max-w-2xl">
       <H1>Talks</H1>
 
       <div className="mt-12">

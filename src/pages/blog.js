@@ -12,7 +12,7 @@ export default function BlogPage({ data }) {
   }))
 
   return (
-    <div className="max-w-lg px-6 pt-6 pb-8 mx-auto mb-16 md:pt-12 md:max-w-5xl">
+    <div className="max-w-lg px-6 pt-8 pb-8 mx-auto mb-16 md:pt-12 md:max-w-5xl">
       <H1>Blog</H1>
 
       <ul className="mt-12 leading-snug">

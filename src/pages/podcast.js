@@ -7,22 +7,24 @@ export default function() {
       <Container size="some">
         <H1>Podcast</H1>
 
-        <div className="mt-8 sm:text-lg">
-          <p className="text-lg">
-            For more than two years I've used{" "}
-            <A href="https://embermap.com/podcast">The EmberMap Podcast</A> to
-            talk about whatever's going on in my day-to-day life doing frontend
-            development, along with my co-host Ryan Toronto.
-          </p>
+        <div className="mt-8">
+          <div className="text-lg text-gray-700">
+            <p>
+              For more than two years I've used{" "}
+              <A href="https://embermap.com/podcast">The EmberMap Podcast</A> to
+              talk about whatever's going on in my day-to-day life doing
+              frontend development, along with my co-host Ryan Toronto.
+            </p>
 
-          <p className="mt-8 md:mt-6">
-            While we originally focused on Ember.js, these days we talk about
-            anything going on in the world of JavaScript UI development.
-          </p>
+            <p className="mt-6">
+              While we originally focused on Ember.js, these days we talk about
+              anything going on in the world of JavaScript UI development.
+            </p>
 
-          <p className="mt-4 md:mt-6">
-            Check out some of my favorite episodes below.
-          </p>
+            <p className="mt-6">
+              Check out some of my favorite episodes below.
+            </p>
+          </div>
           <div className="mt-8">
             <hr />
           </div>
@@ -34,7 +36,7 @@ export default function() {
               imageUrl="podcasts/adam-wathan-on-tailwind-css.jpg"
             >
               I loved this conversation because Adam does a great job breaking
-              down the utility-first CSS approach down to its first principles.
+              down the utility-first CSS approach to its first principles.
             </PodcastCard>
           </div>
 
@@ -108,24 +110,21 @@ export default function() {
 }
 
 const PodcastCard = props => (
-  <div className="mt-8">
-    <h2 className="text-lg font-semibold leading-tight md:text-2xl">
-      <a href={props.url}>{props.title}</a>
-    </h2>
-    <a
-      href={props.url}
-      className="relative block mt-4 overflow-hidden rounded shadow-md"
-    >
+  <>
+    <a href={props.url} className="relative block overflow-hidden rounded-lg">
       <Img src={props.imageUrl} />
     </a>
-    <p className="mt-4">{props.children}</p>
+    <h2 className="mt-4 text-xl font-semibold leading-snug text-gray-900 md:text-2xl">
+      <a href={props.url}>{props.title}</a>
+    </h2>
+    <p className="mt-2 text-base">{props.children}</p>
     <p className="mt-2 md:mt-3">
       <a
-        className="text-sm font-medium text-blue-500 md:text-lg"
+        className="text-sm font-medium text-blue-600 md:text-lg"
         href={props.url}
       >
         Play episode →
       </a>
     </p>
-  </div>
+  </>
 )

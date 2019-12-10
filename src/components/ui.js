@@ -20,7 +20,7 @@ export const A = ({
 
 export function H1({ children }) {
   return (
-    <h1 className="text-3xl font-semibold leading-tight text-gray-900 md:text-4xl lg:text-5xl">
+    <h1 className="text-5xl font-semibold leading-tight text-gray-800 md:text-4xl lg:text-5xl">
       {children}
     </h1>
   )
