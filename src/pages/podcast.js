@@ -6,7 +6,7 @@ export default function() {
     <div className="max-w-xl px-6 pt-8 mx-auto md:pt-12 lg:pt-20 lg:max-w-2xl">
       <H1>Podcast</H1>
 
-      <div className="mt-8 md:text-xl">
+      <div className="mt-8 md:text-lg">
         <p className="text-lg">
           For more than two years I've used{" "}
           <A href="https://embermap.com/podcast">The EmberMap Podcast</A> to
@@ -51,7 +51,7 @@ export default function() {
 
         <div className="mt-16">
           <PodcastCard
-            title="Derrick Reimer on SPA architecture with Elm and GraphQL"
+            title="Derrick Reimer on SPA Architecture with Elm and GraphQL"
             url="https://embermap.com/podcast/derrick-reimer-on-spa-architecture-with-elm-and-graphql"
             imageUrl="podcasts/derrick-reimer-on-spa-architecture-with-elm-and-graphql.jpg"
           >
@@ -62,13 +62,13 @@ export default function() {
 
         <div className="mt-16">
           <PodcastCard
-            title="Edward Faulkner on Embroider, Ember CLI's modern build system"
+            title="Edward Faulkner on Embroider, Ember CLI's Modern Build System"
             url="https://embermap.com/podcast/edward-faulkner-on-embroider-ember-cli-s-modern-build-system"
             imageUrl="podcasts/edward-faulkner-on-embroider-ember-cli-s-modern-build-system.jpg"
           >
-            Ed is one of those developers who can pull together insights from so
-            many different areas. I loved learning more about compilers in this
-            episode.
+            Ed is one of those developers who pulls together insights from so
+            many different areas of knowledge. I loved learning more about
+            compilers in this episode.
           </PodcastCard>
         </div>
 
@@ -79,9 +79,9 @@ export default function() {
             imageUrl="podcasts/apis-are-about-policy.jpg"
           >
             This is a good representitive episode of the show, because it's just
-            Ryan and me talking. This one is a bit special though, because in it
-            we do a deep dive of the wonderful essay "APIs are about Policy" by
-            Steven Wittens.
+            Ryan and me talking. It's a bit of a special episode though, because
+            in this one we do a deep dive of the wonderful essay "APIs are about
+            Policy" by Steven Wittens.
           </PodcastCard>
         </div>
 
@@ -107,7 +107,7 @@ export default function() {
 
 const PodcastCard = props => (
   <div className="mt-8">
-    <h2 className="text-lg font-semibold leading-tight md:text-xl">
+    <h2 className="text-lg font-semibold leading-tight md:text-2xl">
       <a href={props.url}>{props.title}</a>
     </h2>
     <a

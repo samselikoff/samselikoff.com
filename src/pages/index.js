@@ -9,7 +9,7 @@ export default function IndexPage() {
     <>
       <SEO />
 
-      <div className="mb-12 leading-normal md:text-xl">
+      <div className="mb-12 leading-normal md:text-lg">
         <section className="py-10 mx-auto font-light bg-gray-100 md:bg-white md:py-20 lg:py-24 text-lg- xs:text-xl sm:text-2xl sm:tracking-none lg:text-3xl">
           {/* tracking-normal here is a hack, it loses to font-size */}
           <div className="max-w-xs px-6 mx-auto tracking-normal xs:max-w-sm sm:max-w-lg md:max-w-4xl lg:max-w-5xl">
