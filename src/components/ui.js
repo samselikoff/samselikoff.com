@@ -30,7 +30,8 @@ export function Container({ size, children }) {
   let styles = {
     small: "max-w-sm mx-auto px-6 sm:max-w-lg md:max-w-xl lg:max-w-2xl", // Home
     some: "max-w-xl px-6 mx-auto lg:max-w-3xl lg:px-0", // Podcast
-    medium: "max-w-xl px-6 mx-auto lg:max-w-3xl lg:px-16", // Blog post
+    // medium: "max-w-xl px-6 mx-auto lg:max-w-xl lg:px-0 xl:max-w-2xl", // Old Blog post
+    measure: "max-w-measure mx-auto", // Blog post
     large: "max-w-2xl px-6 mx-auto md:max-w-xl", // Projects
   }
 

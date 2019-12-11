@@ -42,12 +42,12 @@ export default function() {
   ]
 
   return (
-    <div className="pt-8 text-base md:pt-16 md:text-lg xl:pt-24">
+    <div className="pt-8 text-base md:pt-16 md:text-lg- xl:pt-24">
       <Container size="some">
         <H1>Podcast</H1>
 
         <div className="mt-8 md:mt-10 xl:mt-16">
-          <div className="text-lg text-gray-700 md:text-xl lg:text-2xl lg:text-gray-700 ">
+          <div className="text-lg text-gray-700 md:text-xl lg:text-2xl lg:text-gray-600">
             <p>
               For more than two years I've used{" "}
               <A href="https://embermap.com/podcast">The EmberMap Podcast</A> to
@@ -65,7 +65,7 @@ export default function() {
             </p>
           </div>
 
-          <div className="lg:flex lg:flex-wrap lg:-mx-4 lg:mt-4 xl:mt-8">
+          <div className="lg:flex lg:flex-wrap lg:-mx-4 lg:mt-4 xl:mt-16">
             {podcasts.map(podcast => (
               <div className="mt-16 lg:w-1/2 lg:px-4" key={podcast.url}>
                 <PodcastCard
@@ -105,7 +105,7 @@ const PodcastCard = props => (
     <a href={props.url} className="relative block overflow-hidden rounded-lg">
       <Img src={props.imageUrl} />
     </a>
-    <h2 className="mt-4 text-xl font-semibold leading-snug text-gray-900 md:text-2xl lg:text-xl">
+    <h2 className="mt-4 text-xl font-semibold leading-snug text-gray-900 md:text-1-5xl lg:text-xl">
       <a href={props.url}>{props.title}</a>
     </h2>
     <p className="mt-2">{props.children}</p>

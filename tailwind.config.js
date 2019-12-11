@@ -22,6 +22,7 @@ module.exports = {
         tighter: "1.15",
       },
       maxWidth: {
+        measure: "34em",
         "7xl": "80rem",
       },
       width: {
@@ -32,9 +33,12 @@ module.exports = {
         "tight-": "-0.0125em",
       },
       fontSize: {
-        "lg-": "1.0625rem", // 17 px
         "sm-": "0.8125rem",
+        "lg-": "1.0625rem", // 17 px
+        lgg: "1.1875rem", // 19 px
+        "1-5xl": "1.375rem", // 22 px
         "2-5xl": "1.6875rem",
+        "4-5xl": "2.625rem",
         "7xl": "5rem",
         "8xl": "6rem",
       },

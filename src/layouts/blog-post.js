@@ -2,7 +2,7 @@ import React from "react"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Code from "../components/code"
-import { Container, Img } from "../components/ui"
+import { H1, Container, Img } from "../components/ui"
 import { Link, graphql } from "gatsby"
 
 const components = {
@@ -60,15 +60,15 @@ export default props => {
   let mdx = props.data.mdx
 
   return (
-    <div className="pt-6 md:pt-12 lg:pt-16">
-      <Container size="medium">
-        <article className="md:text-lg- lg:text-lg">
+    <div className="px-6 pt-6 md:pt-12 lg:pt-16 md:leading-relaxed md:text-lg- lg:text-lg">
+      <Container size="measure">
+        <article>
           <MDXProvider components={components}>
             <div className="mb-10 md:text-left">
               <p className="text-xs font-semibold text-gray-600 md:mt-1">
                 {props.data.mdx.frontmatter.date}
               </p>
-              <h1 className="mt-4 text-3xl font-semibold leading-tight text-gray-900 md:leading-tighter md:text-4xl lg:text-5xl">
+              <h1 className="mt-4 text-3xl font-semibold leading-tight md:text-4xl lg:text-4-5xl">
                 {props.data.mdx.frontmatter.title}
               </h1>
             </div>

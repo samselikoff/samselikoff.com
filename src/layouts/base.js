@@ -23,9 +23,9 @@ const Layout = ({ children }) => {
       <div className="font-sans text-base antialiased text-gray-800">
         <header className="">
           <div className="px-6 pt-4 mx-auto max-w-7xl md:pt-6 xl:pt-8">
-            <div className="flex items-center justify-between pb-4 md:border-b md:border-gray-200 md:justify-start">
+            <div className="flex items-center justify-between pb-4 xl:pb-6 md:border-b md:border-gray-200 md:justify-start">
               <Link to="/">
-                <span className="text-sm font-light tracking-wide uppercase md:text-base lg:text-xl xl:text-2xl">
+                <span className="text-sm font-light tracking-wide uppercase md:text-base lg:text-xl">
                   Sam<span className="font-bold">Selikoff</span>
                 </span>
               </Link>
