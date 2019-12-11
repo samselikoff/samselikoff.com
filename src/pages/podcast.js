@@ -42,7 +42,7 @@ export default function() {
   ]
 
   return (
-    <div className="pt-8 text-base md:pt-16 md:text-lg- xl:pt-24">
+    <div className="pt-8 md:pt-16 md:text-lg- xl:pt-24">
       <Container size="some">
         <H1>Podcast</H1>
 
@@ -105,7 +105,7 @@ const PodcastCard = props => (
     <a href={props.url} className="relative block overflow-hidden rounded-lg">
       <Img src={props.imageUrl} />
     </a>
-    <h2 className="mt-4 text-xl font-semibold leading-snug text-gray-900 md:text-1-5xl lg:text-xl">
+    <h2 className="mt-4 text-lg font-semibold leading-snug text-gray-900 md:text-1-5xl lg:text-xl">
       <a href={props.url}>{props.title}</a>
     </h2>
     <p className="mt-2">{props.children}</p>

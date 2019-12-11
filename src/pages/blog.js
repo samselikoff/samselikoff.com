@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { H1 } from "../components/ui"
+import { H1, Container } from "../components/ui"
 
 export default function BlogPage({ data }) {
   let articles = data.allMdx.edges.map(edge => ({
@@ -12,23 +12,25 @@ export default function BlogPage({ data }) {
   }))
 
   return (
-    <div className="max-w-lg px-6 pt-8 pb-8 mx-auto mb-16 md:pt-12 md:max-w-5xl">
-      <H1>Blog</H1>
+    <div className="pt-8 md:pt-16 xl:pt-24">
+      <Container size="some">
+        <H1>Blog</H1>
 
-      <ul className="mt-12 leading-snug">
-        {articles.map(article => (
-          <li className="mt-6 md:mt-10" key={article.url}>
-            <p className="text-xs font-medium text-gray-400 md:text-sm">
-              {article.date}
-            </p>
-            <Link to={article.url} className="inline-block">
-              <h2 className="mt-1 text-lg font-semibold md:text-xl">
-                {article.title}
-              </h2>
-            </Link>
-          </li>
-        ))}
-      </ul>
+        <ul className="mt-12 leading-snug">
+          {articles.map(article => (
+            <li className="mt-6 md:mt-10" key={article.url}>
+              <p className="font-medium text-gray-400 text-sm- md:text-sm">
+                {article.date}
+              </p>
+              <Link to={article.url} className="inline-block">
+                <h2 className="mt-1 text-lg font-semibold md:text-2xl">
+                  {article.title}
+                </h2>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </Container>
     </div>
   )
 }

@@ -33,7 +33,7 @@ module.exports = {
         "tight-": "-0.0125em",
       },
       fontSize: {
-        "sm-": "0.8125rem",
+        "sm-": "0.8125rem", // 13 px
         "lg-": "1.0625rem", // 17 px
         lgg: "1.1875rem", // 19 px
         "1-5xl": "1.375rem", // 22 px

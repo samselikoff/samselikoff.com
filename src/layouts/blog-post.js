@@ -17,16 +17,16 @@ const components = {
   h3: () => {
     throw new Error("Selikoff: Don't use an h3 in your blog posts, dude")
   },
-  p: props => <p className="mt-6">{props.children}</p>,
+  p: props => <p className="mt-4 lg:mt-6">{props.children}</p>,
   a: ({ children, ...rest }) => (
     <a className="text-blue-500 underline" {...rest}>
       {children}
     </a>
   ),
-  hr: () => <hr className="mt-4" />,
-  ol: props => <ol className="pl-6 list-decimal" {...props} />,
-  ul: props => <ul className="pl-6 list-disc" {...props} />,
-  li: props => <li className="mt-4" {...props} />,
+  hr: () => <hr className="mt-4 lg:mt-6" />,
+  ol: props => <ol className="pl-6 mt-4 list-decimal lg:mt-6" {...props} />,
+  ul: props => <ul className="pl-6 mt-4 list-disc lg:mt-6" {...props} />,
+  li: props => <li className="mt-2" {...props} />,
 
   blockquote: props => (
     <blockquote className="pl-4 italic border-l-4">{props.children}</blockquote>
@@ -64,7 +64,7 @@ export default props => {
       <Container size="measure">
         <article>
           <MDXProvider components={components}>
-            <div className="mb-10 md:text-left">
+            <div className="mb-8 md:mb-10">
               <p className="text-xs font-semibold text-gray-600 md:mt-1">
                 {props.data.mdx.frontmatter.date}
               </p>
