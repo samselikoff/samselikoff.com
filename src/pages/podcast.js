@@ -1,71 +1,30 @@
 import React from "react"
-import { Container, H1, A, Img } from "../components/ui"
+import { Spacer, Container, Lead, H1, A, Img } from "../components/ui"
 
 export default function() {
-  let podcasts = [
-    {
-      title: "Adam Wathan on Tailwind CSS",
-      url: "https://embermap.com/podcast/adam-wathan-on-tailwind-css",
-      imageUrl: "podcasts/adam-wathan-on-tailwind-css.jpg",
-      description: `I loved this conversation because Adam does a great job breaking down the utility-first CSS approach to its first principles.`,
-    },
-    {
-      title: "Yehuda Katz on Paradigms vs. Abstractions in UI Development",
-      url:
-        "https://embermap.com/podcast/yehuda-katz-on-paradigms-vs-abstractions-in-ui-development",
-      imageUrl:
-        "podcasts/yehuda-katz-on-paradigms-vs-abstractions-in-ui-development.jpg",
-      description: `Yehuda is a wealth of knowledge. In this episode he shares why he believes abstractions should get more attention than paradigms – an interesting distinction I wasn't yet familiar with.`,
-    },
-    {
-      title: "Derrick Reimer on SPA Architecture with Elm and GraphQL",
-      url:
-        "https://embermap.com/podcast/derrick-reimer-on-spa-architecture-with-elm-and-graphql",
-      imageUrl:
-        "podcasts/derrick-reimer-on-spa-architecture-with-elm-and-graphql.jpg",
-      description: `Derrick shares some really interesting aspects of the tech stack he used when building his real-time chat app, Level.`,
-    },
-    {
-      title: "Edward Faulkner on Embroider, Ember CLI's Modern Build System",
-      url:
-        "https://embermap.com/podcast/edward-faulkner-on-embroider-ember-cli-s-modern-build-system",
-      imageUrl:
-        "podcasts/edward-faulkner-on-embroider-ember-cli-s-modern-build-system.jpg",
-      description: `Ed is one of those developers who pulls together insights from so many different areas of knowledge. I loved learning more about compilers in this episode.`,
-    },
-    {
-      title: "APIs are about Policy",
-      url: "https://embermap.com/podcast/apis-are-about-policy",
-      imageUrl: "podcasts/apis-are-about-policy.jpg",
-      description: `This is a good representitive episode of the show since it's just Ryan and me talking. It's a bit of a special episode though, because in this one we do a deep dive of the wonderful essay "APIs are about Policy" by Steven Wittens.`,
-    },
-  ]
-
   return (
     <div className="pt-8 md:pt-16 md:text-lg- xl:pt-24">
       <Container size="some">
         <H1>Podcast</H1>
 
-        <div className="mt-8 md:mt-10 xl:mt-16">
-          <div className="text-lg text-gray-700 md:text-xl lg:text-2xl lg:text-gray-600">
-            <p>
-              For more than two years I've used{" "}
-              <A href="https://embermap.com/podcast">The EmberMap Podcast</A> to
-              talk about whatever's going on in my day-to-day life doing
-              frontend development, along with my co-host Ryan Toronto.
-            </p>
+        <Spacer size="large" />
 
-            <p className="mt-6">
-              While we originally focused on Ember.js, these days we talk about
-              anything going on in the world of JavaScript UI development.
-            </p>
+        <Lead>
+          For more than two years I've used{" "}
+          <A href="https://embermap.com/podcast">The EmberMap Podcast</A> to
+          talk about whatever's going on in my day-to-day life doing frontend
+          development, along with my co-host Ryan Toronto.
+        </Lead>
 
-            <p className="mt-6">
-              Check out some of my favorite episodes below.
-            </p>
-          </div>
+        <Lead>
+          While we originally focused on Ember.js, these days we talk about
+          whatever's happening in the world of JavaScript UI development.
+        </Lead>
 
-          <div className="lg:flex lg:flex-wrap lg:-mx-4 lg:mt-4 xl:mt-16">
+        <Lead>Check out some of my favorite episodes below.</Lead>
+
+        <div className="lg:mt-4 xl:mt-16">
+          <div className="lg:flex lg:flex-wrap lg:-mx-4">
             {podcasts.map(podcast => (
               <div className="mt-16 lg:w-1/2 lg:px-4" key={podcast.url}>
                 <PodcastCard
@@ -119,3 +78,42 @@ const PodcastCard = props => (
     </p>
   </>
 )
+
+const podcasts = [
+  {
+    title: "Adam Wathan on Tailwind CSS",
+    url: "https://embermap.com/podcast/adam-wathan-on-tailwind-css",
+    imageUrl: "podcasts/adam-wathan-on-tailwind-css.jpg",
+    description: `I loved this conversation because Adam does a great job breaking down the utility-first CSS approach to its first principles.`,
+  },
+  {
+    title: "Yehuda Katz on Paradigms vs. Abstractions in UI Development",
+    url:
+      "https://embermap.com/podcast/yehuda-katz-on-paradigms-vs-abstractions-in-ui-development",
+    imageUrl:
+      "podcasts/yehuda-katz-on-paradigms-vs-abstractions-in-ui-development.jpg",
+    description: `Yehuda is a wealth of knowledge. In this episode he shares why he believes abstractions should get more attention than paradigms – an interesting distinction I wasn't yet familiar with.`,
+  },
+  {
+    title: "Derrick Reimer on SPA Architecture with Elm and GraphQL",
+    url:
+      "https://embermap.com/podcast/derrick-reimer-on-spa-architecture-with-elm-and-graphql",
+    imageUrl:
+      "podcasts/derrick-reimer-on-spa-architecture-with-elm-and-graphql.jpg",
+    description: `Derrick shares some really interesting aspects of the tech stack he used when building his real-time chat app, Level.`,
+  },
+  {
+    title: "Edward Faulkner on Embroider, Ember CLI's Modern Build System",
+    url:
+      "https://embermap.com/podcast/edward-faulkner-on-embroider-ember-cli-s-modern-build-system",
+    imageUrl:
+      "podcasts/edward-faulkner-on-embroider-ember-cli-s-modern-build-system.jpg",
+    description: `Ed is one of those developers who pulls together insights from so many different areas of knowledge. I loved learning more about compilers in this episode.`,
+  },
+  {
+    title: "APIs are about Policy",
+    url: "https://embermap.com/podcast/apis-are-about-policy",
+    imageUrl: "podcasts/apis-are-about-policy.jpg",
+    description: `This is a good representitive episode of the show since it's just Ryan and me talking. It's a bit of a special episode though, because in this one we do a deep dive of the wonderful essay "APIs are about Policy" by Steven Wittens.`,
+  },
+]

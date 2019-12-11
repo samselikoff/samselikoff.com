@@ -1,11 +1,25 @@
 import React from "react"
-import { H1, Img, Container } from "../components/ui"
+import { H1, Img, Container, Lead, Spacer, A } from "../components/ui"
 
 export default function BlogPage() {
   return (
-    <div className="pt-8 pb-8 md:pt-12">
-      <Container size="large">
+    <div className="pt-8 pb-8 md:pt-12 xl:pt-24">
+      <Container size="some">
         <H1>Projects</H1>
+
+        <Spacer size="large" />
+
+        <Lead>
+          My main open source project is <A href="miragejs.com">Mirage JS</A>,
+          and I'm currently working on bringing it from Ember to the wider
+          JavaScript ecosystem.
+        </Lead>
+
+        <Lead>
+          The rest of my time is spent teaching UI development through videos on
+          EmberMap and YouTube. I also run in-person trainings and do remote
+          mentoring for a handful of frontend teams.
+        </Lead>
 
         <div className="max-w-lg mx-auto md:max-w-full md:mt-4 ">
           <div className="">
@@ -23,20 +37,22 @@ export default function BlogPage() {
             </div>
 
             <div className="mt-16 mb-32 md:mt-24">
-              <p className="text-2xl font-semibold md:text-2xl">Past</p>
+              <p className="text-2xl font-semibold md:text-2xl">
+                Previous work
+              </p>
 
               <div className="flex flex-wrap mt-4 -mx-2">
-                <div className="w-1/2 px-2 md:w-1/3">
+                <div className="w-full px-2 md:w-1/3">
                   <PastProjectCard href="https://ember-learn.github.io/ember-cli-addon-docs/">
                     Addon Docs
                   </PastProjectCard>
                 </div>
-                <div className="w-1/2 px-2 md:w-1/3">
+                <div className="w-full px-2 md:w-1/3">
                   <PastProjectCard href="https://embermap.github.io/ember-data-storefront/">
                     Storefront
                   </PastProjectCard>
                 </div>
-                <div className="w-1/2 px-2 md:w-1/3">
+                <div className="w-full px-2 md:w-1/3">
                   <PastProjectCard href="https://github.com/embermap/ember-cli-tailwind">
                     Ember CLI Tailwind
                   </PastProjectCard>
@@ -52,7 +68,7 @@ export default function BlogPage() {
 
 const PastProjectCard = props => (
   <a
-    className="flex items-center justify-center block h-24 px-4 mt-4 font-semibold leading-snug text-center text-gray-900 bg-gray-100 border border-gray-300 rounded"
+    className="flex items-center justify-center block h-24 px-4 mt-4 font-medium leading-snug text-center text-gray-600 bg-white rounded shadow"
     href={props.href}
   >
     <p>{props.children}</p>

@@ -26,6 +26,21 @@ export function H1({ children }) {
   )
 }
 
+export function Lead({ children }) {
+  return (
+    <p className="mt-6 text-lg text-gray-700 md:text-xl lg:text-2xl">
+      {children}
+    </p>
+  )
+}
+export function Spacer({ size }) {
+  let styles = {
+    large: "mt-8 md:mt-10 xl:mt-16",
+  }
+
+  return <div className={styles[size]}></div>
+}
+
 export function Container({ size, children }) {
   let styles = {
     small: "max-w-sm mx-auto px-6 sm:max-w-lg md:max-w-xl lg:max-w-2xl", // Home
