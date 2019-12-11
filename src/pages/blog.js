@@ -12,7 +12,7 @@ export default function BlogPage({ data }) {
   }))
 
   return (
-    <div className="pt-8 md:pt-16 xl:pt-24">
+    <div className="pt-8 pb-20 md:pt-16 xl:pt-24">
       <Container size="some">
         <H1>Blog</H1>
 

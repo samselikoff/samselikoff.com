@@ -99,7 +99,7 @@ export default props => {
           </div>
         </div>
 
-        <div className="mt-8 mb-16 text-center">
+        <div className="pb-24 mt-8 text-center">
           <Link className="font-medium text-blue-500" to="/blog">
             ← View all posts
           </Link>
