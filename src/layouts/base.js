@@ -22,10 +22,10 @@ const Layout = ({ children }) => {
     <>
       <div className="font-sans text-base antialiased text-gray-800">
         <header className="">
-          <div className="max-w-6xl px-6 pt-4 mx-auto md:pt-6 lg:pt-8">
+          <div className="px-6 pt-4 mx-auto max-w-7xl md:pt-6 xl:pt-8">
             <div className="flex items-center justify-between pb-4 md:border-b md:border-gray-200 md:justify-start">
               <Link to="/">
-                <span className="text-sm font-light tracking-wide uppercase md:text-base lg:text-xl">
+                <span className="text-sm font-light tracking-wide uppercase md:text-base lg:text-xl xl:text-2xl">
                   Sam<span className="font-bold">Selikoff</span>
                 </span>
               </Link>
@@ -226,7 +226,7 @@ function DesktopNav() {
 function DesktopNavLink({ to, children }) {
   return (
     <Link
-      className="ml-6 text-gray-700 lg:ml-8 lg:text-base hover:text-gray-900"
+      className="ml-6 text-gray-700 lg:ml-8 lg:text-base xl:text-lg hover:text-gray-900"
       to={to}
     >
       {children}

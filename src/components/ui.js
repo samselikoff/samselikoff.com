@@ -20,7 +20,7 @@ export const A = ({
 
 export function H1({ children }) {
   return (
-    <h1 className="text-5xl font-semibold leading-tight text-gray-800 md:text-4xl lg:text-5xl">
+    <h1 className="text-5xl font-semibold leading-tight text-gray-800 md:text-6xl lg:text-7xl lg:font-medium xl:text-8xl">
       {children}
     </h1>
   )
@@ -29,7 +29,7 @@ export function H1({ children }) {
 export function Container({ size, children }) {
   let styles = {
     small: "max-w-sm mx-auto px-6 sm:max-w-lg md:max-w-xl lg:max-w-2xl", // Home
-    some: "max-w-xl px-6 mx-auto lg:max-w-2xl", // Podcast
+    some: "max-w-xl px-6 mx-auto lg:max-w-3xl lg:px-0", // Podcast
     medium: "max-w-xl px-6 mx-auto lg:max-w-3xl lg:px-16", // Blog post
     large: "max-w-2xl px-6 mx-auto md:max-w-xl", // Projects
   }

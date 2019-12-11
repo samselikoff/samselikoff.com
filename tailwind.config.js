@@ -21,6 +21,9 @@ module.exports = {
       lineHeight: {
         tighter: "1.15",
       },
+      maxWidth: {
+        "7xl": "80rem",
+      },
       width: {
         28: "7rem",
         36: "9rem",
@@ -32,6 +35,8 @@ module.exports = {
         "lg-": "1.0625rem", // 17 px
         "sm-": "0.8125rem",
         "2-5xl": "1.6875rem",
+        "7xl": "5rem",
+        "8xl": "6rem",
       },
       height: {
         11: "2.75rem",
