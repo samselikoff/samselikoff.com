@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
       <div className="font-sans text-base antialiased text-gray-800">
         <header className="">
           <div className="px-6 pt-4 mx-auto max-w-7xl md:pt-6 xl:pt-8">
-            <div className="flex items-center justify-between pb-4 xl:pb-6 md:border-b md:border-gray-200 md:justify-start">
+            <div className="flex justify-between pb-4 md:pb-0 md:border-b md:border-gray-200 md:justify-start">
               <Link to="/">
                 <span className="text-sm font-light tracking-wide uppercase md:text-base lg:text-xl">
                   Sam<span className="font-bold">Selikoff</span>
@@ -226,8 +226,10 @@ function DesktopNav() {
 function DesktopNavLink({ to, children }) {
   return (
     <Link
-      className="ml-6 text-gray-700 lg:ml-8 lg:text-base xl:text-lg hover:text-gray-900"
+      className="pb-4 ml-6 -mb-px text-gray-600 border-b border-transparent xl:pb-6 lg:ml-8 lg:text-base xl:text-lg hover:text-gray-900"
+      activeClassName="text-gray-900"
       to={to}
+      partiallyActive={true}
     >
       {children}
     </Link>

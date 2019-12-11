@@ -3,7 +3,7 @@ import { H1, Img, Container, Lead, Spacer, A } from "../components/ui"
 
 export default function BlogPage() {
   return (
-    <div className="pt-8 pb-8 md:pt-12 xl:pt-24">
+    <div className="pt-8 pb-8 md:pt-16 xl:pt-24">
       <Container size="some">
         <H1>Projects</H1>
 
@@ -21,7 +21,7 @@ export default function BlogPage() {
           mentoring for a handful of frontend teams.
         </Lead>
 
-        <div className="max-w-lg mx-auto md:max-w-full md:mt-4 ">
+        <div className="md:mt-4 ">
           <div className="">
             <div className="md:flex md:-mx-4">
               <div className="mt-12 md:w-1/2 md:mx-4">
@@ -68,7 +68,7 @@ export default function BlogPage() {
 
 const PastProjectCard = props => (
   <a
-    className="flex items-center justify-center block h-24 px-4 mt-4 font-medium leading-snug text-center text-gray-600 bg-white rounded shadow"
+    className="flex items-center justify-center block h-24 px-4 mt-4 font-medium leading-snug text-center text-gray-600 bg-white rounded shadow hover:text-gray-700"
     href={props.href}
   >
     <p>{props.children}</p>
