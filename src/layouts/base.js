@@ -6,6 +6,7 @@ import { animated, useTransition, useChain } from "react-spring"
 import { DialogOverlay, DialogContent } from "@reach/dialog"
 import { Link, navigate } from "gatsby"
 import { Twitter, GitHub, YouTube } from "../components/logos"
+import SEO from "../components/seo"
 
 const AnimatedLink = animated(Link)
 const AnimatedDialogOverlay = animated(DialogOverlay)
@@ -20,6 +21,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <SEO />
+
       <div className="font-sans text-base antialiased text-gray-800">
         <header className="px-6">
           <div className="pt-4 mx-auto max-w-7xl md:pt-6 xl:pt-8">

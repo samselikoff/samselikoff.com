@@ -1,5 +1,4 @@
 import React from "react"
-import SEO from "../components/seo"
 import { Link as InternalLink } from "gatsby"
 import { Lead, Title, Spacer, Container, A, Img } from "../components/ui"
 import { Twitter, GitHub, YouTube } from "../components/logos"
@@ -7,8 +6,6 @@ import { Twitter, GitHub, YouTube } from "../components/logos"
 export default function IndexPage() {
   return (
     <>
-      <SEO />
-
       <Container size="some">
         <Spacer size="xl" />
 

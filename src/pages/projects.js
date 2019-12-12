@@ -1,70 +1,77 @@
 import React from "react"
 import { Title, Img, Container, Lead, Spacer, A } from "../components/ui"
+import { Helmet } from "react-helmet"
 
 export default function BlogPage() {
   return (
-    <div className="pb-8">
-      <Container size="some">
-        <Spacer size="xl" />
+    <>
+      <Helmet>
+        <title>Projects</title>
+      </Helmet>
 
-        <Title>Projects</Title>
+      <div className="pb-8">
+        <Container size="some">
+          <Spacer size="xl" />
 
-        <Spacer size="lg" />
+          <Title>Projects</Title>
 
-        <Lead>
-          My main open source project is <A href="miragejs.com">Mirage JS</A>,
-          and I'm currently working on bringing it from Ember to the wider
-          JavaScript ecosystem.
-        </Lead>
+          <Spacer size="lg" />
 
-        <Lead>
-          The rest of my time is spent teaching UI development through videos on
-          EmberMap and YouTube. I also run in-person trainings and do remote
-          mentoring for a handful of frontend teams.
-        </Lead>
+          <Lead>
+            My main open source project is <A href="miragejs.com">Mirage JS</A>,
+            and I'm currently working on bringing it from Ember to the wider
+            JavaScript ecosystem.
+          </Lead>
 
-        <div className="md:mt-4 ">
-          <div className="">
-            <div className="md:flex md:-mx-4">
-              <div className="mt-12 md:w-1/2 md:mx-4">
-                <a href="https://miragejs.com/">
-                  <Img src="mirage.png" className="rounded-lg shadow-lg" />
-                </a>
-              </div>
-              <div className="mt-12 md:w-1/2 md:mx-4">
-                <a href="https://embermap.com/">
-                  <Img src="embermap4.png" className="rounded-lg shadow-lg" />
-                </a>
-              </div>
-            </div>
+          <Lead>
+            The rest of my time is spent teaching UI development through videos
+            on EmberMap and YouTube. I also run in-person trainings and do
+            remote mentoring for a handful of frontend teams.
+          </Lead>
 
-            <div className="mt-16 mb-32 md:mt-24">
-              <p className="text-2xl font-semibold md:text-2xl">
-                Previous work
-              </p>
-
-              <div className="flex flex-wrap mt-4 -mx-2">
-                <div className="w-full px-2 md:w-1/3">
-                  <PastProjectCard href="https://ember-learn.github.io/ember-cli-addon-docs/">
-                    Addon Docs
-                  </PastProjectCard>
+          <div className="md:mt-4 ">
+            <div className="">
+              <div className="md:flex md:-mx-4">
+                <div className="mt-12 md:w-1/2 md:mx-4">
+                  <a href="https://miragejs.com/">
+                    <Img src="mirage.png" className="rounded-lg shadow-lg" />
+                  </a>
                 </div>
-                <div className="w-full px-2 md:w-1/3">
-                  <PastProjectCard href="https://embermap.github.io/ember-data-storefront/">
-                    Storefront
-                  </PastProjectCard>
+                <div className="mt-12 md:w-1/2 md:mx-4">
+                  <a href="https://embermap.com/">
+                    <Img src="embermap4.png" className="rounded-lg shadow-lg" />
+                  </a>
                 </div>
-                <div className="w-full px-2 md:w-1/3">
-                  <PastProjectCard href="https://github.com/embermap/ember-cli-tailwind">
-                    Ember CLI Tailwind
-                  </PastProjectCard>
+              </div>
+
+              <div className="mt-16 mb-32 md:mt-24">
+                <p className="text-2xl font-semibold md:text-2xl">
+                  Previous work
+                </p>
+
+                <div className="flex flex-wrap mt-4 -mx-2">
+                  <div className="w-full px-2 md:w-1/3">
+                    <PastProjectCard href="https://ember-learn.github.io/ember-cli-addon-docs/">
+                      Addon Docs
+                    </PastProjectCard>
+                  </div>
+                  <div className="w-full px-2 md:w-1/3">
+                    <PastProjectCard href="https://embermap.github.io/ember-data-storefront/">
+                      Storefront
+                    </PastProjectCard>
+                  </div>
+                  <div className="w-full px-2 md:w-1/3">
+                    <PastProjectCard href="https://github.com/embermap/ember-cli-tailwind">
+                      Ember CLI Tailwind
+                    </PastProjectCard>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </Container>
-    </div>
+        </Container>
+      </div>
+    </>
   )
 }
 

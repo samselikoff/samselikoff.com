@@ -1,63 +1,70 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { Spacer, Container, Lead, Title, A, Img } from "../components/ui"
 
 export default function() {
   return (
-    <div className="md:text-lg-">
-      <Container size="some">
-        <Spacer size="xl" />
+    <>
+      <Helmet>
+        <title>Podcast</title>
+      </Helmet>
 
-        <Title>Podcast</Title>
+      <div className="md:text-lg-">
+        <Container size="some">
+          <Spacer size="xl" />
 
-        <Spacer size="lg" />
+          <Title>Podcast</Title>
 
-        <Lead>
-          For more than two years I've used{" "}
-          <A href="https://embermap.com/podcast">The EmberMap Podcast</A> to
-          talk about whatever's going on in my day-to-day life doing frontend
-          development, along with my co-host Ryan Toronto.
-        </Lead>
+          <Spacer size="lg" />
 
-        <Lead>
-          While we originally focused on Ember.js, these days we talk about
-          whatever's happening in the world of JavaScript UI development.
-        </Lead>
+          <Lead>
+            For more than two years I've used{" "}
+            <A href="https://embermap.com/podcast">The EmberMap Podcast</A> to
+            talk about whatever's going on in my day-to-day life doing frontend
+            development, along with my co-host Ryan Toronto.
+          </Lead>
 
-        <Lead>Check out some of my favorite episodes below.</Lead>
+          <Lead>
+            While we originally focused on Ember.js, these days we talk about
+            whatever's happening in the world of JavaScript UI development.
+          </Lead>
 
-        <div className="lg:mt-4 xl:mt-16">
-          <div className="lg:flex lg:flex-wrap lg:-mx-4">
-            {podcasts.map(podcast => (
-              <div className="mt-16 lg:w-1/2 lg:px-4" key={podcast.url}>
-                <PodcastCard
-                  title={podcast.title}
-                  url={podcast.url}
-                  imageUrl={podcast.imageUrl}
+          <Lead>Check out some of my favorite episodes below.</Lead>
+
+          <div className="lg:mt-4 xl:mt-16">
+            <div className="lg:flex lg:flex-wrap lg:-mx-4">
+              {podcasts.map(podcast => (
+                <div className="mt-16 lg:w-1/2 lg:px-4" key={podcast.url}>
+                  <PodcastCard
+                    title={podcast.title}
+                    url={podcast.url}
+                    imageUrl={podcast.imageUrl}
+                  >
+                    {podcast.description}
+                  </PodcastCard>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-16">
+              <hr />
+            </div>
+
+            <div className="mt-8 mb-24 text-base md:text-lg">
+              <p>View the rest of the episodes on the show's website:</p>
+              <p className="mt-4">
+                <a
+                  className="font-medium text-blue-500 underline"
+                  href="https://embermap.com/podcast"
                 >
-                  {podcast.description}
-                </PodcastCard>
-              </div>
-            ))}
+                  → The EmberMap Podcast
+                </a>
+              </p>
+            </div>
           </div>
-
-          <div className="mt-16">
-            <hr />
-          </div>
-
-          <div className="mt-8 mb-24 text-base md:text-lg">
-            <p>View the rest of the episodes on the show's website:</p>
-            <p className="mt-4">
-              <a
-                className="font-medium text-blue-500 underline"
-                href="https://embermap.com/podcast"
-              >
-                → The EmberMap Podcast
-              </a>
-            </p>
-          </div>
-        </div>
-      </Container>
-    </div>
+        </Container>
+      </div>
+    </>
   )
 }
 

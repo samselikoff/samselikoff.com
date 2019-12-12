@@ -1,12 +1,19 @@
 import React from "react"
-
 import SEO from "../components/seo"
+import { A, Lead, Spacer, Title, Container } from "../components/ui"
 
 const NotFoundPage = () => (
   <>
     <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+
+    <Container size="some">
+      <Spacer size="xl" />
+      <Title>Nothing here...</Title>
+
+      <Lead>
+        You hit a missing link. <A to="/">Head back home</A>.
+      </Lead>
+    </Container>
   </>
 )
 
