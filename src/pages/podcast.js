@@ -1,5 +1,5 @@
 import React from "react"
-import { Spacer, Container, Lead, H1, A, Img } from "../components/ui"
+import { Spacer, Container, Lead, Title, A, Img } from "../components/ui"
 
 export default function() {
   return (
@@ -7,9 +7,9 @@ export default function() {
       <Container size="some">
         <Spacer size="xl" />
 
-        <H1>Podcast</H1>
+        <Title>Podcast</Title>
 
-        <Spacer size="large" />
+        <Spacer size="lg" />
 
         <Lead>
           For more than two years I've used{" "}

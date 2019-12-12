@@ -1,7 +1,7 @@
 import React from "react"
 import SEO from "../components/seo"
 import { Link as InternalLink } from "gatsby"
-import { Container, A, Img } from "../components/ui"
+import { Lead, Title, Spacer, Container, A, Img } from "../components/ui"
 import { Twitter, GitHub, YouTube } from "../components/logos"
 
 export default function IndexPage() {
@@ -9,126 +9,117 @@ export default function IndexPage() {
     <>
       <SEO />
 
-      <div className="mb-12 leading-normal md:text-lg">
-        <section className="py-10 mx-auto font-light bg-gray-100 md:bg-white md:py-20 lg:py-24 text-lg- xs:text-xl sm:text-2xl sm:tracking-none lg:text-3xl">
-          {/* tracking-normal here is a hack, it loses to font-size */}
-          <div className="max-w-xs px-6 mx-auto tracking-normal xs:max-w-sm sm:max-w-lg md:max-w-4xl lg:max-w-5xl">
-            <div className="relative md:flex">
-              <div className="absolute right-0 md:static xs:pt-1 md:pt-0 md:pr-8 lg:pr-12">
-                <div>
-                  <Img
-                    className="w-16 border border-gray-800 rounded-full sm:border-2 xs:w-20 sm:w-32 md:w-32 lg:w-48 lg:border-3"
-                    src="profile.jpeg"
-                    aspectRatio={1}
-                  />
-                </div>
-              </div>
-              <div>
+      <Container size="some">
+        <Spacer size="xl" />
+
+        <Title>Hello!</Title>
+
+        <Spacer size="lg" />
+
+        <Lead>
+          I'm Sam Selikoff, and since 2016 I've made a living teaching
+          JavaScript UI development on the web.
+        </Lead>
+      </Container>
+
+      <div className="mt-6 sm:hidden">
+        <Img src="sam-at-desk-edited2.jpeg" />
+      </div>
+
+      <Container size="some">
+        <div className="flex items-center justify-between mt-5 text-xs font-medium text-gray-700 sm:justify-start smm:justify-center smm:text-sm lg:text-base lg:mt-8">
+          <a
+            href="https://twitter.com/samselikoff"
+            className="flex items-center hover:text-gray-800 smm:px-4 sm:pl-0 sm:pr-6 lg:pr-8"
+          >
+            <Twitter className="h-4 mr-2" />
+            <span>Twitter</span>
+          </a>
+          <a
+            href="https://www.youtube.com/user/samselikoff"
+            className="flex items-center hover:text-gray-800 smm:px-4 sm:pl-0 sm:pr-6 lg:pr-8"
+          >
+            <YouTube className="h-4 mr-2" />
+            <span>YouTube</span>
+          </a>
+          <a
+            href="https://github.com/samselikoff"
+            className="flex items-center hover:text-gray-800 smm:px-4 sm:pl-0 sm:pr-6 lg:pr-8"
+          >
+            <GitHub className="h-4 mr-2" />
+            <span>GitHub</span>
+          </a>
+        </div>
+
+        <div className="hidden mt-12 overflow-hidden rounded-lg sm:block">
+          <Img src="sam-at-desk-edited2.jpeg" />
+        </div>
+
+        <div className="mt-16 md:text-lg lg:flex lg:flex-wrap lg:-mx-4">
+          <div className="lg:w-1/2 lg:px-4">
+            <Section>
+              <SectionTitle link="/projects">Projects</SectionTitle>
+              <SectionBody>
                 <p>
-                  Hey there!{" "}
-                  <span role="img" aria-label="wave">
-                    👋
-                  </span>
+                  I'm currently working on{" "}
+                  <A href="https://miragejs.com/">Mirage JS</A>, an API mocking
+                  library that lets frontend developers build complete features
+                  without touching their backends.{" "}
                 </p>
-
-                <p className="mt-4">
-                  I'm{" "}
-                  <A
-                    href="https://twitter.com/samselikoff"
-                    font="normal"
-                    underline={false}
-                  >
-                    @samselikoff
-                  </A>
-                  , and <br className="md:hidden" /> since 2016 I've made a
-                  <br className="md:hidden" /> living teaching JavaScript
-                  <br className="md:hidden" /> UI development on the web.
+                <p className="mt-6">
+                  I also run <A href="https://embermap.com/">embermap.com</A>{" "}
+                  where I make videos about design, development and testing
+                  using Ember.js, along with my friend{" "}
+                  <A href="https://twitter.com/ryantotweets">Ryan Toronto</A>.
                 </p>
-
-                <div className="items-center hidden mt-6 text-xl font-normal lg:flex">
-                  <a
-                    href="https://twitter.com/samselikoff"
-                    className="flex items-center mr-10"
-                  >
-                    <Twitter className="h-5 mr-3" />
-                    <span>Twitter</span>
-                  </a>
-                  <a
-                    href="https://www.youtube.com/user/samselikoff"
-                    className="flex items-center mr-10"
-                  >
-                    <YouTube className="h-5 mr-3" />
-                    <span>YouTube</span>
-                  </a>
-                  <a
-                    href="https://github.com/samselikoff"
-                    className="flex items-center mr-10"
-                  >
-                    <GitHub className="h-5 mr-3" />
-                    <span>GitHub</span>
-                  </a>
-                </div>
-              </div>
-            </div>
+              </SectionBody>
+            </Section>
           </div>
-        </section>
 
-        <Container size="small">
-          <Section>
-            <SectionTitle link="/projects">Projects</SectionTitle>
-            <SectionBody>
-              <p>
-                I'm currently working on{" "}
-                <A href="https://miragejs.com/">Mirage JS</A>, an API mocking
-                library that lets frontend developers build complete features
-                without touching their backends.{" "}
-              </p>
-              <p className="mt-6">
-                I also run <A href="https://embermap.com/">embermap.com</A>{" "}
-                where I make videos about design, development and testing using
-                Ember.js, along with my friend{" "}
-                <A href="https://twitter.com/ryantotweets">Ryan Toronto</A>.
-              </p>
-            </SectionBody>
-          </Section>
+          <div className="lg:w-1/2 lg:px-4">
+            <Section>
+              <SectionTitle link="/podcast">Podcast</SectionTitle>
+              <SectionBody>
+                <p>
+                  Join me, Ryan + guests on a weekly podcast where we chat about
+                  all things JavaScript UI development – not just Ember!
+                </p>
+                <p className="mt-6">
+                  <A href="https://embermap.com/podcast">
+                    → Check out The EmberMap podcast
+                  </A>
+                </p>
+              </SectionBody>
+            </Section>
+          </div>
 
-          <Section>
-            <SectionTitle link="/podcast">Podcast</SectionTitle>
-            <SectionBody>
-              <p>
-                Join me, Ryan + guests on a weekly podcast where we chat about
-                all things JavaScript UI development – not just Ember!
-              </p>
-              <p className="mt-6">
-                <A href="https://embermap.com/podcast">
-                  → Check out The EmberMap podcast
-                </A>
-              </p>
-            </SectionBody>
-          </Section>
+          <div className="lg:w-1/2 lg:px-4">
+            <Section>
+              <SectionTitle link="/talks">Talks & Interviews</SectionTitle>
+              <SectionBody>
+                <p>
+                  I've given several conference talks and talked about my open
+                  source work on a few podcasts.{" "}
+                  <A to="/talks">Check them out here.</A>
+                </p>
+              </SectionBody>
+            </Section>
+          </div>
 
-          <Section>
-            <SectionTitle link="/talks">Talks & Interviews</SectionTitle>
-            <SectionBody>
-              <p>
-                I've given several conference talks and talked about my open
-                source work on a few podcasts.{" "}
-                <A to="/talks">Check them out here.</A>
-              </p>
-            </SectionBody>
-          </Section>
+          <div className="lg:w-1/2 lg:px-4">
+            <Section>
+              <SectionTitle link="/blog">Blog</SectionTitle>
+              <SectionBody>
+                <p>
+                  You can find my writing on <A to="/blog">my blog</A>. I
+                  haven't been writing much lately but I'm planning on starting
+                  up again.
+                </p>
+              </SectionBody>
+            </Section>
+          </div>
 
-          <Section>
-            <SectionTitle link="/blog">Blog</SectionTitle>
-            <SectionBody>
-              <p>
-                You can find my writing on <A to="/blog">my blog</A>. I haven't
-                been writing much lately but I'm planning on starting up again.
-              </p>
-            </SectionBody>
-          </Section>
-
-          <Section>
+          {/* <Section>
             <SectionTitle>Life</SectionTitle>
             <SectionBody>
               <p>
@@ -139,33 +130,47 @@ export default function IndexPage() {
                 I currently live in New York City + absolutely love it here!
               </p>
             </SectionBody>
-          </Section>
-        </Container>
+          </Section> */}
+        </div>
+      </Container>
 
-        <div className="mt-8 lg:mt-16">
+      <div className="mt-16">
+        <ImageCard
+          src="new-york.jpeg"
+          title="New York City"
+          date="2015–Present"
+        />
+        <div className="flex">
           <ImageCard
-            src="new-york.jpeg"
-            title="New York City"
-            date="2015–Present"
+            src="burlington.jpeg"
+            title="Burlington"
+            date="2014–2015"
+            className="w-1/2"
+            aspectRatio={1}
           />
-          <div className="flex">
-            <ImageCard
-              src="burlington.jpeg"
-              title="Burlington"
-              date="2014–2015"
-              className="w-1/2"
-              aspectRatio={1}
-            />
-            <ImageCard
-              src="boston.jpg"
-              title="Boston"
-              date="2010–2014"
-              className="w-1/2"
-              aspectRatio={1}
-            />
-          </div>
+          <ImageCard
+            src="boston.jpg"
+            title="Boston"
+            date="2010–2014"
+            className="w-1/2"
+            aspectRatio={1}
+          />
         </div>
       </div>
+
+      <div className="mt-12">
+        <Container size="some">
+          <p>
+            I was born in upstate New York, lived in Florida for 15 years, and
+            have since made my way back to the Northeast.
+          </p>
+          <p className="mt-6">
+            I currently live in New York City + absolutely love it here!
+          </p>
+        </Container>
+      </div>
+
+      <div className="mt-16" />
     </>
   )
 }
@@ -175,21 +180,23 @@ function Section({ children }) {
 }
 
 function SectionTitle({ link, children }) {
+  const T = ({ children }) => (
+    <h2 className="text-2xl font-semibold text-gray-900 md:text-2xl lg:text-2-5xl">
+      {children}
+    </h2>
+  )
+
   if (link) {
     return (
       <InternalLink to={link} className="inline-block">
-        <h2 className="text-xl font-semibold text-gray-900 md:text-2xl lg:text-2-5xl">
+        <T>
           {children}
-          <Chevron className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
-        </h2>
+          <Chevron className="w-4 h-4 ml-1 md:w-5 md:h-5 lg:w-6 lg:h-6" />
+        </T>
       </InternalLink>
     )
   } else {
-    return (
-      <h2 className="text-xl font-semibold text-gray-900 md:text-2xl lg:text-3xl">
-        {children}
-      </h2>
-    )
+    return <T>{children}</T>
   }
 }
 

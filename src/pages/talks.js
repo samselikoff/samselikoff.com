@@ -1,5 +1,5 @@
 import React from "react"
-import { A, Spacer, Lead, Container, H1, Img } from "../components/ui"
+import { A, Spacer, Lead, Container, Title, Img } from "../components/ui"
 
 export default function TalksPage() {
   return (
@@ -7,9 +7,9 @@ export default function TalksPage() {
       <Container size="some">
         <Spacer size="xl" />
 
-        <H1>Talks</H1>
+        <Title>Talks</Title>
 
-        <Spacer size="large" />
+        <Spacer size="lg" />
 
         <Lead>
           I love talking about my favorite technologies, my experience working
@@ -33,7 +33,7 @@ export default function TalksPage() {
         </div>
 
         <div className="mt-20 mb-32 md:mt-32">
-          <H1>Interviews</H1>
+          <Title>Interviews</Title>
 
           <div className="flex flex-wrap md:-mx-3 lg:-mx-4">
             {interviews.map(interview => (

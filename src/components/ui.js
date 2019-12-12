@@ -18,7 +18,7 @@ export const A = ({
   return <LinkComponent {...props}>{children}</LinkComponent>
 }
 
-export function H1({ children }) {
+export function Title({ children }) {
   return (
     <h1 className="text-5xl font-semibold leading-tight text-gray-800 md:text-6xl lg:text-7xl lg:font-medium xl:text-8xl">
       {children}
@@ -36,7 +36,8 @@ export function Lead({ children }) {
 
 export function Spacer({ size }) {
   let styles = {
-    large: "mt-8 md:mt-10 xl:mt-16",
+    md: "mt-8",
+    lg: "mt-8 md:mt-10 xl:mt-16",
     xl: "mt-8 md:mt-16 xl:mt-24",
   }
 

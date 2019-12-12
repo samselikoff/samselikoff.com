@@ -1,5 +1,5 @@
 import React from "react"
-import { H1, Img, Container, Lead, Spacer, A } from "../components/ui"
+import { Title, Img, Container, Lead, Spacer, A } from "../components/ui"
 
 export default function BlogPage() {
   return (
@@ -7,9 +7,9 @@ export default function BlogPage() {
       <Container size="some">
         <Spacer size="xl" />
 
-        <H1>Projects</H1>
+        <Title>Projects</Title>
 
-        <Spacer size="large" />
+        <Spacer size="lg" />
 
         <Lead>
           My main open source project is <A href="miragejs.com">Mirage JS</A>,
