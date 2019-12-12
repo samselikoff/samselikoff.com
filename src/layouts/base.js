@@ -21,8 +21,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="font-sans text-base antialiased text-gray-800">
-        <header className="">
-          <div className="px-6 pt-4 mx-auto max-w-7xl md:pt-6 xl:pt-8">
+        <header className="px-6">
+          <div className="pt-4 mx-auto max-w-7xl md:pt-6 xl:pt-8">
             <div className="flex justify-between pb-4 md:pb-0 md:border-b md:border-gray-200 md:justify-start">
               <Link to="/">
                 <span className="text-sm font-light tracking-wide uppercase md:text-base lg:text-xl">

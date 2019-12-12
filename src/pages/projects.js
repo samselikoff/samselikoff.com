@@ -3,8 +3,10 @@ import { H1, Img, Container, Lead, Spacer, A } from "../components/ui"
 
 export default function BlogPage() {
   return (
-    <div className="pt-8 pb-8 md:pt-16 xl:pt-24">
+    <div className="pb-8">
       <Container size="some">
+        <Spacer size="xl" />
+
         <H1>Projects</H1>
 
         <Spacer size="large" />

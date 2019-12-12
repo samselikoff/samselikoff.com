@@ -3,8 +3,10 @@ import { A, Spacer, Lead, Container, H1, Img } from "../components/ui"
 
 export default function TalksPage() {
   return (
-    <div className="pt-8 md:pt-16 md:text-lg- xl:pt-24">
+    <div className="md:text-lg-">
       <Container size="some">
+        <Spacer size="xl" />
+
         <H1>Talks</H1>
 
         <Spacer size="large" />

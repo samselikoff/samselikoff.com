@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { H1, Container } from "../components/ui"
+import { Spacer, H1, Container } from "../components/ui"
 
 export default function BlogPage({ data }) {
   let articles = data.allMdx.edges.map(edge => ({
@@ -12,8 +12,10 @@ export default function BlogPage({ data }) {
   }))
 
   return (
-    <div className="pt-8 pb-20 md:pt-16 xl:pt-24">
+    <div className="pb-20">
       <Container size="some">
+        <Spacer size="xl" />
+
         <H1>Blog</H1>
 
         <ul className="mt-12 leading-snug">

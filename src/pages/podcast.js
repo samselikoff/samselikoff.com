@@ -3,8 +3,10 @@ import { Spacer, Container, Lead, H1, A, Img } from "../components/ui"
 
 export default function() {
   return (
-    <div className="pt-8 md:pt-16 md:text-lg- xl:pt-24">
+    <div className="md:text-lg-">
       <Container size="some">
+        <Spacer size="xl" />
+
         <H1>Podcast</H1>
 
         <Spacer size="large" />
