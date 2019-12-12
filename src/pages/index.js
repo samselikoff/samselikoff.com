@@ -23,7 +23,13 @@ export default function IndexPage() {
       </Container>
 
       <div className="mt-6 sm:hidden">
-        <Img src="sam-at-desk-edited2.jpeg" />
+        <Img
+          src="sam-at-desk-edited3.jpeg"
+          aspectRatio={15 / 9}
+          imgStyle={{
+            objectPosition: "bottom",
+          }}
+        />
       </div>
 
       <Container size="some">
@@ -52,7 +58,13 @@ export default function IndexPage() {
         </div>
 
         <div className="hidden mt-12 overflow-hidden rounded-lg sm:block">
-          <Img src="sam-at-desk-edited2.jpeg" />
+          <Img
+            src="sam-at-desk-edited3.jpeg"
+            aspectRatio={15 / 9}
+            imgStyle={{
+              objectPosition: "bottom",
+            }}
+          />
         </div>
 
         <div className="mt-16 md:text-lg lg:flex lg:flex-wrap lg:-mx-4">
@@ -134,40 +146,43 @@ export default function IndexPage() {
         </div>
       </Container>
 
-      <div className="mt-16">
+      <div className="mt-20 md:mt-32">
+        <Container size="some">
+          <Title>Life</Title>
+          <Lead>
+            I was born in upstate New York, lived in Florida for 15 years, and
+            have since made my way back to the Northeast.
+          </Lead>
+          <Lead>
+            I currently live in New York City + absolutely love it here!
+          </Lead>
+        </Container>
+      </div>
+
+      <div className="mx-auto mt-16 xl:max-w-6xl">
         <ImageCard
           src="new-york.jpeg"
           title="New York City"
           date="2015–Present"
         />
-        <div className="flex">
-          <ImageCard
-            src="burlington.jpeg"
-            title="Burlington"
-            date="2014–2015"
-            className="w-1/2"
-            aspectRatio={1}
-          />
-          <ImageCard
-            src="boston.jpg"
-            title="Boston"
-            date="2010–2014"
-            className="w-1/2"
-            aspectRatio={1}
-          />
+        <div className="flex xl:mt-10 xl:-mx-6">
+          <div className="w-1/2 xl:px-6">
+            <ImageCard
+              src="burlington.jpeg"
+              title="Burlington"
+              date="2014–2015"
+              aspectRatio={1}
+            />
+          </div>
+          <div className="w-1/2 xl:px-6">
+            <ImageCard
+              src="boston.jpg"
+              title="Boston"
+              date="2010–2014"
+              aspectRatio={1}
+            />
+          </div>
         </div>
-      </div>
-
-      <div className="mt-12">
-        <Container size="some">
-          <p>
-            I was born in upstate New York, lived in Florida for 15 years, and
-            have since made my way back to the Northeast.
-          </p>
-          <p className="mt-6">
-            I currently live in New York City + absolutely love it here!
-          </p>
-        </Container>
       </div>
 
       <div className="mt-16" />
@@ -222,9 +237,9 @@ function Chevron(props) {
   )
 }
 
-function ImageCard({ src, title, date, className, aspectRatio = 16 / 9 }) {
+function ImageCard({ src, title, date, aspectRatio = 16 / 9 }) {
   return (
-    <div className={`relative ${className}`}>
+    <div className="relative xl:rounded-lg xl:overflow-hidden">
       <Img src={src} aspectRatio={aspectRatio} />
       <div
         className="absolute bottom-0 w-full py-2 pl-3 text-white md:pl-4 md:py-4"
@@ -233,8 +248,8 @@ function ImageCard({ src, title, date, className, aspectRatio = 16 / 9 }) {
             "linear-gradient(0deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%)",
         }}
       >
-        <p className="text-sm font-semibold sm:text-base md:text-xl">{title}</p>
-        <p className="text-xs sm:text-sm md:text-lg">{date}</p>
+        <p className="text-sm font-semibold sm:text-base xl:text-lg">{title}</p>
+        <p className="text-xs sm:text-sm xl:text-base">{date}</p>
       </div>
     </div>
   )

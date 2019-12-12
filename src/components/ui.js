@@ -72,6 +72,7 @@ export const Img = props => {
   `)
 
   let aspectRatio = props.aspectRatio || 16 / 9
+  let imgStyle = props.imgStyle || {}
   let imageData = data.allFile.nodes.find(
     file => file.relativePath === props.src
   ).childImageSharp.fluid
@@ -80,6 +81,7 @@ export const Img = props => {
     <GatsbyImage
       className={props.className}
       fluid={{ ...imageData, aspectRatio }}
+      imgStyle={imgStyle}
     />
   )
 }
