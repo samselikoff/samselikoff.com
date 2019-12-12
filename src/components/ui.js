@@ -18,12 +18,14 @@ export const A = ({
   return <LinkComponent {...props}>{children}</LinkComponent>
 }
 
-export function Title({ children }) {
-  return (
-    <h1 className="text-5xl font-semibold leading-tight text-gray-800 md:text-6xl lg:text-7xl lg:font-medium xl:text-8xl">
-      {children}
-    </h1>
-  )
+export function Title({ size = "md", children }) {
+  let styles = {
+    sm:
+      "text-4xl font-semibold leading-tight text-gray-800 md:text-5xl lg:text-6xl lg:font-medium xl:text-7xl",
+    md:
+      "text-5xl font-semibold leading-tight text-gray-800 md:text-6xl lg:text-7xl lg:font-medium xl:text-8xl",
+  }
+  return <h1 className={styles[size]}>{children}</h1>
 }
 
 export function Lead({ children }) {

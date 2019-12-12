@@ -130,25 +130,12 @@ export default function IndexPage() {
               </SectionBody>
             </Section>
           </div>
-
-          {/* <Section>
-            <SectionTitle>Life</SectionTitle>
-            <SectionBody>
-              <p>
-                I was born in upstate New York, lived in Florida for 15 years,
-                and have since made my way back to the Northeast.
-              </p>
-              <p className="mt-6">
-                I currently live in New York City + absolutely love it here!
-              </p>
-            </SectionBody>
-          </Section> */}
         </div>
       </Container>
 
-      <div className="mt-20 md:mt-32">
+      <div className="mt-20 md:mt-32 lg:mt-48">
         <Container size="some">
-          <Title>Life</Title>
+          <Title size="sm">Life</Title>
           <Lead>
             I was born in upstate New York, lived in Florida for 15 years, and
             have since made my way back to the Northeast.
@@ -239,17 +226,15 @@ function Chevron(props) {
 
 function ImageCard({ src, title, date, aspectRatio = 16 / 9 }) {
   return (
-    <div className="relative xl:rounded-lg xl:overflow-hidden">
-      <Img src={src} aspectRatio={aspectRatio} />
-      <div
-        className="absolute bottom-0 w-full py-2 pl-3 text-white md:pl-4 md:py-4"
-        style={{
-          background:
-            "linear-gradient(0deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%)",
-        }}
-      >
-        <p className="text-sm font-semibold sm:text-base xl:text-lg">{title}</p>
-        <p className="text-xs sm:text-sm xl:text-base">{date}</p>
+    <div className="relative">
+      <div className="xl:rounded-lg xl:overflow-hidden">
+        <Img src={src} aspectRatio={aspectRatio} />
+      </div>
+      <div className="absolute bottom-0 w-full py-2 pl-3 text-white md:pl-4 md:py-4 bg-gradient-vignette xl:bg-gradient-none xl:static xl:text-gray-900 xl:px-0">
+        <p className="text-sm font-semibold sm:text-base xl:text-lg xl:font-medium">
+          {title}
+        </p>
+        <p className="text-xs sm:text-sm xl:text-gray-700">{date}</p>
       </div>
     </div>
   )
