@@ -1,53 +1,60 @@
 import React from "react"
 import { A, Spacer, Lead, Container, Title, Img } from "../components/ui"
+import { Helmet } from "react-helmet"
 
 export default function TalksPage() {
   return (
-    <div className="md:text-lg-">
-      <Container size="some">
-        <Spacer size="xl" />
+    <>
+      <Helmet>
+        <title>Talks</title>
+      </Helmet>
 
-        <Title>Talks</Title>
+      <div className="md:text-lg-">
+        <Container size="some">
+          <Spacer size="xl" />
 
-        <Spacer size="lg" />
+          <Title>Talks</Title>
 
-        <Lead>
-          I love talking about my favorite technologies, my experience working
-          on software teams, and lessons learned running open-source projects.
-        </Lead>
+          <Spacer size="lg" />
 
-        <Lead>
-          <A href="mailto:sam@samselikoff.com">Contact me</A> if you think I'd
-          be a good fit for your podcast, meetup or conference!
-        </Lead>
+          <Lead>
+            I love talking about my favorite technologies, my experience working
+            on software teams, and lessons learned running open-source projects.
+          </Lead>
 
-        <div className="lg:flex lg:flex-wrap lg:-mx-4">
-          {talks.map(talk => (
-            <div
-              className="mt-12 md:mt-16 lg:mt-20 lg:w-1/2 lg:px-4"
-              key={talk.url}
-            >
-              <Talk talk={talk} />
-            </div>
-          ))}
-        </div>
+          <Lead>
+            <A href="mailto:sam@samselikoff.com">Contact me</A> if you think I'd
+            be a good fit for your podcast, meetup or conference!
+          </Lead>
 
-        <div className="mt-20 mb-32 md:mt-32">
-          <Title>Interviews</Title>
-
-          <div className="flex flex-wrap md:-mx-3 lg:-mx-4">
-            {interviews.map(interview => (
+          <div className="lg:flex lg:flex-wrap lg:-mx-4">
+            {talks.map(talk => (
               <div
-                className="w-2/3 mx-auto mt-16 md:w-1/2 md:px-3 lg:w-1/3 lg:px-4"
-                key={interview.url}
+                className="mt-12 md:mt-16 lg:mt-20 lg:w-1/2 lg:px-4"
+                key={talk.url}
               >
-                <Interview interview={interview} />
+                <Talk talk={talk} />
               </div>
             ))}
           </div>
-        </div>
-      </Container>
-    </div>
+
+          <div className="mt-20 mb-32 md:mt-32">
+            <Title>Interviews</Title>
+
+            <div className="flex flex-wrap md:-mx-3 lg:-mx-4">
+              {interviews.map(interview => (
+                <div
+                  className="w-2/3 mx-auto mt-16 md:w-1/2 md:px-3 lg:w-1/3 lg:px-4"
+                  key={interview.url}
+                >
+                  <Interview interview={interview} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </div>
+    </>
   )
 }
 
