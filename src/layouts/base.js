@@ -136,9 +136,13 @@ function MobileNav({ isOpen, handleClick, closeMenu }) {
               className={isOpen ? "" : "pointer-events-none"}
               key={key}
               style={{
-                backdropFilter: props.blur.to(v => `blur(${v}px)`),
-                WebkitBackdropFilter: props.blur.to(v => `blur(${v}px)`),
-                background: props.alpha.to(v => `rgba(120, 120, 120, ${v})`),
+                backdropFilter: props.blur.interpolate(v => `blur(${v}px)`),
+                WebkitBackdropFilter: props.blur.interpolate(
+                  v => `blur(${v}px)`
+                ),
+                background: props.alpha.interpolate(
+                  v => `rgba(120, 120, 120, ${v})`
+                ),
               }}
               onDismiss={closeMenu}
             >
