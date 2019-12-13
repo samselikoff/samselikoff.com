@@ -70,8 +70,8 @@ export default function() {
 
 const PodcastCard = props => (
   <>
-    <a href={props.url} className="relative block overflow-hidden rounded-lg">
-      <Img src={props.imageUrl} />
+    <a href={props.url} className="block">
+      <Img src={props.imageUrl} className="rounded-lg" />
     </a>
     <h2 className="mt-4 text-lg font-semibold leading-snug text-gray-900 md:text-1-5xl lg:text-xl">
       <a href={props.url}>{props.title}</a>

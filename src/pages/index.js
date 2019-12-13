@@ -54,13 +54,14 @@ export default function IndexPage() {
           </a>
         </div>
 
-        <div className="hidden mt-12 overflow-hidden rounded-lg sm:block">
+        <div className="hidden mt-12 sm:block">
           <Img
             src="sam-at-desk-edited3.jpeg"
             aspectRatio={15 / 9}
             imgStyle={{
               objectPosition: "bottom",
             }}
+            className="rounded-lg"
           />
         </div>
 
@@ -224,9 +225,7 @@ function Chevron(props) {
 function ImageCard({ src, title, date, aspectRatio = 16 / 9 }) {
   return (
     <div className="relative">
-      <div className="xl:rounded-lg xl:overflow-hidden">
-        <Img src={src} aspectRatio={aspectRatio} />
-      </div>
+      <Img className="xl:rounded-lg" src={src} aspectRatio={aspectRatio} />
       <div className="absolute bottom-0 w-full py-2 pl-3 text-white md:pl-4 md:py-4 bg-gradient-vignette xl:bg-gradient-none xl:static xl:text-gray-900 xl:px-0">
         <p className="text-sm font-semibold sm:text-base xl:text-lg xl:font-medium">
           {title}

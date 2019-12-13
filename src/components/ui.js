@@ -57,7 +57,12 @@ export function Container({ size, children }) {
   return <div className={styles[size]}>{children}</div>
 }
 
-export const Img = props => {
+export const Img = ({
+  src,
+  aspectRatio = 16 / 9,
+  imgStyle = {},
+  className = "",
+}) => {
   const data = useStaticQuery(graphql`
     query {
       allFile {
@@ -73,17 +78,20 @@ export const Img = props => {
     }
   `)
 
-  let aspectRatio = props.aspectRatio || 16 / 9
-  let imgStyle = props.imgStyle || {}
-  let imageData = data.allFile.nodes.find(
-    file => file.relativePath === props.src
-  ).childImageSharp.fluid
+  let imageData = data.allFile.nodes.find(file => file.relativePath === src)
+    .childImageSharp.fluid
 
   return (
+    /*
+      We pre-wire the wrapper with position: relative, zIndex: 0 here to fix a bug in Safari. Otherwise,
+      as images are fading in, border radius won't be correctly applied.
+    */
     <GatsbyImage
-      className={props.className}
+      className={className}
+      style={{ position: "relative", zIndex: 0 }}
       fluid={{ ...imageData, aspectRatio }}
       imgStyle={imgStyle}
+      loading="eager"
     />
   )
 }

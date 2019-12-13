@@ -61,8 +61,8 @@ export default function TalksPage() {
 const Talk = ({ talk }) => {
   return (
     <>
-      <a href={talk.url} className="block overflow-hidden rounded-lg">
-        <Img src={talk.image} />
+      <a href={talk.url} className="block">
+        <Img src={talk.image} className="rounded-lg" />
       </a>
       <div className="leading-snug">
         <p className="mt-3 text-sm font-semibold text-gray-500 md:text-base lg:text-sm">
