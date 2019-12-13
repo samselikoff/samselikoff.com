@@ -134,7 +134,7 @@ export default function IndexPage() {
         <Container size="some">
           <Title size="sm">Life</Title>
           <Lead>
-            I was born in upstate New York, lived in Florida for 15 years, and
+            I was born in upstate New York, lived in Florida for 13 years, and
             have since made my way back to the Northeast.
           </Lead>
           <Lead>
