@@ -13,8 +13,8 @@ module.exports = {
         "3": "3px",
       },
       fontFamily: {
-        // sans: `Inter`,
-        sans: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
+        sans: `Inter`,
+        // sans: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
       },
       spacing: {
         "escape-xl": "calc((100vw -528px)/2)",

@@ -3,4 +3,4 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
-import "typeface-inter"
+import "./src/fonts/Inter/inter.css"
