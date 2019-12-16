@@ -20,13 +20,7 @@ export default function IndexPage() {
       </Container>
 
       <div className="mt-6 sm:hidden">
-        <Img
-          src="sam-at-desk-edited3.jpeg"
-          aspectRatio={15 / 9}
-          imgStyle={{
-            objectPosition: "bottom",
-          }}
-        />
+        <HomepageImage />
       </div>
 
       <Container size="some">
@@ -55,14 +49,7 @@ export default function IndexPage() {
         </div>
 
         <div className="hidden mt-12 sm:block">
-          <Img
-            src="sam-at-desk-edited3.jpeg"
-            aspectRatio={15 / 9}
-            imgStyle={{
-              objectPosition: "bottom",
-            }}
-            className="rounded-lg"
-          />
+          <HomepageImage className="rounded-lg" />
         </div>
 
         <div className="mt-16 md:text-lg lg:flex lg:flex-wrap lg:-mx-4">
@@ -172,6 +159,16 @@ export default function IndexPage() {
 
       <div className="mt-16" />
     </>
+  )
+}
+
+function HomepageImage({ className }) {
+  return (
+    <Img
+      src="sam-at-desk-6-edit2.jpeg"
+      aspectRatio={1.4996178344}
+      className={className}
+    />
   )
 }
 
