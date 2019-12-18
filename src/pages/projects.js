@@ -18,9 +18,9 @@ export default function BlogPage() {
           <Spacer size="lg" />
 
           <Lead>
-            My main open source project is <A href="miragejs.com">Mirage JS</A>,
-            and I'm currently working on bringing it from Ember to the wider
-            JavaScript ecosystem.
+            My main open source project is{" "}
+            <A href="https://miragejs.com/">Mirage JS</A>, and I'm currently
+            working on bringing it from Ember to the wider JavaScript ecosystem.
           </Lead>
 
           <Lead>
