@@ -47,4 +47,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     fromPath: "/tutorials/intro-to-d3-big-data.html",
     toPath: "/blog/intro-to-d3",
   })
+  createRedirect({
+    fromPath: "/blog/2013/08/09/ember-d3-simple-dashboards/",
+    toPath: "/blog/ember-d3-simple-dashboards",
+  })
 }
