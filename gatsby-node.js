@@ -4,7 +4,7 @@ const path = require("path")
   Create blog post pages for each md{x} file in /src/posts directory.
 */
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
 
   const result = await graphql(`
     query {
@@ -37,5 +37,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: path.resolve(`./src/layouts/blog-post.js`),
       context: { id: node.id },
     })
+  })
+
+  createRedirect({
+    fromPath: "tutorials/intro-to-d3-big-data",
+    toPath: "blog/intro-to-d3",
   })
 }
