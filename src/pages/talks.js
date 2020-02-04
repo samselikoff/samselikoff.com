@@ -143,6 +143,12 @@ const talks = [
 
 const interviews = [
   {
+    url: "http://www.fullstackradio.com/133",
+    image: "interviews/fullstackradio.jpg",
+    byline: "Full Stack Radio #133",
+    title: "Sam Selikoff - Building Production-Ready SPAs Fast with Mirage.js",
+  },
+  {
     url: "http://www.fullstackradio.com/106",
     image: "interviews/fullstackradio.jpg",
     byline: "Full Stack Radio #106",
