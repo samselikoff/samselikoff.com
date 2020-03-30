@@ -164,11 +164,7 @@ export default function IndexPage() {
 
 function HomepageImage({ className }) {
   return (
-    <Img
-      src="sam-at-desk-6-edit2.jpeg"
-      aspectRatio={1.4996178344}
-      className={className}
-    />
+    <Img src="sam-7.jpeg" aspectRatio={1616 / 1080} className={className} />
   )
 }
 
