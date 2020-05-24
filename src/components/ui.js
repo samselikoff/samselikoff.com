@@ -36,7 +36,7 @@ export function Lead({ children }) {
   )
 }
 
-export function Spacer({ size }) {
+export function Spacer({ size = "md" }) {
   let styles = {
     md: "mt-8",
     lg: "mt-8 md:mt-10 xl:mt-16",

@@ -1,3 +1,7 @@
+function px(pixels) {
+  return `${pixels / 16}rem`
+}
+
 module.exports = {
   theme: {
     screens: {
@@ -8,6 +12,28 @@ module.exports = {
       lg: "1024px",
       xl: "1280px",
     },
+
+    fontSize: {
+      xs: px(12),
+      "sm-": px(13),
+      sm: px(14),
+      base: px(16),
+      "lg-": px(17),
+      lg: px(18),
+      lgg: px(19),
+      xl: px(20),
+      "1-5xl": px(22),
+      "2xl": px(24),
+      "2-5xl": px(27),
+      "3xl": px(30),
+      "4xl": px(36),
+      "4-5xl": px(42),
+      "5xl": px(48),
+      "6xl": px(64),
+      "7xl": px(80),
+      "8xl": px(96),
+    },
+
     extend: {
       borderWidth: {
         "3": "3px",
@@ -31,16 +57,6 @@ module.exports = {
       },
       letterSpacing: {
         "tight-": "-0.0125em",
-      },
-      fontSize: {
-        "sm-": "0.8125rem", // 13 px
-        "lg-": "1.0625rem", // 17 px
-        lgg: "1.1875rem", // 19 px
-        "1-5xl": "1.375rem", // 22 px
-        "2-5xl": "1.6875rem",
-        "4-5xl": "2.625rem",
-        "7xl": "5rem",
-        "8xl": "6rem",
       },
       height: {
         11: "2.75rem",
