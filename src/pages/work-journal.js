@@ -114,7 +114,7 @@ export default function TalksPage() {
             </Section>
 
             <Section title="interesting-things">
-              <SectionItem href="https://webpack.js.org/guides/tree-shaking/">
+              <SectionItem href="https://changelog.com/podcast/395">
                 Jason Warner talks about leading GitHub to its $7.5 billion
                 acquisition. The part about GitHub knowing what value it brought
                 to the table was a highlight.
