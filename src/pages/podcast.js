@@ -19,8 +19,8 @@ export default function() {
 
           <Lead>
             For more than two years I've used{" "}
-            <A href="https://embermap.com/podcast">The EmberMap Podcast</A> to
-            talk about whatever's going on in my day-to-day life doing frontend
+            <A href="https://frontendfirst.fm/">Frontend First</A> to talk about
+            whatever's going on in my day-to-day life doing frontend
             development, along with my co-host Ryan Toronto.
           </Lead>
 
@@ -55,9 +55,9 @@ export default function() {
               <p className="mt-4">
                 <a
                   className="font-medium text-blue-500 underline"
-                  href="https://embermap.com/podcast"
+                  href="https://frontendfirst.fm/"
                 >
-                  → The EmberMap Podcast
+                  → Frontend First
                 </a>
               </p>
             </div>

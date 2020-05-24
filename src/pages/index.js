@@ -79,11 +79,11 @@ export default function IndexPage() {
               <SectionBody>
                 <p>
                   Join me, Ryan + guests on a weekly podcast where we chat about
-                  all things JavaScript UI development – not just Ember!
+                  all things JavaScript UI development!
                 </p>
                 <p className="mt-6">
-                  <A href="https://embermap.com/podcast">
-                    → Check out The EmberMap podcast
+                  <A href="https://frontendfirst.fm/">
+                    → Check out Frontend First
                   </A>
                 </p>
               </SectionBody>
