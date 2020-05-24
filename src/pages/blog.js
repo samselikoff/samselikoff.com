@@ -27,9 +27,6 @@ export default function BlogPage({ data }) {
           <ul className="mt-12 leading-snug">
             {articles.map(article => (
               <li className="mt-6 md:mt-10" key={article.url}>
-                <p className="font-medium text-gray-400 text-sm- md:text-sm">
-                  {article.date}
-                </p>
                 <Link to={article.url} className="inline-block">
                   <h2 className="mt-1 text-lg font-semibold md:text-2xl">
                     {article.title}

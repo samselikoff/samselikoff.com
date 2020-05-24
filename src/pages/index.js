@@ -108,9 +108,8 @@ export default function IndexPage() {
               <SectionTitle link="/blog">Blog</SectionTitle>
               <SectionBody>
                 <p>
-                  You can find my writing on <A to="/blog">my blog</A>. I
-                  haven't been writing much lately but I'm planning on starting
-                  up again.
+                  You can find my writing on <A to="/blog">my blog</A>. I write
+                  mostly about frontend web development.
                 </p>
               </SectionBody>
             </Section>

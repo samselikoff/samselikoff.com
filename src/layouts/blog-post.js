@@ -71,16 +71,17 @@ export default props => {
           <article>
             <MDXProvider components={components}>
               <div className="mb-8 md:mb-10">
-                <p className="text-xs font-semibold text-gray-600 md:mt-1">
-                  {props.data.mdx.frontmatter.date}
-                </p>
-                <h1 className="mt-4 text-3xl font-semibold leading-tight md:text-4xl lg:text-4-5xl">
+                <h1 className="mt-8 text-3xl font-semibold leading-tight md:text-4xl lg:text-4-5xl">
                   {props.data.mdx.frontmatter.title}
                 </h1>
               </div>
               <MDXRenderer>{mdx.body}</MDXRenderer>
             </MDXProvider>
           </article>
+
+          <p className="pt-8 text-sm font-medium text-gray-500 text-right md:mt-1">
+            {props.data.mdx.frontmatter.date}
+          </p>
 
           <hr className="mt-10" />
 
@@ -96,10 +97,10 @@ export default props => {
             </div>
 
             <div className="mt-2 leading-none text-center">
-              <p className="pt-2 text-xs font-medium tracking-wider text-gray-600 uppercase">
+              <p className="pt-2 text-xs font-semibold tracking-wider text-gray-600 uppercase">
                 Written by
               </p>
-              <p className="pt-1 text-xl font-semibold">
+              <p className="pt-2 text-xl font-semibold">
                 <Link to="/">Sam Selikoff</Link>
               </p>
             </div>
