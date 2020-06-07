@@ -96,6 +96,64 @@ export default function TalksPage() {
 
           <Spacer size="lg" />
 
+          <Entry week="2020-06-01">
+            <Entry.Section title="work">
+              <Entry.Item href="https://youtu.be/PPBrwm4tr50">
+                I published "CAP theorem explained for Frontend Developers" on
+                YouTube. Fun to think about how many apps we use on a daily
+                basis have an Optimistic UI.
+              </Entry.Item>
+              <Entry.Item>
+                No podcast this week but we did record an interview with Tom
+                Preston-Werner about Redwood JS. Coming next week.
+              </Entry.Item>
+              <Entry.Item href="https://miragejs.com/tutorial/part-8/">
+                I finished Part 8 of Mirage's tutorial on Factories. Was hoping
+                to get the whole thing done this week, but alas.
+              </Entry.Item>
+              <Entry.Item href="https://embermap.com/topics/contextual-components-in-octane/making-the-button-and-menu-reusable">
+                Published two new videos in EmberMap's series on Contextual
+                Components.
+              </Entry.Item>
+              <Entry.Item>
+                I got Firebase auth working in my Hasura/Next.js app in two
+                different ways: JWT and Session Cookies. Planning on making a
+                YouTube video about it soon.
+              </Entry.Item>
+            </Entry.Section>
+
+            <Entry.Section title="learnings">
+              <Entry.Item href="https://codahale.com/you-cant-sacrifice-partition-tolerance/">
+                This post from Coda Hale helped me understand some interesting
+                things about CAP as I was prepping this week's video.
+              </Entry.Item>
+              <Entry.Item>
+                In reading about auth I learned a bit about symmetric vs.
+                asymmetric encryption. How asymmetric encryption works is really
+                fascinating. I have some more learning to do here but might make
+                for good future video content.
+              </Entry.Item>
+            </Entry.Section>
+
+            <Entry.Section title="interesting-things">
+              <Entry.Item href="https://changelog.com/gotime/132">
+                The podcast episode that inspired this week's video on CAP.
+              </Entry.Item>
+              <Entry.Item href="https://changelog.com/gotime/128">
+                Another fascinating episode from Go Time on Immediate mode GUIS.
+              </Entry.Item>
+              <Entry.Item href="https://www.youtube.com/watch?v=TxBj8R7XKe4">
+                NASA and SpaceX launched a rocket. You may get emotional.
+              </Entry.Item>
+              <Entry.Item href="https://youtu.be/o-_WXXVye3Y">
+                MKBHD on BLM.
+              </Entry.Item>
+              <Entry.Item href="https://syntax.fm/show/254/headless-cms-break-down-and-roundup">
+                Comprehensive breakdown of modern CMS options.
+              </Entry.Item>
+            </Entry.Section>
+          </Entry>
+
           <Entry week="2020-05-25">
             <Entry.Section title="work">
               <Entry.Item href="https://youtu.be/5F_k9q9HbAc">
