@@ -96,6 +96,58 @@ export default function TalksPage() {
 
           <Spacer size="lg" />
 
+          <Entry week="2020-06-08">
+            <Entry.Section title="work">
+              <Entry.Item href="https://youtu.be/F5eDWtJRYaI">
+                I published "React Router v6 Preview: Nested Routing". This
+                started as a simpler idea for making a NavLink component that
+                supported an `inactiveClassName` prop, but turned into more of a
+                semi-livestream experimenting with several cool new features of
+                React Router v6.
+              </Entry.Item>
+              <Entry.Item href="https://frontendfirst.fm/episodes/tom-preston-werner-on-architecture-decisions-in-redwood-js">
+                We interviewed Tom Preston-Werner about Redwood JS for this
+                week's podcast. Great conversation on how Tom & company are
+                trying to ameliorate some of the architecture woes endemic in
+                larger Rails apps.
+              </Entry.Item>
+              <Entry.Item href="https://embermap.com/topics/contextual-components-in-octane/yielding-a-menu-item">
+                Published "Yielding a Menu Item" on EmberMap's series on
+                Contextual Components.
+              </Entry.Item>
+              <Entry.Item href="https://embermap.com/topics/contextual-components-in-octane/yielding-a-menu-item">
+                I got the four tests written + passing for the last part of the
+                Mirage tutorial, so now I just need to finish writing them up.
+                Was hoping to ship the tutorial but it was a short week. Next
+                week this is my number 1 goal!
+              </Entry.Item>
+            </Entry.Section>
+
+            <Entry.Section title="learnings">
+              <Entry.Item href="https://github.com/ReactTraining/react-router/blob/dev/docs/installation/getting-started.md">
+                This WIP guide from the dev branch of React Router gives a great
+                overview of the v6 features of the library.
+              </Entry.Item>
+              <Entry.Item>
+                Got more practice with React Testing Library + Jest this week. I
+                was struck by the amount of boilerplate required to wire up a
+                test with my app and React Router running. A lot of the testing
+                primitives in the React ecosystem seem to be at the wrong level
+                of abstraction to me – my app only ever runs in production with
+                a router, for example. I wish these tools would just let you
+                visit("/some-url") rather than render(&lt;Provider&gt;&lt;App
+                /&gt;&lt;/Provider&gt;).
+              </Entry.Item>
+            </Entry.Section>
+
+            <Entry.Section title="interesting-things">
+              <Entry.Item href="https://podcasts.apple.com/us/podcast/serverless-chats/id1470600803?i=1000477152868">
+                It was fun hearing the creator of AWS Lambda talk about
+                serverless.
+              </Entry.Item>
+            </Entry.Section>
+          </Entry>
+
           <Entry week="2020-06-01">
             <Entry.Section title="work">
               <Entry.Item href="https://youtu.be/PPBrwm4tr50">
