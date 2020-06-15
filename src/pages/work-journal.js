@@ -115,7 +115,7 @@ export default function TalksPage() {
                 Published "Yielding a Menu Item" on EmberMap's series on
                 Contextual Components.
               </Entry.Item>
-              <Entry.Item href="https://embermap.com/topics/contextual-components-in-octane/yielding-a-menu-item">
+              <Entry.Item>
                 I got the four tests written + passing for the last part of the
                 Mirage tutorial, so now I just need to finish writing them up.
                 Was hoping to ship the tutorial but it was a short week. Next
@@ -142,8 +142,7 @@ export default function TalksPage() {
 
             <Entry.Section title="interesting-things">
               <Entry.Item href="https://podcasts.apple.com/us/podcast/serverless-chats/id1470600803?i=1000477152868">
-                It was fun hearing the creator of AWS Lambda talk about
-                serverless.
+                It was fun hearing the creator of AWS Lambda talk serverless.
               </Entry.Item>
             </Entry.Section>
           </Entry>
