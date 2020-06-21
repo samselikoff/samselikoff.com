@@ -96,6 +96,46 @@ export default function TalksPage() {
 
           <Spacer size="lg" />
 
+          <Entry week="2020-06-15">
+            <Entry.Section title="work">
+              <Entry.Item href="https://youtu.be/G_0yKeh0Sf0">
+                I published "Levels of abstraction in testing" on YouTube.
+              </Entry.Item>
+              <Entry.Item>
+                Worked on the Mirage tutorial some more. Need to give myself a
+                hard deadline or this will keep filling up space.
+              </Entry.Item>
+              <Entry.Item href="https://frontendfirst.fm/episodes/drew-powers-on-how-pikas-making-the-web-faster">
+                Interviewed + published Ep. 102 of Frontend First, which was an
+                interview with Drew Powers about Pika. Also recorded next week's
+                episode with Ryan.
+              </Entry.Item>
+              <Entry.Item href="https://embermap.com/topics/building-ui-components-with-storybook/writing-our-first-story">
+                Published Ep. 2 of our Storybook series on EmberMap. Darin's
+                doing an awesome job with these. We also planned out Ep. 3.
+              </Entry.Item>
+            </Entry.Section>
+
+            <Entry.Section title="interesting-things">
+              <Entry.Item href="https://youtu.be/UCeYTysLyGI">
+                Jason Fried gave a video walkthrough of HEY.
+              </Entry.Item>
+              <Entry.Item href="https://synthetic.transistor.fm/episodes/category-theory-affordances-and-convexity-of-media">
+                Ryan Singer has a new podcast.
+              </Entry.Item>
+              <Entry.Item href="https://www.theobservereffect.org/marc.html">
+                Great interview with pmarca. Lots of insights about processes
+                and systems.
+              </Entry.Item>
+              <Entry.Item href="https://www.techspot.com/news/85630-counter-strike-16-can-now-played-web-browser.html">
+                CS 1.6 in the browser. Cue extreme nostalgia.
+              </Entry.Item>
+              <Entry.Item href="https://www.playstation.com/en-us/ps5/">
+                Sony announced the PS5.
+              </Entry.Item>
+            </Entry.Section>
+          </Entry>
+
           <Entry week="2020-06-08">
             <Entry.Section title="work">
               <Entry.Item href="https://youtu.be/F5eDWtJRYaI">
