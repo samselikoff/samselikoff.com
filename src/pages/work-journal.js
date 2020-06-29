@@ -96,6 +96,48 @@ export default function TalksPage() {
 
           <Spacer size="lg" />
 
+          <Entry week="2020-06-22">
+            <Entry.Section title="work">
+              <Entry.Item href="https://youtu.be/QiR9viVIJgo">
+                I published "React is a programming language for UIs" on
+                YouTube.
+              </Entry.Item>
+              <Entry.Item href="https://miragejs.com/tutorial">
+                I finally shipped the official Mirage Tutorial! Stoked to figure
+                out my next priority.
+              </Entry.Item>
+              <Entry.Item href="https://frontendfirst.fm/episodes/safety-and-idempotence">
+                Published "Safety and idempotence", Ep. 103 of Frontend First.
+              </Entry.Item>
+              <Entry.Item href="https://embermap.com/topics/contextual-components-in-octane/yielding-a-divider">
+                Published "Yielding a Divider", Ep. 6 of Contextual Components
+                with Octane on EmberMap.
+              </Entry.Item>
+            </Entry.Section>
+
+            <Entry.Section title="interesting-things">
+              <Entry.Item href="https://baremetrics.com/features/messaging">
+                Baremetrics launched a minimal Intercom alternative.
+              </Entry.Item>
+              <Entry.Item href="https://twitter.com/jaredpalmer/status/1276523015652741120">
+                Interesting thread on challenges of auth when using a
+                backend-as-a-service.
+              </Entry.Item>
+              <Entry.Item href="https://www.kickstarter.com/projects/ugmonk/analog-the-simplest-productivity-system">
+                Neat physical productivity tool.
+              </Entry.Item>
+              <Entry.Item href="https://youtu.be/w1GDzE5s_Z0">
+                Video refresher on the story of Last of Us Part 1.
+              </Entry.Item>
+              <Entry.Item href="https://podcasts.apple.com/us/podcast/econtalk/id135066958?i=1000475691965">
+                Adding historical context to the current wave of protests.
+              </Entry.Item>
+              <Entry.Item href="https://synthetic.transistor.fm/episodes/opacity-and-creativity">
+                Taleb's fat tails applied to software projects.
+              </Entry.Item>
+            </Entry.Section>
+          </Entry>
+
           <Entry week="2020-06-15">
             <Entry.Section title="work">
               <Entry.Item href="https://youtu.be/G_0yKeh0Sf0">
