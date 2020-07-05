@@ -96,6 +96,62 @@ export default function TalksPage() {
 
           <Spacer size="lg" />
 
+          <Entry week="2020-06-29">
+            <Entry.Section title="work">
+              <Entry.Item href="https://youtu.be/S73wYY6N5Ms">
+                I published "Authorizing anonymous users in Hasura using Netlify
+                Functions" on YouTube.
+              </Entry.Item>
+              <Entry.Item href="https://miragejs.com/repl">
+                We deployed a Hasura backend for miragejs.com and shipped Share
+                links to the REPL. Had a lot of fun building this.
+              </Entry.Item>
+              <Entry.Item href="https://frontendfirst.fm/episodes/tech-debt-vs-platform-risk">
+                Published "Tech debt vs. platform risk", Ep. 104 of Frontend
+                First.
+              </Entry.Item>
+              <Entry.Item href="https://embermap.com/topics/building-ui-components-with-storybook/working-with-context">
+                Published Darin's video "Working with Context", Ep. 3 of
+                Building UI Components with Storybook on EmberMap.
+              </Entry.Item>
+              <Entry.Item>Did some consulting work.</Entry.Item>
+            </Entry.Section>
+
+            <Entry.Section title="learnings">
+              <Entry.Item href="https://hasura.io/docs/1.0/graphql/manual/auth/authentication/unauthenticated-access.html">
+                Hasura lets you configure permissions for unauthenticated users,
+                which is perfect for making certain queries public (like the
+                blog posts for your homepage) without needing to add support for
+                user accounts. The docs are confusing and also incorrect in a
+                few places, but all you need to do is set the
+                `HASURA_GRAPHQL_UNAUTHORIZED_ROLE` environment variable and it
+                works regardless if you happen to be using either webhooks or
+                JWTs elsewhere.
+              </Entry.Item>
+            </Entry.Section>
+
+            <Entry.Section title="interesting-things">
+              <Entry.Item href="https://stripe.com/blog/billing-customer-portal">
+                Stripe launched a customer portal.
+              </Entry.Item>
+              <Entry.Item href="https://hasura.io/blog/announcing-hasura-cloud-managed-graphql-for-your-database-and-services/">
+                Hasura launched a premium hosted version of their platform. Was
+                only a matter of time. Exciting!
+              </Entry.Item>
+              <Entry.Item href="https://medium.com/linear-app/practices-for-building-linear-is-now-open-for-all-234f7cf9a3d0">
+                Linear, a beautiful web-based productivity app, now has open
+                signups.
+              </Entry.Item>
+              <Entry.Item href="https://www.youtube.com/watch?v=qkJJ9v4eryM">
+                Ryan Singer and Adam Wathan chatted about how Shape Up applies
+                to small teams.
+              </Entry.Item>
+              <Entry.Item href="https://www.twitch.tv/videos/667925289">
+                React Core Team Q&A.
+              </Entry.Item>
+            </Entry.Section>
+          </Entry>
+
           <Entry week="2020-06-22">
             <Entry.Section title="work">
               <Entry.Item href="https://youtu.be/QiR9viVIJgo">
