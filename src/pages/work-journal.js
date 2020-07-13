@@ -13,7 +13,7 @@ function Entry({ week, children }) {
 
   return (
     <>
-      <h2 className="mt-1 font-bold text-lg">
+      <h2 className="mt-1 text-lg font-bold">
         <p>
           Week of {month} {day}
           <sup>{suffix}</sup>, {year}
@@ -22,7 +22,7 @@ function Entry({ week, children }) {
 
       <Spacer />
 
-      <div className="space-y-10 pb-32">{children}</div>
+      <div className="pb-32 space-y-10">{children}</div>
     </>
   )
 }
@@ -58,7 +58,7 @@ Entry.Section = function(props) {
     <section>
       <p className="font-bold">{titles[props.title]}</p>
 
-      <ul className="list-disc pl-6 pt-4 space-y-3">{props.children}</ul>
+      <ul className="pt-4 pl-6 space-y-3 list-disc">{props.children}</ul>
     </section>
   )
 }
@@ -149,10 +149,10 @@ export default function TalksPage() {
                 Part 1 of an interview about the technology behind Remix.
               </Entry.Item>
               <Entry.Item href="https://podcasts.apple.com/us/podcast/react-podcast/id1341969432?i=1000483769761">
-                ...and part 2 on Micahel and Ryan plan to sustain development.
+                ...and part 2 on Michael and Ryan plan to sustain development.
               </Entry.Item>
               <Entry.Item href="https://podcasts.apple.com/us/podcast/peter-thiel-a-conversation-with-niall-ferguson/id1443583377?i=1000443467592">
-                Fascinating interview with Peter Theil from 2019.
+                Fascinating interview with Peter Thiel from 2019.
               </Entry.Item>
               <Entry.Item href="https://twitter.com/plibin/status/1280532633391263744">
                 The best product demo I've seen in recent memory.
