@@ -96,6 +96,70 @@ export default function TalksPage() {
 
           <Spacer size="lg" />
 
+          <Entry week="2020-07-06">
+            <Entry.Section title="work">
+              <Entry.Item href="https://youtu.be/Ba0fnSkT37E">
+                I published "The Rule of Least Power" on YouTube.
+              </Entry.Item>
+              <Entry.Item href="https://miragejs.com/repl">
+                We enabled the REPL on miragejs.com! The Share links also now
+                save the request method, URL and body, in addition to the server
+                config. Finally, we debounced updates so typing feels much more
+                responsive.
+              </Entry.Item>
+              <Entry.Item href="https://github.com/miragejs/graphql">
+                Rocky Neurock shipped v0.1.0 of @miragejs/graphql! I reviewed
+                his work but it was really all him. Stoked to add GraphQL
+                support to the REPL so we can properly show it off soon. Very
+                excited for this.
+              </Entry.Item>
+              <Entry.Item>
+                Did some consulting, as well as some Mirage maintenance work.
+              </Entry.Item>
+            </Entry.Section>
+
+            <Entry.Section title="learnings">
+              <Entry.Item href="https://github.com/miragejs/site/commit/30d02d38044d037af4393fada6ed6df071a686f9">
+                Dependabot has been churning through our Netlify build resources
+                for miragejs.com. We automerge in-range dependency updates, so
+                the Netlify preview builds for Dependabot PRs were literally
+                going unused. I learned that you can tell Netlify not to build a
+                PR if the commit message has "[skip netlify]" in it, so I
+                customized our Dependabot config to add this – and it worked!
+                Still need to smooth this out a bit as the builds are ignored
+                when merged to master, but for now it is helping alleviate the
+                problem. Check out the link for our current config.
+              </Entry.Item>
+            </Entry.Section>
+
+            <Entry.Section title="interesting-things">
+              <Entry.Item href="https://termible.io">
+                Slick embeddable terminals that run in the browser.
+              </Entry.Item>
+              <Entry.Item href="https://stripe.com/">
+                Stripe launched a new homepage.
+              </Entry.Item>
+              <Entry.Item href="https://swr.vercel.app">
+                SWR's docs site also got a refresh.
+              </Entry.Item>
+              <Entry.Item href="https://mailbrew.com">
+                Neat app that rolls up your social feeds into a daily email.
+              </Entry.Item>
+              <Entry.Item href="https://podcasts.apple.com/us/podcast/react-podcast/id1341969432?i=1000481895112">
+                Part 1 of an interview about the technology behind Remix.
+              </Entry.Item>
+              <Entry.Item href="https://podcasts.apple.com/us/podcast/react-podcast/id1341969432?i=1000483769761">
+                ...and part 2 on Micahel and Ryan plan to sustain development.
+              </Entry.Item>
+              <Entry.Item href="https://podcasts.apple.com/us/podcast/peter-thiel-a-conversation-with-niall-ferguson/id1443583377?i=1000443467592">
+                Fascinating interview with Peter Theil from 2019.
+              </Entry.Item>
+              <Entry.Item href="https://twitter.com/plibin/status/1280532633391263744">
+                The best product demo I've seen in recent memory.
+              </Entry.Item>
+            </Entry.Section>
+          </Entry>
+
           <Entry week="2020-06-29">
             <Entry.Section title="work">
               <Entry.Item href="https://youtu.be/S73wYY6N5Ms">
