@@ -149,7 +149,7 @@ export default function TalksPage() {
                 Part 1 of an interview about the technology behind Remix.
               </Entry.Item>
               <Entry.Item href="https://podcasts.apple.com/us/podcast/react-podcast/id1341969432?i=1000483769761">
-                ...and part 2 on Michael and Ryan plan to sustain development.
+                ...and part 2 on Michael and Ryan's plan to sustain development.
               </Entry.Item>
               <Entry.Item href="https://podcasts.apple.com/us/podcast/peter-thiel-a-conversation-with-niall-ferguson/id1443583377?i=1000443467592">
                 Fascinating interview with Peter Thiel from 2019.
