@@ -6,16 +6,17 @@ export const A = ({
   children,
   font = "medium",
   underline = true,
+  className = '',
   ...props
 }) => {
   let border = underline
     ? `border-b border-blue-400 hover:border-blue-500 `
     : ``
-  props.className += ` ${border} font-${font} text-blue-600`
+  className += ` ${border} font-${font} text-blue-600`
   let isInternalLink = props.to && props.to.startsWith("/")
   let LinkComponent = isInternalLink ? Link : `a`
 
-  return <LinkComponent {...props}>{children}</LinkComponent>
+  return <LinkComponent {...props} className={className}>{children}</LinkComponent>
 }
 
 export function Title({ size = "md", children }) {

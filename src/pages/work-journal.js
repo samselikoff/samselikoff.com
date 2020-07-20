@@ -96,6 +96,82 @@ export default function TalksPage() {
 
           <Spacer size="lg" />
 
+          <Entry week="2020-07-13">
+            <Entry.Section title="work">
+              <Entry.Item href="https://twitter.com/samselikoff/status/1284303541490900994">
+                I prepped my next YouTube video on rendering buffered data from
+                SWR. This is the first week I missed publishing in a while, and
+                I felt very defeated by it. When the weekend came I knew it'd be
+                too much to try to squeeze in, so I listened to my body and gave
+                myself permission to rest. Ended up having a glorious beach day
+                on Sunday. Still working on finding balance during quarantine +
+                excited to get this video up next week.
+              </Entry.Item>
+              <Entry.Item href="https://miragejs.com/docs/advanced/graphql/">
+                We got a GraphQL guide added to the Mirage docs! Excited by the
+                momentum here, driven by Rocky's ongoing excellent work.
+              </Entry.Item>
+              <Entry.Item href="https://miragejs.com/repl/v1/231">
+                We also shipped GraphQL support in the REPL. Few more
+                quality-of-life improvements coming here but excited to start
+                sharing more examples soon.
+              </Entry.Item>
+              <Entry.Item href="https://frontendfirst.fm/episodes/stop-energy">
+                Published "Stop Energy", Ep. 105 of Frontend First.
+              </Entry.Item>
+              <Entry.Item href="https://embermap.com/topics/contextual-components-in-octane/exposing-a-menu-button">
+                Published Ep. 7 of Contextual Components in Octane on EmberMap.
+              </Entry.Item>
+              <Entry.Item href="https://embermap.com/topics/building-ui-components-with-storybook/using-our-first-storybook-addon">
+                Published Ep. 4 of Building UI Components with Storybook on
+                EmberMap. Darin's doing a great job with this series.
+              </Entry.Item>
+              <Entry.Item>Consulting.</Entry.Item>
+            </Entry.Section>
+
+            <Entry.Section title="learnings">
+              <Entry.Item href="http://adamjonrichardson.com/2014/01/13/potentially-pure-functions/">
+                In my ongoing quest to understand useEffect, I asked{" "}
+                <A href="http://adamjonrichardson.com/2014/01/13/potentially-pure-functions/">
+                  a question on Twitter
+                </A>{" "}
+                about when a function parameter needs to be invoked inside of an
+                effect. I'm still not confident about any of the answers, but
+                Chris Freeman shared this great article with me on
+                Potentially-Pure Functions. It seems that in a langugage like
+                JavaScript, the purity of a function can depend on the purity of
+                its arguments. The reason I'm spending so much time trying to
+                understand this is because of{" "}
+                <A href="https://twitter.com/sebmarkbage/status/1161459117342334976">
+                  this 2019 tweet from Sebastian
+                </A>
+                . I'm still not sure how much this stuff matters outside of a
+                CM/Suspense world.
+              </Entry.Item>
+            </Entry.Section>
+
+            <Entry.Section title="interesting-things">
+              <Entry.Item href="https://podcasts.apple.com/us/podcast/econtalk/id135066958?i=1000448359339">
+                When leaders should lie.
+              </Entry.Item>
+              <Entry.Item href="https://twitter.com/mattgperry/status/1283412864594784257?s=20">
+                Framer Motion 2 is out.
+              </Entry.Item>
+              <Entry.Item href="https://podcasts.apple.com/us/podcast/software-engineering-daily/id1019576853?i=1000481764165">
+                Dyanmo's strengths over relational DBs.
+              </Entry.Item>
+              <Entry.Item href="https://frontend.horse/issues/8/">
+                Shaders for frontend devs.
+              </Entry.Item>
+              <Entry.Item href="https://podcasts.apple.com/us/podcast/econtalk/id135066958?i=1000484613857">
+                Using Bitcoin to verify digital property rights in video games.
+              </Entry.Item>
+              <Entry.Item href="https://www.youtube.com/watch?v=6_pru8U2RmM">
+                Delightful Apple video on working from home.
+              </Entry.Item>
+            </Entry.Section>
+          </Entry>
+
           <Entry week="2020-07-06">
             <Entry.Section title="work">
               <Entry.Item href="https://youtu.be/Ba0fnSkT37E">
