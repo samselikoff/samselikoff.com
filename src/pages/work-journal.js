@@ -96,6 +96,57 @@ export default function TalksPage() {
 
           <Spacer size="lg" />
 
+          <Entry week="2020-07-20">
+            <Entry.Section title="work">
+              <Entry.Item href="https://youtu.be/Ra5SUzeXOac">
+                I published "Building a Twitter Clone with Tailwind CSS and
+                Next.js" on YouTube.
+              </Entry.Item>
+              <Entry.Item href="https://2020-07-21-mobile-twitter-ui.vercel.app">
+                I also tidied the demo from the video and threw it up on Vercel.
+              </Entry.Item>
+              <Entry.Item>
+                We brought on a second person to help make content for EmberMap
+                which lead me to write up some notes on my process for making
+                videos. Excited to get this knowledge out of my head and more
+                formalized so it's easy to share.
+              </Entry.Item>
+              <Entry.Item>
+                Recorded Ep. 106 of Frontend First which we'll publish next
+                week.
+              </Entry.Item>
+              <Entry.Item>
+                Caught up on some business admin work + did some consulting.
+              </Entry.Item>
+            </Entry.Section>
+            <Entry.Section title="learnings">
+              <Entry.Item>
+                My Twitter clone video ended up a bit long. I'd like to get on a
+                consistent weekly cadence of publishing videos in the 6-9 minute
+                range. However, these longer videos do seem to get a bit more
+                attention. So still figuring out what works best for the kind of
+                stuff I want to teach.
+              </Entry.Item>
+              <Entry.Item href="https://css-tricks.com/flexbox-truncated-text/">
+                One of the main takeaways from the video was how truncated text
+                behaves when it's in a flex child, due to text's "intrinsic
+                width." CSS Tricks has a nice little article on it.
+              </Entry.Item>
+            </Entry.Section>
+
+            <Entry.Section title="interesting-things">
+              <Entry.Item href="https://www.apollographql.com/blog/announcing-the-release-of-apollo-client-3-0">
+                Apollo Client 3.0 was released.
+              </Entry.Item>
+              <Entry.Item href="https://www.biotele.com/magenta.html">
+                Magenta ain't a color.
+              </Entry.Item>
+              <Entry.Item href="https://www.youtube.com/watch?v=VPLCk-FTVvw">
+                Mesmerizing rendition of Moon River.
+              </Entry.Item>
+            </Entry.Section>
+          </Entry>
+
           <Entry week="2020-07-13">
             <Entry.Section title="work">
               <Entry.Item href="https://twitter.com/samselikoff/status/1284303541490900994">
