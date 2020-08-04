@@ -96,6 +96,45 @@ export default function TalksPage() {
 
           <Spacer size="lg" />
 
+          <Entry week="2020-07-27">
+            <Entry.Section title="work">
+              <Entry.Item href="https://youtu.be/b1uZ4FYHaM8">
+                I published "Buffering new Tweets with SWR" on YouTube.
+              </Entry.Item>
+              <Entry.Item href="https://frontendfirst.fm/episodes/does-code-splitting-negate-the-benefits-of-building-an-spa">
+                Published "Does code splitting negate the benefits of building
+                an SPA?", Ep. 106 of Frontend First.
+              </Entry.Item>
+              <Entry.Item>
+                Mirage issues, EmberMap work, and consulting.
+              </Entry.Item>
+            </Entry.Section>
+
+            <Entry.Section title="learnings">
+              <Entry.Item>
+                One question that came up a few times from my video was whether
+                JavaScript equality (===) could be used to compare two pieces of
+                React state. In all my tests, "setBuffer(data)" made the
+                "buffer" state an actual reference to the same object that
+                "data" referenced, meaning, both pieces of state referred to the
+                same JavaScript object. And therefore the equality check could
+                be used, even across renders. Definitely a useful thing to know!
+              </Entry.Item>
+            </Entry.Section>
+
+            <Entry.Section title="interesting-things">
+              <Entry.Item href="https://nextjs.org/blog/next-9-5">
+                Next.js 9.5 was released.
+              </Entry.Item>
+              <Entry.Item href="https://twitter.com/natfriedman/status/1288155000560967680">
+                GitHub publicized their product roadmap.
+              </Entry.Item>
+              <Entry.Item href="https://www.econtalk.org/nassim-nicholas-taleb-on-the-pandemic/">
+                Taleb on the history and statistics of pandemics.
+              </Entry.Item>
+            </Entry.Section>
+          </Entry>
+
           <Entry week="2020-07-20">
             <Entry.Section title="work">
               <Entry.Item href="https://youtu.be/Ra5SUzeXOac">
