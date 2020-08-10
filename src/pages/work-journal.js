@@ -96,6 +96,82 @@ export default function TalksPage() {
 
           <Spacer size="lg" />
 
+          <Entry week="2020-08-03">
+            <Entry.Section title="work">
+              <Entry.Item href="https://youtu.be/_OZYvKsn60g">
+                I published "Animating Skeleton Screens with Tailwind CSS" on
+                YouTube.
+              </Entry.Item>
+              <Entry.Item>
+                Recorded Ep. 107 of Frontend First. Will publish next week.
+              </Entry.Item>
+              <Entry.Item href="https://www.bhphotovideo.com/c/product/945063-REG/impact_soft_n_natural_4_sockets.html">
+                Bought a light box kit + spent some time with a cinemtographer
+                friend learning about lighting and color. Still have a lot to
+                learn here!
+              </Entry.Item>
+              <Entry.Item href="https://embermap.com/topics/building-ui-components-with-storybook/adding-interactivity-using-the-knobs-addon">
+                Helped Darin publish Ep. 5 of Building UI Components with
+                Storybook on EmberMap.
+              </Entry.Item>
+            </Entry.Section>
+
+            <Entry.Section title="learnings">
+              <Entry.Item>
+                I learned more about color correction, white balance and
+                exposure. I got some soft boxes that are all 5000K temperature
+                lighting and want to get some blackout curtains next so I have
+                total control over the lighting in my videos. I played around
+                with recording at night and the difference is dramatic when you
+                have total control of the light and the camera's white balance
+                dialed in correctly. The goal here is to get the look and style
+                of all my videos the same. Now that I know a bit more about
+                this, looking at my recent videos is kinda stark! They all look
+                very different from each other. But I suppose continuous
+                improvement is the name of the game.
+              </Entry.Item>
+              <Entry.Item>
+                I also learned about shooting in Log format and using a LUT
+                (lookup table) to decompress the image. Shooting in Log prevents
+                the camera from losing data on the brightest and darkest parts
+                of an image. It does this by compressing the data, so that the
+                raw image ends up looking very flat. You then use a LUT to
+                decompress it into a standard (REC 709) format where you can
+                then make your additional tweaks and grades. The goal here is to
+                get my environment set up in such a way that I can record, apply
+                a LUT, and have a similar-looking video every time.
+              </Entry.Item>
+              <Entry.Item>
+                While working on my Twitter clone I was asking Adam a question
+                about line height. He noticed I had added a font size of 15px
+                and said it was going to affect many parts of the UI. I said I
+                added it because mobile twitter.com uses 15px, and I wanted to
+                match it. It was an interesting conversation and made me realize
+                that if you do want to add something like a 15px font size to
+                Tailwind's theme, you really should take the time to trace that
+                through and think about the corresponding changes to line height
+                and the spacing scale that it entails, because many of these
+                values are interrelated. For example, with a 15px font size, you
+                can't match icons without also adjusting the spacing scale. The
+                default scale of a 16px base and a 4 unit scale is, in Adam's
+                words, "the hardest to mess up."
+              </Entry.Item>
+            </Entry.Section>
+
+            <Entry.Section title="interesting-things">
+              <Entry.Item href="https://numinous.productions/timeful/">
+                If books were alive.
+              </Entry.Item>
+              <Entry.Item href="https://romefrontend.dev/blog/2020/08/08/introducing-rome.html">
+                The author of Babel announced Rome, his new JS linting project.
+              </Entry.Item>
+              <Entry.Item href="https://youtu.be/5tSTk1083VY">
+                Jaw-dropping story of overcoming adversity, the power of the
+                mind, and finding the physical limits of the human body.
+              </Entry.Item>
+            </Entry.Section>
+          </Entry>
+
           <Entry week="2020-07-27">
             <Entry.Section title="work">
               <Entry.Item href="https://youtu.be/b1uZ4FYHaM8">
