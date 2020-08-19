@@ -1,5 +1,6 @@
 import React from "react";
 import NextLink from "next/link";
+import NextHead from "next/head";
 
 export const A = ({
   children,
@@ -78,47 +79,12 @@ export const Img = ({ src, aspectRatio = 16 / 9, className = "" }) => {
       style={{ paddingBottom: `${(1 / aspectRatio) * 100}%` }}
     >
       <div className="absolute inset-0">
-        <img src={src} className={className} />
+        <img src={src} className={`${className} w-full h-full object-cover`} />
       </div>
     </div>
   );
 };
 
-export const Img2 = ({
-  src,
-  aspectRatio = 16 / 9,
-  imgStyle = {},
-  className = "",
-}) => {
-  const data = useStaticQuery(graphql`
-    query {
-      allFile {
-        nodes {
-          relativePath
-          childImageSharp {
-            fluid(maxWidth: 3000) {
-              ...GatsbyImageSharpFluid_noBase64
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  let imageData = data.allFile.nodes.find((file) => file.relativePath === src)
-    .childImageSharp.fluid;
-
-  return (
-    /*
-      We pre-wire the wrapper with position: relative, zIndex: 0 here to fix a bug in Safari. Otherwise,
-      as images are fading in, border radius won't be correctly applied.
-    */
-    <GatsbyImage
-      className={className}
-      style={{ position: "relative", zIndex: 0 }}
-      fluid={{ ...imageData, aspectRatio }}
-      imgStyle={imgStyle}
-      loading="eager"
-    />
-  );
+export const Head = ({ children }) => {
+  return <NextHead>{children}</NextHead>;
 };

@@ -1,10 +1,14 @@
-import { Lead, Title, Spacer, Container, A, Img } from "../components/ui";
+import { Head, Lead, Title, Spacer, Container, A, Img } from "../components/ui";
 import { Twitter, GitHub, YouTube } from "../components/logos";
 import NextLink from "next/link";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Sam Selikoff</title>
+      </Head>
+
       <Container size="some">
         <Spacer size="xl" />
 
