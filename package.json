@@ -14,9 +14,11 @@
     "gray-matter": "^4.0.2",
     "next": "9.5.1",
     "next-mdx-enhanced": "^3.1.0",
+    "parse-numeric-range": "^1.2.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-spring": "^8.0.27",
+    "react-syntax-highlighter": "^13.5.1",
     "remark": "^12.0.1",
     "remark-html": "^12.0.0",
     "tailwindcss": "^1.7.2"
