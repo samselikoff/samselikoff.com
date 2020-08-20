@@ -3,9 +3,10 @@ import "tailwindcss/tailwind.css";
 import "../fonts/Inter/inter.css";
 import { animated, useTransition, useChain } from "react-spring";
 import { DialogOverlay, DialogContent } from "@reach/dialog";
-// import { Link, navigate } from "gatsby"
 import NextLink from "next/link";
+import { useRouter } from "next/router";
 import { Twitter, GitHub, YouTube } from "../components/logos";
+import { useState } from "react";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -20,11 +21,12 @@ export default MyApp;
 const AnimatedDialogOverlay = animated(DialogOverlay);
 
 const Layout = ({ children }) => {
-  const [mobileNavIsOpen, setMobileNavIsOpen] = React.useState(false);
+  const router = useRouter();
+  const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false);
 
   function handleClick(location) {
     setMobileNavIsOpen(false);
-    navigate(location);
+    router.push(location);
   }
 
   return (
