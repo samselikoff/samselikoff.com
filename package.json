@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@loadable/component": "^5.13.1",
     "@mdx-js/loader": "^1.6.16",
     "@next/mdx": "^9.5.2",
     "@reach/dialog": "^0.10.5",
