@@ -32,3 +32,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# Ignore next-mdx-enhanced cache directory
+.mdx-data
