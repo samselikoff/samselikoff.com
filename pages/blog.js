@@ -3,8 +3,6 @@ import { Head, Spacer, Title, Container } from "../components/ui";
 import NextLink from "next/link";
 
 export default function Blog({ allPosts }) {
-  console.log({ allPosts });
-
   return (
     <>
       <Head>
