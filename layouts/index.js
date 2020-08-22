@@ -2,6 +2,7 @@ import { Head, Container, Img } from "../components/ui";
 import Code from "../components/code";
 import NextLink from "next/link";
 import { MDXProvider } from "@mdx-js/react";
+import { parseISO, format } from "date-fns";
 
 export default function Post(frontMatter) {
   return ({ children: content }) => {
@@ -23,7 +24,7 @@ export default function Post(frontMatter) {
             </article>
 
             <p className="pt-8 text-sm font-medium text-right text-gray-500 md:mt-1">
-              {frontMatter.date}
+              {format(parseISO(frontMatter.date), "MMMM d, yyyy")}
             </p>
 
             <hr className="mt-10" />
