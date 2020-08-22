@@ -7,6 +7,7 @@ import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { Twitter, GitHub, YouTube } from "../components/logos";
 import { useState } from "react";
+import { Link } from "../components/ui";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -238,7 +239,7 @@ function DesktopNav() {
 
 function DesktopNavLink({ to, children }) {
   return (
-    <NextLink href={to}>
+    <Link href={to} activeClassName="text-gray-900">
       <a
         className="pb-4 ml-6 -mb-px text-gray-600 border-b border-transparent xl:pb-6 lg:ml-8 lg:text-base xl:text-lg hover:text-gray-900"
         // activeClassName="text-gray-900"
@@ -246,6 +247,6 @@ function DesktopNavLink({ to, children }) {
       >
         {children}
       </a>
-    </NextLink>
+    </Link>
   );
 }

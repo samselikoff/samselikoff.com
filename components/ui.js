@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Children } from "react";
 import NextLink from "next/link";
 import NextHead from "next/head";
+import { useRouter } from "next/router";
 
 export const A = ({
   children,
@@ -87,4 +88,27 @@ export const Img = ({ src, aspectRatio = 16 / 9, className = "" }) => {
 
 export const Head = ({ children }) => {
   return <NextHead>{children}</NextHead>;
+};
+
+// Copied from https://github.com/vercel/next.js/blob/canary/examples/active-class-name/components/ActiveLink.js
+export const Link = ({ children, activeClassName, ...props }) => {
+  const { asPath } = useRouter();
+  const child = Children.only(children);
+  const childClassName = child.props.className || "";
+
+  // pages/index.js will be matched via props.href
+  // pages/about.js will be matched via props.href
+  // pages/[slug].js will be matched via props.as
+  const className =
+    asPath === props.href || asPath === props.as
+      ? `${childClassName} ${activeClassName}`.trim()
+      : childClassName;
+
+  return (
+    <NextLink {...props}>
+      {React.cloneElement(child, {
+        className: className || null,
+      })}
+    </NextLink>
+  );
 };
