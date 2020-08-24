@@ -1,7 +1,4 @@
 const withMdxEnhanced = require("next-mdx-enhanced");
-// const withMDX = require("@next/mdx")({
-//   extension: /\.mdx?$/,
-// });
 
 module.exports = withMdxEnhanced({
   defaultLayout: true,
