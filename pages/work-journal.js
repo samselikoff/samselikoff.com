@@ -81,45 +81,6 @@ Entry.Item = function ({ children, href }) {
 };
 
 export default function TalksPage({ entries }) {
-  // let [entries, setEntries] = useState([]);
-  // useEffect(() => {
-  //   // Your web app's Firebase configuration
-  //   let firebaseConfig = {
-  //     apiKey: "AIzaSyAXX4G4xSLAwfIgR8vOsgYQOq9or0Jmmyo",
-  //     authDomain: "test-3fb7f.firebaseapp.com",
-  //     databaseURL: "https://test-3fb7f.firebaseio.com",
-  //     projectId: "test-3fb7f",
-  //     storageBucket: "test-3fb7f.appspot.com",
-  //     messagingSenderId: "197704559138",
-  //     appId: "1:197704559138:web:f373ec99c0218a774ff87b",
-  //     measurementId: "G-HP7G1FS9FN",
-  //   };
-  //   // Initialize Firebase
-  //   firebase.initializeApp(firebaseConfig);
-  //   let db = firebase.database();
-
-  //   // [
-  //   //   {
-  //   //     date: "2020-07-20",
-  //   //     category: "work",
-  //   //     href: "https://youtu.be/Ra5SUzeXOac",
-  //   //     text: `I published "Building a Twitter Clone with Tailwind CSS and Next.js" on YouTube.`,
-  //   //   },
-  //   // ].forEach((entry) => {
-  //   //   let newId = db.ref().child("work-journal-entries").push().key;
-  //   //   db.ref(`work-journal-entries/${newId}`).set(entry);
-  //   // });
-
-  //   db.ref("/work-journal-entries")
-  //     .once("value")
-  //     .then(function (snapshot) {
-  //       let entriesObject = snapshot.val();
-  //       setEntries(
-  //         Object.keys(entriesObject).map((id) => ({ id, ...entriesObject[id] }))
-  //       );
-  //     });
-  // }, []);
-
   let weeksObject = entries.reduce((memo, entry) => {
     let nearestMonday = startOfWeek(parseISO(entry.date), { weekStartsOn: 1 });
     let nearestMondayString = format(nearestMonday, "yyyy-MM-dd");
@@ -881,8 +842,10 @@ export async function getStaticProps() {
     measurementId: "G-HP7G1FS9FN",
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  let db = firebase.database();
+  let app = !firebase.apps.length
+    ? firebase.initializeApp(firebaseConfig)
+    : firebase.app();
+  let db = app.database();
 
   let snapshot = await db.ref("/work-journal-entries").once("value");
   let entriesObject = snapshot.val();
@@ -894,5 +857,6 @@ export async function getStaticProps() {
         ...entriesObject[id],
       })),
     },
+    revalidate: 1,
   };
 }
