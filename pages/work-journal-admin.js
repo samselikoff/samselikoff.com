@@ -67,10 +67,10 @@ export default function WorkJournalAdminPage() {
       .then(() => {
         setIsSavingNewEntry(false);
         setNewEntry({
-          date: format(new Date(), "yyyy-MM-dd"),
+          date: newEntry.date,
           text: "",
           href: "",
-          category: "work",
+          category: newEntry.category,
         });
       });
   }
