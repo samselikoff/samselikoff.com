@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { A, Spacer, Lead, Container, Title, Head } from "../components/ui";
 import { format, parse, parseISO, startOfWeek } from "date-fns";
 import * as firebase from "firebase/app";
@@ -80,7 +79,7 @@ Entry.Item = function ({ children, href }) {
   );
 };
 
-export default function TalksPage({ entries }) {
+export default function WorkJournalPage({ entries }) {
   let weeksObject = entries.reduce((memo, entry) => {
     let nearestMonday = startOfWeek(parseISO(entry.date), { weekStartsOn: 1 });
     let nearestMondayString = format(nearestMonday, "yyyy-MM-dd");

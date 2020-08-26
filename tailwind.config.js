@@ -39,7 +39,7 @@ module.exports = {
         none: "none",
       },
       borderWidth: {
-        "3": "3px",
+        3: "3px",
       },
       fontFamily: {
         sans: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
@@ -82,15 +82,15 @@ module.exports = {
 
           // Another (darker darks): https://hihayk.github.io/scale/#4/4/91/91/0/0/-19/-5/a6afb9/166/175/185
           // But swapped 900 with above
-          "100": "#F7F8F9",
-          "200": "#E3E6E8",
-          "300": "#CFD3D8",
-          "400": "#BBC1C9",
-          "500": "#A6AFB9",
-          "600": "#80878F",
-          "700": "#5B5F65",
-          "800": "#35383B",
-          "900": "#1E2021",
+          100: "#F7F8F9",
+          200: "#E3E6E8",
+          300: "#CFD3D8",
+          400: "#BBC1C9",
+          500: "#A6AFB9",
+          600: "#80878F",
+          700: "#5B5F65",
+          800: "#35383B",
+          900: "#1E2021",
         },
       },
     },
@@ -120,6 +120,7 @@ module.exports = {
         );
       });
     },
+    require("@tailwindcss/ui"),
   ],
   future: {
     removeDeprecatedGapUtilities: true,

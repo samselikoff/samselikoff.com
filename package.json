@@ -12,6 +12,7 @@
     "@mdx-js/loader": "^1.6.16",
     "@next/mdx": "^9.5.2",
     "@reach/dialog": "^0.10.5",
+    "@tailwindcss/ui": "^0.5.0",
     "date-fns": "^2.15.0",
     "firebase": "^7.19.0",
     "gray-matter": "^4.0.2",
