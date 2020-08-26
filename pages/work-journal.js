@@ -124,29 +124,35 @@ export default function WorkJournalPage({ entries }) {
 
           {weeks.map((week) => (
             <Entry week={week.startingDate} key={week.startingDate}>
-              <Entry.Section title="work">
-                {week.work.map((entry) => (
-                  <Entry.Item href={entry.href} key={entry.id}>
-                    {entry.text}
-                  </Entry.Item>
-                ))}
-              </Entry.Section>
+              {week.work.length > 0 && (
+                <Entry.Section title="work">
+                  {week.work.map((entry) => (
+                    <Entry.Item href={entry.href} key={entry.id}>
+                      {entry.text}
+                    </Entry.Item>
+                  ))}
+                </Entry.Section>
+              )}
 
-              <Entry.Section title="learnings">
-                {week.learnings.map((entry) => (
-                  <Entry.Item href={entry.href} key={entry.id}>
-                    {entry.text}
-                  </Entry.Item>
-                ))}
-              </Entry.Section>
+              {week.learnings.length > 0 && (
+                <Entry.Section title="learnings">
+                  {week.learnings.map((entry) => (
+                    <Entry.Item href={entry.href} key={entry.id}>
+                      {entry.text}
+                    </Entry.Item>
+                  ))}
+                </Entry.Section>
+              )}
 
-              <Entry.Section title="interesting-things">
-                {week.interestingThings.map((entry) => (
-                  <Entry.Item href={entry.href} key={entry.id}>
-                    {entry.text}
-                  </Entry.Item>
-                ))}
-              </Entry.Section>
+              {week.interestingThings.length > 0 && (
+                <Entry.Section title="interesting-things">
+                  {week.interestingThings.map((entry) => (
+                    <Entry.Item href={entry.href} key={entry.id}>
+                      {entry.text}
+                    </Entry.Item>
+                  ))}
+                </Entry.Section>
+              )}
             </Entry>
           ))}
 
