@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import * as firebase from "firebase/app";
 // Add the Firebase products that you want to use
 import "firebase/database";
+import { format } from "date-fns";
 
 let firebaseApp;
 
@@ -60,13 +61,24 @@ export default function WorkJournalAdminPage() {
 
           <Spacer size="lg" />
 
+          <div>
+            <p className="text-sm italic font-medium text-gray-500 uppercase">
+              New entry
+            </p>
+            <EntryForm />
+          </div>
+
+          <Spacer size="lg" />
+
+          <div className="border-t-4 border-gray-800 border-double" />
+
           {!entries ? (
             <p>Loading...</p>
           ) : (
             <ul className="divide-y divide-cool-gray-200">
               {entries.map((entry) => (
                 <div className="py-4" key={entry.id}>
-                  <Entry entry={entry} />
+                  <EntryForm entry={entry} />
                 </div>
               ))}
             </ul>
@@ -77,7 +89,7 @@ export default function WorkJournalAdminPage() {
   );
 }
 
-function Entry({ entry }) {
+function EntryForm({ entry = { date: format(new Date(), "yyyy-MM-dd") } }) {
   let [localEntry, setLocalEntry] = useState({ ...entry });
   let [isSaving, setIsSaving] = useState(false);
 
@@ -90,17 +102,28 @@ function Entry({ entry }) {
     setIsSaving(true);
 
     let db = firebaseApp.database();
-    db.ref(`work-journal-entries/${localEntry.id}`)
+
+    let id = entry.id || db.ref().child("work-journal-entries").push().key;
+
+    db.ref(`work-journal-entries/${id}`)
       .set(localEntry)
       .then(() => {
         setIsSaving(false);
       });
   }
 
+  function deleteEntry() {
+    if (confirm("Delete this entry?")) {
+      firebaseApp.database().ref(`work-journal-entries/${entry.id}`).remove();
+    } else {
+      // ignore
+    }
+  }
+
   let hasLocalChanges = !shallowEqual(entry, localEntry);
 
   return (
-    <div className="py-6">
+    <div>
       <form onSubmit={updateEntry}>
         <div className="grid grid-cols-1 row-gap-6 col-gap-4 mt-6 sm:grid-cols-6">
           <div className="sm:col-span-3">
@@ -125,7 +148,7 @@ function Entry({ entry }) {
           <legend className="text-sm font-medium leading-5 text-gray-700">
             Category
           </legend>
-          <div className="mt-2">
+          <div className="flex items-center mt-2">
             <div className="flex items-center">
               <input
                 id={`entry${localEntry.id}-work`}
@@ -134,7 +157,7 @@ function Entry({ entry }) {
                 value="work"
                 checked={localEntry.category === "work"}
                 onChange={() => handleChange("category", "work")}
-                className="w-4 h-4 text-indigo-600 transition duration-150 ease-in-out form-radio"
+                className="w-4 h-4 text-blue-600 transition duration-150 ease-in-out form-radio"
               />
               <label htmlFor={`entry${localEntry.id}-work`} className="ml-3">
                 <span className="block text-sm font-medium leading-5 ">
@@ -142,7 +165,7 @@ function Entry({ entry }) {
                 </span>
               </label>
             </div>
-            <div className="flex items-center mt-4">
+            <div className="flex items-center ml-6">
               <input
                 id={`entry${localEntry.id}-learning`}
                 name="category"
@@ -150,7 +173,7 @@ function Entry({ entry }) {
                 value="learning"
                 checked={localEntry.category === "learning"}
                 onChange={() => handleChange("category", "learning")}
-                className="w-4 h-4 text-indigo-600 transition duration-150 ease-in-out form-radio"
+                className="w-4 h-4 text-blue-600 transition duration-150 ease-in-out form-radio"
               />
               <label
                 htmlFor={`entry${localEntry.id}-learning`}
@@ -161,7 +184,7 @@ function Entry({ entry }) {
                 </span>
               </label>
             </div>
-            <div className="flex items-center mt-4">
+            <div className="flex items-center ml-6">
               <input
                 id={`entry${localEntry.id}-interesting-thing`}
                 name="category"
@@ -169,7 +192,7 @@ function Entry({ entry }) {
                 value="interesting-thing"
                 checked={localEntry.category === "interesting-thing"}
                 onChange={() => handleChange("category", "interesting-thing")}
-                className="w-4 h-4 text-indigo-600 transition duration-150 ease-in-out form-radio"
+                className="w-4 h-4 text-blue-600 transition duration-150 ease-in-out form-radio"
               />
               <label
                 htmlFor={`entry${localEntry.id}-interesting-thing`}
@@ -222,8 +245,19 @@ function Entry({ entry }) {
         </div>
 
         <div className="pt-5">
-          <div className="flex justify-end">
-            <span className="inline-flex ml-3 rounded-md shadow-sm">
+          <div className="flex flex-end">
+            {entry.id && (
+              <span className="inline-flex mr-auto rounded-md shadow-sm">
+                <button
+                  onClick={deleteEntry}
+                  type="button"
+                  className="px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
+                >
+                  Delete...
+                </button>
+              </span>
+            )}
+            <span className="inline-flex rounded-md shadow-sm">
               <button
                 type="submit"
                 disabled={!hasLocalChanges}
@@ -257,7 +291,9 @@ function Entry({ entry }) {
                   </svg>
                 </span>
 
-                <span className={isSaving ? "invisible" : ""}>Update</span>
+                <span className={isSaving ? "invisible" : ""}>
+                  {entry.id ? "Update" : "Create"}
+                </span>
               </button>
             </span>
           </div>

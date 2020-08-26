@@ -89,18 +89,20 @@ export default function WorkJournalPage({ entries }) {
     return memo;
   }, {});
 
-  let weeks = Object.keys(weeksObject).map((startingDate) => ({
-    startingDate,
-    work: weeksObject[startingDate].filter(
-      (entry) => entry.category === "work"
-    ),
-    learnings: weeksObject[startingDate].filter(
-      (entry) => entry.category === "learning"
-    ),
-    interestingThings: weeksObject[startingDate].filter(
-      (entry) => entry.category === "interesting-thing"
-    ),
-  }));
+  let weeks = Object.keys(weeksObject)
+    .sort((x, y) => (x > y ? "-1" : "1"))
+    .map((startingDate) => ({
+      startingDate,
+      work: weeksObject[startingDate].filter(
+        (entry) => entry.category === "work"
+      ),
+      learnings: weeksObject[startingDate].filter(
+        (entry) => entry.category === "learning"
+      ),
+      interestingThings: weeksObject[startingDate].filter(
+        (entry) => entry.category === "interesting-thing"
+      ),
+    }));
 
   return (
     <>
