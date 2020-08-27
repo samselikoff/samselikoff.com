@@ -1,5 +1,4 @@
-import "@reach/dialog/styles.css";
-import "tailwindcss/tailwind.css";
+import "../styles.css";
 import "../fonts/Inter/inter.css";
 import { animated, useTransition, useChain } from "react-spring";
 import { DialogOverlay, DialogContent } from "@reach/dialog";
