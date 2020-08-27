@@ -1,61 +1,33 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "samselikoff.com2",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
-    "@loadable/component": "^5.10.3",
-    "@mdx-js/mdx": "^1.5.1",
-    "@mdx-js/react": "^1.5.1",
-    "@reach/dialog": "^0.6.2",
-    "date-fns": "^2.14.0",
-    "gatsby": "^2.18.11",
-    "gatsby-image": "^2.2.36",
-    "gatsby-plugin-layout": "^1.1.18",
-    "gatsby-plugin-manifest": "^2.2.33",
-    "gatsby-plugin-mdx": "^1.0.62",
-    "gatsby-plugin-netlify": "^2.1.31",
-    "gatsby-plugin-offline": "^3.0.29",
-    "gatsby-plugin-postcss": "^2.1.18",
-    "gatsby-plugin-react-helmet": "^3.1.18",
-    "gatsby-plugin-sharp": "^2.3.7",
-    "gatsby-remark-copy-linked-files": "^2.1.33",
-    "gatsby-remark-images": "^3.1.38",
-    "gatsby-source-filesystem": "^2.1.42",
-    "gatsby-transformer-sharp": "^2.3.9",
-    "parse-numeric-range": "^0.0.2",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
+    "@loadable/component": "^5.13.1",
+    "@mdx-js/loader": "^1.6.16",
+    "@next/mdx": "^9.5.2",
+    "@reach/dialog": "^0.10.5",
+    "@tailwindcss/ui": "^0.5.0",
+    "date-fns": "^2.15.0",
+    "firebase": "^7.19.0",
+    "gray-matter": "^4.0.2",
+    "next": "9.5.1",
+    "next-mdx-enhanced": "^3.1.0",
+    "parse-numeric-range": "^1.2.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
     "react-spring": "^8.0.27",
-    "react-syntax-highlighter": "^11.0.2",
-    "remark-slug": "^5.1.2",
-    "tailwindcss": "^1.4.6"
+    "react-syntax-highlighter": "^13.5.1",
+    "remark": "^12.0.1",
+    "remark-html": "^12.0.0",
+    "tailwindcss": "^1.7.2"
   },
   "devDependencies": {
-    "eslint-config-react-app": "^5.0.2",
-    "prettier": "^1.19.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "clean": "gatsby clean",
-    "develop": "gatsby develop -H 0.0.0.0",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "file-loader": "^6.0.0"
   }
 }
