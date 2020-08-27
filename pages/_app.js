@@ -113,7 +113,7 @@ function MobileNav({ isOpen, handleClick, closeMenu }) {
 
   const transRef = React.useRef();
   const transitions = useTransition(
-    isOpen ? [1, 2, 3, 4, 5, 6, 7, 8] : [],
+    isOpen ? [1, 2, 3, 4, 5, 6, 7, 8, 9] : [],
     null,
     {
       ref: transRef,
@@ -195,6 +195,7 @@ function MobileNav({ isOpen, handleClick, closeMenu }) {
                       </animated.a>
                     </div>
                     {[
+                      { label: "Journal", url: "/work-journal" },
                       { label: "Projects", url: "/projects" },
                       { label: "Podcast", url: "/podcast" },
                       { label: "Talks", url: "/talks" },
@@ -228,6 +229,7 @@ function MobileNav({ isOpen, handleClick, closeMenu }) {
 function DesktopNav() {
   return (
     <div className="items-center hidden ml-auto md:flex">
+      <DesktopNavLink to="/work-journal">Work journal</DesktopNavLink>
       <DesktopNavLink to="/projects">Projects</DesktopNavLink>
       <DesktopNavLink to="/podcast">Podcast</DesktopNavLink>
       <DesktopNavLink to="/talks">Talks</DesktopNavLink>
