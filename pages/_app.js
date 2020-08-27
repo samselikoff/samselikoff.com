@@ -157,7 +157,13 @@ function MobileNav({ isOpen, handleClick, closeMenu }) {
                   className="w-full max-w-lg p-4 m-0 mx-auto bg-transparent"
                   aria-label="Site nav"
                 >
-                  <div className="flex flex-wrap">
+                  <button
+                    onClick={closeMenu}
+                    className="flex flex-wrap focus:outline-none"
+                    style={{
+                      WebkitTapHighlightColor: "transparent",
+                    }}
+                  >
                     <div className="w-1/3 px-2 mt-4">
                       <animated.a
                         style={{
@@ -216,7 +222,7 @@ function MobileNav({ isOpen, handleClick, closeMenu }) {
                         </ToolboxInternalLink>
                       </div>
                     ))}
-                  </div>
+                  </button>
                 </DialogContent>
               )}
             </AnimatedDialogOverlay>
