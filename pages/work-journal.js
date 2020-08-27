@@ -110,7 +110,7 @@ export default function WorkJournalPage({ entries }) {
         <title>Work journal</title>
       </Head>
 
-      <div className="md:text-lg-">
+      <div className="break-words md:text-lg-">
         <Container size="some">
           <Spacer size="xl" />
 
