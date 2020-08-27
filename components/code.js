@@ -1,7 +1,7 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import rangeParser from "parse-numeric-range";
 
-export default function (props) {
+export default function Code(props) {
   let language = props.language || "";
 
   let highlightedLines = props.highlightedLines
