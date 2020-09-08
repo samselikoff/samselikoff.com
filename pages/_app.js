@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div className="font-sans text-base antialiased text-gray-800">
+      <div className="flex flex-col min-h-screen font-sans text-base antialiased text-gray-800">
         <header className="px-6">
           <div className="pt-4 mx-auto max-w-7xl md:pt-6 xl:pt-8">
             <div className="flex justify-between pb-4 md:pb-0 md:border-b md:border-gray-200 md:justify-start">
@@ -53,7 +53,7 @@ const Layout = ({ children }) => {
             />
           </div>
         </header>
-        <main>{children}</main>
+        <main className="flex flex-col flex-1">{children}</main>
       </div>
     </>
   );
