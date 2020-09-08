@@ -1,9 +1,11 @@
 import { Head, Container, Spacer, Title, Lead } from "../components/ui";
 import { useEffect, useState, useRef } from "react";
 import * as firebase from "firebase/app";
+import { format } from "date-fns";
+
 // Add the Firebase products that you want to use
 import "firebase/database";
-import { format } from "date-fns";
+import "firebase/auth";
 
 let firebaseApp;
 
@@ -97,6 +99,7 @@ export default function WorkJournalAdminPage() {
             <p className="text-sm italic font-medium text-gray-500 uppercase">
               New entry
             </p>
+
             <NewEntry
               entry={newEntry}
               isSaving={isSavingNewEntry}

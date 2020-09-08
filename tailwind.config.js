@@ -82,6 +82,7 @@ module.exports = {
 
           // Another (darker darks): https://hihayk.github.io/scale/#4/4/91/91/0/0/-19/-5/a6afb9/166/175/185
           // But swapped 900 with above
+          50: "#fbfbfc",
           100: "#F7F8F9",
           200: "#E3E6E8",
           300: "#CFD3D8",
