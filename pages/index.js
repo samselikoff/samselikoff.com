@@ -133,28 +133,30 @@ export default function Home() {
         </Container>
       </div>
 
-      <div className="mx-auto mt-16 xl:max-w-6xl">
-        <ImageCard
-          src="/images/new-york.jpeg"
-          title="New York City"
-          date="2015–Present"
-        />
-        <div className="flex xl:mt-10 xl:-mx-6">
-          <div className="w-1/2 xl:px-6">
-            <ImageCard
-              src="/images/burlington.jpeg"
-              title="Burlington"
-              date="2014–2015"
-              aspectRatio={1}
-            />
-          </div>
-          <div className="w-1/2 xl:px-6">
-            <ImageCard
-              src="/images/boston.jpg"
-              title="Boston"
-              date="2010–2014"
-              aspectRatio={1}
-            />
+      <div>
+        <div className="mx-auto mt-16 xl:max-w-6xl">
+          <ImageCard
+            src="/images/new-york.jpeg"
+            title="New York City"
+            date="2015–Present"
+          />
+          <div className="flex xl:mt-10 xl:-mx-6">
+            <div className="w-1/2 xl:px-6">
+              <ImageCard
+                src="/images/burlington.jpeg"
+                title="Burlington"
+                date="2014–2015"
+                aspectRatio={1}
+              />
+            </div>
+            <div className="w-1/2 xl:px-6">
+              <ImageCard
+                src="/images/boston.jpg"
+                title="Boston"
+                date="2010–2014"
+                aspectRatio={1}
+              />
+            </div>
           </div>
         </div>
       </div>
