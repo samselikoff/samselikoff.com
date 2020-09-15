@@ -1,36 +1,36 @@
 import { Head, Container, Spacer, Title, Lead } from "../components/ui";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import * as firebase from "firebase/app";
 import { format } from "date-fns";
+import { Formik, Form, Field } from "formik";
 
 // Add the Firebase products that you want to use
 import "firebase/database";
 import "firebase/auth";
-import { Formik, Form, Field } from "formik";
 
 let firebaseApp;
+let firebaseConfig = {
+  apiKey: "AIzaSyAXX4G4xSLAwfIgR8vOsgYQOq9or0Jmmyo",
+  authDomain: "test-3fb7f.firebaseapp.com",
+  databaseURL: "https://test-3fb7f.firebaseio.com",
+  projectId: "test-3fb7f",
+  storageBucket: "test-3fb7f.appspot.com",
+  messagingSenderId: "197704559138",
+  appId: "1:197704559138:web:f373ec99c0218a774ff87b",
+  measurementId: "G-HP7G1FS9FN",
+};
 
 export default function WorkJournalAdminPage() {
   let [entries, setEntries] = useState();
   useEffect(() => {
-    async function f() {
-      let firebaseConfig = {
-        apiKey: "AIzaSyAXX4G4xSLAwfIgR8vOsgYQOq9or0Jmmyo",
-        authDomain: "test-3fb7f.firebaseapp.com",
-        databaseURL: "https://test-3fb7f.firebaseio.com",
-        projectId: "test-3fb7f",
-        storageBucket: "test-3fb7f.appspot.com",
-        messagingSenderId: "197704559138",
-        appId: "1:197704559138:web:f373ec99c0218a774ff87b",
-        measurementId: "G-HP7G1FS9FN",
-      };
-      // Initialize Firebase
-      firebaseApp = !firebase.apps.length
-        ? firebase.initializeApp(firebaseConfig)
-        : firebase.app();
-      let db = firebaseApp.database();
+    // Initialize Firebase
+    firebaseApp = !firebase.apps.length
+      ? firebase.initializeApp(firebaseConfig)
+      : firebase.app();
+    let db = firebaseApp.database();
 
-      let snapshot = await db.ref("/work-journal-entries").once("value");
+    let workJournalEntriesRef = db.ref("/work-journal-entries");
+    workJournalEntriesRef.on("value", (snapshot) => {
       let entriesObject = snapshot.val();
 
       let entries = Object.keys(entriesObject)
@@ -41,9 +41,11 @@ export default function WorkJournalAdminPage() {
         .sort((x, y) => (x.date > y.date ? "-1" : "1"));
 
       setEntries(entries);
-    }
+    });
 
-    f();
+    return () => {
+      workJournalEntriesRef.off("value");
+    };
   }, []);
 
   return (
