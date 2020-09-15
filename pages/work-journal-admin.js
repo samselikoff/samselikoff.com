@@ -44,25 +44,7 @@ export default function WorkJournalAdminPage() {
     }
 
     f();
-  });
-
-  async function createEntry(newEntry, { resetForm }) {
-    let db = firebaseApp.database();
-    let newId = db.ref().child("work-journal-entries").push().key;
-
-    await db.ref(`work-journal-entries/${newId}`).set(newEntry);
-
-    await new Promise((resolve) => setTimeout(resolve));
-
-    resetForm({
-      values: {
-        date: newEntry.date,
-        text: "",
-        href: "",
-        category: newEntry.category,
-      },
-    });
-  }
+  }, []);
 
   return (
     <>
@@ -87,7 +69,7 @@ export default function WorkJournalAdminPage() {
               New entry
             </p>
 
-            <NewEntry onSubmit={createEntry} />
+            <NewEntry />
           </div>
 
           <Spacer size="lg" />
@@ -100,8 +82,7 @@ export default function WorkJournalAdminPage() {
             <ul className="divide-y divide-cool-gray-200">
               {entries.map((entry) => (
                 <div className="py-4" key={entry.id}>
-                  <p>{entry.text}</p>
-                  {/* <Entry entry={entry} /> */}
+                  <Entry entry={entry} />
                 </div>
               ))}
             </ul>
@@ -112,9 +93,34 @@ export default function WorkJournalAdminPage() {
   );
 }
 
-function NewEntry({ onSubmit }) {
+function NewEntry() {
+  let defaultNewEntry = {
+    date: format(new Date(), "yyyy-MM-dd"),
+    text: "",
+    category: "work",
+    href: "",
+  };
+
+  async function createEntry(newEntry, { resetForm }) {
+    let db = firebaseApp.database();
+    let newId = db.ref().child("work-journal-entries").push().key;
+
+    await db.ref(`work-journal-entries/${newId}`).set(newEntry);
+
+    await new Promise((resolve) => setTimeout(resolve));
+
+    resetForm({
+      values: {
+        date: newEntry.date,
+        text: "",
+        href: "",
+        category: newEntry.category,
+      },
+    });
+  }
+
   return (
-    <EntryForm onSubmit={onSubmit}>
+    <EntryForm initialValues={defaultNewEntry} onSubmit={createEntry}>
       {({ isSubmitting }) => (
         <div className="pt-5">
           <div className="flex justify-end">
@@ -167,25 +173,12 @@ function NewEntry({ onSubmit }) {
 }
 
 function Entry({ entry }) {
-  let [localEntry, setLocalEntry] = useState({ ...entry });
-  let [isSaving, setIsSaving] = useState(false);
+  let [isShowingForm, setIsShowingForm] = useState(false);
 
-  function handleChange(key, value) {
-    console.log("here");
-    setLocalEntry((localEntry) => ({ ...localEntry, [key]: value }));
-  }
-
-  function updateEntry(e) {
-    e.preventDefault();
-    setIsSaving(true);
-
+  async function updateEntry(entry) {
     let db = firebaseApp.database();
 
-    db.ref(`work-journal-entries/${entry.id}`)
-      .set(localEntry)
-      .then(() => {
-        setIsSaving(false);
-      });
+    await db.ref(`work-journal-entries/${entry.id}`).set(entry);
   }
 
   function deleteEntry() {
@@ -196,83 +189,86 @@ function Entry({ entry }) {
     }
   }
 
-  let hasLocalChanges = !shallowEqual(entry, localEntry);
-
-  return (
-    <EntryForm
-      entry={localEntry}
-      hasLocalChanges={hasLocalChanges}
-      isSaving={isSaving}
-      onChange={handleChange}
-      onSubmit={updateEntry}
-    >
-      <div className="pt-5">
-        <div className="flex">
-          <span className="inline-flex mr-auto rounded-md shadow-sm">
-            <button
-              onClick={deleteEntry}
-              type="button"
-              className="px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
-            >
-              Delete...
-            </button>
-          </span>
-          <span className="inline-flex rounded-md shadow-sm">
-            <button
-              type="submit"
-              disabled={!hasLocalChanges}
-              className={`${
-                hasLocalChanges ? "" : "pointer-events-none opacity-50"
-              } hinline-flex justify-center px-4 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out bg-green-500 border border-transparent rounded-md hover:bg-green-400 focus:outline-none focus:border-green-600 focus:shadow-outline-green active:bg-green-600 flex items-center relative`}
-            >
-              <span
-                className={`${
-                  isSaving ? "" : "invisible"
-                } absolute inset-0 flex items-center justify-center`}
+  return isShowingForm ? (
+    <EntryForm initialValues={entry} onSubmit={updateEntry}>
+      {({ isSubmitting, dirty }) => (
+        <div className="pt-5">
+          <div className="flex">
+            <span className="inline-flex rounded-md shadow-sm">
+              <button
+                onClick={() => setIsShowingForm(false)}
+                type="button"
+                className="px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
               >
-                <svg
-                  className="w-4 h-4 text-white animate-spin"
-                  fill="none"
-                  viewBox="0 0 24 24"
+                Close
+              </button>
+            </span>
+            <span className="inline-flex ml-2 mr-auto rounded-md shadow-sm">
+              <button
+                onClick={deleteEntry}
+                type="button"
+                className="px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
+              >
+                Delete...
+              </button>
+            </span>
+            <span className="inline-flex rounded-md shadow-sm">
+              <button
+                type="submit"
+                disabled={!dirty}
+                className={`${
+                  dirty ? "" : "pointer-events-none opacity-50"
+                } hinline-flex justify-center px-4 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out bg-green-500 border border-transparent rounded-md hover:bg-green-400 focus:outline-none focus:border-green-600 focus:shadow-outline-green active:bg-green-600 flex items-center relative`}
+              >
+                <span
+                  className={`${
+                    isSubmitting ? "" : "invisible"
+                  } absolute inset-0 flex items-center justify-center`}
                 >
-                  <circle
-                    className="opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                  ></circle>
-                  <path
-                    className="opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                  ></path>
-                </svg>
-              </span>
+                  <svg
+                    className="w-4 h-4 text-white animate-spin"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    ></path>
+                  </svg>
+                </span>
 
-              <span className={isSaving ? "invisible" : ""}>Update</span>
-            </button>
-          </span>
+                <span className={isSubmitting ? "invisible" : ""}>Update</span>
+              </button>
+            </span>
+          </div>
         </div>
-      </div>
+      )}
     </EntryForm>
+  ) : (
+    <button
+      onClick={() => setIsShowingForm(true)}
+      className="text-left focus:outline-none"
+    >
+      {entry.text}
+    </button>
   );
 }
 
-let i = 0;
-function EntryForm({ entry, onSubmit, children }) {
-  let [uniqueId] = useState(++i);
-  let defaultNewEntry = {
-    date: format(new Date(), "yyyy-MM-dd"),
-    text: "",
-    category: "work",
-    href: "",
-  };
+function EntryForm({ initialValues, onSubmit, children }) {
+  let uniqueId = initialValues.id || "new";
 
   return (
-    <Formik initialValues={defaultNewEntry} onSubmit={onSubmit}>
-      {({ isSubmitting }) => (
+    <Formik initialValues={initialValues} onSubmit={onSubmit}>
+      {({ isSubmitting, dirty }) => (
         <Form>
           <div className="grid grid-cols-1 row-gap-6 col-gap-4 mt-6 sm:grid-cols-6">
             <div className="sm:col-span-3">
@@ -380,26 +376,9 @@ function EntryForm({ entry, onSubmit, children }) {
               </div>
             </div>
           </div>
-          {children({ isSubmitting })}
+          {children({ isSubmitting, dirty })}
         </Form>
       )}
     </Formik>
   );
-}
-
-function shallowEqual(object1, object2) {
-  const keys1 = Object.keys(object1);
-  const keys2 = Object.keys(object2);
-
-  if (keys1.length !== keys2.length) {
-    return false;
-  }
-
-  for (let key of keys1) {
-    if (object1[key] !== object2[key]) {
-      return false;
-    }
-  }
-
-  return true;
 }
