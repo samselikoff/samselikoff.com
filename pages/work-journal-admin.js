@@ -46,30 +46,22 @@ export default function WorkJournalAdminPage() {
     f();
   });
 
-  let [newEntry, setNewEntry] = useState({
-    date: format(new Date(), "yyyy-MM-dd"),
-    text: "",
-    category: "work",
-    href: "",
-  });
-
-  function handleChange(key, value) {
-    setNewEntry((newEntry) => ({ ...newEntry, [key]: value }));
-  }
-
-  async function createEntry(newEntry) {
+  async function createEntry(newEntry, { resetForm }) {
     let db = firebaseApp.database();
-    // let newId = db.ref().child("work-journal-entries").push().key;
+    let newId = db.ref().child("work-journal-entries").push().key;
 
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    // await db.ref(`work-journal-entries/${newId}`).set(newEntry);
+    await db.ref(`work-journal-entries/${newId}`).set(newEntry);
 
-    // setNewEntry({
-    //   date: newEntry.date,
-    //   text: "",
-    //   href: "",
-    //   category: newEntry.category,
-    // });
+    await new Promise((resolve) => setTimeout(resolve));
+
+    resetForm({
+      values: {
+        date: newEntry.date,
+        text: "",
+        href: "",
+        category: newEntry.category,
+      },
+    });
   }
 
   return (
@@ -95,11 +87,7 @@ export default function WorkJournalAdminPage() {
               New entry
             </p>
 
-            <NewEntry
-              entry={newEntry}
-              handleChange={handleChange}
-              onSubmit={createEntry}
-            />
+            <NewEntry onSubmit={createEntry} />
           </div>
 
           <Spacer size="lg" />
@@ -124,9 +112,9 @@ export default function WorkJournalAdminPage() {
   );
 }
 
-function NewEntry({ entry, handleChange, onSubmit }) {
+function NewEntry({ onSubmit }) {
   return (
-    <EntryForm entry={entry} onChange={handleChange} onSubmit={onSubmit}>
+    <EntryForm onSubmit={onSubmit}>
       {({ isSubmitting }) => (
         <div className="pt-5">
           <div className="flex justify-end">
@@ -272,22 +260,31 @@ function Entry({ entry }) {
   );
 }
 
+let i = 0;
 function EntryForm({ entry, onSubmit, children }) {
+  let [uniqueId] = useState(++i);
+  let defaultNewEntry = {
+    date: format(new Date(), "yyyy-MM-dd"),
+    text: "",
+    category: "work",
+    href: "",
+  };
+
   return (
-    <Formik initialValues={entry} onSubmit={onSubmit}>
+    <Formik initialValues={defaultNewEntry} onSubmit={onSubmit}>
       {({ isSubmitting }) => (
         <Form>
           <div className="grid grid-cols-1 row-gap-6 col-gap-4 mt-6 sm:grid-cols-6">
             <div className="sm:col-span-3">
               <label
-                htmlFor={`entry${entry.id}-date`}
+                htmlFor={`entry${uniqueId}-date`}
                 className="block text-sm font-medium leading-5 text-gray-700"
               >
                 Date
               </label>
               <div className="mt-1 rounded-md shadow-sm">
                 <Field
-                  id={`entry${entry.id}-date`}
+                  id={`entry${uniqueId}-date`}
                   name="date"
                   type="text"
                   className="block w-full transition duration-150 ease-in-out form-input sm:text-sm sm:leading-5"
@@ -302,13 +299,13 @@ function EntryForm({ entry, onSubmit, children }) {
             <div className="flex items-center mt-2">
               <div className="flex items-center">
                 <Field
-                  id={`entry${entry.id}-work`}
+                  id={`entry${uniqueId}-work`}
                   name="category"
                   type="radio"
                   value="work"
                   className="w-4 h-4 text-blue-600 transition duration-150 ease-in-out form-radio"
                 />
-                <label htmlFor={`entry${entry.id}-work`} className="ml-3">
+                <label htmlFor={`entry${uniqueId}-work`} className="ml-3">
                   <span className="block text-sm font-medium leading-5 ">
                     Work
                   </span>
@@ -316,13 +313,13 @@ function EntryForm({ entry, onSubmit, children }) {
               </div>
               <div className="flex items-center ml-6">
                 <Field
-                  id={`entry${entry.id}-learning`}
+                  id={`entry${uniqueId}-learning`}
                   name="category"
                   type="radio"
                   value="learning"
                   className="w-4 h-4 text-blue-600 transition duration-150 ease-in-out form-radio"
                 />
-                <label htmlFor={`entry${entry.id}-learning`} className="ml-3">
+                <label htmlFor={`entry${uniqueId}-learning`} className="ml-3">
                   <span className="block text-sm font-medium leading-5 ">
                     Learning
                   </span>
@@ -330,14 +327,14 @@ function EntryForm({ entry, onSubmit, children }) {
               </div>
               <div className="flex items-center ml-6">
                 <Field
-                  id={`entry${entry.id}-interesting-thing`}
+                  id={`entry${uniqueId}-interesting-thing`}
                   name="category"
                   type="radio"
                   value="interesting-thing"
                   className="w-4 h-4 text-blue-600 transition duration-150 ease-in-out form-radio"
                 />
                 <label
-                  htmlFor={`entry${entry.id}-interesting-thing`}
+                  htmlFor={`entry${uniqueId}-interesting-thing`}
                   className="ml-3"
                 >
                   <span className="block text-sm font-medium leading-5 ">
@@ -349,7 +346,7 @@ function EntryForm({ entry, onSubmit, children }) {
           </fieldset>
           <div className="mt-8 sm:col-span-6">
             <label
-              htmlFor={`entry${entry.id}-text`}
+              htmlFor={`entry${uniqueId}-text`}
               className="block text-sm font-medium leading-5 text-gray-700"
             >
               Text
@@ -357,7 +354,7 @@ function EntryForm({ entry, onSubmit, children }) {
             <div className="mt-1 rounded-md shadow-sm">
               <Field
                 as="textarea"
-                id={`entry${entry.id}-text`}
+                id={`entry${uniqueId}-text`}
                 type="text"
                 name="text"
                 rows="3"
@@ -368,14 +365,14 @@ function EntryForm({ entry, onSubmit, children }) {
           <div className="grid grid-cols-1 row-gap-6 col-gap-4 mt-6 sm:grid-cols-6">
             <div className="sm:col-span-6">
               <label
-                htmlFor={`entry${entry.id}-href`}
+                htmlFor={`entry${uniqueId}-href`}
                 className="block text-sm font-medium leading-5 text-gray-700"
               >
                 Link
               </label>
               <div className="mt-1 rounded-md shadow-sm">
                 <Field
-                  id={`entry${entry.id}-href`}
+                  id={`entry${uniqueId}-href`}
                   placeholder="http://some-url.com"
                   name="href"
                   className="block w-full transition duration-150 ease-in-out form-input sm:text-sm sm:leading-5"
