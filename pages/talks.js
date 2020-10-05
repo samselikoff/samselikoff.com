@@ -138,6 +138,12 @@ const talks = [
 
 const interviews = [
   {
+    url: "https://reactpodcast.simplecast.com/episodes/110",
+    image: "/images/interviews/react-podcast.jpg",
+    byline: "React Podcast #110",
+    title: "Sam Selikoff on Finding a Full Stack React",
+  },
+  {
     url: "http://www.fullstackradio.com/133",
     image: "/images/interviews/fullstackradio.jpg",
     byline: "Full Stack Radio #133",
