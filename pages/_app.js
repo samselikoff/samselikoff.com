@@ -5,7 +5,7 @@ import { DialogOverlay, DialogContent } from "@reach/dialog";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { Twitter, GitHub, YouTube } from "../components/logos";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "../components/ui";
 import Head from "next/head";
 
@@ -174,7 +174,7 @@ function ToolboxInternalLink(props) {
 }
 
 function MobileNav({ isOpen, handleClick, closeMenu }) {
-  const springRef = React.useRef();
+  const springRef = useRef();
   const overlayTransitions = useTransition(isOpen, null, {
     ref: springRef,
     config: {
@@ -188,7 +188,7 @@ function MobileNav({ isOpen, handleClick, closeMenu }) {
     enter: { alpha: 0.3, blur: 25 },
   });
 
-  const transRef = React.useRef();
+  const transRef = useRef();
   const transitions = useTransition(
     isOpen ? [1, 2, 3, 4, 5, 6, 7, 8, 9] : [],
     null,
