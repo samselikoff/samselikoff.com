@@ -1,6 +1,6 @@
 import { A, Spacer, Lead, Container, Title, Head } from "../components/ui";
 import { format, parse, parseISO, startOfWeek } from "date-fns";
-import * as firebase from "firebase/app";
+import firebase from "firebase/app";
 
 // Add the Firebase products that you want to use
 import "firebase/database";
