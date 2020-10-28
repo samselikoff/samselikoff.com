@@ -1,6 +1,7 @@
 import { Head, Lead, Title, Spacer, Container, A, Img } from "../components/ui";
 import { Twitter, GitHub, YouTube } from "../components/logos";
 import NextLink from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -139,22 +140,26 @@ export default function Home() {
             src="/images/new-york.jpeg"
             title="New York City"
             date="2015–Present"
+            width={5567}
+            height={3132}
           />
           <div className="flex xl:mt-10 xl:-mx-6">
             <div className="w-1/2 xl:px-6">
               <ImageCard
-                src="/images/burlington.jpeg"
+                src="/images/burlington-square.jpeg"
                 title="Burlington"
                 date="2014–2015"
-                aspectRatio={1}
+                width={2448}
+                height={2448}
               />
             </div>
             <div className="w-1/2 xl:px-6">
               <ImageCard
-                src="/images/boston.jpg"
+                src="/images/boston-square.jpg"
                 title="Boston"
                 date="2010–2014"
-                aspectRatio={1}
+                width={1200}
+                height={1200}
               />
             </div>
           </div>
@@ -166,13 +171,19 @@ export default function Home() {
   );
 }
 
-function HomepageImage({ className }) {
+function HomepageImage({ className = "" }) {
   return (
-    <Img
+    <Image
+      className={`${className} object-cover object-top w-full h-full`}
       src="/images/sam.jpeg"
-      aspectRatio={1616 / 1080}
-      className={`${className} h-full w-full object-cover object-top`}
+      width={1616}
+      height={1080}
     />
+    // <Img
+    //   src="/images/sam.jpeg"
+    //   aspectRatio={1616 / 1080}
+    //   className={`${className} h-full w-full object-cover object-top`}
+    // />
   );
 }
 function Section({ children }) {
@@ -224,14 +235,20 @@ function Chevron(props) {
   );
 }
 
-function ImageCard({ src, title, date, aspectRatio = 16 / 9 }) {
+function ImageCard({ src, title, date, aspectRatio = 16 / 9, width, height }) {
   return (
     <div className="relative">
-      <Img
+      <Image
+        className="object-cover w-full h-full xl:rounded-lg"
+        src={src}
+        width={width}
+        height={height}
+      />
+      {/* <Img
         className="object-cover w-full h-full xl:rounded-lg"
         src={src}
         aspectRatio={aspectRatio}
-      />
+      /> */}
       <div className="absolute bottom-0 w-full py-2 pl-3 text-white md:pl-4 md:py-4 bg-gradient-to-t from-black.85 xl:bg-none xl:static xl:text-gray-900 xl:px-0">
         <p className="text-sm font-semibold sm:text-base xl:text-lg xl:font-medium">
           {title}
