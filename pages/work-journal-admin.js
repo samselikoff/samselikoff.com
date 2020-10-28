@@ -1,6 +1,6 @@
 import { Head, Container, Spacer, Title, Lead } from "../components/ui";
 import { useEffect, useState } from "react";
-import * as firebase from "firebase/app";
+import firebase from "firebase/app";
 import { format } from "date-fns";
 import { Formik, Form, Field } from "formik";
 

@@ -8,14 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
-    "@loadable/component": "^5.13.1",
-    "@mdx-js/loader": "^1.6.16",
+    "@loadable/component": "^5.14.1",
+    "@mdx-js/loader": "^1.6.19",
     "@next/mdx": "^9.5.2",
-    "@reach/dialog": "^0.10.5",
+    "@reach/dialog": "^0.11.2",
     "@tailwindcss/ui": "^0.5.0",
-    "date-fns": "^2.15.0",
-    "firebase": "^7.19.0",
-    "formik": "^2.1.5",
+    "date-fns": "^2.16.1",
+    "firebase": "^8.0.0",
+    "formik": "^2.2.1",
     "gray-matter": "^4.0.2",
     "next": "^9.5.3-canary.25",
     "next-mdx-enhanced": "^4.0.0",
@@ -27,9 +27,9 @@
     "react-syntax-highlighter": "^13.5.1",
     "remark": "^12.0.1",
     "remark-html": "^12.0.0",
-    "tailwindcss": "^1.7.2"
+    "tailwindcss": "^1.9.6"
   },
   "devDependencies": {
-    "file-loader": "^6.0.0"
+    "file-loader": "^6.2.0"
   }
 }
