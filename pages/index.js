@@ -143,7 +143,7 @@ export default function Home() {
           <div className="flex xl:mt-10 xl:-mx-6">
             <div className="w-1/2 xl:px-6">
               <ImageCard
-                src="/images/burlington.jpeg"
+                src="/images/burlington-square.jpeg"
                 title="Burlington"
                 date="2014–2015"
                 aspectRatio={1}
@@ -151,7 +151,7 @@ export default function Home() {
             </div>
             <div className="w-1/2 xl:px-6">
               <ImageCard
-                src="/images/boston.jpg"
+                src="/images/boston-square.jpg"
                 title="Boston"
                 date="2010–2014"
                 aspectRatio={1}
