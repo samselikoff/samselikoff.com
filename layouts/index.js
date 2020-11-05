@@ -1,8 +1,9 @@
-import { Head, Container, Img } from "../components/ui";
+import { Head, Container } from "../components/ui";
 import Code from "../components/code";
 import NextLink from "next/link";
 import { MDXProvider } from "@mdx-js/react";
 import { parseISO, format } from "date-fns";
+import Image from "next/image";
 
 export default function Layout({ children, frontMatter }) {
   return (
@@ -32,7 +33,7 @@ export default function Layout({ children, frontMatter }) {
             <div>
               <NextLink href="/">
                 <a className="block w-16 h-16 mx-auto overflow-hidden rounded-full">
-                  <Img src="/images/profile.jpeg" aspectRatio={1} />
+                  <Image src="/images/profile.jpeg" width={985} height={985} />
                 </a>
               </NextLink>
             </div>
