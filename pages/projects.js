@@ -1,4 +1,5 @@
-import { Head, Title, Img, Container, Lead, Spacer, A } from "../components/ui";
+import { Head, Title, Container, Lead, Spacer, A } from "../components/ui";
+import Image from "next/image";
 
 export default function Projects() {
   return (
@@ -32,16 +33,20 @@ export default function Projects() {
               <div className="md:flex md:-mx-4">
                 <div className="mt-12 md:w-1/2 md:mx-4">
                   <a href="https://miragejs.com/">
-                    <Img
+                    <Image
                       src="/images/projects/mirage.png"
+                      width={1776}
+                      height={1000}
                       className="rounded-lg shadow-lg"
                     />
                   </a>
                 </div>
                 <div className="mt-12 md:w-1/2 md:mx-4">
                   <a href="https://embermap.com/">
-                    <Img
+                    <Image
                       src="/images/projects/embermap.png"
+                      width={1000}
+                      height={562}
                       className="rounded-lg shadow-lg"
                     />
                   </a>
