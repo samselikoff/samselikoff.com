@@ -63,7 +63,7 @@ export default function Layout({ children, frontMatter }) {
 }
 
 const components = {
-  h2: ({ children, ...rest }) => (
+  h2: ({ children = "", ...rest }) => (
     <h2
       id={slugify(children).toLowerCase()}
       className="pt-20 mt-8 text-lg font-semibold leading-tight text-gray-900 border-t border-gray-200 md:text-2xl"
