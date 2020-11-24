@@ -7,7 +7,7 @@ As I've been writing more and more JavaScript, I've learned something about the 
 
 One example is writing constructors. I've come across several ways to do it - but which way is right? Why do some libraries choose one method, and some another? In this post, I'd like to explore some of the techniques I've encountered for writing constructor functions, their pros and cons, and when to use them.
 
-## Generic advice - using the `new` keyword (Mozilla)
+## Generic advice - using the new keyword (Mozilla)
 
 If I had to describe the 'standard' constructor pattern I've seen, it's probably this:
 

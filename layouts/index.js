@@ -4,6 +4,7 @@ import NextLink from "next/link";
 import { MDXProvider } from "@mdx-js/react";
 import { parseISO, format } from "date-fns";
 import Image from "next/image";
+import slugify from "slugify";
 
 export default function Layout({ children, frontMatter }) {
   return (
@@ -62,9 +63,10 @@ export default function Layout({ children, frontMatter }) {
 }
 
 const components = {
-  h2: ({ children, ...rest }) => (
+  h2: ({ children = "", ...rest }) => (
     <h2
-      className="mt-12 text-lg font-semibold leading-tight text-gray-900 md:text-2xl"
+      id={slugify(children).toLowerCase()}
+      className="pt-20 mt-8 text-lg font-semibold leading-tight text-gray-900 border-t border-gray-200 md:text-2xl"
       {...rest}
     >
       {children}
@@ -80,13 +82,15 @@ const components = {
       {children}
     </a>
   ),
-  hr: () => <hr className="mt-4 lg:mt-6" />,
+  hr: () => <hr className="mt-4 border-gray-200 lg:mt-6" />,
   ol: (props) => <ol className="pl-6 mt-4 list-decimal lg:mt-6" {...props} />,
   ul: (props) => <ul className="pl-6 mt-4 list-disc lg:mt-6" {...props} />,
   li: (props) => <li className="mt-2" {...props} />,
 
   blockquote: (props) => (
-    <blockquote className="pl-4 italic border-l-4">{props.children}</blockquote>
+    <blockquote className="pl-4 italic border-l-4 border-gray-200">
+      {props.children}
+    </blockquote>
   ),
   inlineCode: (props) => (
     <code className="px-1 py-px text-sm bg-gray-100">{props.children}</code>
