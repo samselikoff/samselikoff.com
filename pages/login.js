@@ -5,13 +5,15 @@ import firebase from "firebase/app";
 // Add the Firebase products that you want to use
 import "firebase/auth";
 
+const apiKey = process.env.FIREBASE_API_KEY;
+
 export default function Login() {
   let app;
   let [state, setState] = useState("authenticating");
 
   useEffect(() => {
     let firebaseConfig = {
-      apiKey: process.env.FIREBASE_API_KEY,
+      apiKey,
       authDomain: "test-3fb7f.firebaseapp.com",
       databaseURL: "https://test-3fb7f.firebaseio.com",
       projectId: "test-3fb7f",
