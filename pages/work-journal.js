@@ -163,7 +163,7 @@ export default function WorkJournalPage({ entries }) {
 
 export async function getStaticProps() {
   let firebaseConfig = {
-    apiKey: "AIzaSyAXX4G4xSLAwfIgR8vOsgYQOq9or0Jmmyo",
+    apiKey: process.env.FIREBASE_API_KEY,
     authDomain: "test-3fb7f.firebaseapp.com",
     databaseURL: "https://test-3fb7f.firebaseio.com",
     projectId: "test-3fb7f",
