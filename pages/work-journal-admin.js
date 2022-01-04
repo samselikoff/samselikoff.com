@@ -10,7 +10,7 @@ import "firebase/auth";
 
 let firebaseApp;
 let firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
+  apiKey: "AIzaSyBPpTKXIBpM5Je5FpQd_Kp991djDBtX5N4",
   authDomain: "test-3fb7f.firebaseapp.com",
   databaseURL: "https://test-3fb7f.firebaseio.com",
   projectId: "test-3fb7f",
