@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { A, Spacer, Lead, Container, Title, Head } from "../components/ui";
 
 export default function FramerMotionCoursePage() {
@@ -7,67 +8,112 @@ export default function FramerMotionCoursePage() {
         <title>Framer Motion Course</title>
       </Head>
 
-      <div className="break-words md:text-lg-">
-        <div className="pt-4 mx-auto max-w-7xl md:pt-6 xl:pt-8">
-          <div className="max-w-3xl">
-            <Spacer size="xl" />
-            <Title>Framer Motion Recipes</Title>
-            <Spacer size="lg" />
-            <Lead>I've just started working on a brand new video course!</Lead>
-            <Lead>
-              I'll be teaching you how to build some really slick React
-              components with{" "}
-              <A href="https://www.framer.com/motion/">Framer Motion</A> in the
-              style of the videos from{" "}
-              <A href="https://youtube.com/samselikoff">my YouTube channel</A>.
-            </Lead>
-            <div className="py-4"></div>
-            <p className="md:leading-relaxed md:text-lg-">
-              For each component, you can expect a step-by-step video
-              explanation along with the complete source code. I'll have more
-              details soon, but for now email is the easiest way for me to share
-              any updates with you, including some behind-the-scenes work and
-              even a free video or two!
+      <div className="">
+        {/* Top section */}
+        <div className="px-4 mx-auto max-w-7xl">
+          <div className="pt-4">
+            <p className="font-bold leading-none text-gray-800 uppercase text-xxs ">
+              <span className="px-2 py-1 text-blue-500 rounded bg-blue-50">
+                video course
+              </span>
             </p>
-            <p className="mt-4 md:leading-relaxed md:text-lg-">
-              If you're interested, enter you email below:
+            <h1 className="mt-4 text-6xl font-bold text-gray-800 leading-tighter">
+              Framer Motion <span className="text-blue-500">Recipes</span>
+            </h1>
+
+            <p className="mt-6 text-lg text-gray-700 md:text-xl lg:text-2xl">
+              I'm working on a new course where I'll be teaching you how to
+              build some really slick React components with{" "}
+              <A href="https://www.framer.com/motion/">Framer Motion</A>!
             </p>
-            <div className="mt-10 sm:mt-12">
-              <form action="#" className="sm:max-w-xl sm:mx-auto lg:mx-0">
-                <div className="sm:flex">
-                  <div className="flex-1 min-w-0">
-                    <label htmlFor="email" className="sr-only">
-                      Email address
-                    </label>
-                    <input
-                      id="email"
-                      type="email"
-                      placeholder="Enter your email"
-                      className="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border-0 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
-                    />
-                  </div>
-                  <div className="mt-3 sm:mt-0 sm:ml-3">
-                    <button
-                      type="submit"
-                      className="block w-full px-4 py-3 font-medium text-white rounded-md shadow bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
-                    >
-                      Start free trial
-                    </button>
-                  </div>
-                </div>
-                <p className="mt-3 text-sm text-gray-300 sm:mt-4">
-                  Start your free 14-day trial, no credit card necessary. By
-                  providing your email, you agree to our{" "}
-                  <a href="#" className="font-medium text-white">
-                    terms of service
-                  </a>
-                  .
-                </p>
-              </form>
-            </div>
-            <Spacer size="lg" />
+            <p className="mt-4 text-lg text-gray-700 md:text-xl lg:text-2xl">
+              By the end you'll have a set of robust, beautiful components that
+              you can use in your own apps and tweak to your heart's content.
+            </p>
           </div>
         </div>
+
+        {/* Picture */}
+        <div className="px-4 mt-12">
+          <div
+            className="relative w-full mt-2 overflow-hidden rounded-lg"
+            style={{ aspectRatio: `${16 / 9}` }}
+          >
+            <Image
+              layout="fill"
+              objectFit="cover"
+              src="/images/framer-motion-course/image1.jpeg"
+            />
+          </div>
+          <p className="px-8 pt-2 text-xs font-medium text-center text-white">
+            The videos will be shot and taught in the style of <br />
+            <a
+              className="font-bold text-white border-b border-blue-300"
+              href="https://www.youtube.com/samselikoff"
+            >
+              my YouTube channel
+            </a>
+            .
+          </p>
+        </div>
+
+        {/* Form */}
+        <div className="px-4 pt-40 pb-48 -mt-24 text-white bg-blue-500">
+          <h2 className="text-4xl font-bold leading-tight ">
+            Ready to follow along?
+          </h2>
+
+          <div className="p-4 mt-8 text-gray-700 bg-white rounded-lg shadow-lg">
+            <p>
+              Sign up for <strong>behind-the-scenes work</strong> and get{" "}
+              <strong>two free videos</strong> when the course is ready:
+            </p>
+
+            <form className="pt-4" action="">
+              <input
+                type="email"
+                required
+                placeholder="Enter your email"
+                className="w-full px-5 py-3 text-gray-700 placeholder-gray-600 border rounded-md shadow-sm focus:outline-none focus:border-blue-300"
+              />
+              <div className="mt-3">
+                <button
+                  type="submit"
+                  className="block w-full px-8 py-3 font-semibold text-white bg-blue-500 border border-transparent rounded-md shadow focus:outline-none focus:border-blue-100"
+                >
+                  Sign up
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        {/* Form */}
+        {/* <div className="px-6 pt-6 pb-12 mt-4 -mx-4 bg-gray-100">
+          <div className="p-4 -mx-2 text-gray-800 bg-white rounded shadow-lg">
+            <p>
+              If you're interested in <strong>behind-the-scenes work</strong>{" "}
+              and even <strong>two free videos</strong> when the course is
+              ready, sign up to get notified:
+            </p>
+            <form className="mt-4" action="">
+              <input
+                type="email"
+                required
+                placeholder="Enter your email"
+                className="w-full px-5 py-3 placeholder-gray-600 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500"
+              />
+              <div className="mt-3">
+                <button
+                  type="submit"
+                  className="block w-full px-8 py-3 font-medium text-white bg-blue-500 rounded-md shadow hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+                >
+                  Sign up
+                </button>
+              </div>
+            </form>
+          </div>
+        </div> */}
       </div>
     </>
   );
