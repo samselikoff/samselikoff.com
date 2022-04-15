@@ -44,13 +44,14 @@ export default function FramerMotionCoursePage() {
         {/* Picture */}
         <div className="px-4 mt-12">
           <div
-            className="relative w-full mt-2 overflow-hidden rounded-lg"
+            className="relative mt-2 overflow-hidden rounded-lg"
             style={{ aspectRatio: `${16 / 9}` }}
           >
             <Image
               layout="fill"
               objectFit="cover"
-              src="/images/framer-motion-course/image1.jpeg"
+              quality={100}
+              src="/images/framer-motion-course/sam-edit-2.jpg"
             />
           </div>
           <p className="px-8 pt-2 text-xs font-medium text-center text-white">
@@ -66,12 +67,12 @@ export default function FramerMotionCoursePage() {
         </div>
 
         {/* Form */}
-        <div className="px-4 pt-40 pb-48 -mt-24 text-white bg-blue-500">
+        <div className="px-4 pt-40 pb-40 -mt-24 text-white bg-blue-500">
           <h2 className="text-4xl font-bold leading-tight ">
             Ready to follow along?
           </h2>
 
-          <div className="p-4 mt-8 text-gray-700 bg-white rounded-lg shadow-lg">
+          <div className="p-4 mt-16 text-gray-700 bg-white rounded-lg shadow-lg">
             <AnimatePresence initial={false} exitBeforeEnter>
               {isComplete ? (
                 <motion.div
@@ -159,32 +160,77 @@ export default function FramerMotionCoursePage() {
           </div>
         </div>
 
-        {/* Form */}
-        {/* <div className="px-6 pt-6 pb-12 mt-4 -mx-4 bg-gray-100">
-          <div className="p-4 -mx-2 text-gray-800 bg-white rounded shadow-lg">
-            <p>
-              If you're interested in <strong>behind-the-scenes work</strong>{" "}
-              and even <strong>two free videos</strong> when the course is
-              ready, sign up to get notified:
-            </p>
-            <form className="mt-4" action="">
-              <input
-                type="email"
-                required
-                placeholder="Enter your email"
-                className="w-full px-5 py-3 placeholder-gray-600 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500"
+        {/* Footer */}
+        <div className="px-4 pt-12">
+          <h2 className="text-4xl font-bold leading-tight ">
+            Meet your teachers
+          </h2>
+
+          <p className="mt-6 text-lg text-gray-700 md:text-xl lg:text-2xl">
+            Me and my friend Ryan can't wait to teach this course because Framer
+            Motion is one of our favorite libraries, and this kind of UI polish
+            is always something people want to add to their apps but never have
+            the time.
+          </p>
+
+          <div className="pt-8 pb-8">
+            <div
+              className="relative overflow-hidden rounded-lg"
+              style={{ aspectRatio: `${16 / 9}` }}
+            >
+              <Image
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+                src="/images/framer-motion-course/sam-and-ryan.jpeg"
               />
-              <div className="mt-3">
-                <button
-                  type="submit"
-                  className="block w-full px-8 py-3 font-medium text-white bg-blue-500 rounded-md shadow hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
-                >
-                  Sign up
-                </button>
-              </div>
-            </form>
+            </div>
           </div>
-        </div> */}
+
+          <p className="text-lg text-gray-700 md:text-xl lg:text-2xl">
+            Over the years we've run conference trainings, worked on open
+            source, and these days we make videos for{" "}
+            <A href="https://www.youtube.com/c/RyanToronto">each</A> of{" "}
+            <A href="https://www.youtube.com/c/SamSelikoff">our</A> YouTube
+            channels.
+          </p>
+
+          <div className="grid grid-cols-2 py-12">
+            <div className="text-center">
+              <a href="https://twitter.com/samselikoff">
+                <Image
+                  quality={100}
+                  width={64}
+                  height={64}
+                  className="overflow-hidden rounded-full "
+                  src="/images/framer-motion-course/twitter-sam.jpg"
+                />
+                <p className="block text-xs font-semibold text-gray-800 underline">
+                  @samselikoff
+                </p>
+              </a>
+            </div>
+            <div className="text-center">
+              <a href="https://twitter.com/ryantotweets">
+                <Image
+                  quality={100}
+                  width={64}
+                  height={64}
+                  className="overflow-hidden rounded-full"
+                  src="/images/framer-motion-course/twitter-ryan.jpg"
+                />
+                <p className="block text-xs font-semibold text-gray-800 underline">
+                  @ryantotweets
+                </p>
+              </a>
+            </div>
+          </div>
+
+          <p className="pb-12 text-lg text-gray-700 md:text-xl lg:text-2xl">
+            We can't wait to build some awesome Framer Motion components
+            together!
+          </p>
+        </div>
       </div>
     </>
   );
@@ -247,4 +293,12 @@ function useCovertKitForm({ formId }) {
     isComplete,
     isSubmitting,
   };
+}
+
+function TwitterLogo(props) {
+  return (
+    <svg viewBox="0 0 24 24" {...props}>
+      <path d="M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724 9.864 9.864 0 01-3.127 1.195 4.916 4.916 0 00-3.594-1.555c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 3.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 19.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 4.557z" />
+    </svg>
+  );
 }
