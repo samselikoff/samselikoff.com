@@ -16,61 +16,64 @@ export default function FramerMotionCoursePage() {
         <title>Framer Motion Course</title>
       </Head>
 
-      <div>
-        {/* Top section */}
-        <div className="max-w-xl px-4 mx-auto sm:pt-8 lg:max-w-2xl">
-          <div className="pt-4 lg:pt-8">
-            <p className="font-bold leading-none text-gray-800 uppercase text-xxs ">
-              <span className="px-2 py-1 text-blue-500 rounded bg-blue-50">
-                video course
-              </span>
-            </p>
-            <h1 className="mt-4 text-6xl font-bold text-gray-800 leading-tighter lg:leading-none">
-              Framer Motion <span className="text-blue-500">Recipes</span>
-            </h1>
-
-            <p className="mt-6 text-lg text-gray-700 md:text-xl lg:mt-8 lg:text-1-5xl">
-              I'm working on a new course where I'll be teaching you how to
-              build some really slick React components with{" "}
-              <A href="https://www.framer.com/motion/">Framer Motion</A>!
-            </p>
-            <p className="mt-4 text-lg text-gray-700 md:text-xl lg:text-1-5xl">
-              By the end you'll have a set of robust, beautiful components that
-              you can use in your own apps and tweak to your heart's content.
-            </p>
+      <div className="">
+        <div className="xl:px-4">
+          <div className="">
+            {/* Top section */}
+            <div className="max-w-xl px-4 mx-auto sm:pt-8 lg:max-w-2xl xl:px-0 xl:max-w-3xl">
+              <div className="pt-4 lg:pt-8">
+                <p className="font-bold leading-none text-gray-800 uppercase text-xxs ">
+                  <span className="px-2 py-1 text-blue-500 rounded bg-blue-50">
+                    video course
+                  </span>
+                </p>
+                <h1 className="mt-4 text-6xl font-bold text-gray-800 leading-tighter lg:leading-none xl:text-7xl">
+                  Framer Motion <span className="text-blue-500">Recipes</span>
+                </h1>
+                <p className="mt-4 text-lg text-gray-700 md:text-xl lg:mt-6 lg:text-1-5xl xl:mt-8">
+                  I'm working on a new course where I'll be teaching you how to
+                  build some really slick React components with{" "}
+                  <A href="https://www.framer.com/motion/">Framer Motion</A>!
+                </p>
+                <p className="mt-4 text-lg text-gray-700 md:text-xl lg:text-1-5xl xl:mt-6">
+                  By the end you'll have a set of robust, beautiful components
+                  that you can use in your own apps and tweak to your heart's
+                  content.
+                </p>
+              </div>
+            </div>
+            {/* Picture */}
+            <div className="max-w-2xl px-4 mx-auto mt-12 lg:mt-16 lg:max-w-3xl xl:max-w-5xl">
+              <div
+                className="relative mt-2 overflow-hidden rounded-lg"
+                style={{ aspectRatio: `${16 / 9}` }}
+              >
+                <Image
+                  layout="fill"
+                  objectFit="cover"
+                  quality={100}
+                  src="/images/framer-motion-course/sam-edit-2.jpg"
+                />
+              </div>
+              <p className="px-8 pt-2 text-xs font-medium text-center text-white sm:text-sm ">
+                The videos will be shot and taught in the style of{" "}
+                <br className="sm:hidden" />
+                <a
+                  className="font-bold text-white border-b border-blue-300"
+                  href="https://www.youtube.com/samselikoff"
+                >
+                  my YouTube channel
+                </a>
+                .
+              </p>
+            </div>
           </div>
-        </div>
-
-        {/* Picture */}
-        <div className="max-w-2xl px-4 mx-auto mt-12 lg:mt-16 lg:max-w-3xl">
-          <div
-            className="relative mt-2 overflow-hidden rounded-lg"
-            style={{ aspectRatio: `${16 / 9}` }}
-          >
-            <Image
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-              src="/images/framer-motion-course/sam-edit-2.jpg"
-            />
-          </div>
-          <p className="px-8 pt-2 text-xs font-medium text-center text-white sm:text-sm">
-            The videos will be shot and taught in the style of{" "}
-            <br className="sm:hidden" />
-            <a
-              className="font-bold text-white border-b border-blue-300"
-              href="https://www.youtube.com/samselikoff"
-            >
-              my YouTube channel
-            </a>
-            .
-          </p>
         </div>
 
         {/* Form */}
-        <div className="pt-40 pb-40 -mt-24 text-white bg-blue-500 sm:pt-48 sm:pb-32 lg:-mt-48 lg:pt-72">
-          <div className="max-w-xl px-4 mx-auto lg:max-w-2xl">
-            <h2 className="text-4xl font-bold leading-tight lg:text-4-5xl">
+        <div className="pt-40 pb-40 -mt-24 text-white bg-blue-500 sm:pt-48 sm:pb-32 lg:-mt-48 lg:pt-72 xl:pt-80">
+          <div className="max-w-xl px-4 mx-auto lg:max-w-2xl xl:px-0 xl:max-w-3xl">
+            <h2 className="text-4xl font-bold leading-tight lg:text-4-5xl xl:text-5xl">
               Ready to follow along?
             </h2>
             <div className="p-4 mt-8 text-gray-700 bg-white rounded-lg shadow-lg sm:p-8 sm:mt-6 lg:mt-8 lg:text-xl">
@@ -167,12 +170,12 @@ export default function FramerMotionCoursePage() {
         </div>
 
         {/* Footer */}
-        <div className="max-w-xl px-4 pt-12 pb-16 mx-auto sm:pt-16 lg:max-w-2xl lg:pt-20 ">
-          <h2 className="text-4xl font-bold leading-tight lg:text-4-5xl">
+        <div className="max-w-xl px-4 pt-12 pb-16 mx-auto sm:pt-16 lg:max-w-2xl lg:pt-20 lg:pb-20 xl:pb-28 xl:max-w-3xl">
+          <h2 className="text-4xl font-bold leading-tight lg:text-4-5xl xl:text-5xl">
             Meet your teachers
           </h2>
 
-          <p className="mt-6 text-lg text-gray-700 md:text-xl lg:text-1-5xl">
+          <p className="mt-6 text-lg text-gray-700 md:text-xl lg:text-1-5xl xl:mt-8">
             Hey there! I'm{" "}
             <A href="https://twitter.com/samselikoff">Sam Selikoff</A> and I'll
             be teaching this course along with my friend{" "}
@@ -188,7 +191,7 @@ export default function FramerMotionCoursePage() {
             <A href="https://github.com/ryanto">source</A> together.{" "}
           </p>
 
-          <div className="py-8 sm:py-12 sm:-mx-6">
+          <div className="py-8 sm:py-12 sm:-mx-6 xl:-mx-12">
             <div
               className="relative overflow-hidden rounded-lg"
               style={{ aspectRatio: `${16 / 9}` }}
