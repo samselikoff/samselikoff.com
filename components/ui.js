@@ -36,10 +36,8 @@ export const A = ({
 
 export function Title({ size = "md", children }) {
   let styles = {
-    sm:
-      "text-4xl font-semibold leading-tight text-gray-800 md:text-5xl lg:text-6xl lg:font-medium xl:text-7xl",
-    md:
-      "text-5xl font-semibold leading-tight text-gray-800 md:text-6xl lg:text-7xl lg:font-medium xl:text-8xl",
+    sm: "text-4xl font-semibold leading-tight text-gray-800 md:text-5xl lg:text-6xl lg:leading-none lg:font-medium xl:text-7xl",
+    md: "text-5xl font-semibold leading-tight text-gray-800 md:text-6xl md:leading-none lg:text-7xl lg:font-medium xl:text-8xl",
   };
   return <h1 className={styles[size]}>{children}</h1>;
 }
