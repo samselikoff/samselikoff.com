@@ -50,11 +50,11 @@ export default function FramerMotionCoursePage() {
                     ever-changing codebase.
                   </p>
                   <p className="mt-4 text-gray-700 lg:text-lg">
-                    But what if you had{" "}
-                    <strong>a set of realistic components</strong> that you
-                    could add right alongside your existing code, without
-                    requiring a massive refactor, and that added those little
-                    details you always wish you had?
+                    But what if you had a set of{" "}
+                    <strong>realistic components</strong> that you could add
+                    right alongside your existing code, without requiring a
+                    massive refactor, and that added those little details you
+                    always wish you had?
                   </p>
                   <p className="mt-4 text-gray-700 lg:text-lg">
                     I've started working on a course that will teach you how to
@@ -70,14 +70,8 @@ export default function FramerMotionCoursePage() {
                   <p className="mt-4 text-gray-700 lg:text-lg">
                     It's not ready yet, but if you want to follow along and get
                     an early look at the components as I build them, sign up
-                    below
+                    below.
                   </p>
-                  {/* <p className="mt-8 text-gray-700 lg:text-lg">👋 Hey there!</p>
-                  <p className="mt-4 text-gray-700 lg:text-lg">
-                    I'm working on a brand new Framer Motion course! It's not
-                    ready yet but if you want to follow along and get an early
-                    look at the components as I build them, sign up below.
-                  </p> */}
                 </div>
               </div>
             </div>
