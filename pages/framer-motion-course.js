@@ -30,24 +30,55 @@ export default function FramerMotionCoursePage() {
                 <h1 className="mt-4 text-6xl font-bold text-gray-800 leading-tighter lg:leading-none xl:text-7xl">
                   Framer Motion <span className="text-blue-500">Recipes</span>
                 </h1>
-                <p className="mt-4 text-lg text-gray-700 md:text-xl lg:mt-6 lg:text-1-5xl xl:mt-8">
+                <p className="mt-4 text-lg text-gray-600 md:text-xl lg:mt-6 lg:text-2xl xl:mt-8">
                   Learn how to use <A>Framer Motion</A> to build polished
                   animations – just like the ones you see on Stripe and Linear –
                   that you can bring back to the React apps you work on every
                   day.
                 </p>
-                <p className="mt-8 text-gray-700 lg:text-lg">👋 Hey there!</p>
-                <p className="mt-4 text-gray-700 lg:text-lg">
-                  I'm working on a brand new Framer Motion course! It's not
-                  ready yet but if you want to follow along and get an early
-                  look at the components as I build them, sign up below.
-                </p>
-                {/* <p className="mt-8 text-gray-700 lg:text-lg">👋 Hey there!</p>
-                <p className="mt-4 text-gray-700 lg:text-lg">
-                  I'm working on a brand new Framer Motion course! It's not
-                  ready yet but if you want to follow along and get an early
-                  look at the components as I build them, sign up below.
-                </p> */}
+
+                <hr className="w-32 mx-auto mt-8 border-t-2 border-gray-200 lg:mt-14" />
+
+                <div className="max-w-xl mx-auto mt-12">
+                  <p className="mt-4 text-gray-700 lg:text-lg">
+                    If you’re like me, you see a lot of beautiful animations on
+                    the web, but you <strong>feel lost</strong> when it comes to
+                    adding them to the apps you work on every day.
+                  </p>
+                  <p className="mt-4 text-gray-700 lg:text-lg">
+                    It can be hard to bring isolated examples into your
+                    ever-changing codebase.
+                  </p>
+                  <p className="mt-4 text-gray-700 lg:text-lg">
+                    But what if you had{" "}
+                    <strong>a set of realistic components</strong> that you
+                    could add right alongside your existing code, without
+                    requiring a massive refactor, and that added those little
+                    details you always wish you had?
+                  </p>
+                  <p className="mt-4 text-gray-700 lg:text-lg">
+                    I've started working on a course that will teach you how to
+                    do just that. I'll use real-world examples with components
+                    that you already have in your apps today, like:
+                  </p>
+                  <ul className="pl-12 mt-4 text-gray-700 list-disc lg:text-lg">
+                    <li>Buttons</li>
+                    <li>Headers and navigation menus</li>
+                    <li>Modals, dialogs and notifications</li>
+                    <li>Lists, tables and grids</li>
+                  </ul>
+                  <p className="mt-4 text-gray-700 lg:text-lg">
+                    It's not ready yet, but if you want to follow along and get
+                    an early look at the components as I build them, sign up
+                    below
+                  </p>
+                  {/* <p className="mt-8 text-gray-700 lg:text-lg">👋 Hey there!</p>
+                  <p className="mt-4 text-gray-700 lg:text-lg">
+                    I'm working on a brand new Framer Motion course! It's not
+                    ready yet but if you want to follow along and get an early
+                    look at the components as I build them, sign up below.
+                  </p> */}
+                </div>
               </div>
             </div>
             {/* Picture */}
@@ -63,7 +94,7 @@ export default function FramerMotionCoursePage() {
                   src="/images/framer-motion-course/sam-edit-2.jpg"
                 />
               </div>
-              <p className="px-8 pt-2 text-xs font-medium text-center text-white sm:text-sm xl:text-base">
+              <p className="px-8 pt-2 text-xs font-medium text-center text-white sm:text-sm xl:text-base xl:pt-3">
                 Check out{" "}
                 <a
                   className="font-bold text-white border-b border-blue-300 hover:border-blue-100"
