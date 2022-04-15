@@ -22,7 +22,7 @@ export default function FramerMotionCoursePage() {
             {/* Top section */}
             <div className="max-w-xl px-4 mx-auto sm:pt-8 lg:max-w-2xl xl:px-0 xl:max-w-3xl">
               <div className="pt-4 lg:pt-8">
-                <p className="font-bold leading-none text-gray-800 uppercase text-xxs ">
+                <p className="font-bold leading-none text-gray-800 uppercase text-xxs md:text-xs">
                   <span className="px-2 py-1 text-blue-500 rounded bg-blue-50">
                     video course
                   </span>
@@ -31,15 +31,23 @@ export default function FramerMotionCoursePage() {
                   Framer Motion <span className="text-blue-500">Recipes</span>
                 </h1>
                 <p className="mt-4 text-lg text-gray-700 md:text-xl lg:mt-6 lg:text-1-5xl xl:mt-8">
-                  I'm working on a new course where I'll be teaching you how to
-                  build some really slick React components with{" "}
-                  <A href="https://www.framer.com/motion/">Framer Motion</A>!
+                  Learn how to use <A>Framer Motion</A> to build polished
+                  animations – just like the ones you see on Stripe and Linear –
+                  that you can bring back to the React apps you work on every
+                  day.
                 </p>
-                <p className="mt-4 text-lg text-gray-700 md:text-xl lg:text-1-5xl xl:mt-6">
-                  By the end you'll have a set of robust, beautiful components
-                  that you can use in your own apps and tweak to your heart's
-                  content.
+                <p className="mt-8 text-gray-700 lg:text-lg">👋 Hey there!</p>
+                <p className="mt-4 text-gray-700 lg:text-lg">
+                  I'm working on a brand new Framer Motion course! It's not
+                  ready yet but if you want to follow along and get an early
+                  look at the components as I build them, sign up below.
                 </p>
+                {/* <p className="mt-8 text-gray-700 lg:text-lg">👋 Hey there!</p>
+                <p className="mt-4 text-gray-700 lg:text-lg">
+                  I'm working on a brand new Framer Motion course! It's not
+                  ready yet but if you want to follow along and get an early
+                  look at the components as I build them, sign up below.
+                </p> */}
               </div>
             </div>
             {/* Picture */}
@@ -175,19 +183,9 @@ export default function FramerMotionCoursePage() {
           </h2>
 
           <p className="mt-6 text-lg text-gray-700 md:text-xl lg:text-1-5xl xl:mt-8">
-            Hey there! I'm{" "}
-            <A href="https://twitter.com/samselikoff">Sam Selikoff</A> and I'll
-            be teaching this course along with my friend{" "}
+            I'm <A href="https://twitter.com/samselikoff">Sam Selikoff</A> and
+            I'll be teaching this course along with my friend{" "}
             <A href="https://twitter.com/ryantotweets">Ryan Toronto</A>.
-          </p>
-
-          <p className="mt-6 text-lg text-gray-700 md:text-xl lg:text-1-5xl">
-            We co-host <A href="https://frontendfirst.fm/">Frontend First</A>,
-            make videos for each of our{" "}
-            <A href="https://www.youtube.com/c/SamSelikoff">YouTube</A>{" "}
-            <A href="https://www.youtube.com/c/RyanToronto">channels</A>, and
-            work on <A href="https://github.com/samselikoff">open</A>{" "}
-            <A href="https://github.com/ryanto">source</A> together.{" "}
           </p>
 
           <div className="py-8 sm:py-12 sm:-mx-6 xl:-mx-12">
@@ -205,15 +203,12 @@ export default function FramerMotionCoursePage() {
           </div>
 
           <p className="text-lg text-gray-700 md:text-xl lg:text-1-5xl">
-            We wanted to teach this course because animation is something folks
-            get super excited about but can have a hard time implementing on
-            their own.
-          </p>
-
-          <p className="mt-6 text-lg text-gray-700 md:text-xl lg:text-1-5xl">
-            So, we're focused on making components that you'll not only
-            understand, but also be able to <em>actually use and customize</em>{" "}
-            in your own applications.
+            We co-host <A href="https://frontendfirst.fm/">Frontend First</A>,
+            make videos for each of our{" "}
+            <A href="https://www.youtube.com/c/SamSelikoff">YouTube</A>{" "}
+            <A href="https://www.youtube.com/c/RyanToronto">channels</A>, and
+            work on <A href="https://github.com/samselikoff">open</A>{" "}
+            <A href="https://github.com/ryanto">source</A> together.{" "}
           </p>
 
           <p className="mt-6 text-lg text-gray-700 md:text-xl lg:text-1-5xl">
