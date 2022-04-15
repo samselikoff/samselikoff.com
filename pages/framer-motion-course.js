@@ -185,7 +185,7 @@ export default function FramerMotionCoursePage() {
                       block w-full px-8 py-3 font-semibold text-white  border border-transparent rounded-md shadow focus:outline-none focus:border-blue-100
                       ${
                         isSubmitting || isComplete
-                          ? "bg-blue-600"
+                          ? "bg-blue-600 opacity-50"
                           : "bg-blue-500"
                       }
                     `}
