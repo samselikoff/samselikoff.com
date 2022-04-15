@@ -1,7 +1,15 @@
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import { A, Spacer, Lead, Container, Title, Head } from "../components/ui";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function FramerMotionCoursePage() {
+  let { isSubmitting, isComplete, isError, formProps } = useCovertKitForm({
+    formId: "3179275", // framer motion course form id
+  });
+
+  let signUpForm = useRef();
+
   return (
     <>
       <Head>
@@ -64,27 +72,90 @@ export default function FramerMotionCoursePage() {
           </h2>
 
           <div className="p-4 mt-8 text-gray-700 bg-white rounded-lg shadow-lg">
-            <p>
-              Sign up for <strong>behind-the-scenes work</strong> and get{" "}
-              <strong>two free videos</strong> when the course is ready:
-            </p>
-
-            <form className="pt-4" action="">
-              <input
-                type="email"
-                required
-                placeholder="Enter your email"
-                className="w-full px-5 py-3 text-gray-700 placeholder-gray-600 border rounded-md shadow-sm focus:outline-none focus:border-blue-300"
-              />
-              <div className="mt-3">
-                <button
-                  type="submit"
-                  className="block w-full px-8 py-3 font-semibold text-white bg-blue-500 border border-transparent rounded-md shadow focus:outline-none focus:border-blue-100"
+            <AnimatePresence initial={false} exitBeforeEnter>
+              {isComplete ? (
+                <motion.div
+                  key="allDone"
+                  initial="hidden"
+                  animate="showing"
+                  exit="hidden"
+                  transition={{
+                    ease: "easeInOut",
+                  }}
+                  variants={{
+                    hidden: {
+                      height: signUpForm.current
+                        ? signUpForm.current.offsetHeight
+                        : "auto",
+                      opacity: 0,
+                    },
+                    showing: {
+                      height: "auto",
+                      opacity: 1,
+                    },
+                  }}
                 >
-                  Sign up
-                </button>
-              </div>
-            </form>
+                  <h3 className="font-semibold text-gray-900">All set!</h3>
+                  <p className="pt-3 text-gray-700">
+                    Thanks for subscribing! Please check your inbox for a
+                    confirmation email.
+                  </p>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="signupForm"
+                  ref={signUpForm}
+                  initial="hidden"
+                  animate="showing"
+                  exit="hidden"
+                  transition={{
+                    ease: "easeOut",
+                  }}
+                  variants={{
+                    hidden: {
+                      opacity: 0,
+                    },
+                    showing: {
+                      opacity: 1,
+                    },
+                  }}
+                >
+                  <p>
+                    Sign up for <strong>behind-the-scenes work</strong> and get{" "}
+                    <strong>two free videos</strong> when the course is ready:
+                  </p>
+                  <form className="pt-4" {...formProps}>
+                    <input
+                      name="email_address"
+                      type="email"
+                      required
+                      placeholder="Enter your email"
+                      className="w-full px-5 py-3 text-gray-700 placeholder-gray-600 border rounded-md shadow-sm focus:outline-none focus:border-blue-300"
+                    />
+                    <div className="mt-3">
+                      <button
+                        type="submit"
+                        disabled={isSubmitting || isComplete}
+                        className={`
+                    block w-full px-8 py-3 font-semibold text-white  border border-transparent rounded-md shadow focus:outline-none focus:border-blue-100
+                    ${
+                      isSubmitting || isComplete ? "bg-blue-600" : "bg-blue-500"
+                    }
+                  `}
+                      >
+                        Sign up
+                      </button>
+                    </div>
+                    {isError && (
+                      <div className="mt-3 text-red-500">
+                        Oh no, something's wrong with our signup form 😔. Please
+                        try again.
+                      </div>
+                    )}
+                  </form>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
 
@@ -117,4 +188,63 @@ export default function FramerMotionCoursePage() {
       </div>
     </>
   );
+}
+
+function useCovertKitForm({ formId }) {
+  let url = `https://app.convertkit.com/forms/${formId}/subscriptions`;
+  let [email, setEmail] = useState("");
+  let [isError, setIsError] = useState(false);
+  let [formState, setFormState] = useState("");
+
+  let isSubmitting = formState === "submitting";
+  let isComplete = formState === "complete";
+
+  useEffect(() => {
+    window.toggleNewsletter = () => {
+      setEmail("ryanto@gmail.com");
+      setFormState((state) => (state !== "complete" ? "complete" : ""));
+    };
+  });
+
+  let handleSubmit = async function (event) {
+    event.preventDefault();
+    let form = event.target;
+    let value = form.email_address.value;
+
+    setFormState("submitting");
+
+    let formData = new FormData(form);
+
+    try {
+      let response = await fetch(url, {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        setIsError(false);
+        setEmail(value);
+        setFormState("complete");
+      } else {
+        setIsError(true);
+      }
+    } catch (e) {
+      console.error(e);
+      setIsError(true);
+    }
+  };
+
+  let formProps = {
+    onSubmit: handleSubmit,
+    method: "POST",
+    action: url,
+  };
+
+  return {
+    formProps,
+    email,
+    isError,
+    isComplete,
+    isSubmitting,
+  };
 }

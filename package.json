@@ -16,6 +16,7 @@
     "date-fns": "^2.16.1",
     "firebase": "^8.0.0",
     "formik": "^2.2.1",
+    "framer-motion": "^4.0",
     "gray-matter": "^4.0.2",
     "next": "^10.0.0",
     "next-mdx-enhanced": "^4.0.0",
