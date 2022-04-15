@@ -206,47 +206,16 @@ export default function FramerMotionCoursePage() {
           </div>
 
           <p className="text-lg text-gray-700 md:text-xl lg:text-1-5xl">
-            We want to teach this course because animation is something folks
+            We wanted to teach this course because animation is something folks
             get super excited about but can have a hard time implementing on
             their own.
           </p>
 
           <p className="mt-6 text-lg text-gray-700 md:text-xl lg:text-1-5xl">
-            So we're focused on making components that you'll not only
+            So, we're focused on making components that you'll not only
             understand, but also be able to <em>actually use and customize</em>{" "}
             in your own applications.
           </p>
-
-          {/* <div className="grid grid-cols-2 py-12">
-            <div className="text-center">
-              <a href="https://twitter.com/samselikoff">
-                <Image
-                  quality={100}
-                  width={64}
-                  height={64}
-                  className="overflow-hidden rounded-full "
-                  src="/images/framer-motion-course/twitter-sam.jpg"
-                />
-                <p className="block text-xs font-semibold text-gray-800 underline">
-                  @samselikoff
-                </p>
-              </a>
-            </div>
-            <div className="text-center">
-              <a href="https://twitter.com/ryantotweets">
-                <Image
-                  quality={100}
-                  width={64}
-                  height={64}
-                  className="overflow-hidden rounded-full"
-                  src="/images/framer-motion-course/twitter-ryan.jpg"
-                />
-                <p className="block text-xs font-semibold text-gray-800 underline">
-                  @ryantotweets
-                </p>
-              </a>
-            </div>
-          </div> */}
 
           <p className="mt-6 text-lg text-gray-700 md:text-xl lg:text-1-5xl">
             We can't wait to show you what we've been working on!
