@@ -43,7 +43,7 @@ export default function FramerMotionCoursePage() {
               </div>
             </div>
             {/* Picture */}
-            <div className="max-w-2xl px-4 mx-auto mt-12 lg:mt-16 lg:max-w-3xl xl:max-w-5xl">
+            <div className="max-w-2xl px-4 mx-auto mt-12 lg:mt-16 lg:max-w-3xl xl:max-w-4xl">
               <div
                 className="relative mt-2 overflow-hidden rounded-lg"
                 style={{ aspectRatio: `${16 / 9}` }}
@@ -56,15 +56,14 @@ export default function FramerMotionCoursePage() {
                 />
               </div>
               <p className="px-8 pt-2 text-xs font-medium text-center text-white sm:text-sm xl:text-base">
-                The videos will be shot and taught in the style of{" "}
-                <br className="sm:hidden" />
+                Check out{" "}
                 <a
-                  className="font-bold text-white border-b border-blue-300"
+                  className="font-bold text-white border-b border-blue-300 hover:border-blue-100"
                   href="https://www.youtube.com/samselikoff"
                 >
                   my YouTube channel
-                </a>
-                .
+                </a>{" "}
+                for a sample of some of my past videos.
               </p>
             </div>
           </div>
