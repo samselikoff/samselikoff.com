@@ -55,7 +55,7 @@ export default function FramerMotionCoursePage() {
                   src="/images/framer-motion-course/sam-edit-2.jpg"
                 />
               </div>
-              <p className="px-8 pt-2 text-xs font-medium text-center text-white sm:text-sm ">
+              <p className="px-8 pt-2 text-xs font-medium text-center text-white sm:text-sm xl:text-base">
                 The videos will be shot and taught in the style of{" "}
                 <br className="sm:hidden" />
                 <a
