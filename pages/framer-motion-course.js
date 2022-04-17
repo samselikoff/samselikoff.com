@@ -13,232 +13,142 @@ export default function FramerMotionCoursePage() {
   return (
     <>
       <Head>
-        <title>Framer Motion Course</title>
+        <title>Craft cutting-edge UIs withi Framer Motion</title>
       </Head>
 
-      <div className="">
-        <div className="xl:px-4">
-          <div className="">
-            {/* Top section */}
-            <div className="max-w-xl px-4 mx-auto sm:pt-8 lg:max-w-2xl xl:px-0 xl:max-w-3xl">
-              <div className="pt-4 lg:pt-8">
-                <p className="font-bold leading-none text-gray-800 uppercase text-xxs md:text-xs">
-                  <span className="px-2 py-1 text-blue-500 rounded bg-blue-50">
-                    video course
-                  </span>
-                </p>
-                <h1 className="mt-4 text-6xl font-bold text-gray-800 leading-tighter lg:leading-none xl:text-7xl">
-                  Framer Motion <span className="text-blue-500">Recipes</span>
-                </h1>
-                <p className="mt-4 text-lg text-gray-600 md:text-xl lg:mt-6 lg:text-2xl xl:mt-8">
-                  Learn how to use <A>Framer Motion</A> to build polished
-                  animations – just like the ones you see on Stripe and Linear –
-                  that you can bring back to the React apps you work on every
-                  day.
-                </p>
-
-                <hr className="w-32 mx-auto mt-8 border-t-2 border-gray-200 lg:mt-14" />
-
-                <div className="max-w-xl mx-auto mt-12">
-                  <p className="mt-4 text-gray-700 lg:text-lg">
-                    If you’re like me, you see a lot of beautiful animations on
-                    the web, but you <strong>feel lost</strong> when it comes to
-                    adding them to the apps you work on every day.
+      <div
+        className="flex-1 w-full -mt-px border-t border-gray-200"
+        style={{ backgroundColor: "#f8fafc" }}
+      >
+        <div className="max-w-xl p-4 mx-auto lg:max-w-6xl lg:grid lg:grid-cols-2">
+          {/* Top section */}
+          <div className="xl:px-4">
+            <div className="">
+              <div className="px-4 mx-auto sm:pt-8">
+                <div className="pt-4 lg:pt-8">
+                  <a
+                    href="https://twitter.com/samselikoff"
+                    className="block w-16 h-16 overflow-hidden rounded-full"
+                  >
+                    <Image
+                      src="/images/profile.jpeg"
+                      width={985}
+                      height={985}
+                    />
+                  </a>
+                  <p className="mt-4 text-4xl font-bold leading-tight text-gray-800">
+                    Craft cutting-edge UIs with Framer Motion
                   </p>
-                  <p className="mt-4 text-gray-700 lg:text-lg">
-                    It can be hard to bring isolated examples into your
-                    ever-changing codebase.
-                  </p>
-                  <p className="mt-4 text-gray-700 lg:text-lg">
-                    But what if you had a set of{" "}
-                    <strong>realistic components</strong> that you could add
-                    right alongside your existing code, without requiring a
-                    massive refactor, and that added those little details you
-                    always wish you had?
-                  </p>
-                  <p className="mt-4 text-gray-700 lg:text-lg">
-                    I've started working on a course that will teach you how to
-                    do just that. I'll use real-world examples with components
-                    that you already have in your apps today, like:
-                  </p>
-                  <ul className="pl-12 mt-4 text-gray-700 list-disc lg:text-lg">
-                    <li>Buttons</li>
-                    <li>Headers and navigation menus</li>
-                    <li>Modals, dialogs and notifications</li>
-                    <li>Lists, tables and grids</li>
-                  </ul>
-                  <p className="mt-4 text-gray-700 lg:text-lg">
-                    It's not ready yet, but if you want to follow along and get
-                    an early look at the components as I build them, sign up
-                    below.
-                  </p>
+                  <p className="mt-4 text-lg text-gray-600 md:text-xl lg:mt-6 lg:text-2xl xl:mt-8"></p>
+                  <div className="max-w-xl mx-auto mt-8">
+                    <p className="mt-4 text-gray-700 lg:text-lg">
+                      Subscribe for behind-the-scenes updates, free content
+                      previews, and more as I work on{" "}
+                      <strong>Framer Motion Recipes</strong> — a course I'm
+                      creating that will teach you how to build the sort of
+                      cutting-edge UI interactions you see on sites like Stripe
+                      and in beautiful native applications like Things.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            {/* Picture */}
-            <div className="max-w-2xl px-4 mx-auto mt-12 lg:mt-16 lg:max-w-3xl xl:max-w-4xl">
-              <div
-                className="relative mt-2 overflow-hidden rounded-lg"
-                style={{ aspectRatio: `${16 / 9}` }}
-              >
-                <Image
-                  layout="fill"
-                  objectFit="cover"
-                  quality={100}
-                  src="/images/framer-motion-course/sam-edit-2.jpg"
-                />
-              </div>
-              <p className="px-8 pt-2 text-xs font-medium text-center text-white sm:text-sm xl:text-base xl:pt-3">
-                Check out{" "}
-                <a
-                  className="font-bold text-white border-b border-blue-300 hover:border-blue-100"
-                  href="https://www.youtube.com/samselikoff"
-                >
-                  my YouTube channel
-                </a>{" "}
-                for a sample of some of my past videos.
-              </p>
-            </div>
           </div>
-        </div>
-
-        {/* Form */}
-        <div className="pt-40 pb-40 -mt-24 text-white bg-blue-500 sm:pt-48 sm:pb-32 lg:-mt-48 lg:pt-72 xl:pt-80">
-          <div className="max-w-xl px-4 mx-auto lg:max-w-2xl xl:px-0 xl:max-w-3xl">
-            <h2 className="text-4xl font-bold leading-tight lg:text-4-5xl xl:text-5xl">
-              Ready to follow along?
-            </h2>
-            <div className="p-4 mt-8 text-gray-700 bg-white rounded-lg shadow-lg sm:p-8 sm:mt-6 lg:mt-8 lg:text-xl">
-              <AnimatePresence initial={false} exitBeforeEnter>
-                {isComplete ? (
-                  <motion.div
-                    key="allDone"
-                    initial="hidden"
-                    animate="showing"
-                    exit="hidden"
-                    transition={{
-                      ease: "easeInOut",
-                    }}
-                    variants={{
-                      hidden: {
-                        height: signUpForm.current
-                          ? signUpForm.current.offsetHeight
-                          : "auto",
-                        opacity: 0,
-                      },
-                      showing: {
-                        height: "auto",
-                        opacity: 1,
-                      },
-                    }}
-                  >
-                    <h3 className="font-semibold text-gray-900">All set!</h3>
-                    <p className="pt-3 text-gray-700">
-                      Thanks for subscribing! Please check your inbox for a
-                      confirmation email.
-                    </p>
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="signupForm"
-                    ref={signUpForm}
-                    initial="hidden"
-                    animate="showing"
-                    exit="hidden"
-                    transition={{
-                      ease: "easeOut",
-                    }}
-                    variants={{
-                      hidden: {
-                        opacity: 0,
-                      },
-                      showing: {
-                        opacity: 1,
-                      },
-                    }}
-                  >
-                    <p>
-                      I'll have more details soon, but you can sign up now to
-                      get <strong>behind-the-scenes updates</strong> and even{" "}
-                      <strong>a free video or two</strong> once the course is
-                      ready:
-                    </p>
-                    <form className="pt-5" {...formProps}>
-                      <input
-                        name="email_address"
-                        type="email"
-                        required
-                        placeholder="Enter your email"
-                        className="w-full px-5 py-3 text-gray-700 placeholder-gray-600 border rounded-md shadow-sm focus:outline-none focus:border-blue-300"
-                      />
-                      <div className="mt-3">
-                        <button
-                          type="submit"
-                          disabled={isSubmitting || isComplete}
-                          className={`
-                      block w-full px-8 py-3 font-semibold text-white  border border-transparent rounded-md shadow focus:outline-none focus:border-blue-100
-                      ${
-                        isSubmitting || isComplete
-                          ? "bg-blue-600 opacity-50"
-                          : "bg-blue-500"
-                      }
-                    `}
-                        >
-                          Sign up
-                        </button>
-                      </div>
-                      {isError && (
-                        <div className="mt-3 text-red-500">
-                          Oh no, something's wrong with our signup form 😔.
-                          Please try again.
+          {/* Form */}
+          <div className="pb-20 mt-8 lg:mt-32 lg:ml-12">
+            <div className="px-4 mx-auto xl:px-0">
+              <div className="p-4 mt-4 text-gray-700 bg-white border border-gray-100 rounded-lg shadow-xl sm:p-8 sm:mt-6 lg:mt-8">
+                <AnimatePresence initial={false} exitBeforeEnter>
+                  {isComplete ? (
+                    <motion.div
+                      key="allDone"
+                      initial="hidden"
+                      animate="showing"
+                      exit="hidden"
+                      transition={{
+                        ease: "easeInOut",
+                      }}
+                      variants={{
+                        hidden: {
+                          height: signUpForm.current
+                            ? signUpForm.current.offsetHeight
+                            : "auto",
+                          opacity: 0,
+                        },
+                        showing: {
+                          height: "auto",
+                          opacity: 1,
+                        },
+                      }}
+                    >
+                      <h3 className="font-semibold text-gray-900">All set!</h3>
+                      <p className="pt-3 text-gray-700">
+                        Thanks for subscribing! Please check your inbox for a
+                        confirmation email.
+                      </p>
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="signupForm"
+                      ref={signUpForm}
+                      initial="hidden"
+                      animate="showing"
+                      exit="hidden"
+                      transition={{
+                        ease: "easeOut",
+                      }}
+                      variants={{
+                        hidden: {
+                          opacity: 0,
+                        },
+                        showing: {
+                          opacity: 1,
+                        },
+                      }}
+                    >
+                      <form className="" {...formProps}>
+                        <input
+                          name="email_address"
+                          type="email"
+                          required
+                          placeholder="Enter your email"
+                          className="w-full px-5 py-3 text-gray-700 placeholder-gray-600 border rounded-md shadow-sm focus:outline-none focus:border-blue-300"
+                        />
+                        <div className="mt-3">
+                          <button
+                            type="submit"
+                            disabled={isSubmitting || isComplete}
+                            className={`
+                        block w-full px-8 py-3 font-semibold text-white  border border-transparent rounded-md shadow focus:outline-none focus:border-blue-100
+                        ${
+                          isSubmitting || isComplete
+                            ? "bg-blue-600 opacity-50"
+                            : "bg-blue-500"
+                        }
+                      `}
+                          >
+                            Subscribe
+                          </button>
                         </div>
-                      )}
-                    </form>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                        <div className="mt-2">
+                          <p className="text-xs text-gray-600">
+                            I'll never share your information, and you can
+                            unsubscribe at any time.
+                          </p>
+                        </div>
+                        {isError && (
+                          <div className="mt-3 text-red-500">
+                            Oh no, something's wrong with our signup form 😔.
+                            Please try again.
+                          </div>
+                        )}
+                      </form>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* Footer */}
-        <div className="max-w-xl px-4 pt-12 pb-16 mx-auto sm:pt-16 lg:max-w-2xl lg:pt-20 lg:pb-20 xl:pb-28 xl:max-w-3xl">
-          <h2 className="text-4xl font-bold leading-tight lg:text-4-5xl xl:text-5xl">
-            Meet your teachers
-          </h2>
-
-          <p className="mt-6 text-lg text-gray-700 md:text-xl lg:text-1-5xl xl:mt-8">
-            I'm <A href="https://twitter.com/samselikoff">Sam Selikoff</A> and
-            I'll be teaching this course along with my friend{" "}
-            <A href="https://twitter.com/ryantotweets">Ryan Toronto</A>.
-          </p>
-
-          <div className="py-8 sm:py-12 sm:-mx-6 xl:-mx-12">
-            <div
-              className="relative overflow-hidden rounded-lg"
-              style={{ aspectRatio: `${16 / 9}` }}
-            >
-              <Image
-                layout="fill"
-                objectFit="cover"
-                quality={100}
-                src="/images/framer-motion-course/sam-and-ryan.jpeg"
-              />
-            </div>
-          </div>
-
-          <p className="text-lg text-gray-700 md:text-xl lg:text-1-5xl">
-            We co-host <A href="https://frontendfirst.fm/">Frontend First</A>,
-            make videos for each of our{" "}
-            <A href="https://www.youtube.com/c/SamSelikoff">YouTube</A>{" "}
-            <A href="https://www.youtube.com/c/RyanToronto">channels</A>, and
-            work on <A href="https://github.com/samselikoff">open</A>{" "}
-            <A href="https://github.com/ryanto">source</A> together.{" "}
-          </p>
-
-          <p className="mt-6 text-lg text-gray-700 md:text-xl lg:text-1-5xl">
-            We can't wait to show you what we've been working on!
-          </p>
         </div>
       </div>
     </>
