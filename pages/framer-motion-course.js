@@ -13,7 +13,21 @@ export default function FramerMotionCoursePage() {
   return (
     <>
       <Head>
-        <title>Craft cutting-edge UIs withi Framer Motion</title>
+        <title>Craft cutting-edge UIs with Framer Motion</title>
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@samselikoff" />
+        <meta
+          name="twitter:title"
+          content="Craft cutting-edge UIs with Framer Motion"
+        />
+        <meta
+          name="twitter:description"
+          content="Learn how to use React and Framer Motion to pull off the polished UI interactions you see on sites like Stripe and Linear."
+        />
+        <meta
+          name="twitter:image"
+          content="https://samselikoff.com/images/framer-motion-course/cover.jpg"
+        />
       </Head>
 
       <div
