@@ -26,16 +26,24 @@ export default function FramerMotionCoursePage() {
             <div className="">
               <div className="px-4 mx-auto sm:pt-8">
                 <div className="pt-4 lg:pt-8">
-                  <a
-                    href="https://twitter.com/samselikoff"
-                    className="block w-16 h-16 overflow-hidden rounded-full"
-                  >
-                    <Image
-                      src="/images/profile.jpeg"
-                      width={985}
-                      height={985}
-                    />
-                  </a>
+                  <div className="flex space-x-3">
+                    <a
+                      href="https://twitter.com/samselikoff"
+                      className="block w-16 h-16 overflow-hidden rounded-full"
+                    >
+                      <Image
+                        src="/images/profile.jpeg"
+                        width={985}
+                        height={985}
+                      />
+                    </a>
+                    <a
+                      href="https://twitter.com/ryantotweets"
+                      className="block w-16 h-16 overflow-hidden rounded-full"
+                    >
+                      <Image src="/images/ryan.jpeg" width={985} height={985} />
+                    </a>
+                  </div>
                   <p className="mt-4 text-4xl font-bold leading-tight text-gray-800">
                     Craft cutting-edge UIs with Framer Motion
                   </p>
@@ -43,8 +51,8 @@ export default function FramerMotionCoursePage() {
                   <div className="max-w-xl mx-auto mt-8">
                     <p className="mt-4 text-gray-700 lg:text-lg">
                       Subscribe for behind-the-scenes updates, free content
-                      previews, and more as I work on{" "}
-                      <strong>Framer Motion Recipes</strong> — a course I'm
+                      previews, and more as me and Ryan work on{" "}
+                      <strong>Framer Motion Recipes</strong> — a course we're
                       creating that will teach you how to build the sort of
                       cutting-edge UI interactions you see on sites like Stripe
                       and in beautiful native applications like Things.
