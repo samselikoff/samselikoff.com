@@ -65,7 +65,7 @@ export default function FramerMotionCoursePage() {
                   <div className="max-w-xl mx-auto mt-8">
                     <p className="mt-4 text-gray-700 lg:text-lg">
                       Subscribe for behind-the-scenes updates, free content
-                      previews, and more as me and Ryan work on{" "}
+                      previews, and more as Ryan and I work on{" "}
                       <strong>Framer Motion Recipes</strong> — a course we're
                       creating that will teach you how to build the sort of
                       cutting-edge UI interactions you see on sites like Stripe
