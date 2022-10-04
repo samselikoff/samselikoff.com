@@ -21,13 +21,4 @@ module.exports = withMdxEnhanced({
 
     return config;
   },
-  async redirects() {
-    return [
-      {
-        source: "/headshot",
-        destination: "/images/profile.jpeg",
-        permanent: false,
-      },
-    ];
-  },
 });
