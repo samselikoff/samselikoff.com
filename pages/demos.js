@@ -22,10 +22,9 @@ export default function Demos() {
           <div className="-mx-6 md:mt-8 md:mx-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
               {demos.map((demo) => (
-                <div className="bg-black flex">
+                <div className="bg-black flex" key={demo.url}>
                   <a
                     href={demo.url}
-                    key={demo.url}
                     className="border-b border-gray-800 block self-center"
                   >
                     <video
