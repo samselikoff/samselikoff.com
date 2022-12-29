@@ -108,6 +108,14 @@ let demos = [
     url: "https://twitter.com/samselikoff/status/1527746918297870336",
   },
   {
+    src: "/demos/2022-05-07.mp4",
+    url: "https://twitter.com/samselikoff/status/1523132765608505344",
+  },
+  {
+    src: "/demos/2022-04-29.mp4",
+    url: "https://twitter.com/samselikoff/status/1520130336239153152",
+  },
+  {
     src: "/demos/2022-04-15.mp4",
     url: "https://twitter.com/samselikoff/status/1515077492897312772",
   },
