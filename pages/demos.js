@@ -33,6 +33,7 @@ export default function Demos() {
                       autoPlay
                       muted
                       loop
+                      playsInline
                     />
                   </a>
                 </div>
