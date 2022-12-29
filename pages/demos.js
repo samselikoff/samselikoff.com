@@ -15,7 +15,7 @@ export default function Demos() {
 
           <Spacer size="lg" />
 
-          <Lead>Short videos of demos shared on Twitter.</Lead>
+          <Lead>Short videos of demos I've shared on Twitter.</Lead>
 
           <Spacer size="lg" />
 
