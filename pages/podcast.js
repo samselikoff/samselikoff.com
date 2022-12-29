@@ -17,10 +17,9 @@ export default function Podcast() {
           <Spacer size="lg" />
 
           <Lead>
-            For more than two years I've used{" "}
-            <A href="https://frontendfirst.fm/">Frontend First</A> to talk about
-            whatever's going on in my day-to-day life doing frontend
-            development, along with my co-host Ryan Toronto.
+            <A href="https://frontendfirst.fm/">Frontend First</A> is my podcast
+            where I discuss learnings and advice from my day-to-day life doing
+            frontend development, along with my co-host Ryan Toronto.
           </Lead>
 
           <Lead>
@@ -99,8 +98,7 @@ const podcasts = [
   },
   {
     title: "Yehuda Katz on Paradigms vs. Abstractions in UI Development",
-    url:
-      "https://embermap.com/podcast/yehuda-katz-on-paradigms-vs-abstractions-in-ui-development",
+    url: "https://embermap.com/podcast/yehuda-katz-on-paradigms-vs-abstractions-in-ui-development",
     imageUrl:
       "/images/podcasts/yehuda-katz-on-paradigms-vs-abstractions-in-ui-development.jpg",
     imageWidth: 2550,
@@ -109,8 +107,7 @@ const podcasts = [
   },
   {
     title: "Derrick Reimer on SPA Architecture with Elm and GraphQL",
-    url:
-      "https://embermap.com/podcast/derrick-reimer-on-spa-architecture-with-elm-and-graphql",
+    url: "https://embermap.com/podcast/derrick-reimer-on-spa-architecture-with-elm-and-graphql",
     imageUrl:
       "/images/podcasts/derrick-reimer-on-spa-architecture-with-elm-and-graphql.jpg",
     imageWidth: 1920,
@@ -119,8 +116,7 @@ const podcasts = [
   },
   {
     title: "Edward Faulkner on Embroider, Ember CLI's Modern Build System",
-    url:
-      "https://embermap.com/podcast/edward-faulkner-on-embroider-ember-cli-s-modern-build-system",
+    url: "https://embermap.com/podcast/edward-faulkner-on-embroider-ember-cli-s-modern-build-system",
     imageUrl:
       "/images/podcasts/edward-faulkner-on-embroider-ember-cli-s-modern-build-system.jpg",
     imageWidth: 1920,

@@ -18,7 +18,8 @@ export default function TalksPage() {
 
           <Lead>
             I love talking about my favorite technologies, my experience working
-            on software teams, and lessons learned running open-source projects.
+            on software teams, and lessons learned from running open-source
+            projects.
           </Lead>
 
           <Lead>
@@ -102,6 +103,15 @@ const Interview = ({ interview }) => {
 };
 
 const talks = [
+  {
+    title:
+      "Improving developer and user experience with nested layouts in Next.js",
+    presentedAt: "Next.js Conf 2022",
+    image: "/images/talks/nextconf2022.jpeg",
+    imageWidth: 1280,
+    imageHeight: 720,
+    url: "https://www.youtube.com/watch?v=6mQ3M1CUGnk",
+  },
   {
     title: "Stop Coding: You Have a Product Gap",
     presentedAt: "EmberCamp 2018",

@@ -63,15 +63,8 @@ export default function Home() {
               <SectionBody>
                 <p>
                   I'm currently working on{" "}
-                  <A href="https://miragejs.com/">Mirage JS</A>, an API mocking
-                  library that lets frontend developers build complete features
-                  without touching their backend APIs.{" "}
-                </p>
-                <p className="mt-6">
-                  I also run <A href="https://embermap.com/">embermap.com</A>{" "}
-                  where I make videos about design, development and testing
-                  using Ember.js, along with my friend{" "}
-                  <A href="https://twitter.com/ryantotweets">Ryan Toronto</A>.
+                  <A href="https://buildui.com/">Build UI</A>, a subscription
+                  video site for frontend developers.
                 </p>
               </SectionBody>
             </Section>

@@ -17,15 +17,20 @@ export default function Projects() {
           <Spacer size="lg" />
 
           <Lead>
-            My main open source project is{" "}
-            <A href="https://miragejs.com/">Mirage JS</A>, and I'm currently
-            working on bringing it from Ember to the wider JavaScript ecosystem.
+            In October 2022 I launched{" "}
+            <A href="https://buildui.com/">Build UI</A> with my friend Ryan
+            Toronto. It's a subscription video site for frontend developers, and
+            is an evolution of our first video site, EmberMap.
           </Lead>
 
           <Lead>
-            The rest of my time is spent teaching UI development through videos
-            on EmberMap and YouTube. I also run in-person trainings and do
-            remote mentoring for a handful of frontend teams.
+            The rest of my time is spent making YouTube videos, doing remote
+            mentoring for frontend teams, and consulting.
+          </Lead>
+
+          <Lead>
+            I created Mirage.js and used to do open source. The project still is
+            in use even though I'm no longer actively involved.
           </Lead>
 
           <div className="md:mt-4 ">
