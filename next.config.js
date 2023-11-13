@@ -21,4 +21,14 @@ module.exports = withMdxEnhanced({
 
     return config;
   },
+
+  redirects() {
+    return [
+      {
+        source: "/framer-motion-course",
+        destination: "https://buildui.com/newsletter",
+        permanent: false,
+      },
+    ];
+  },
 });
