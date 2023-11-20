@@ -1,4 +1,11 @@
-import "../styles.css";
+// Works in dev, but breaks in prod.
+// (Try yarn build && yarn serve, and look at header nav menu on mobile.)
+import "@reach/dialog/styles.css";
+import "tailwindcss/tailwind.css";
+
+// This works
+// import "../styles.css";
+
 import "../fonts/Inter/inter.css";
 import { animated, useTransition, useChain } from "react-spring";
 import { DialogOverlay, DialogContent } from "@reach/dialog";
