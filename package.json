@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
     "start": "next start"
   },
   "dependencies": {
@@ -35,6 +35,6 @@
     "file-loader": "^6.2.0"
   },
   "engines": {
-    "node": "16.14.2"
+    "node": "18.x"
   }
 }
