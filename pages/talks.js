@@ -104,6 +104,38 @@ const Interview = ({ interview }) => {
 
 const talks = [
   {
+    title: "React Unpacked: A Roadmap to React 19",
+    presentedAt: "React Conf 2024",
+    image: "/images/talks/reactconf2024.jpg",
+    imageWidth: 1280,
+    imageHeight: 720,
+    url: "https://www.youtube.com/watch?v=R0B2HsSM78s",
+  },
+  {
+    title: "High Floor, High Ceiling",
+    presentedAt: "Big Sky Dev Con 2024",
+    image: "/images/talks/bigskydevcon2024.png",
+    imageWidth: 1280,
+    imageHeight: 720,
+    url: "https://www.youtube.com/live/uVKSmR_hBMs?si=sN6F-SIgJEfn6zgM&t=5693",
+  },
+  {
+    title: "How Next.js delivers React's vision for the future",
+    presentedAt: "Next.js Conf 2023",
+    image: "/images/talks/nextconf2023.jpg",
+    imageWidth: 1280,
+    imageHeight: 720,
+    url: "https://www.youtube.com/watch?v=9CN9RCzznZc",
+  },
+  {
+    title: "Tailwind CSS for the modern web",
+    presentedAt: "Tailwind Connect 2023",
+    image: "/images/talks/tailwindconnect2023.jpg",
+    imageWidth: 1280,
+    imageHeight: 720,
+    url: "https://www.youtube.com/watch?v=CLkxRnRQtDE&t=645s",
+  },
+  {
     title:
       "Improving developer and user experience with nested layouts in Next.js",
     presentedAt: "Next.js Conf 2022",
